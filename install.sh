@@ -42,15 +42,30 @@ detect_arch() {
   esac
 }
 
-# ─── Fetch latest version tag ───
+# ─── Fetch latest version tag (including pre-releases) ───
 get_latest_version() {
+  local api_url="https://api.github.com/repos/${REPO}/releases"
+  local tag=""
+
   if command -v curl >/dev/null 2>&1; then
-    curl -fsSL -o /dev/null -w '%{redirect_url}' "https://github.com/${REPO}/releases/latest" | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+[^ ]*'
+    # Try /releases/latest first (stable releases)
+    tag=$(curl -fsSL "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+
+    # Fallback: get most recent release (including pre-releases)
+    if [ -z "$tag" ]; then
+      tag=$(curl -fsSL "${api_url}" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+    fi
   elif command -v wget >/dev/null 2>&1; then
-    wget -qO- --server-response "https://github.com/${REPO}/releases/latest" 2>&1 | grep -i location | grep -oE 'v[0-9]+\.[0-9]+\.[0-9]+[^ ]*'
+    tag=$(wget -qO- "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+
+    if [ -z "$tag" ]; then
+      tag=$(wget -qO- "${api_url}" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+    fi
   else
     error "Neither curl nor wget found. Please install one of them."
   fi
+
+  echo "$tag"
 }
 
 # ─── Main ───

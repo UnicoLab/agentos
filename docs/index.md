@@ -15,7 +15,7 @@ Local-first AI agents for your workflow — private, powerful, and fully customi
 Your data never leaves your machine. You choose the model, the prompt, the tools. <strong>No vendor lock-in.</strong>
 </p>
 
-<div class="hero-badges">
+<div class="hero-badges" markdown>
 
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-Free%20Testing-brightgreen?style=flat-square)](mailto:info@unicolab.ai)
@@ -23,7 +23,7 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 </div>
 
-<div class="hero-cta">
+<div class="hero-cta" markdown>
 
 [Download Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
 [Get Started :material-rocket-launch:](getting-started/installation.md){ .md-button }
@@ -205,7 +205,7 @@ This is a **base engine** that can be extended to any profile, tools, or busines
 2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your license
 3. **Install, configure, and start using** — see the [Quick Start Guide](getting-started/quick-start.md)
 
-<div class="hero-cta">
+<div class="hero-cta" markdown>
 
 [Download Now :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
 [Request License :material-email:](mailto:info@unicolab.ai){ .md-button }

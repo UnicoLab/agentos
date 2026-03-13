@@ -56,31 +56,35 @@ jobs:
           cat > /tmp/release-notes.md << NOTES
           ## AgentOS — Jean-Pierre ${TAG}
 
-          Cross-platform binaries for macOS, Linux, and Windows.
+          Cross-platform binaries for macOS (Apple Silicon + Intel), Linux, and Windows.
 
-          ### 📥 Installation
+          ### ⚡ One-Line Install (macOS / Linux)
+
+          \`\`\`bash
+          curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+          \`\`\`
+
+          This auto-detects your OS and architecture, downloads the correct binary, handles macOS security (Gatekeeper), and installs to your PATH.
+
+          ### 📥 Manual Installation
 
           1. Download the archive for your platform below
-          2. Extract it: \`tar xzf agentos_*.tar.gz\` (or unzip on Windows)
-          3. Move to PATH: \`sudo mv agentos /usr/local/bin/\`
-          4. **Request a license:** Email [info@unicolab.ai](mailto:info@unicolab.ai) for a free testing key
-          5. Run setup: \`agentos setup\`
-          6. Launch: \`agentos serve\`
+          2. Extract: \`tar xzf agentos_*.tar.gz\`
+          3. **macOS only** — clear quarantine: \`sudo xattr -rd com.apple.quarantine agentos && codesign --force --sign - agentos\`
+          4. Move to PATH: \`sudo mv agentos /usr/local/bin/\`
+          5. Launch: \`agentos serve\`
+          6. Configure everything in the **Web UI** at \`http://localhost:18080\`
+
+          ### 🔑 License
+
+          Email [info@unicolab.ai](mailto:info@unicolab.ai) for a **free testing license**.
 
           ### 📖 Documentation
 
-          Full setup guides and documentation: **[unicolab.github.io/agentos](https://unicolab.github.io/agentos)**
-
-          ### 🔒 Privacy
-
-          Your data stays on your machine. See our [Security & Privacy](https://unicolab.github.io/agentos/security/) page.
-
-          ### 🧪 Free Testing Program
-
-          Get a **free license key** by emailing [info@unicolab.ai](mailto:info@unicolab.ai)!
+          **[unicolab.github.io/agentos](https://unicolab.github.io/agentos)**
 
           ---
-          Built with ❤️ by [UnicoLab](https://unicolab.ai) · Part of the [AIFlow](https://ai-flow.ai) Ecosystem
+          Built with ❤️ by [UnicoLab](https://unicolab.ai)
           NOTES
 
           # Create the release with all assets

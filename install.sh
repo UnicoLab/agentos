@@ -134,12 +134,12 @@ main() {
   rm -rf "${WORK}"
 
   printf "\n${BOLD}${GREEN}  🎉 Installation complete!${NC}\n\n"
-  printf "  ${BOLD}Next steps:${NC}\n"
-  printf "    1. Run:  ${CYAN}agentos serve${NC}\n"
-  printf "    2. Open: ${CYAN}http://localhost:18080${NC}\n"
-  printf "    3. Configure in the ${BOLD}Web UI Settings${NC}\n\n"
   printf "  ${YELLOW}Need a license?${NC} Email ${BOLD}info@unicolab.ai${NC}\n"
   printf "  ${CYAN}Docs:${NC} https://unicolab.github.io/agentos/\n\n"
+
+  # Auto-launch AgentOS
+  printf "  ${BOLD}Starting AgentOS...${NC}\n\n"
+  "${INSTALL_DIR}/${BINARY_NAME}" serve
 }
 
 main "$@"

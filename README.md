@@ -42,44 +42,48 @@ You have **full control** over which AI model to use, which prompts to configure
 
 ## ⚡ Quick Start
 
-### 1. Download
+### One-Line Install (macOS / Linux)
 
-Grab the latest release for your platform:
+```bash
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+```
+
+This auto-detects your OS and architecture, downloads the correct binary, handles macOS Gatekeeper security, installs to PATH, and launches AgentOS — all in one command. Works with or without admin access.
+
+### Manual Install
+
+<details>
+<summary><strong>📥 Download manually</strong></summary>
 
 | Platform | Architecture | Download |
 |----------|-------------|----------|
-| **macOS** (Apple Silicon — M1/M2/M3/M4) | arm64 | [agentos_darwin_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **macOS** (Intel) | amd64 | [agentos_darwin_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** | x86_64 | [agentos_linux_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** (ARM — Raspberry Pi, etc.) | arm64 | [agentos_linux_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Windows** | x86_64 | [agentos_windows_amd64.zip](https://github.com/UnicoLab/agentos/releases/latest) |
-
-> 💡 **Not sure which macOS version?** Run `uname -m` in Terminal — `arm64` = Apple Silicon, `x86_64` = Intel
-
-### 2. Install
+| **macOS** Apple Silicon | arm64 (M1/M2/M3/M4) | [agentos_darwin_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **macOS** Intel | amd64 | [agentos_darwin_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **Linux** x86 | amd64 | [agentos_linux_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **Linux** ARM | arm64 | [agentos_linux_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **Windows** | amd64 | [agentos_windows_amd64.zip](https://github.com/UnicoLab/agentos/releases/latest) |
 
 ```bash
-# Extract (macOS/Linux)
+# Extract
 tar xzf agentos_*.tar.gz
 
-# Move to PATH (run from anywhere)
+# macOS: clear Gatekeeper
+xattr -rd com.apple.quarantine ./agentos
+codesign --force --sign - ./agentos
+
+# Run (no install needed)
+./agentos serve
+
+# Or install to PATH
 sudo mv agentos /usr/local/bin/
-
-# macOS only: remove quarantine
-sudo xattr -rd com.apple.quarantine /usr/local/bin/agentos
-```
-
-### 3. Setup & Launch
-
-```bash
-# Interactive setup wizard
-agentos setup
-
-# Start the server (opens browser automatically)
 agentos serve
 ```
 
-That's it! 🎉 Open `http://localhost:18080` and start talking to your AI agent.
+> 💡 No admin? No problem — just run `./agentos serve` from any folder.
+
+</details>
+
+That's it! 🎉 Open `http://localhost:18080` and configure everything in the **Web UI Settings**.
 
 > 📖 **Detailed guides:** [Installation](https://unicolab.github.io/agentos/getting-started/installation/) · [Ollama Setup](https://unicolab.github.io/agentos/guides/ollama-setup/) · [GitHub Setup](https://unicolab.github.io/agentos/guides/github-setup/)
 
@@ -129,28 +133,28 @@ Runs on YOUR machine. SQLite storage. No cloud sync unless you want it.
 <details>
 <summary><strong>📊 Dashboard — Classic View</strong></summary>
 
-<img src="screens/flavors/pm/classic-view-dashboard.png" width="100%" alt="Dashboard">
+<img src="docs/assets/screens/flavors/pm/classic-view-dashboard.png" width="100%" alt="Dashboard">
 
 </details>
 
 <details>
 <summary><strong>💬 AI Chat — Planning Session</strong></summary>
 
-<img src="screens/flavors/pm/JP-chat-planning.png" width="100%" alt="Chat">
+<img src="docs/assets/screens/flavors/pm/JP-chat-planning.png" width="100%" alt="Chat">
 
 </details>
 
 <details>
 <summary><strong>📁 Projects Page</strong></summary>
 
-<img src="screens/flavors/pm/projects-page.png" width="100%" alt="Projects">
+<img src="docs/assets/screens/flavors/pm/projects-page.png" width="100%" alt="Projects">
 
 </details>
 
 <details>
 <summary><strong>⚙️ Settings — Model Configuration</strong></summary>
 
-<img src="screens/flavors/pm/model-config.png" width="100%" alt="Model Config">
+<img src="docs/assets/screens/flavors/pm/model-config.png" width="100%" alt="Model Config">
 
 </details>
 

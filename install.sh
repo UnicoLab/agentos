@@ -9,26 +9,27 @@ REPO="UnicoLab/agentos"
 INSTALL_DIR="/usr/local/bin"
 BINARY_NAME="agentos"
 
-# ─── Colors ───
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-CYAN='\033[0;36m'
-YELLOW='\033[1;33m'
-BOLD='\033[1m'
-NC='\033[0m' # No Color
+# ─── Colors (actual escape bytes, not literals) ───
+ESC=$(printf '\033')
+RED="${ESC}[0;31m"
+GREEN="${ESC}[0;32m"
+CYAN="${ESC}[0;36m"
+YELLOW="${ESC}[1;33m"
+BOLD="${ESC}[1m"
+NC="${ESC}[0m"
 
-info()    { printf "${CYAN}ℹ${NC}  %s\n" "$1"; }
-success() { printf "${GREEN}✅${NC} %s\n" "$1"; }
-warn()    { printf "${YELLOW}⚠️${NC}  %s\n" "$1"; }
-error()   { printf "${RED}❌${NC} %s\n" "$1"; exit 1; }
+info()    { printf "%s\n" "${CYAN}ℹ${NC}  $1"; }
+success() { printf "%s\n" "${GREEN}✅${NC} $1"; }
+warn()    { printf "%s\n" "${YELLOW}⚠️${NC}  $1"; }
+error()   { printf "%s\n" "${RED}❌${NC} $1"; exit 1; }
 
 # ─── Detect OS ───
 detect_os() {
   case "$(uname -s)" in
     Darwin*)  echo "darwin" ;;
     Linux*)   echo "linux"  ;;
-    MINGW*|MSYS*|CYGWIN*) error "Windows detected. Please download the .zip manually from GitHub Releases." ;;
-    *)        error "Unsupported operating system: $(uname -s)" ;;
+    MINGW*|MSYS*|CYGWIN*) error "Windows detected. Download the .zip from GitHub Releases." ;;
+    *)        error "Unsupported OS: $(uname -s)" ;;
   esac
 }
 
@@ -37,49 +38,37 @@ detect_arch() {
   case "$(uname -m)" in
     x86_64|amd64)   echo "amd64" ;;
     arm64|aarch64)   echo "arm64" ;;
-    i386|i686)       error "32-bit systems are not supported. AgentOS requires a 64-bit OS." ;;
+    i386|i686)       error "32-bit systems are not supported." ;;
     *)               error "Unsupported architecture: $(uname -m)" ;;
   esac
 }
 
-# ─── Fetch latest version tag (including pre-releases) ───
+# ─── Fetch latest version tag (handles pre-releases) ───
 get_latest_version() {
-  local api_url="https://api.github.com/repos/${REPO}/releases"
-  local tag=""
+  TAG=""
 
-  if command -v curl >/dev/null 2>&1; then
-    # Try /releases/latest first (stable releases)
-    tag=$(curl -fsSL "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+  # Try stable release first
+  TAG=$(curl -fsSL "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null \
+    | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
 
-    # Fallback: get most recent release (including pre-releases)
-    if [ -z "$tag" ]; then
-      tag=$(curl -fsSL "${api_url}" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
-    fi
-  elif command -v wget >/dev/null 2>&1; then
-    tag=$(wget -qO- "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
-
-    if [ -z "$tag" ]; then
-      tag=$(wget -qO- "${api_url}" 2>/dev/null | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
-    fi
-  else
-    error "Neither curl nor wget found. Please install one of them."
+  # Fallback: most recent release including pre-releases
+  if [ -z "$TAG" ]; then
+    TAG=$(curl -fsSL "https://api.github.com/repos/${REPO}/releases" 2>/dev/null \
+      | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
   fi
 
-  echo "$tag"
+  echo "$TAG"
 }
 
 # ─── Main ───
 main() {
-  printf "\n${BOLD}${CYAN}"
-  printf "  ⬡  AgentOS Installer\n"
-  printf "  ─────────────────────\n"
-  printf "${NC}\n"
+  printf "\n${BOLD}${CYAN}  ⬡  AgentOS Installer${NC}\n"
+  printf "${CYAN}  ─────────────────────${NC}\n\n"
 
   OS=$(detect_os)
   ARCH=$(detect_arch)
   info "Detected: ${BOLD}${OS}/${ARCH}${NC}"
 
-  # Get latest version
   info "Fetching latest release..."
   VERSION=$(get_latest_version)
   if [ -z "$VERSION" ]; then
@@ -88,60 +77,49 @@ main() {
   info "Latest version: ${BOLD}${VERSION}${NC}"
 
   # Build download URL
-  VERSION_NUM="${VERSION#v}"  # strip leading 'v'
+  VERSION_NUM="${VERSION#v}"
   ARCHIVE="agentos_${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
   URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARCHIVE}"
 
   # Download
-  TMPDIR=$(mktemp -d)
+  WORK=$(mktemp -d)
   info "Downloading ${BOLD}${ARCHIVE}${NC}..."
-  if command -v curl >/dev/null 2>&1; then
-    curl -fsSL "$URL" -o "${TMPDIR}/${ARCHIVE}" || error "Download failed. URL: ${URL}"
-  else
-    wget -q "$URL" -O "${TMPDIR}/${ARCHIVE}" || error "Download failed. URL: ${URL}"
-  fi
-  success "Downloaded successfully"
+  curl -fsSL "$URL" -o "${WORK}/${ARCHIVE}" || error "Download failed. URL: ${URL}"
+  success "Downloaded"
 
   # Extract
   info "Extracting..."
-  tar xzf "${TMPDIR}/${ARCHIVE}" -C "${TMPDIR}"
+  tar xzf "${WORK}/${ARCHIVE}" -C "${WORK}"
   success "Extracted"
 
   # macOS: Remove quarantine and ad-hoc sign
   if [ "$OS" = "darwin" ]; then
-    info "Clearing macOS quarantine flag..."
-    xattr -rd com.apple.quarantine "${TMPDIR}/${BINARY_NAME}" 2>/dev/null || true
-
-    info "Ad-hoc signing binary for Gatekeeper..."
-    codesign --force --sign - "${TMPDIR}/${BINARY_NAME}" 2>/dev/null || true
+    info "Clearing macOS Gatekeeper restrictions..."
+    xattr -rd com.apple.quarantine "${WORK}/${BINARY_NAME}" 2>/dev/null || true
+    codesign --force --sign - "${WORK}/${BINARY_NAME}" 2>/dev/null || true
     success "macOS security cleared"
   fi
 
-  # Make executable
-  chmod +x "${TMPDIR}/${BINARY_NAME}"
+  chmod +x "${WORK}/${BINARY_NAME}"
 
-  # Install to PATH — try system dir, fallback to user dir (no admin needed)
+  # Install — try system dir, fallback to user dir (no admin needed)
   if [ -w "${INSTALL_DIR}" ]; then
-    mv "${TMPDIR}/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
-    success "Installed to ${INSTALL_DIR}/${BINARY_NAME}"
-  elif command -v sudo >/dev/null 2>&1 && sudo -n true 2>/dev/null; then
-    sudo mv "${TMPDIR}/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
-    success "Installed to ${INSTALL_DIR}/${BINARY_NAME}"
+    mv "${WORK}/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
+    success "Installed to ${BOLD}${INSTALL_DIR}/${BINARY_NAME}${NC}"
+  elif sudo -n true 2>/dev/null; then
+    sudo mv "${WORK}/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
+    success "Installed to ${BOLD}${INSTALL_DIR}/${BINARY_NAME}${NC}"
   else
-    # No admin access — install to user-local directory
     USER_BIN="${HOME}/.local/bin"
     mkdir -p "${USER_BIN}"
-    mv "${TMPDIR}/${BINARY_NAME}" "${USER_BIN}/${BINARY_NAME}"
+    mv "${WORK}/${BINARY_NAME}" "${USER_BIN}/${BINARY_NAME}"
     INSTALL_DIR="${USER_BIN}"
-    success "Installed to ${USER_BIN}/${BINARY_NAME} (no admin required)"
-
-    # Ensure ~/.local/bin is in PATH
+    success "Installed to ${BOLD}${USER_BIN}/${BINARY_NAME}${NC} (no admin required)"
     case ":${PATH}:" in
       *":${USER_BIN}:"*) ;;
       *)
-        warn "Add this to your shell profile (~/.zshrc or ~/.bashrc):"
-        echo "    export PATH=\"${USER_BIN}:\$PATH\""
-        # Also apply for this session
+        warn "Add to your shell profile:"
+        printf "    export PATH=\"%s:\$PATH\"\n" "${USER_BIN}"
         export PATH="${USER_BIN}:${PATH}"
         ;;
     esac
@@ -149,28 +127,19 @@ main() {
 
   # Verify
   if command -v "${BINARY_NAME}" >/dev/null 2>&1; then
-    INSTALLED_VERSION=$("${BINARY_NAME}" version 2>/dev/null || echo "unknown")
+    INSTALLED_VERSION=$("${BINARY_NAME}" version 2>/dev/null || echo "installed")
     success "AgentOS ${INSTALLED_VERSION} is ready!"
-  else
-    warn "${INSTALL_DIR} may not be in your PATH. Add it with:"
-    echo "    export PATH=\"${INSTALL_DIR}:\$PATH\""
   fi
 
-  # Cleanup
-  rm -rf "${TMPDIR}"
+  rm -rf "${WORK}"
 
-  # Done!
-  printf "\n${BOLD}${GREEN}"
-  printf "  🎉 Installation complete!\n"
-  printf "${NC}\n"
+  printf "\n${BOLD}${GREEN}  🎉 Installation complete!${NC}\n\n"
   printf "  ${BOLD}Next steps:${NC}\n"
   printf "    1. Run:  ${CYAN}agentos serve${NC}\n"
   printf "    2. Open: ${CYAN}http://localhost:18080${NC}\n"
-  printf "    3. Configure everything in the ${BOLD}Web UI Settings${NC}\n"
-  printf "\n"
-  printf "  ${YELLOW}Need a license key?${NC} Email ${BOLD}info@unicolab.ai${NC}\n"
-  printf "  ${CYAN}Docs:${NC} https://unicolab.github.io/agentos/\n"
-  printf "\n"
+  printf "    3. Configure in the ${BOLD}Web UI Settings${NC}\n\n"
+  printf "  ${YELLOW}Need a license?${NC} Email ${BOLD}info@unicolab.ai${NC}\n"
+  printf "  ${CYAN}Docs:${NC} https://unicolab.github.io/agentos/\n\n"
 }
 
 main "$@"

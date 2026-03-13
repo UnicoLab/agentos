@@ -46,7 +46,7 @@ All architectures are pre-built and available on the [Releases Page](https://git
 
 If you prefer to install manually:
 
-=== "macOS"
+=== "macOS (with admin)"
 
     ```bash
     # 1. Extract
@@ -55,16 +55,40 @@ If you prefer to install manually:
     # 2. Move to PATH
     sudo mv agentos /usr/local/bin/
 
-    # 3. Clear macOS quarantine + sign
-    sudo xattr -rd com.apple.quarantine /usr/local/bin/agentos
+    # 3. Clear quarantine + sign
+    xattr -rd com.apple.quarantine /usr/local/bin/agentos
     codesign --force --sign - /usr/local/bin/agentos
 
     # 4. Verify
     agentos version
     ```
 
+=== "macOS (no admin)"
+
+    No admin access? No problem — run it from any folder:
+
+    ```bash
+    # 1. Extract
+    tar xzf agentos_*_darwin_*.tar.gz
+
+    # 2. Clear quarantine (no sudo needed on your own files)
+    xattr -rd com.apple.quarantine ./agentos
+    codesign --force --sign - ./agentos
+
+    # 3. Run directly
+    ./agentos serve
+    ```
+
+    !!! tip "Optional: add to your user PATH"
+        ```bash
+        mkdir -p ~/.local/bin
+        mv agentos ~/.local/bin/
+        echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+        source ~/.zshrc
+        ```
+
     !!! warning "macOS Gatekeeper"
-        Since AgentOS is not yet notarized with Apple, macOS may show a security warning. The commands above clear the quarantine flag and ad-hoc sign the binary. Alternatively, go to **System Settings → Privacy & Security → Allow Anyway**.
+        If you still see a security warning, go to **System Settings → Privacy & Security** and click **"Allow Anyway"** next to the AgentOS entry.
 
 === "Linux"
 

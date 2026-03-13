@@ -105,15 +105,32 @@ main() {
   # Make executable
   chmod +x "${TMPDIR}/${BINARY_NAME}"
 
-  # Install to PATH
-  info "Installing to ${BOLD}${INSTALL_DIR}/${BINARY_NAME}${NC}..."
+  # Install to PATH — try system dir, fallback to user dir (no admin needed)
   if [ -w "${INSTALL_DIR}" ]; then
     mv "${TMPDIR}/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
-  else
-    warn "Elevated permissions required for ${INSTALL_DIR}"
+    success "Installed to ${INSTALL_DIR}/${BINARY_NAME}"
+  elif command -v sudo >/dev/null 2>&1 && sudo -n true 2>/dev/null; then
     sudo mv "${TMPDIR}/${BINARY_NAME}" "${INSTALL_DIR}/${BINARY_NAME}"
+    success "Installed to ${INSTALL_DIR}/${BINARY_NAME}"
+  else
+    # No admin access — install to user-local directory
+    USER_BIN="${HOME}/.local/bin"
+    mkdir -p "${USER_BIN}"
+    mv "${TMPDIR}/${BINARY_NAME}" "${USER_BIN}/${BINARY_NAME}"
+    INSTALL_DIR="${USER_BIN}"
+    success "Installed to ${USER_BIN}/${BINARY_NAME} (no admin required)"
+
+    # Ensure ~/.local/bin is in PATH
+    case ":${PATH}:" in
+      *":${USER_BIN}:"*) ;;
+      *)
+        warn "Add this to your shell profile (~/.zshrc or ~/.bashrc):"
+        echo "    export PATH=\"${USER_BIN}:\$PATH\""
+        # Also apply for this session
+        export PATH="${USER_BIN}:${PATH}"
+        ;;
+    esac
   fi
-  success "Installed to ${INSTALL_DIR}/${BINARY_NAME}"
 
   # Verify
   if command -v "${BINARY_NAME}" >/dev/null 2>&1; then

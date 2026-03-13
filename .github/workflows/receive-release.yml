@@ -1,0 +1,76 @@
+name: Receive Release
+
+on:
+  repository_dispatch:
+    types: [new-release]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    name: Publish Release to Public Repo
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download release assets from private repo
+        env:
+          GH_TOKEN: ${{ secrets.RELEASE_PAT }}
+        run: |
+          TAG="${{ github.event.client_payload.tag }}"
+          PRIVATE_REPO="UnicoLab/ul_aiflow_AgentOS"
+
+          echo "📦 Downloading release ${TAG} from ${PRIVATE_REPO}..."
+          mkdir -p release-assets
+
+          # Download all release assets
+          gh release download "${TAG}" \
+            --repo "${PRIVATE_REPO}" \
+            --dir ./release-assets \
+            --skip-existing
+
+          echo "✅ Downloaded assets:"
+          ls -la release-assets/
+
+      - name: Create public release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ github.event.client_payload.tag }}"
+          VERSION="${TAG#v}"  # Remove 'v' prefix for display
+
+          # Create release notes
+          cat > /tmp/release-notes.md << 'NOTES'
+          ## AgentOS — Jean-Pierre v${VERSION}
+
+          Cross-platform binaries for macOS, Linux, and Windows.
+
+          ### 📥 Installation
+
+          1. Download the archive for your platform below
+          2. Extract it: `tar xzf agentos_*.tar.gz` (or unzip on Windows)
+          3. Move to PATH: `sudo mv agentos /usr/local/bin/`
+          4. Run setup: `agentos setup`
+          5. Launch: `agentos serve`
+
+          ### 📖 Documentation
+
+          Full setup guides and documentation: **[unicolab.github.io/agentos](https://unicolab.github.io/agentos)**
+
+          ### 🔒 Privacy
+
+          Your data stays on your machine. See our [Security & Privacy](https://unicolab.github.io/agentos/security/) page.
+
+          ### 🎁 Beta Program
+
+          Get a **free license key** by joining our [beta program](mailto:beta@unicolab.ai)!
+          NOTES
+
+          # Create the release with all assets
+          gh release create "${TAG}" ./release-assets/* \
+            --title "Jean-Pierre ${TAG}" \
+            --notes-file /tmp/release-notes.md
+
+          echo "✅ Public release ${TAG} created!"

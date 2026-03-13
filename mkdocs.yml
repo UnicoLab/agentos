@@ -1,0 +1,106 @@
+site_name: AgentOS by UnicoLab
+site_url: https://unicolab.github.io/agentos
+site_description: "Local-first AI agents for your workflow — private, powerful, and customizable."
+site_author: UnicoLab
+repo_url: https://github.com/UnicoLab/agentos
+repo_name: UnicoLab/agentos
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/robot-happy-outline
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/UnicoLab
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/unicolab
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quick Start: getting-started/quick-start.md
+      - Configuration: getting-started/configuration.md
+  - Features:
+      - AI Copilot: features/ai-copilot.md
+      - Dashboard: features/dashboard.md
+      - Integrations: features/integrations.md
+      - Fleet View: features/fleet-view.md
+  - Guides:
+      - Ollama Setup: guides/ollama-setup.md
+      - GitHub Setup: guides/github-setup.md
+      - Jira Setup: guides/jira-setup.md
+      - Slack Setup: guides/slack-setup.md
+      - AIFlow Sync: guides/aiflow-sync.md
+      - Background Service: guides/background-service.md
+  - Reference:
+      - CLI Commands: reference/cli.md
+      - API Endpoints: reference/api.md
+      - Keyboard Shortcuts: reference/keyboard-shortcuts.md
+  - Flavors:
+      - Overview: flavors/index.md
+      - "Jean-Pierre — PM": flavors/jean-pierre.md
+  - Security & Privacy: security.md
+  - License: license.md
+
+copyright: "&copy; 2024–2026 UnicoLab. All rights reserved."

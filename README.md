@@ -46,13 +46,15 @@ You have **full control** over which AI model to use, which prompts to configure
 
 Grab the latest release for your platform:
 
-| Platform | Download |
-|----------|----------|
-| **macOS** (Apple Silicon) | [Download .tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **macOS** (Intel) | [Download .tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** (x86_64) | [Download .tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** (ARM64) | [Download .tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Windows** (x86_64) | [Download .zip](https://github.com/UnicoLab/agentos/releases/latest) |
+| Platform | Architecture | Download |
+|----------|-------------|----------|
+| **macOS** (Apple Silicon — M1/M2/M3/M4) | arm64 | [agentos_darwin_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **macOS** (Intel) | amd64 | [agentos_darwin_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **Linux** | x86_64 | [agentos_linux_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **Linux** (ARM — Raspberry Pi, etc.) | arm64 | [agentos_linux_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
+| **Windows** | x86_64 | [agentos_windows_amd64.zip](https://github.com/UnicoLab/agentos/releases/latest) |
+
+> 💡 **Not sure which macOS version?** Run `uname -m` in Terminal — `arm64` = Apple Silicon, `x86_64` = Intel
 
 ### 2. Install
 

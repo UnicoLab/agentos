@@ -6,6 +6,8 @@ hide:
 
 <div class="hero" markdown>
 
+<img src="assets/images/jp-orbital.png" alt="Jean-Pierre — AI PM Copilot" style="max-width: 400px; margin: 0 auto 1rem; display: block;">
+
 # AgentOS
 
 <p class="subtitle">
@@ -15,10 +17,9 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 <div class="hero-badges">
 
-[![Go](https://img.shields.io/badge/Go-1.23-00ADD8?style=flat-square&logo=go)](https://golang.org)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://react.dev)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=flat-square)]()
-[![License](https://img.shields.io/badge/License-Proprietary-green?style=flat-square)]()
+[![License](https://img.shields.io/badge/License-Free%20Testing-brightgreen?style=flat-square)](mailto:info@unicolab.ai)
+[![Privacy](https://img.shields.io/badge/Privacy-Local%20First-success?style=flat-square)](security.md)
 
 </div>
 

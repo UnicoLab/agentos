@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="docs/assets/images/jp-avatar.png" width="120" alt="AgentOS">
-
 # AgentOS
 
 ### 🤖 Local-First AI Agents for Your Workflow
@@ -9,8 +7,8 @@
 **Private. Powerful. Customizable.**
 
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=for-the-badge)](https://github.com/UnicoLab/agentos/releases/latest)
-[![Go](https://img.shields.io/badge/Built%20with-Go%201.23-00ADD8?style=for-the-badge&logo=go)](https://golang.org)
-[![React](https://img.shields.io/badge/UI-React%2019-61DAFB?style=for-the-badge&logo=react)](https://react.dev)
+[![License](https://img.shields.io/badge/License-Free%20Testing-brightgreen?style=for-the-badge)](mailto:info@unicolab.ai)
+[![Docs](https://img.shields.io/badge/Docs-unicolab.github.io-blue?style=for-the-badge)](https://unicolab.github.io/agentos)
 
 [📥 Download](https://github.com/UnicoLab/agentos/releases/latest) · [📖 Documentation](https://unicolab.github.io/agentos) · [📧 Request License](mailto:info@unicolab.ai) · [🐛 Report Bug](https://github.com/UnicoLab/agentos/issues)
 

@@ -1,0 +1,178 @@
+/* ── AgentOS Docs — Custom Styling ── */
+
+:root {
+  --md-primary-fg-color: #6c63ff;
+  --md-primary-fg-color--light: #8b7fff;
+  --md-primary-fg-color--dark: #5a52d5;
+  --md-accent-fg-color: #a78bfa;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #6c63ff, #a78bfa, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  color: var(--md-default-fg-color--light);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.hero-cta .md-button {
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+}
+
+/* Feature grid */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.12);
+}
+
+.feature-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Screenshot container */
+.screenshot {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  margin: 1.5rem 0;
+}
+
+.screenshot img {
+  width: 100%;
+  display: block;
+}
+
+/* Privacy badge */
+.privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(6, 182, 212, 0.1));
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Flavor cards */
+.flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.flavor-card {
+  padding: 2rem;
+  border-radius: 16px;
+  border: 2px solid var(--md-default-fg-color--lightest);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.flavor-card:hover {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 8px 32px rgba(108, 99, 255, 0.15);
+}
+
+.flavor-card .flavor-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Step cards */
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.step-card {
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  text-align: center;
+}
+
+.step-card .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Comparison table styling */
+.comparison-table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Override for dark mode screenshots */
+[data-md-color-scheme="slate"] .screenshot {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}

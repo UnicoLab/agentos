@@ -41,9 +41,8 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 !!! tip "100% Private & Secure"
     All your project data, chat conversations, and configurations stay on your local machine. The **only** external communication is for licensing validation, bug reports, feedback, and anonymized usage statistics — **never your project data**.
 
-<div class="screenshot">
-<img src="screens/flavors/pm/classic-view-dashboard.png" alt="AgentOS Dashboard — Classic View">
-</div>
+
+
 
 ---
 

@@ -30,6 +30,9 @@ theme:
     repo: fontawesome/brands/github
     logo: material/robot-happy-outline
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
@@ -38,9 +41,12 @@ theme:
     - navigation.footer
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
+    - content.code.annotate
     - content.tabs.link
     - toc.follow
+    - header.autohide
 
 extra:
   social:

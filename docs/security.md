@@ -95,14 +95,7 @@ All API keys are stored locally in `~/.agentos/config.yaml`. They are masked in 
 
 ---
 
-## Transparency & Auditability
 
-AgentOS is built on industry-standard, auditable technologies:
-
-- **Go** — High-performance, memory-safe compiled binary
-- **SQLite** — Transparent local database architecture
-- **React** — Modern, standard web UI components
-- **Standard APIs** — Uses official REST APIs for all integrations
 
 ---
 

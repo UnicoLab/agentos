@@ -59,7 +59,7 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 <div class="step-card">
 <div class="step-num">2</div>
 <h3>Configure</h3>
-<p>Either run <code>agentos setup</code> wizard or directly use the <strong>Web UI Settings</strong> to connect your agents.</p>
+<p>Configuration is <strong>optional</strong> — skip the CLI and go straight to the <strong>Web UI Settings</strong> to connect your agents and tools in seconds.</p>
 </div>
 
 <div class="step-card">

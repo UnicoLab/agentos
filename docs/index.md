@@ -52,20 +52,20 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 <div class="step-card">
 <div class="step-num">1</div>
-<h3>Download</h3>
-<p>Grab the binary for your platform from the <a href="https://github.com/UnicoLab/agentos/releases/latest">releases page</a></p>
+<h3>Launch</h3>
+<p>Run <code>agentos serve</code>. No complex installation required — the binary starts everything.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">2</div>
 <h3>Configure</h3>
-<p>Run <code>agentos setup</code> — the wizard walks you through provider, integrations, and project setup</p>
+<p>Either run <code>agentos setup</code> wizard or directly use the <strong>Web UI Settings</strong> to connect your agents.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">3</div>
-<h3>Launch</h3>
-<p>Run <code>agentos serve</code> and open <code>http://localhost:18080</code> — your AI agent is ready</p>
+<h3>Interact</h3>
+<p>AgentOS is live at <code>localhost:18080</code>. Your project intelligence is ready for natural language chat.</p>
 </div>
 
 </div>
@@ -74,46 +74,39 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 ## Key Features
 
-<div class="feature-grid">
+<div class="feature-grid" markdown>
 
-<div class="feature-card">
-<h3>🤖 AI Copilot</h3>
-<p>Streaming chat with Ollama (local), OpenAI, Anthropic, or Google Gemini. Persistent memory that learns your preferences across conversations.</p>
+<div class="feature-card" markdown>
+### 🤖 AI Copilot
+Streaming chat with Ollama (local), OpenAI, Anthropic, or Gemini. Persistent memory that learns your preferences.
+[AI Copilot →](features/ai-copilot.md)
 </div>
 
-<div class="feature-card">
-<h3>📊 Smart Dashboard</h3>
-<p>24-card bento-grid dashboard: KPIs, Risk Radar, Velocity Charts, Gantt, Heatmaps, Sprint Status, Team Leaderboard, and more — all drag-and-drop.</p>
+<div class="feature-card" markdown>
+### 📊 Smart Dashboard
+24-card bento-grid: KPIs, Risk Radar, Velocity, Gantt, Heatmaps, Sprint Status, and more — all drag-and-drop.
+[Dashboard →](features/dashboard.md)
 </div>
 
-<div class="feature-card">
-<h3>🐙 GitHub Integration</h3>
-<p>Multi-repo support: PRs, commits, issues, contributor activity, webhooks. Aggregate data across all your repositories in one view.</p>
+<div class="feature-card" markdown>
+### 🐙 Multi-Source Sync
+Aggregate GitHub repos and Jira boards in one view. Track PRs, commits, issues, and contributor velocity.
 </div>
 
-<div class="feature-card">
-<h3>📋 Jira Integration</h3>
-<p>Multi-board support: sprint status, issue tracking, epic grouping, and WIP breakdown. Cross-referenced with GitHub data.</p>
+<div class="feature-card" markdown>
+### 🔒 Local-First Privacy
+Runs on YOUR machine. Data sovereignty by design. SQLite storage, no cloud sync mandatory.
+[Security →](security.md)
 </div>
 
-<div class="feature-card">
-<h3>🔒 Local-First Privacy</h3>
-<p>Runs on YOUR machine. Data sovereignty by design. SQLite storage, no cloud sync unless you explicitly enable AIFlow Sync.</p>
+<div class="feature-card" markdown>
+### ⚡ Action Chain
+Watch your AI agent work. Tool calls visualized as an expanding chain with per-step timing and outputs.
 </div>
 
-<div class="feature-card">
-<h3>⚡ Action Chain</h3>
-<p>Watch your AI agent work in real-time — tool calls visualized as an expanding chain with per-step timing, arguments, and outputs.</p>
-</div>
-
-<div class="feature-card">
-<h3>🧠 Agent Memory</h3>
-<p>JP Memory auto-extracts facts, preferences, and corrections from every conversation and injects them as context in future replies.</p>
-</div>
-
-<div class="feature-card">
-<h3>🛸 Fleet View</h3>
-<p>Multi-project health overview — all projects ranked by risk score at a glance. Perfect for managers overseeing multiple teams.</p>
+<div class="feature-card" markdown>
+### 🛸 Fleet View
+Multi-project health overview — all projects ranked by risk score. Perfect for engineering managers.
 </div>
 
 </div>
@@ -122,28 +115,28 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 ## Flavors — One Engine, Many Agents
 
-AgentOS is built on a **flavor system** — each flavor is a specialized AI agent persona with its own personality, tools, and dashboard configuration.
+AgentOS is built on a **flavor system** — each flavor is a specialized AI agent persona with its own personality, tools, and visual DNA.
 
-<div class="flavor-grid">
+<div class="flavor-grid" markdown>
 
-<div class="flavor-card">
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🎩</div>
-<h3>Jean-Pierre — The PM</h3>
-<p>AI Project Management copilot. Tracks GitHub repos, Jira boards, generates standups, identifies risks, and manages your sprint.</p>
-<a href="flavors/jean-pierre/">Learn more →</a>
+### Jean-Pierre — The PM
+AI Project Management copilot. GitHub + Jira + Slack intelligence. Risk identifies and sprint management.
+[Learn more →](flavors/jean-pierre.md)
 </div>
 
-<div class="flavor-card">
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🏢</div>
-<h3>Office Assistant</h3>
-<p>Document management, scheduling, and workflow automation for office productivity.</p>
+### Office Assistant
+Document management, scheduling, and workflow automation for office productivity.
 <em>Coming soon</em>
 </div>
 
-<div class="flavor-card">
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🛒</div>
-<h3>Retail Ops</h3>
-<p>Inventory tracking, order management, and retail analytics AI assistant.</p>
+### Retail Ops
+Inventory tracking, order management, and retail analytics AI assistant.
 <em>Coming soon</em>
 </div>
 
@@ -153,12 +146,12 @@ AgentOS is built on a **flavor system** — each flavor is a specialized AI agen
 
 ## 🔓 No Vendor Lock-In — Full Control
 
-AgentOS puts **you** in charge:
+AgentOS puts **you** in charge of your intelligence infrastructure:
 
-- 🤖 **Choose your AI model** — Ollama (free, local), OpenAI, Anthropic, or Gemini. Switch anytime.
-- 📝 **Customize prompts** — Full control over the system prompt and agent behavior
-- 🧰 **Pick your tools** — GitHub, Jira, Slack, AIFlow — enable only what you need
-- 📂 **Own your data** — Standard SQLite. Export anytime. We never touch it.
+- 🤖 **Choose your AI model** — Ollama (local), OpenAI, Anthropic, or Gemini. Switch anytime.
+- 📝 **Customize prompts** — Full control over system prompts and agent behavior.
+- 🧰 **Pick your tools** — Enable only what is necessary for your workflow.
+- 📂 **Own your data** — Standard SQLite storage. Export anytime. We never touch it.
 
 ---
 
@@ -168,15 +161,14 @@ AgentOS puts **you** in charge:
 
 AgentOS was designed with a **privacy-first architecture**:
 
-| What stays local | What is communicated externally |
-|---|---|
-| ✅ All project data (commits, PRs, issues) | 🔑 License validation (Watchtower) |
-| ✅ All chat conversations & history | 📊 Anonymized usage statistics |
-| ✅ Agent memory & preferences | 🐛 Bug reports (user-initiated only) |
-| ✅ Configuration & API keys | 💬 Feedback (user-initiated only) |
-| ✅ Meeting notes & documents | |
+| Data Type | Storage | Leaves Your Machine? |
+|---|---|---|
+| Project Data (Commits, PRs, etc) | Local SQLite | ❌ **Never** |
+| Chat Conversations | Local SQLite | ❌ **Never** |
+| Agent Memory | Local SQLite | ❌ **Never** |
+| API Keys & Tokens | Local Config | ❌ **Never** |
 
-All API keys (GitHub, Jira, etc.) are stored **securely on your local machine** in `~/.agentos/config.yaml` and are never transmitted to UnicoLab.
+All communication with UnicoLab Watchtower is limited to **license validation** and anonymous feature metrics.
 
 [Learn more about our security model →](security.md)
 
@@ -185,29 +177,19 @@ All API keys (GitHub, Jira, etc.) are stored **securely on your local machine** 
 ## 🧪 R&D Testing Program — Try It Free
 
 !!! warning "License Required"
-    AgentOS requires a valid license key to operate. To get a **free testing license**, email **[info@unicolab.ai](mailto:info@unicolab.ai)**.
+    AgentOS requires a valid license key to operate. To get a **free testing license**, contact our team at **[info@unicolab.ai](mailto:info@unicolab.ai)**.
 
-AgentOS is an **experimental R&D project** — an autonomous compute node for project management. We're currently offering **free limited access to the PM flavor** (Jean-Pierre) in exchange for your feedback.
-
-This is a **base engine** that can be extended to any profile, tools, or business needs. The PM flavor is our first deployment — more flavors are coming.
-
-!!! note "Early Stage Software"
-    There may be bugs as the project is in active R&D. Your feedback helps us improve!
-
-### What you get:
-- 🎁 **Free license key** — no cost, no commitment
-- 🏷️ **Priority support** from the core team
-- 🗳️ **Direct influence** on the roadmap
+AgentOS is an **experimental AI platform** — an autonomous compute node for advanced project management. We are offering free access to the PM flavor (Jean-Pierre) during the public beta.
 
 ### How to get started:
-1. **Download** from the [releases page](https://github.com/UnicoLab/agentos/releases/latest)
-2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your license
-3. **Install, configure, and start using** — see the [Quick Start Guide](getting-started/quick-start.md)
+1. **Download** from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
+2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your activation key.
+3. **Launch and Configure** — See the [Quick Start Guide](getting-started/quick-start.md) to get running in minutes.
 
 <div class="hero-cta" markdown>
 
-[Download Now :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Request License :material-email:](mailto:info@unicolab.ai){ .md-button }
+[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
+[Email for Key :material-email:](mailto:info@unicolab.ai){ .md-button }
 
 </div>
 

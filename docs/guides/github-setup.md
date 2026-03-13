@@ -1,104 +1,80 @@
-# GitHub Setup
+<div class="hero" markdown>
 
-Connect AgentOS to your GitHub repositories to track PRs, commits, issues, and contributor activity in real-time.
+# 🐙 GitHub Integration
 
----
+Connect AgentOS to your GitHub repositories to track PRs, commits, issues, and contributor velocity in real-time.
 
-## Create a Personal Access Token
-
-1. Go to [github.com/settings/tokens](https://github.com/settings/tokens)
-2. Click **Generate new token (classic)**
-3. Give it a descriptive name (e.g., "AgentOS")
-4. Select these scopes:
-    - [x] `repo` — Full control of private repositories
-    - [x] `read:org` — Read org membership (optional, for org repos)
-5. Click **Generate token**
-6. **Copy the token** — you won't see it again!
-
-!!! warning "Keep your token safe"
-    Your token is stored locally in `~/.agentos/config.yaml` and is **never sent anywhere** except directly to GitHub's API from your machine.
-
----
-
-## Configure in AgentOS
-
-### Option 1: Settings UI (easiest)
-
-1. Open AgentOS at `http://localhost:18080`
-2. Press ++cmd+comma++ to open Settings
-3. Navigate to **Integrations → GitHub**
-4. Paste your token
-5. Click **Save**
-
-<div class="screenshot">
-<img src="../../screens/flavors/pm/github-config.png" alt="GitHub Configuration">
+<div class="hero-cta" markdown>
+[Set Up Connectors :material-cog:](../getting-started/configuration.md){ .md-button .md-button--primary }
 </div>
 
-### Option 2: Config File
-
-Add to `~/.agentos/config.yaml`:
-
-```yaml
-github_token: ghp_xxxxxxxxxxxxxxxxxxxx
-```
+</div>
 
 ---
 
-## Add GitHub Repos to a Project
+## 🔑 Security & Authentication
 
-Once your token is configured, add repos to a project:
+AgentOS uses **Personal Access Tokens (classic)** to communicate directly with GitHub's REST API. Your token is never shared with UnicoLab — it stays encrypted on your local machine.
 
-1. Go to **Projects** → Select or create a project
-2. Under **GitHub**, add your repository paths:
-    - Format: `owner/repo-name`
-    - Example: `facebook/react`, `myorg/my-app`
-3. You can add **multiple repos** — they'll be aggregated in the dashboard
+<div class="step-grid" markdown>
 
-```yaml
-# Example in projects.yaml
-projects:
-  - name: My Product
-    github:
-      repos:
-        - myorg/frontend
-        - myorg/backend
-        - myorg/docs
-      days_to_fetch: 30
-```
+<div class="step-card" markdown>
+<div class="step-num">1</div>
+### Generate Token
+Visit [github.com/settings/tokens](https://github.com/settings/tokens) and create a new **Classic** token.
+</div>
 
----
+<div class="step-card" markdown>
+<div class="step-num">2</div>
+### Select Scopes
+Enable the `repo` scope (covers private repositories, PRs, and issues).
+</div>
 
-## What You'll See
+<div class="step-card" markdown>
+<div class="step-num">3</div>
+### Connect
+Copy the token and paste it into the **Settings > Integrations > GitHub** panel in the AgentOS Web UI.
+</div>
 
-Once connected, your dashboard will show:
-
-- **KPIs** — Open PRs, issues, commit count, contributors
-- **PR List** — All open PRs with review status and AI reviewer suggestions
-- **Commit Chart** — Activity over time with per-author breakdown
-- **Velocity Chart** — 8-week contributor velocity
-- **Contribution Heatmap** — 26-week activity grid
-- **Risk Radar** — AI-scored risk from stale PRs, missing reviewers, etc.
+</div>
 
 ---
 
-## Webhooks (Optional, Advanced)
+## 📊 Mapping Your Workspace
 
-For **real-time** updates (instead of polling), you can set up a GitHub webhook:
+Once the connector is active, you can link repositories to your projects.
 
-1. In your GitHub repo, go to **Settings → Webhooks**
-2. Add webhook:
-    - **URL**: `http://your-machine:18080/v1/webhook/github`
-    - **Content type**: `application/json`
-    - **Secret**: (optional, for HMAC verification)
-    - **Events**: Push, Pull requests, Issues
+<div class="screenshot" markdown>
+![GitHub Configuration](../assets/screens/flavors/pm/github-config.png)
+</div>
 
-!!! note
-    Webhooks require your machine to be reachable from the internet. For local development, this is typically not needed — AgentOS polls GitHub automatically.
+### Multi-Repo Aggregation
+Jean-Pierre can track multiple repositories under a single project. This is perfect for microservices or mono-repo workflows where a single "product" spans several codebases.
+
+!!! example "Project Definition"
+    - **Project**: Core Engine
+    - **Repos**: `myorg/api`, `myorg/frontend`, `myorg/docs`
+    - **Index Depth**: 30 Days (Recommended)
 
 ---
 
-## Next Steps
+## 🏗️ What Jean-Pierre Indexes
 
-- [Set up Jira →](jira-setup.md)
-- [Set up Slack →](slack-setup.md)
-- [Back to Quick Start →](../getting-started/quick-start.md)
+- **Pull Requests**: Status, review blockers, and long-running "stale" PRs.
+- **Commits**: Author velocity, heatmap activity, and codebase churn.
+- **Issues**: Label-based tracking and milestone progress.
+- **Contributors**: Active developers and contribution streaks.
+
+---
+
+## ⚡ Real-Time Webhooks (Advanced)
+
+By default, AgentOS polls GitHub every few minutes. If you want instant updates, you can expose your local server (e.g., via ngrok) and set up a repository webhook pointing to:
+
+`http://your-domain.com:18080/v1/webhook/github`
+
+---
+
+<div class="hero-cta" markdown>
+[Next: Connect Jira →](jira-setup.md){ .md-button }
+</div>

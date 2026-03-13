@@ -1,55 +1,98 @@
-# Dashboard
+<div class="hero" markdown>
+
+# 📊 Project Dashboard
 
 A 24-card, drag-and-drop bento-grid dashboard that gives you a complete picture of your project at a glance.
 
----
-
-<div class="screenshot">
-<img src="../../screens/flavors/pm/classic-view-dashboard.png" alt="Project Dashboard">
+<div class="hero-cta" markdown>
+[View Jean-Pierre Flavor →](../flavors/jean-pierre.md){ .md-button .md-button--primary }
 </div>
 
-## Dashboard Cards
-
-Every card is draggable, resizable, and interactive. Click any card's **Ask JP** button to get AI-powered analysis.
-
-| Card | What it shows |
-|------|---------------|
-| 📊 **KPIs** | Open PRs, issues, commits, stars — dynamic labels based on fetch range |
-| 🎯 **Risk Radar** | 0–100 risk score from stale PRs, low velocity, sprint lag |
-| 📈 **Velocity Chart** | 8-week stacked author velocity chart |
-| 📅 **Gantt Chart** | AI-generated timeline from real PR + sprint data |
-| 🎯 **Action Center** | Centralized risks, AI recommendations, checkable task list |
-| 🏆 **Team Leaderboard** | Gamified contributor ranking with streaks and badges |
-| 🌡️ **Contribution Heatmap** | 26-week commit activity grid |
-| 🔀 **Pull Requests** | Live PR list with AI reviewer suggestions |
-| 🐛 **Issues** | Labeled issue tracker |
-| 📰 **Daily Brief** | Auto-generated morning project summary |
-| 🧩 **Sprint Status** | Jira sprint ring with WIP/Done/Todo |
-| 🗺️ **Mind Map** | Jira issue visual map by type/label |
-| 🏗️ **Epic Tracker** | Issues grouped by Epic with progress |
-| 📝 **Notes** | Auto-saving markdown scratchpad per project |
-| 🔍 **PR Dependencies** | Force graph of PR relationships |
-| 📅 **Sprint Planner** | AI-generated sprint plans |
-| 📋 **Scheduled Reports** | Automated report delivery |
-| 📄 **Executive Report** | Boardroom-ready PDF export |
-| 🕐 **Activity Timeline** | Full activity feed with weekly AI summaries |
-| 🔄 **Update Log** | Data freshness and connector status |
+</div>
 
 ---
 
-## Living View
+## The Command Center
 
-Switch between **Classic** (bento grid) and **Living** (orbital) dashboard modes:
+<div class="screenshot" markdown>
+![Project Dashboard](../assets/screens/flavors/pm/classic-view-dashboard.png)
+</div>
 
-- **Classic** — Traditional card grid, drag-and-drop customization
-- **Living** — Animated orbital view with JP bubble at center, interactive nodes for each widget
+Every card is draggable, resizable, and interactive. Click any card's **"Ask JP"** button to get an instant AI analysis of that specific metric.
 
 ---
 
-## Keyboard Shortcuts
+## High-Density Widgets
 
-| Shortcut | Action |
-|----------|--------|
-| ++cmd+r++ | Refresh dashboard data |
-| ++cmd+k++ | Command Palette |
-| ++cmd+comma++ | Settings |
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### 📈 Risk Radar
+0–100 risk score calculated from stale PRs, low velocity, and sprint lag.
+</div>
+
+<div class="feature-card" markdown>
+### 🏗️ Velocity Charts
+8-week stacked author velocity and contribution heatmaps.
+</div>
+
+<div class="feature-card" markdown>
+### 📅 Smart Gantt
+Auto-generated timelines derived from real PR activity and sprint data.
+</div>
+
+<div class="feature-card" markdown>
+### 🎯 Action Center
+Centralized risk assessment with AI-recommended next steps and task lists.
+</div>
+
+</div>
+
+---
+
+## Dynamic Card Library
+
+| Card | Description |
+|------|-------------|
+| 📊 **KPIs** | Open PRs, issues, commits, stars — dynamic labels based on range |
+| 🔀 **Pull Requests** | Live PR list with AI-powered reviewer suggestions |
+| 🧩 **Sprint Status** | Jira metrics visualized as progress rings (WIP vs Done) |
+| 🗺️ **Mind Map** | Visual dependency graph of Jira issues and epics |
+| 🏆 **Leaderboard** | Gamified team contribution metrics with streaks and badges |
+| 🕐 **Activity Feed** | Reverse-chronological timeline of all project events |
+
+---
+
+## 👽 Living View Mode
+
+Toggle between two distinct visual experiences:
+
+<div class="step-grid" markdown>
+
+<div class="step-card" markdown>
+### 🧱 Classic Bento
+Traditional card grid. Best for dense information review and dashboard building.
+</div>
+
+<div class="step-card" markdown>
+### 🫧 Living Orbital
+An animated, immersive view with Jean-Pierre at the center. Widgets orbit the agent as interactive nodes.
+</div>
+
+</div>
+
+!!! info "Pro Tip"
+    Hover over the Jean-Pierre avatar in the center of the orbital view to see his current "mood" based on project health scores.
+
+---
+
+## Keyboard Mastery
+
+Press ++cmd+k++ anytime to open the **Command Palette**.
+
+| Action | Shortcut |
+|--------|----------|
+| **Refresh Data** | ++cmd+r++ |
+| **Search Engine** | ++cmd+k++ |
+| **Toggle Sidebar** | ++cmd+b++ |
+| **Agent Settings** | ++cmd+comma++ |

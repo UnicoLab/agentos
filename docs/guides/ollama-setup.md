@@ -1,129 +1,99 @@
-# Ollama Setup — Free Local AI
+<div class="hero" markdown>
 
-[Ollama](https://ollama.com) lets you run powerful AI models **entirely on your machine** — no API keys, no costs, no data leaving your computer. This is the recommended setup for maximum privacy.
+# 🤖 Ollama Setup — Free Local AI
 
----
+[Ollama](https://ollama.com) is the recommended way to run AgentOS. It lets you run high-fidelity Large Language Models **entirely on your machine** with maximum privacy and zero recurring costs.
 
-## Install Ollama
+<div class="hero-cta" markdown>
+[Download Ollama :material-download:](https://ollama.com/download){ .md-button .md-button--primary }
+[Next: Connect GitHub →](github-setup.md){ .md-button }
+</div>
 
-=== "macOS"
-
-    ```bash
-    # Install via Homebrew (recommended)
-    brew install ollama
-
-    # Or download from https://ollama.com/download
-    ```
-
-=== "Linux"
-
-    ```bash
-    # One-line installer
-    curl -fsSL https://ollama.com/install.sh | sh
-    ```
-
-=== "Windows"
-
-    Download the installer from [ollama.com/download](https://ollama.com/download) and run it.
+</div>
 
 ---
 
-## Download a Model
+## 🏗️ Installation
 
-After installing Ollama, pull a model. We recommend starting with **Llama 3.2** — it's fast, capable, and free:
+<div class="step-grid" markdown>
+
+<div class="step-card" markdown>
+### macOS
+Download the macOS app or install via Homebrew:
+`brew install ollama`
+</div>
+
+<div class="step-card" markdown>
+### Linux
+One-line installer:
+`curl -fsSL https://ollama.com/install.sh | sh`
+</div>
+
+<div class="step-card" markdown>
+### Windows
+Download the `.exe` installer from the official site and follow the prompts.
+</div>
+
+</div>
+
+---
+
+## 🧠 Choice of Models
+
+After installing, you need to "pull" a model. We've optimized Jean-Pierre for the **Llama 3** family.
 
 ```bash
-# Pull the default model (recommended for most systems)
+# Recommended for most users
 ollama pull llama3.2
 
-# For more powerful systems (16GB+ RAM), try the larger version
+# For powerful workstations (M3 Max / RTX 4090)
 ollama pull llama3.2:70b
 
-# For lightweight systems (8GB RAM), use the smaller version
+# For ultra-lightweight performance
 ollama pull llama3.2:1b
 ```
 
-### Model Recommendations
+### Hardware Recommendations
 
-| Model | RAM Needed | Quality | Speed | Best For |
-|-------|-----------|---------|-------|----------|
-| `llama3.2:1b` | 4GB | ⭐⭐ | ⚡⚡⚡ | Low-resource machines |
-| `llama3.2` (8b) | 8GB | ⭐⭐⭐⭐ | ⚡⚡ | **Most users (recommended)** |
-| `llama3.2:70b` | 48GB | ⭐⭐⭐⭐⭐ | ⚡ | Best quality, needs powerful hardware |
-| `mistral` | 8GB | ⭐⭐⭐⭐ | ⚡⚡ | Good alternative |
-| `codellama` | 8GB | ⭐⭐⭐ | ⚡⚡ | Code-focused tasks |
+| Model | RAM | Quality | Best For |
+|-------|-----|---------|----------|
+| **Llama 3.2 (3b)** | 8GB | ⭐⭐⭐⭐ | **Universal standard** |
+| **Mistral (7b)** | 16GB | ⭐⭐⭐⭐ | Alternative logic |
+| **Llama 3.1 (70b)** | 48GB | ⭐⭐⭐⭐⭐ | Executive reasoning |
 
 ---
 
-## Start Ollama
+## ⚡ Connecting to AgentOS
 
-Ollama runs as a background service:
+Once Ollama is running (it stays in your system tray on macOS/Windows), simply tell AgentOS which flavor to use.
 
-```bash
-# Start the Ollama server (runs on port 11434)
-ollama serve
+<div class="step-grid" markdown>
 
-# Verify it's running
-curl http://localhost:11434/api/tags
-```
+<div class="step-card" markdown>
+<div class="step-num">1</div>
+### Web UI
+Open **Settings** (++cmd+comma++), select **Ollama** as the provider, and pick your model from the dropdown.
+</div>
 
-!!! tip "Auto-start"
-    On macOS, Ollama auto-starts when you open the app. On Linux, it runs as a systemd service automatically after installation.
+<div class="step-card" markdown>
+<div class="step-num">2</div>
+### CLI
+Run `agentos serve`. The engine will auto-detect the local Ollama instance at `http://localhost:11434`.
+</div>
 
----
-
-## Configure AgentOS to use Ollama
-
-### Option 1: Setup Wizard
-
-Run `agentos setup` and select **Ollama** as your AI provider. It will auto-detect available models.
-
-### Option 2: Settings UI
-
-1. Open AgentOS at `http://localhost:18080`
-2. Press ++cmd+comma++ to open Settings
-3. Under **AI Provider**, select **Ollama**
-4. Choose your model from the dropdown
-
-### Option 3: Config File
-
-Edit `~/.agentos/config.yaml`:
-
-```yaml
-ollama_model: llama3.2:latest
-ollama_url: http://localhost:11434
-```
+</div>
 
 ---
 
-## Verify It Works
+## 🛠️ Performance Tuning
 
-1. Start AgentOS: `agentos serve`
-2. Open the chat panel
-3. Ask: *"Hello, introduce yourself"*
-
-If everything is configured correctly, you'll see the agent respond using your local Ollama model — **completely offline, completely private**.
-
----
-
-## Troubleshooting
-
-??? question "AgentOS can't connect to Ollama"
-    Make sure Ollama is running: `ollama serve`  
-    Check the URL in your config matches (default: `http://localhost:11434`)
-
-??? question "Model is too slow"
-    Try a smaller model: `ollama pull llama3.2:1b`  
-    Close other memory-heavy applications
-
-??? question "Out of memory errors"
-    Your chosen model needs more RAM than available.  
-    Switch to a smaller model or close other applications.
+If the agent feels sluggish, ensure you have:
+1. **Model Matching**: Don't run a 70B model on a MacBook Air. Stick to 3B or 7B.
+2. **GPU Acceleration**: Ollama automatically uses WebGPU/Metal on macOS. On Linux/Windows, ensure your NVIDIA/AMD drivers are up to date.
+3. **Dedicated Resources**: Close high-memory browser tabs or development servers if you're pushing larger models.
 
 ---
 
-## Next Steps
-
-- [Connect GitHub →](github-setup.md)
-- [Connect Jira →](jira-setup.md)
-- [Back to Quick Start →](../getting-started/quick-start.md)
+<div class="hero-cta" markdown>
+[Back to Quick Start →](../getting-started/quick-start.md){ .md-button }
+</div>

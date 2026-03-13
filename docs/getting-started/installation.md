@@ -1,153 +1,129 @@
-# Installation
+<div class="hero" markdown>
 
-Getting AgentOS running on your machine takes less than 5 minutes. Pick your platform and follow the steps below.
+# 🛠️ Installation
 
----
+Getting AgentOS running on your machine takes less than 5 minutes. 
 
-## Download
+<div class="hero-cta" markdown>
+[Download Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
+[Quick Start Guide :material-rocket-launch:](quick-start.md){ .md-button }
+</div>
 
-Head to the **[Releases Page](https://github.com/UnicoLab/agentos/releases/latest)** and download the archive matching your system:
-
-| Platform | Architecture | File |
-|----------|-------------|------|
-| **macOS** (Apple Silicon — M1/M2/M3/M4) | arm64 | `agentos_*_darwin_arm64.tar.gz` |
-| **macOS** (Intel) | amd64 | `agentos_*_darwin_amd64.tar.gz` |
-| **Linux** | x86_64 | `agentos_*_linux_amd64.tar.gz` |
-| **Linux** (ARM — Raspberry Pi, etc.) | arm64 | `agentos_*_linux_arm64.tar.gz` |
-| **Windows** | x86_64 | `agentos_*_windows_amd64.zip` |
-
-!!! tip "Not sure which macOS version?"
-    Open **Terminal** and run: `uname -m`  
-    — If it says `arm64`, you have Apple Silicon  
-    — If it says `x86_64`, you have Intel
+</div>
 
 ---
 
-## Install
+## 🏗️ Supported Platforms
+
+Head to the **[Releases Page](https://github.com/UnicoLab/agentos/releases/latest)** and grab the archive for your system.
+
+| Platform | Architecture | Recommended For |
+|----------|-------------|-----------------|
+| **macOS** | arm64 | Apple Silicon (M1, M2, M3, M4) |
+| **macOS** | amd64 | Intel Macs |
+| **Linux** | amd64 | Standard PC / Cloud Servers |
+| **Linux** | arm64 | Raspberry Pi 4/5, Graviton |
+| **Windows** | amd64 | Standard PC |
+
+---
+
+## 🚀 Setup Flow
+
+<div class="step-grid" markdown>
+
+<div class="step-card" markdown>
+<div class="step-num">1</div>
+### Extract
+Unzip or untar the downloaded file. You'll get a single `agentos` executable binary.
+</div>
+
+<div class="step-card" markdown>
+<div class="step-num">2</div>
+### Move to PATH
+(Optional) Move the binary to `/usr/local/bin` or your Windows PATH so you can run it from anywhere.
+</div>
+
+<div class="step-card" markdown>
+<div class="step-num">3</div>
+### Serve
+Run `agentos serve`. This starts the local API engine and launches the premium Web UI.
+</div>
+
+</div>
+
+---
+
+## 🖥️ Platform-Specific Steps
 
 === "macOS"
 
     ```bash
-    # 1. Extract the archive
-    tar xzf agentos_*_darwin_*.tar.gz
-
-    # 2. Move the binary to your PATH (so you can run it from anywhere)
+    # 1. Move to local bin
     sudo mv agentos /usr/local/bin/
 
-    # 3. Remove the quarantine flag (macOS security)
+    # 2. Clear quarantine (required for first run)
     sudo xattr -rd com.apple.quarantine /usr/local/bin/agentos
 
-    # 4. Verify it works
+    # 3. Verify
     agentos version
     ```
 
-    !!! note "macOS Gatekeeper"
-        Since AgentOS is not (yet) notarized with Apple, macOS may show a security warning the first time you run it. The `xattr` command above removes this. Alternatively, go to **System Settings → Privacy & Security** and click "Allow Anyway".
+    !!! tip "Apple Silicon vs Intel"
+        Run `uname -m` in Terminal. If it says `arm64`, download the **arm64** version. If it says `x86_64`, download the **amd64** version.
 
 === "Linux"
 
     ```bash
-    # 1. Extract the archive
-    tar xzf agentos_*_linux_*.tar.gz
-
-    # 2. Move the binary to your PATH
+    # 1. Move to local bin
     sudo mv agentos /usr/local/bin/
-
-    # 3. Make it executable (usually already set)
     sudo chmod +x /usr/local/bin/agentos
 
-    # 4. Verify it works
+    # 2. Verify
     agentos version
     ```
 
 === "Windows"
 
-    1. **Extract** the `.zip` archive to a folder (e.g., `C:\Program Files\AgentOS\`)
-    2. **Add to PATH** (optional, for command-line access):
-        - Open **Settings → System → About → Advanced system settings**
-        - Click **Environment Variables**
-        - Edit the **Path** variable and add `C:\Program Files\AgentOS\`
-    3. **Double-click** `agentos.exe` to launch, or run from PowerShell:
-    
-    ```powershell
-    cd "C:\Program Files\AgentOS"
-    .\agentos.exe serve
-    ```
+    1. Extract the `agentos.exe` to a permanent folder.
+    2. (Optional) Add the folder to your system **Path** variable.
+    3. Open PowerShell and run:
+       ```powershell
+       .\agentos.exe serve
+       ```
 
 ---
 
-## First Run — Setup Wizard
+## ⚙️ Initial Configuration
 
-When you launch AgentOS for the first time, it will guide you through an interactive setup wizard:
+Once AgentOS is running, navigate to `http://localhost:18080` to access the **Interactive Settings Dashboard**. 
 
+You can also run the CLI wizard if you prefer terminal-based setup:
 ```bash
 agentos setup
 ```
 
-The wizard will help you configure:
-
-1. **AI Provider** — Choose between Ollama (free, local), OpenAI, Anthropic, or Google Gemini
-2. **GitHub Connection** — Connect your GitHub repos for project tracking
-3. **Jira Connection** — (Optional) Connect Jira boards for sprint data
-4. **License Key** — Enter your Watchtower license key
-
-!!! info "No license key yet?"
-    We offer **free beta licenses** for early adopters! See the [License page](../license.md) for details on how to get one.
+### What you'll need:
+- 🤖 **AI Provider**: API keys or a local [Ollama](../guides/ollama-setup.md) installation.
+- 🐙 **GitHub Token**: For fetching repository data (optional).
+- 🔑 **License Key**: For premium features (request yours at [info@unicolab.ai](mailto:info@unicolab.ai)).
 
 ---
 
-## Quick Launch
+## 🔋 Background Service
 
-Once setup is done, start AgentOS:
+If you want AgentOS to start automatically on boot:
 
 ```bash
-# Start the server
-agentos serve
+# Install as a background service
+agentos serve --install-service
 
-# Your browser will open automatically at:
-# → http://localhost:18080
+# Check status
+# macOS: launchctl list | grep agentos
+# Linux: systemctl --user status agentos
 ```
 
-That's it! 🎉 AgentOS is now running on your machine with a premium web interface.
-
 ---
 
-## Run as a Background Service
-
-Want AgentOS to start automatically when you log in?
-
-=== "macOS (launchd)"
-
-    ```bash
-    # Install as a user service
-    agentos serve --install-service
-
-    # Check status
-    launchctl list | grep agentos
-
-    # Uninstall later
-    agentos serve --uninstall-service
-    ```
-
-=== "Linux (systemd)"
-
-    ```bash
-    # Install as a user service
-    agentos serve --install-service
-
-    # Check status
-    systemctl --user status agentos
-
-    # Uninstall later
-    agentos serve --uninstall-service
-    ```
-
-Once installed as a service, AgentOS runs in the background and is always available at `http://localhost:18080`.
-
----
-
-## Next Steps
-
-- [Quick Start Guide →](quick-start.md) — 5-minute walkthrough of your first session
-- [Set up Ollama for free local AI →](../guides/ollama-setup.md) — Run AI completely on your machine
-- [Connect GitHub →](../guides/github-setup.md) — Track your repositories
+<div class="hero-cta" markdown>
+[Next: Quick Start Guide →](quick-start.md){ .md-button .md-button--primary }
+</div>

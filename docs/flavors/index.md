@@ -1,51 +1,80 @@
-# Flavors
+# AgentOS Flavors
 
 AgentOS is built on a **flavor system** — each flavor is a specialized AI agent persona with its own personality, tools, dashboard configuration, and use case.
 
 ---
 
-## What is a Flavor?
+<div class="hero" markdown>
 
-A flavor defines:
+## One Engine, Many Agents
 
-- 🤖 **Agent Persona** — Name, personality, communication style, system prompt
-- 🧰 **Available Tools** — Which integrations and capabilities are enabled
-- 📊 **Dashboard Layout** — Which cards appear by default
-- ⚡ **Quick Actions** — One-click prompts tailored to the use case
-- 🎨 **Branding** — Icon, accent color, welcome message
+A flavor is a tailored experience that transforms the base AgentOS engine into a specialized assistant.
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### 🤖 Agent Persona
+Name, personality, communication style, and specialized system prompt.
+</div>
+
+<div class="feature-card" markdown>
+### 🧰 Available Tools
+Which integrations and capabilities are enabled for the agent.
+</div>
+
+<div class="feature-card" markdown>
+### 📊 Dashboard Layout
+A custom bento-grid layout tailored to the flavor's specific data sources.
+</div>
+
+<div class="feature-card" markdown>
+### ⚡ Quick Actions
+One-click workflows and prompts tailored to the industry or role.
+</div>
+
+</div>
+
+</div>
 
 ---
 
 ## Available Flavors
 
-<div class="flavor-grid">
+<div class="flavor-grid" markdown>
 
-<div class="flavor-card">
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🎩</div>
-<h3>Jean-Pierre — The PM</h3>
-<p>AI Project Management copilot. GitHub + Jira + Slack intelligence.</p>
-<strong>Status: ✅ Available</strong>
-<br><a href="jean-pierre/">Learn more →</a>
+### Jean-Pierre — The PM
+AI Project Management copilot. GitHub + Jira + Slack intelligence.
+<br>
+**Status: ✅ Available**
+<br>
+[Learn more →](jean-pierre.md)
 </div>
 
-<div class="flavor-card">
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🏢</div>
-<h3>Office Assistant</h3>
-<p>Document management, scheduling, and workflow automation.</p>
-<strong>Status: 🔜 Coming Soon</strong>
+### Office Assistant
+Document management, scheduling, and workflow automation.
+<br>
+**Status: 🔜 Coming Soon**
 </div>
 
-<div class="flavor-card">
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🛒</div>
-<h3>Retail Ops</h3>
-<p>Inventory, orders, and retail analytics assistant.</p>
-<strong>Status: 🔜 Coming Soon</strong>
+### Retail Ops
+Inventory, orders, and retail analytics assistant.
+<br>
+**Status: 🔜 Coming Soon**
 </div>
 
 </div>
 
 ---
 
-## Custom Flavors
+## 🎨 Custom Flavors
 
-AgentOS's flavor system is extensible -> to any use-case, tools, connectors etc ... Imagine all possibilities, we can create a flavor for any need, any industry, any use-case, any role !
+The AgentOS flavor system is designed to be fully extensible. We can create specialized agents for any role, industry, or complex workflow.
+
+!!! tip "Enterprise Customization"
+    Need a custom flavor for your organization? We can build tailored agents that connect to your proprietary tools and data sources. [Contact us](mailto:info@unicolab.ai) to discuss your needs.

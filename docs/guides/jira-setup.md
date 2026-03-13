@@ -1,81 +1,65 @@
-# Jira Setup
+<div class="hero" markdown>
+
+# 📋 Jira Integration
 
 Connect AgentOS to your Jira boards to track sprints, issues, epics, and team workload.
 
----
-
-## Prerequisites
-
-- A Jira Cloud account (Atlassian)
-- An API token from Atlassian
-
----
-
-## Create an API Token
-
-1. Go to [id.atlassian.com/manage-profile/security/api-tokens](https://id.atlassian.com/manage-profile/security/api-tokens)
-2. Click **Create API token**
-3. Give it a label (e.g., "AgentOS")
-4. **Copy the token**
-
----
-
-## Configure in AgentOS
-
-### Option 1: Settings UI
-
-1. Open Settings (++cmd+comma++)
-2. Navigate to **Integrations → Jira**
-3. Fill in:
-    - **Site URL**: `https://yourcompany.atlassian.net`
-    - **Email**: Your Atlassian account email
-    - **API Token**: The token you just created
-4. Click **Save**
-
-<div class="screenshot">
-<img src="../../screens/flavors/pm/jira-config.png" alt="Jira Configuration">
+<div class="hero-cta" markdown>
+[Set Up Connectors :material-cog:](../getting-started/configuration.md){ .md-button .md-button--primary }
 </div>
 
-### Option 2: Config File
-
-```yaml
-jira_site_url: https://yourcompany.atlassian.net
-jira_email: you@company.com
-jira_token: "your-api-token"
-```
+</div>
 
 ---
 
-## Add Jira Boards to a Project
+## 🏗️ Setup Workflow
 
-```yaml
-projects:
-  - name: My Product
-    jira:
-      - project_key: PROD
-        board_id: 42
-        days_to_fetch: 14
-      - project_key: INFRA      # multiple boards supported
-        board_id: 55
-```
+<div class="step-grid" markdown>
 
-!!! tip "Finding your Board ID"
-    Open your Jira board in a browser. The URL will look like:  
-    `https://yourcompany.atlassian.net/jira/software/projects/PROD/boards/42`  
-    The number at the end (`42`) is your board ID.
+<div class="step-card" markdown>
+<div class="step-num">1</div>
+### Create Token
+Visit [id.atlassian.com](https://id.atlassian.com/manage-profile/security/api-tokens) and generate a new API token labeled "AgentOS".
+</div>
 
----
+<div class="step-card" markdown>
+<div class="step-num">2</div>
+### Authenticate
+Enter your **Site URL** (`yourcompany.atlassian.net`), your **email**, and the **token** in the Settings panel.
+</div>
 
-## What You'll See
+<div class="step-card" markdown>
+<div class="step-num">3</div>
+### Link Boards
+Add your Board IDs to your project configuration. Jean-Pierre will begin hydration immediately.
+</div>
 
-- **Sprint Status** — Ring chart showing Done/WIP/Todo
-- **Epic Tracker** — Issues grouped by Epic with progress bars
-- **Mind Map** — Visual map of issues by type and label
-- **Sprint Planner** — AI-generated sprint plans from backlog data
+</div>
 
 ---
 
-## Next Steps
+## 📊 Mapping Your Jira Boards
 
-- [Set up Slack →](slack-setup.md)
-- [Back to Quick Start →](../getting-started/quick-start.md)
+<div class="screenshot" markdown>
+![Jira Configuration](../assets/screens/flavors/pm/jira-config.png)
+</div>
+
+!!! info "Finding your Board ID"
+    Open your Jira board in a browser. The numerical value at the end of the URL (e.g., `.../boards/42`) is your **Board ID**.
+
+---
+
+## 🎨 Intelligence Delivered
+
+Once connected, your dashboard is enriched with professional project metrics:
+
+- **Sprint Status**: Interactive WIP vs. Done progress rings.
+- **Epic Tracker**: Grouped issue views with roll-up progress bars.
+- **Issue Mind Map**: A visual dependency graph of your backlog.
+- **Sprint Planner**: AI-suggested milestones based on velocity.
+
+---
+
+<div class="hero-cta" markdown>
+[Next: Connect Slack →](slack-setup.md){ .md-button }
+</div>

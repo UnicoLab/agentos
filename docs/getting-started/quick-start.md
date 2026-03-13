@@ -1,130 +1,110 @@
-# Quick Start
+<div class="hero" markdown>
+
+# ⚡ Quick Start Guide
 
 Follow this 5-minute guide to go from zero to your first AI-powered project insight.
+
+<div class="hero-cta" markdown>
+[Installation Guide :material-download:](installation.md){ .md-button .md-button--primary }
+[Set up Ollama :material-robot:](../guides/ollama-setup.md){ .md-button }
+</div>
+
+</div>
 
 ---
 
 ## Prerequisites
 
-Before you begin, make sure you have:
+Before you begin, ensure you have the core engine ready:
 
-- [x] **AgentOS installed** — See the [Installation Guide](installation.md)
-- [x] **An AI provider** — Either [Ollama](../guides/ollama-setup.md) (free, local) or an API key (OpenAI, Anthropic, Gemini)
-- [x] **A GitHub repo** (optional) — For project tracking features
-
----
-
-## Step 1: Run the Setup Wizard
-
-If you haven't already run setup:
-
-```bash
-agentos setup
-```
-
-The wizard will walk you through each step interactively. You can also configure everything later through the web UI settings panel.
+- [x] **AgentOS binary** — [Download latest version](https://github.com/UnicoLab/agentos/releases/latest)
+- [x] **AI Provider** — [Ollama](../guides/ollama-setup.md) (Local) or API Key (OpenAI/Anthropic/Gemini)
+- [x] **Source Access** — GitHub personal access token (optional, but recommended)
 
 ---
 
-## Step 2: Start AgentOS
+## Getting Started
 
-```bash
-agentos serve
-```
+You can set up AgentOS in two ways: via the CLI or directly in the Web UI.
 
-Your browser will automatically open to `http://localhost:18080`. You'll see the **Welcome Screen** with your agent ready to go.
+<div class="step-grid" markdown>
 
----
-
-## Step 3: Create Your First Project
-
-1. Click **Projects** in the sidebar
-2. Click **+ New Project**
-3. Fill in:
-    - **Project name** — e.g., "My Web App"
-    - **GitHub repos** — e.g., `myorg/my-web-app`
-    - **Color** — Pick a color for visual identification
-4. Click **Create**
-
-AgentOS will immediately start fetching data from your GitHub repos.
-
----
-
-## Step 4: Talk to Your Agent
-
-Open the chat panel (right sidebar) and try asking:
-
-!!! example "Try these prompts"
-
-    - *"Give me a standup report for My Web App"*
-    - *"What are the open pull requests?"*
-    - *"Show me the sprint status"*
-    - *"Who has been most active this week?"*
-    - *"What are the biggest risks in this project?"*
-
-Your agent will use tools to fetch real-time data from your connected sources and generate structured, actionable reports.
-
----
-
-## Step 5: Explore the Dashboard
-
-Switch to the **Dashboard** view to see your project at a glance:
-
-- **KPIs** — Open PRs, issues, commits, contributors
-- **Risk Radar** — AI-scored risk assessment
-- **Velocity Chart** — Commit activity over time
-- **Gantt Chart** — AI-generated timeline from real data
-- **Action Center** — Recommended next steps
-
-<div class="screenshot">
-<img src="../../screens/flavors/pm/classic-view-dashboard.png" alt="Dashboard View">
+<div class="step-card" markdown>
+<div class="step-num">1</div>
+### Launch
+Run `agentos serve` in your terminal. Your dashboard will automatically open at `http://localhost:18080`.
 </div>
 
-Every card is draggable and customizable. Click any card's **Ask JP** button to get AI analysis of that specific metric.
+<div class="step-card" markdown>
+<div class="step-num">2</div>
+### Configure
+Either run `agentos setup` for an interactive CLI wizard, or skip it and go straight to the **Settings** panel in the Web UI to connect your agents.
+</div>
+
+<div class="step-card" markdown>
+<div class="step-num">3</div>
+### Track
+Create your first project in the Web UI. Link your GitHub repositories to let Jean-Pierre start indexing your workspace.
+</div>
+
+<div class="step-card" markdown>
+<div class="step-num">4</div>
+### Chat
+Open the chat sidebar and start talking. Ask for a standup, a risk assessment, or a summary of recent PRs.
+</div>
+
+</div>
 
 ---
 
-## Step 6: Use Quick Commands
+## First Interaction
 
-Press ++cmd+k++ (macOS) or ++ctrl+k++ (Linux/Windows) to open the **Command Palette** — a spotlight-style search that lets you:
+Once Jean-Pierre is connected, try these powerful prompts:
 
-- Navigate to any view
-- Run common PM workflows
-- Ask your agent a quick question
-- Trigger tool executions
+!!! example "PM Workflows"
+    - *"Give me a standup report for my active project"*
+    - *"Analyze the biggest risks in the current sprint"*
+    - *"Show me all open pull requests with no reviews"*
+    - *"Summarize the last 24 hours of activity"*
 
 ---
 
-## What's Next?
+## Exploration
 
-<div class="step-grid">
-
-<div class="step-card">
-<div class="step-num">🤖</div>
-<h3>Set up Ollama</h3>
-<p>Run AI 100% locally for free</p>
-<a href="../guides/ollama-setup/">Guide →</a>
+<div class="screenshot" markdown>
+![Dashboard View](../assets/screens/flavors/pm/classic-view-dashboard.png)
 </div>
 
-<div class="step-card">
-<div class="step-num">🐙</div>
-<h3>Connect GitHub</h3>
-<p>Track repos, PRs, and contributor activity</p>
-<a href="../guides/github-setup/">Guide →</a>
+Every card on the dashboard is interactive. Click **"Ask JP"** on any metric to get deep AI analysis of the underlying data.
+
+---
+
+## Next Steps
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### 🤖 Local AI
+Set up Ollama to run high-fidelity LLMs 100% locally.
+[Ollama Guide →](../guides/ollama-setup.md)
 </div>
 
-<div class="step-card">
-<div class="step-num">📋</div>
-<h3>Connect Jira</h3>
-<p>Track sprints, issues, and epics</p>
-<a href="../guides/jira-setup/">Guide →</a>
+<div class="feature-card" markdown>
+### 🐙 GitHub Sync
+Deep-dive into multi-repo tracking and contributor metrics.
+[GitHub Guide →](../guides/github-setup.md)
 </div>
 
-<div class="step-card">
-<div class="step-num">⚙️</div>
-<h3>Configure</h3>
-<p>Deep-dive into all settings</p>
-<a href="configuration/">Guide →</a>
+<div class="feature-card" markdown>
+### 📋 Jira Integration
+Track sprints, epics, and WIP across your organization.
+[Jira Guide →](../guides/jira-setup.md)
+</div>
+
+<div class="feature-card" markdown>
+### ⚙️ Full Reference
+Explore every CLI command and configuration option.
+[CLI Reference →](../reference/cli.md)
 </div>
 
 </div>

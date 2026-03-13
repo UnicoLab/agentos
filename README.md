@@ -16,7 +16,7 @@
 
 ---
 
-<img src="docs/assets/images/hero-banner.png" width="700" alt="AgentOS Command Center">
+<img src="docs/assets/images/jp-orbital.png" width="500" alt="Jean-Pierre — AI Project Management Copilot">
 
 </div>
 
@@ -172,7 +172,7 @@ AgentOS is a **base engine** that can be extended to any profile, tools, or busi
 
 ## 🛡️ Privacy & Security
 
-<img src="docs/assets/images/privacy-shield.png" width="400" align="right" alt="Privacy Shield">
+<img src="docs/assets/images/privacy-shield.png" width="250" align="center" alt="Privacy Shield">
 
 | ✅ Stays on your machine | ↗️ External communication |
 |---|---|
@@ -231,8 +231,15 @@ Visit our full documentation at **[unicolab.github.io/agentos](https://unicolab.
 
 <div align="center">
 
-**Built with ❤️ by [UnicoLab](https://unicolab.ai) · Part of the [AIFlow](https://ai-flow.ai) Ecosystem**
+---
+
+**Built with ❤️ by [UnicoLab](https://unicolab.ai)**
+
+*An autonomous compute node for the [AIFlow](https://ai-flow.ai) project management platform.*
 
 *"Jean-Pierre doesn't just show you data — he understands your projects."*
+
+[![UnicoLab](https://img.shields.io/badge/Made%20by-UnicoLab-6c63ff?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://unicolab.ai)
+[![AIFlow](https://img.shields.io/badge/Part%20of-AIFlow%20Ecosystem-06b6d4?style=flat-square)](https://ai-flow.ai)
 
 </div>

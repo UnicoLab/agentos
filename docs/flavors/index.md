@@ -48,4 +48,4 @@ A flavor defines:
 
 ## Custom Flavors
 
-AgentOS's flavor system is extensible. Each flavor is defined by a `pack.yaml` file that configures the agent's behavior. Contact us if you're interested in creating a custom flavor for your specific use case.
+AgentOS's flavor system is extensible -> to any use-case, tools, connectors etc ... Imagine all possibilities, we can create a flavor for any need, any industry, any use-case, any role !

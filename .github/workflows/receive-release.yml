@@ -15,9 +15,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Generate GitHub App token for cross-repo access
+      - name: Generate app token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.TECHNICAL_APP_APP_ID }}
+          private-key: ${{ secrets.TECHNICAL_APP_PEM }}
+          owner: UnicoLab
+          repositories: |
+            ul_aiflow_AgentOS
+
       - name: Download release assets from private repo
         env:
-          GH_TOKEN: ${{ secrets.RELEASE_PAT }}
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
           TAG="${{ github.event.client_payload.tag }}"
           PRIVATE_REPO="UnicoLab/ul_aiflow_AgentOS"
@@ -42,18 +53,19 @@ jobs:
           VERSION="${TAG#v}"  # Remove 'v' prefix for display
 
           # Create release notes
-          cat > /tmp/release-notes.md << 'NOTES'
-          ## AgentOS — Jean-Pierre v${VERSION}
+          cat > /tmp/release-notes.md << NOTES
+          ## AgentOS — Jean-Pierre ${TAG}
 
           Cross-platform binaries for macOS, Linux, and Windows.
 
           ### 📥 Installation
 
           1. Download the archive for your platform below
-          2. Extract it: `tar xzf agentos_*.tar.gz` (or unzip on Windows)
-          3. Move to PATH: `sudo mv agentos /usr/local/bin/`
-          4. Run setup: `agentos setup`
-          5. Launch: `agentos serve`
+          2. Extract it: \`tar xzf agentos_*.tar.gz\` (or unzip on Windows)
+          3. Move to PATH: \`sudo mv agentos /usr/local/bin/\`
+          4. **Request a license:** Email [info@unicolab.ai](mailto:info@unicolab.ai) for a free testing key
+          5. Run setup: \`agentos setup\`
+          6. Launch: \`agentos serve\`
 
           ### 📖 Documentation
 
@@ -63,9 +75,12 @@ jobs:
 
           Your data stays on your machine. See our [Security & Privacy](https://unicolab.github.io/agentos/security/) page.
 
-          ### 🎁 Beta Program
+          ### 🧪 Free Testing Program
 
-          Get a **free license key** by joining our [beta program](mailto:beta@unicolab.ai)!
+          Get a **free license key** by emailing [info@unicolab.ai](mailto:info@unicolab.ai)!
+
+          ---
+          Built with ❤️ by [UnicoLab](https://unicolab.ai) · Part of the [AIFlow](https://ai-flow.ai) Ecosystem
           NOTES
 
           # Create the release with all assets

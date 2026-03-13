@@ -214,5 +214,7 @@ This is a **base engine** that can be extended to any profile, tools, or busines
 ---
 
 <p style="text-align: center; color: var(--md-default-fg-color--light); font-size: 0.9rem;">
-<strong>Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a></strong> · Part of the <a href="https://ai-flow.ai">AIFlow</a> Ecosystem
+<strong>Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a></strong><br>
+<em>An autonomous compute node for the <a href="https://ai-flow.ai">AIFlow</a> project management platform.</em><br>
+© 2024–2026 UnicoLab. All rights reserved.
 </p>

@@ -1,109 +1,92 @@
 ---
 title: Strategic Canvas
-description: Visual portfolio command center with live project health, typed connections, and AI-powered strategic insights.
+description: A visual portfolio board that gives you real-time project health, dependency mapping, and AI-powered strategic recommendations.
 ---
 
-# Strategic Canvas :material-drawing:
+<div class="hero" markdown>
 
-> Map your projects, track live KPIs, and get AI-powered strategic insights — all on a visual drag-and-drop board.
+# :material-drawing: Strategic Canvas
 
----
+**See your entire portfolio at a glance.** Live project health, smart dependency mapping, and AI-powered strategic recommendations — all on one visual board.
 
-## Overview
-
-The Strategic Canvas transforms project portfolio management from spreadsheet-juggling into a **visual command center**. Drop project cards that auto-populate with live GitHub and Jira metrics, connect them with typed relationships, and let JP analyze the entire board.
-
-!!! info "Live Data"
-    Every project card on the canvas fetches **real-time metrics** from your configured GitHub repos and Jira boards when the canvas opens.
+</div>
 
 ---
 
-## Project Cards
+## Why It Matters
 
-Each project card shows:
+Managing multiple projects means juggling fragmented views across GitHub, Jira, and spreadsheets. The Strategic Canvas gives you something you've never had before: a **single visual board** where every project shows real-time health and you can map relationships between them.
 
-- **Health Badge** — :material-check-circle:{ style="color: #22c55e" } Healthy (70-100) · :material-alert:{ style="color: #f59e0b" } At Risk (40-69) · :material-close-circle:{ style="color: #ef4444" } Critical (0-39)
-- **Sparkline** — 7-day commit trend as an inline chart
-- **Live Metrics** — Open PRs, open issues, sprint progress %, recent commits
-
-### Health Score Algorithm
-
-The health score (0-100) is computed from:
-
-| Factor | Impact |
-|--------|--------|
-| PR backlog | >20 PRs: -25, >10: -15, >5: -5 |
-| Issue backlog | >30 issues: -20, >15: -10, >8: -5 |
-| Sprint progress | ≥75%: +10, <60%: -5, <40%: -15 |
-| Commit activity | >20 commits: +10, <5 commits: -10 |
+!!! success "The Value"
+    - **Cut status meeting prep from 30 minutes to 30 seconds**
+    - **Spot cross-project risks** that are invisible in individual dashboards
+    - **Get AI recommendations** based on the full portfolio picture
 
 ---
 
-## Typed Connections
+## What You See
 
-Connect projects to show relationships. Each type has a distinct color and line style:
+### Live Project Cards
 
-| Type | Color | Style | Meaning |
-|------|-------|-------|---------|
-| **depends on** | :material-circle:{ style="color: #8b5cf6" } Purple | Solid | Target is a dependency |
-| **blocks** | :material-circle:{ style="color: #ef4444" } Red | Dashed | Source is blocking target |
-| **shares team** | :material-circle:{ style="color: #22c55e" } Green | Dotted | Same team works on both |
-| **data flow** | :material-circle:{ style="color: #3b82f6" } Blue | Dashed | Data flows between projects |
-| **integrates** | :material-circle:{ style="color: #f59e0b" } Amber | Dotted | Integration relationship |
+Drop any project onto the canvas — it **instantly shows live data**:
 
----
+- :material-check-circle:{ style="color: #22c55e" } **Health Badge** — Healthy, At Risk, or Critical — auto-scored from your live PR, issue, and sprint data
+- :material-chart-line: **Commit Sparkline** — 7-day activity trend at a glance
+- :material-source-pull: **Key Metrics** — Open PRs · Issues · Sprint Progress · Commit Count
 
-## Canvas Elements
+No manual data entry. No stale screenshots. **Always live.**
 
-| Element | Description |
-|---------|-------------|
-| :material-folder-star: **Project Card** | Live metrics from GitHub + Jira |
-| :material-chart-donut: **Health Chart** | Portfolio health donut (healthy/at-risk/critical) |
-| :material-note-text: **Sticky Note** | Free-text notes for strategies and decisions |
-| :material-brain: **AI Insight** | Auto-generated or on-demand AI analysis |
-| :material-trending-up: **KPI Metric** | Aggregated portfolio metrics |
-| :material-format-header-1: **Heading** | Section labels for organization |
+### Smart Connections
 
----
+Map how your projects relate to each other:
 
-## AI Analysis
+| Relationship | What It Reveals |
+|-------------|-----------------|
+| **depends on** | Hidden dependency chains that create risk |
+| **blocks** | Active blockers across project boundaries |
+| **shares team** | Resource conflicts and capacity risks |
+| **data flow** | Integration points that need attention |
 
-Click **🧠 Analyze with JP** in the toolbar to send the full canvas context to Jean-Pierre:
-
-- All project names, descriptions, and health scores
-- All connections with their types
-- Portfolio KPIs and aggregated metrics
-- Notes content
-
-JP returns **strategic analysis** including risk assessment, dependency insights, and actionable recommendations.
+!!! tip "Risk Discovery"
+    When you connect two at-risk projects as "depends on", JP immediately highlights the cascading risk — something you'd never see in separate Jira boards.
 
 ---
 
-## Templates
+## AI-Powered Strategic Insight
 
-Start with a pre-built layout:
+Click **🧠 Analyze with JP** and Jean-Pierre sees the **full picture**: every project, its health, every connection. He delivers:
 
-=== "Portfolio Overview"
-    All projects + health donut + KPI row + AI summary. Best for weekly check-ins.
-
-=== "Risk Matrix"
-    Projects arranged for risk assessment with AI risk analysis. Best for steering committees.
-
-=== "Sprint Dashboard"
-    Sprint-focused view with velocity insights. Best for sprint planning/review.
+- :material-alert: **Cross-project risk assessment** — risks that only exist when you zoom out
+- :material-link-variant: **Dependency analysis** — is a critical project depending on one that's already at risk?
+- :material-account-group: **Resource insights** — team conflicts between connected projects
+- :material-check-all: **Action items** — concrete next steps, not vague advice
 
 ---
 
-## Controls
+## Portfolio Health At a Glance
 
-| Action | How |
-|--------|-----|
-| Pan | ++alt++ + drag, or middle-click + drag |
-| Zoom | Scroll wheel |
-| Reset view | Click ⊡ button |
-| Move node | Drag the node header |
-| Connect | Click 🔗, select source, select target, choose type |
-| Delete node | Hover → click :material-delete: |
-| Delete edge | Hover the edge → click × |
-| Refresh data | Click :material-refresh: |
-| Save | Click Save (auto-reminds if unsaved) |
+The **portfolio health donut** shows the distribution of healthy, at-risk, and critical projects. KPI cards auto-populate with aggregated metrics across your entire portfolio.
+
+See immediately: *"3 projects healthy, 1 at risk, 1 critical. Overall health: 72%."*
+
+---
+
+## Templates — Start in Seconds
+
+| Template | Best For |
+|----------|----------|
+| **Portfolio Overview** | Weekly leadership check-in — all projects + KPIs + AI summary |
+| **Risk Matrix** | Steering committee — projects grouped by risk level |
+| **Sprint Dashboard** | Sprint planning — velocity and sprint health across teams |
+
+---
+
+## The Bottom Line
+
+| Without Canvas | With Canvas |
+|---------------|-------------|
+| Separate dashboards per project | One visual board, all projects |
+| Dependencies tracked in spreadsheets | Visual dependency map with typed relationships |
+| Risks discovered in meetings (too late) | AI-detected cross-project risks in real-time |
+| Manual status aggregation | Auto-populated live metrics |
+| Strategic analysis takes hours | One-click AI analysis of entire portfolio |

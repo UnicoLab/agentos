@@ -83,6 +83,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Product Tour: demo.md
   - Getting Started:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
@@ -90,6 +91,8 @@ nav:
   - Features:
       - AI Copilot: features/ai-copilot.md
       - Dashboard: features/dashboard.md
+      - Strategic Canvas: features/canvas.md
+      - Pack System: features/packs.md
       - Integrations: features/integrations.md
       - Fleet View: features/fleet-view.md
   - Guides:

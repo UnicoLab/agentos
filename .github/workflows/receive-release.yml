@@ -50,61 +50,41 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TAG="${{ github.event.client_payload.tag }}"
-          VERSION="${TAG#v}"  # Remove 'v' prefix for display
 
-          # Create release notes
           cat > /tmp/release-notes.md << 'NOTES'
-          ## AgentOS — Multi-Flavour Release
-
-          Cross-platform binaries for macOS (Apple Silicon + Intel), Linux, and Windows.
-
-          ### 🎩 Available Flavours
-
-          | Flavour | Binary | Description |
-          |---------|--------|-------------|
-          | 🎩 **Jean-Pierre — The PM** | `agentos-pm` | Project management copilot (GitHub + Jira + Slack) |
-          | 🛒 **Retail Ops** | `agentos-retail` | Inventory & retail analytics assistant |
-          | 🏢 **Office Assistant** | `agentos-office` | Document management & workflow automation |
-
-          ### ⚡ One-Line Install
+          ## ⚡ Quick Install
 
           **macOS / Linux:**
-          \`\`\`bash
-          # Default (PM flavour)
+          ```bash
           curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
-
-          # Choose a flavour:
-          curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
-          curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
-          \`\`\`
+          ```
 
           **Windows:**
-          \`\`\`powershell
+          ```powershell
           curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
-          \`\`\`
+          ```
 
-          > The installer renames the binary to \`agentos\` — all commands stay the same: \`agentos serve\`, \`agentos chat\`, etc.
+          Or just **double-click** the included launcher script — no terminal needed.
 
-          ### 🖱️ Double-Click Launchers
+          ---
 
-          Every download includes launcher scripts — **no terminal needed**:
-          - **macOS:** \`Start AgentOS.command\`
-          - **Windows:** \`Start AgentOS.bat\`
-          - **Linux:** \`start-agentos.sh\`
+          ### 🎩 Choose Your Flavour
+
+          | Flavour | Install Command |
+          |---------|----------------|
+          | 🎩 **Jean-Pierre — PM** (default) | `curl ... \| sh` |
+          | 🛒 **Retail Ops** | `curl ... \| sh -s -- --flavour retail` |
+          | 🏢 **Office Assistant** | `curl ... \| sh -s -- --flavour office` |
+
+          > All flavours install as `agentos` — same commands: `agentos serve`, `agentos chat`, etc.
 
           ### 🔑 License
 
-          Email [info@unicolab.ai](mailto:info@unicolab.ai) for a **free testing license**.
+          Email **[info@unicolab.ai](mailto:info@unicolab.ai)** for a free testing license.
 
-          ### 📖 Documentation
-
-          **[unicolab.github.io/agentos](https://unicolab.github.io/agentos)**
-
-          ---
-          Built with ❤️ by [UnicoLab](https://unicolab.ai)
+          📖 **Docs:** [unicolab.github.io/agentos](https://unicolab.github.io/agentos)
           NOTES
 
-          # Create the release with all assets (--clobber handles re-releases)
           gh release create "${TAG}" ./release-assets/* \
             --title "AgentOS ${TAG}" \
             --notes-file /tmp/release-notes.md

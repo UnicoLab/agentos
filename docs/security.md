@@ -142,7 +142,7 @@ Traditional project management platforms hit scaling walls: database overload, A
 Each AgentOS instance is a **fully autonomous compute node**. Adding a new team member means downloading a binary — not provisioning infrastructure. Your 500th user gets the exact same performance as your first user.
 
 !!! note "Enterprise Coordination"
-    Need centralized intelligence across all instances? Connect AgentOS to **[AIFlow](../guides/aiflow-sync.md)** as a sync hub. Each agent stays fast and independent, while AIFlow aggregates insights at the organization level.
+    Need centralized intelligence across all instances? Connect AgentOS to **[AIFlow](guides/aiflow-sync.md)** as a sync hub. Each agent stays fast and independent, while AIFlow aggregates insights at the organization level.
 
 ---
 

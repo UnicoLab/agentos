@@ -53,27 +53,44 @@ jobs:
           VERSION="${TAG#v}"  # Remove 'v' prefix for display
 
           # Create release notes
-          cat > /tmp/release-notes.md << NOTES
-          ## AgentOS — Jean-Pierre ${TAG}
+          cat > /tmp/release-notes.md << 'NOTES'
+          ## AgentOS — Multi-Flavour Release
 
           Cross-platform binaries for macOS (Apple Silicon + Intel), Linux, and Windows.
 
-          ### ⚡ One-Line Install (macOS / Linux)
+          ### 🎩 Available Flavours
 
+          | Flavour | Binary | Description |
+          |---------|--------|-------------|
+          | 🎩 **Jean-Pierre — The PM** | `agentos-pm` | Project management copilot (GitHub + Jira + Slack) |
+          | 🛒 **Retail Ops** | `agentos-retail` | Inventory & retail analytics assistant |
+          | 🏢 **Office Assistant** | `agentos-office` | Document management & workflow automation |
+
+          ### ⚡ One-Line Install
+
+          **macOS / Linux:**
           \`\`\`bash
+          # Default (PM flavour)
           curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+
+          # Choose a flavour:
+          curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+          curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
           \`\`\`
 
-          This auto-detects your OS and architecture, downloads the correct binary, handles macOS security (Gatekeeper), and installs to your PATH.
+          **Windows:**
+          \`\`\`powershell
+          curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
+          \`\`\`
 
-          ### 📥 Manual Installation
+          > The installer renames the binary to \`agentos\` — all commands stay the same: \`agentos serve\`, \`agentos chat\`, etc.
 
-          1. Download the archive for your platform below
-          2. Extract: \`tar xzf agentos_*.tar.gz\`
-          3. **macOS only** — clear quarantine: \`sudo xattr -rd com.apple.quarantine agentos && codesign --force --sign - agentos\`
-          4. Move to PATH: \`sudo mv agentos /usr/local/bin/\`
-          5. Launch: \`agentos serve\`
-          6. Configure everything in the **Web UI** at \`http://localhost:18080\`
+          ### 🖱️ Double-Click Launchers
+
+          Every download includes launcher scripts — **no terminal needed**:
+          - **macOS:** \`Start AgentOS.command\`
+          - **Windows:** \`Start AgentOS.bat\`
+          - **Linux:** \`start-agentos.sh\`
 
           ### 🔑 License
 
@@ -87,9 +104,9 @@ jobs:
           Built with ❤️ by [UnicoLab](https://unicolab.ai)
           NOTES
 
-          # Create the release with all assets
+          # Create the release with all assets (--clobber handles re-releases)
           gh release create "${TAG}" ./release-assets/* \
-            --title "Jean-Pierre ${TAG}" \
+            --title "AgentOS ${TAG}" \
             --notes-file /tmp/release-notes.md
 
           echo "✅ Public release ${TAG} created!"

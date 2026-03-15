@@ -15,30 +15,45 @@ Getting AgentOS running on your machine takes **one command**.
 
 ## ⚡ One-Line Install (Recommended)
 
-The fastest way to get started on **macOS** or **Linux**. This script auto-detects your OS and architecture, downloads the correct binary, handles macOS security, and installs it to your PATH:
+The fastest way to get started on **macOS** or **Linux**. This script auto-detects your OS and architecture, downloads the correct flavour binary, renames it to `agentos`, and installs it to your PATH:
 
 ```bash
+# Default: installs Jean-Pierre (PM copilot)
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+
+# Choose a different flavour:
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
 ```
 
-That's it! After installation, just run `agentos serve` and you're live. 🎉
+!!! info "Available Flavours"
+    | Flavour | Description |
+    |---------|-------------|
+    | **pm** (default) | Jean-Pierre — AI Project Management Copilot |
+    | **retail** | Retail Operations Assistant |
+    | **office** | Office Productivity Assistant |
+
+That's it! After installation, just run `agentos serve` and you're live. 🎉 The binary is always called `agentos` regardless of flavour.
 
 ---
 
 ## 🏗️ Supported Platforms
 
-All architectures are pre-built and available on the [Releases Page](https://github.com/UnicoLab/agentos/releases/latest):
+All architectures are pre-built and available on the [Releases Page](https://github.com/UnicoLab/agentos/releases/latest).
 
-| Platform | Architecture | Archive |
-|----------|-------------|---------|
-| **macOS** Apple Silicon | arm64 (M1/M2/M3/M4) | `agentos_*_darwin_arm64.tar.gz` |
-| **macOS** Intel | amd64 (x86_64) | `agentos_*_darwin_amd64.tar.gz` |
-| **Linux** x86 | amd64 | `agentos_*_linux_amd64.tar.gz` |
-| **Linux** ARM | arm64 | `agentos_*_linux_arm64.tar.gz` |
-| **Windows** | amd64 | `agentos_*_windows_amd64.zip` |
+Each flavour has its own archive. Choose the one that matches your role:
+
+| Flavour | Platform | Archive Pattern |
+|---------|----------|---------|
+| 🎩 **PM** | macOS arm64 / amd64, Linux | `agentos-pm_v*_{os}_{arch}.tar.gz` |
+| 🛒 **Retail** | macOS arm64 / amd64, Linux | `agentos-retail_v*_{os}_{arch}.tar.gz` |
+| 🏢 **Office** | macOS arm64 / amd64, Linux | `agentos-office_v*_{os}_{arch}.tar.gz` |
 
 !!! tip "Not sure which macOS version?"
     Run `uname -m` in Terminal. `arm64` = Apple Silicon, `x86_64` = Intel.
+
+!!! note "Binary is always called `agentos`"
+    The install script automatically renames the per-flavour binary to `agentos`. If installing manually, rename it yourself: `mv agentos-pm agentos`.
 
 ---
 
@@ -106,9 +121,24 @@ If you prefer to install manually:
 
 === "Windows"
 
-    1. Extract `agentos.exe` from the `.zip` archive.
-    2. (Optional) Add the folder to your system **Path**.
-    3. Open PowerShell and run:
+    **Automatic (recommended):**
+
+    ```powershell
+    # Download and run the installer (default: PM flavour)
+    curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat
+    .\install.bat
+
+    # Choose a different flavour:
+    .\install.bat --flavour retail
+    ```
+
+    **Manual:**
+
+    1. Download the `.zip` for your flavour from the [Releases Page](https://github.com/UnicoLab/agentos/releases/latest)
+    2. Extract the archive
+    3. Rename the binary: `ren agentos-pm.exe agentos.exe`
+    4. (Optional) Move to a folder in your system **Path**
+    5. Open PowerShell and run:
        ```powershell
        .\agentos.exe serve
        ```

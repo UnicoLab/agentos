@@ -1,10 +1,22 @@
 #!/bin/sh
 # ──────────────────────────────────────────────────────────────
 #  AgentOS — Universal Installer
-#  Usage:  curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+#
+#  Default (PM flavor):
+#    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+#
+#  Choose a flavor:
+#    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+#    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
+#
+#  Available flavours:
+#    pm      — Jean-Pierre, AI Project Management Copilot (default)
+#    retail  — Retail Operations Assistant
+#    office  — Office Productivity Assistant
 #
 #  Features:
 #    • Auto-detects OS (macOS/Linux) and architecture (arm64/amd64)
+#    • Selects the correct per-flavour binary
 #    • macOS: clears Gatekeeper quarantine + ad-hoc code signs
 #    • Installs to /usr/local/bin (admin) or ~/.local/bin (no admin)
 #    • Automatically adds to PATH if needed
@@ -15,6 +27,28 @@ set -e
 
 REPO="UnicoLab/agentos"
 BINARY_NAME="agentos"
+
+# ─── Flavour mapping ───
+# Maps user-friendly names to binary archive prefixes
+flavour_to_binary() {
+  case "$1" in
+    pm|aiflow-pm)   echo "agentos-pm" ;;
+    retail|retail-ops) echo "agentos-retail" ;;
+    office)         echo "agentos-office" ;;
+    *)
+      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}      — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}retail${NC}  — Retail Operations Assistant\n      ${CYAN}office${NC}  — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm"
+      ;;
+  esac
+}
+
+flavour_display_name() {
+  case "$1" in
+    pm|aiflow-pm)      echo "Jean-Pierre — The PM 🎩" ;;
+    retail|retail-ops)  echo "Retail Ops 🛒" ;;
+    office)            echo "Office Assistant 🏢" ;;
+    *)                 echo "$1" ;;
+  esac
+}
 
 # ─── Colors ───
 ESC=$(printf '\033')
@@ -216,9 +250,52 @@ ensure_path() {
   success "Added ${BOLD}${DIR_TO_ADD}${NC} to PATH in ${BOLD}$(basename "$SHELL_RC")${NC}"
 }
 
+# ─── Parse arguments ───
+parse_args() {
+  FLAVOUR="pm"
+
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      --flavour|--flavor|-f)
+        if [ -n "$2" ]; then
+          FLAVOUR="$2"
+          shift 2
+        else
+          fail "--flavour requires a value.\n    Usage: curl ... | sh -s -- --flavour pm\n    Options: pm, retail, office"
+        fi
+        ;;
+      --help|-h)
+        printf "\n${BOLD}AgentOS Installer${NC}\n\n"
+        printf "  ${CYAN}Usage:${NC}\n"
+        printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh\n"
+        printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail\n\n"
+        printf "  ${CYAN}Options:${NC}\n"
+        printf "    --flavour <name>   Select agent flavour (default: pm)\n"
+        printf "    --help             Show this help message\n\n"
+        printf "  ${CYAN}Available flavours:${NC}\n"
+        printf "    ${BOLD}pm${NC}       Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"
+        printf "    ${BOLD}retail${NC}   Retail Operations Assistant\n"
+        printf "    ${BOLD}office${NC}   Office Productivity Assistant\n\n"
+        exit 0
+        ;;
+      *)
+        shift
+        ;;
+    esac
+  done
+}
+
 # ─── Main ───
 main() {
+  parse_args "$@"
   header
+
+  # Resolve flavour-specific archive name
+  SOURCE_BINARY=$(flavour_to_binary "$FLAVOUR")
+  DISPLAY_NAME=$(flavour_display_name "$FLAVOUR")
+  info "Flavour:  ${BOLD}${DISPLAY_NAME}${NC} → archive ${CYAN}${SOURCE_BINARY}${NC}"
+  info "Binary:   ${BOLD}${BINARY_NAME}${NC} (all flavours install as '${BINARY_NAME}')"
+
   check_dependencies
 
   # Detect platform
@@ -231,22 +308,28 @@ main() {
   VERSION=$(get_latest_version)
   info "Version:  ${BOLD}${VERSION}${NC}"
 
-  # Download
+  # Download — archive naming: agentos-pm_v0.12.0_darwin_arm64.tar.gz
   VERSION_NUM="${VERSION#v}"
-  ARCHIVE="agentos_${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
+  ARCHIVE="${SOURCE_BINARY}_v${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
   URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARCHIVE}"
 
   WORK=$(mktemp -d)
   trap 'rm -rf "$WORK"' EXIT
 
   info "Downloading ${BOLD}${ARCHIVE}${NC}..."
-  http_get "$URL" "${WORK}/${ARCHIVE}" || fail "Download failed.\n    URL: ${CYAN}${URL}${NC}\n    Check your internet connection or try downloading manually."
+  http_get "$URL" "${WORK}/${ARCHIVE}" || fail "Download failed.\n    URL: ${CYAN}${URL}${NC}\n    Check your internet connection or try downloading manually.\n\n    💡 If the flavour-specific archive is not found, try:\n       ${CYAN}curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm${NC}"
   success "Downloaded"
 
   # Extract
   info "Extracting..."
   tar xzf "${WORK}/${ARCHIVE}" -C "${WORK}" || fail "Extraction failed. The archive may be corrupted.\n    Try downloading again from: ${CYAN}https://github.com/${REPO}/releases${NC}"
   success "Extracted"
+
+  # Rename flavour binary → agentos (so all commands stay compatible)
+  if [ "${SOURCE_BINARY}" != "${BINARY_NAME}" ] && [ -f "${WORK}/${SOURCE_BINARY}" ]; then
+    mv "${WORK}/${SOURCE_BINARY}" "${WORK}/${BINARY_NAME}"
+    info "Renamed ${SOURCE_BINARY} → ${BINARY_NAME}"
+  fi
 
   # macOS: Gatekeeper clearance
   if [ "$OS" = "darwin" ]; then
@@ -264,10 +347,10 @@ main() {
   printf "\n"
   if command -v "${BINARY_NAME}" >/dev/null 2>&1; then
     INSTALLED_VERSION=$("${BINARY_NAME}" version 2>/dev/null || echo "installed")
-    success "${BOLD}AgentOS${NC} ${INSTALLED_VERSION}"
+    success "${BOLD}AgentOS${NC} ${DISPLAY_NAME} ${INSTALLED_VERSION}"
   elif [ -x "${FINAL_DIR}/${BINARY_NAME}" ]; then
     INSTALLED_VERSION=$("${FINAL_DIR}/${BINARY_NAME}" version 2>/dev/null || echo "installed")
-    success "${BOLD}AgentOS${NC} ${INSTALLED_VERSION}"
+    success "${BOLD}AgentOS${NC} ${DISPLAY_NAME} ${INSTALLED_VERSION}"
   else
     warn "Binary installed but not in PATH. Run it directly:"
     printf "    ${CYAN}${FINAL_DIR}/${BINARY_NAME} serve${NC}\n"
@@ -279,6 +362,7 @@ main() {
   printf "%s\n" "${BOLD}${GREEN}  ║   🎉 Installation Complete!      ║${NC}"
   printf "%s\n" "${BOLD}${GREEN}  ╚══════════════════════════════════╝${NC}"
   printf "\n"
+  printf "  ${YELLOW}Flavour:${NC}       ${BOLD}${DISPLAY_NAME}${NC}\n"
   printf "  ${YELLOW}Need a license?${NC} Email ${BOLD}info@unicolab.ai${NC}\n"
   printf "  ${CYAN}Documentation:${NC}  https://unicolab.github.io/agentos/\n"
   printf "\n"

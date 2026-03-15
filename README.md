@@ -45,27 +45,56 @@ You have **full control** over which AI model to use, which prompts to configure
 ### One-Line Install (macOS / Linux)
 
 ```bash
+# Default: installs Jean-Pierre (PM copilot)
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+
+# Choose a different flavour:
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
 ```
 
-This auto-detects your OS and architecture, downloads the correct binary, handles macOS Gatekeeper security, installs to PATH, and launches AgentOS — all in one command. Works with or without admin access.
+This auto-detects your OS and architecture, downloads the correct flavour binary, handles macOS Gatekeeper security, installs to PATH, and launches AgentOS — all in one command. Works with or without admin access.
+
+### Windows Install
+
+```powershell
+# Download and run the installer (default: PM flavour)
+curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
+
+# Choose a different flavour:
+install.bat --flavour retail
+install.bat --flavour office
+```
+
+This downloads the correct binary, renames it to `agentos.exe`, installs to `%LOCALAPPDATA%\AgentOS`, adds to PATH, and launches — all automatically.
 
 ### Manual Install
 
 <details>
 <summary><strong>📥 Download manually</strong></summary>
 
-| Platform | Architecture | Download |
-|----------|-------------|----------|
-| **macOS** Apple Silicon | arm64 (M1/M2/M3/M4) | [agentos_darwin_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **macOS** Intel | amd64 | [agentos_darwin_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** x86 | amd64 | [agentos_linux_amd64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** ARM | arm64 | [agentos_linux_arm64.tar.gz](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Windows** | amd64 | [agentos_windows_amd64.zip](https://github.com/UnicoLab/agentos/releases/latest) |
+Each flavour is a separate binary. Choose the one you need:
+
+| Flavour | Platform | Architecture | Binary |
+|---------|----------|-------------|--------|
+| 🎩 **PM** | macOS Apple Silicon | arm64 | `agentos-pm_*_darwin_arm64.tar.gz` |
+| 🎩 **PM** | macOS Intel | amd64 | `agentos-pm_*_darwin_amd64.tar.gz` |
+| 🎩 **PM** | Linux x86 | amd64 | `agentos-pm_*_linux_amd64.tar.gz` |
+| 🛒 **Retail** | macOS Apple Silicon | arm64 | `agentos-retail_*_darwin_arm64.tar.gz` |
+| 🛒 **Retail** | macOS Intel | amd64 | `agentos-retail_*_darwin_amd64.tar.gz` |
+| 🛒 **Retail** | Linux x86 | amd64 | `agentos-retail_*_linux_amd64.tar.gz` |
+| 🏢 **Office** | macOS Apple Silicon | arm64 | `agentos-office_*_darwin_arm64.tar.gz` |
+| 🏢 **Office** | macOS Intel | amd64 | `agentos-office_*_darwin_amd64.tar.gz` |
+| 🏢 **Office** | Linux x86 | amd64 | `agentos-office_*_linux_amd64.tar.gz` |
+
+Full list on the [Releases Page](https://github.com/UnicoLab/agentos/releases/latest).
 
 ```bash
-# Extract
-tar xzf agentos_*.tar.gz
+# Extract (example: PM flavour on Apple Silicon)
+tar xzf agentos-pm_*.tar.gz
+
+# The archive contains the binary — rename to 'agentos' for consistency
+mv agentos-pm agentos
 
 # macOS: clear Gatekeeper
 xattr -rd com.apple.quarantine ./agentos
@@ -79,7 +108,7 @@ sudo mv agentos /usr/local/bin/
 agentos serve
 ```
 
-> 💡 No admin? No problem — just run `./agentos serve` from any folder.
+> 💡 No admin? No problem — just run `./agentos serve` from any folder. The install script does the rename automatically.
 
 </details>
 
@@ -160,17 +189,27 @@ Runs on YOUR machine. SQLite storage. No cloud sync unless you want it.
 
 ---
 
-## 🎩 Flavors
+## 🎩 Flavours
 
-AgentOS uses a **flavor system** — each flavor is a specialized agent persona:
+AgentOS uses a **flavour system** — each flavour is a specialized agent persona with its own binary:
 
-| Flavor | Description | Status |
-|--------|-------------|--------|
-| 🎩 **Jean-Pierre — The PM** | Project management copilot (GitHub + Jira + Slack) | ✅ Free testing access |
-| 🏢 **Office Assistant** | Document management & workflow automation | 🔜 Coming soon |
-| 🛒 **Retail Ops** | Inventory & retail analytics | 🔜 Coming soon |
+| Flavour | Binary | Description | Status |
+|---------|--------|-------------|--------|
+| 🎩 **Jean-Pierre — The PM** | `agentos-pm` | Project management copilot (GitHub + Jira + Slack) | ✅ Free testing access |
+| 🛒 **Retail Ops** | `agentos-retail` | Inventory & retail analytics | ✅ Free testing access |
+| 🏢 **Office Assistant** | `agentos-office` | Document management & workflow automation | ✅ Free testing access |
 
-AgentOS is a **base engine** that can be extended to any profile, tools, or business needs. The PM flavor is our first deployment — contact us for custom flavors.
+All flavours share the same powerful engine — they differ in their AI persona, tools, and dashboard. Each binary works with the exact same commands (`serve`, `chat`, `setup`, etc.).
+
+```bash
+# Install the PM flavour (default)
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+
+# Install a different flavour
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+```
+
+AgentOS is a **base engine** that can be extended to any profile, tools, or business needs. Contact us for custom flavours.
 
 ---
 

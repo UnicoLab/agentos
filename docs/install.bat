@@ -106,7 +106,7 @@ echo   Version:  %TAG%
 
 REM ─── Build download URL ───
 set "VERSION_NUM=%TAG:~1%"
-set "ARCHIVE=%SOURCE_BINARY%_v%VERSION_NUM%_windows_amd64.zip"
+set "ARCHIVE=%SOURCE_BINARY%_%VERSION_NUM%_windows_amd64.zip"
 set "URL=https://github.com/%REPO%/releases/download/%TAG%/%ARCHIVE%"
 
 REM ─── Download ───

@@ -45,9 +45,9 @@ Each flavour has its own archive. Choose the one that matches your role:
 
 | Flavour | Platform | Archive Pattern |
 |---------|----------|---------|
-| 🎩 **PM** | macOS arm64 / amd64, Linux | `agentos-pm_v*_{os}_{arch}.tar.gz` |
-| 🛒 **Retail** | macOS arm64 / amd64, Linux | `agentos-retail_v*_{os}_{arch}.tar.gz` |
-| 🏢 **Office** | macOS arm64 / amd64, Linux | `agentos-office_v*_{os}_{arch}.tar.gz` |
+| 🎩 **PM** | macOS arm64 / amd64, Linux | `agentos-pm_{version}_{os}_{arch}.tar.gz` |
+| 🛒 **Retail** | macOS arm64 / amd64, Linux | `agentos-retail_{version}_{os}_{arch}.tar.gz` |
+| 🏢 **Office** | macOS arm64 / amd64, Linux | `agentos-office_{version}_{os}_{arch}.tar.gz` |
 
 !!! tip "Not sure which macOS version?"
     Run `uname -m` in Terminal. `arm64` = Apple Silicon, `x86_64` = Intel.

@@ -308,9 +308,9 @@ main() {
   VERSION=$(get_latest_version)
   info "Version:  ${BOLD}${VERSION}${NC}"
 
-  # Download — archive naming: agentos-pm_v0.12.0_darwin_arm64.tar.gz
+  # Download — archive naming: agentos-pm_0.12.0_darwin_arm64.tar.gz
   VERSION_NUM="${VERSION#v}"
-  ARCHIVE="${SOURCE_BINARY}_v${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
+  ARCHIVE="${SOURCE_BINARY}_${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
   URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARCHIVE}"
 
   WORK=$(mktemp -d)

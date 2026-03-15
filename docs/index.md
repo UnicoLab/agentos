@@ -52,8 +52,8 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 <div class="step-card">
 <div class="step-num">1</div>
-<h3>Launch</h3>
-<p>Run <code>agentos serve</code>. No complex installation required — the binary starts everything.</p>
+<h3>Download</h3>
+<p>Choose your flavour and install with one command — or just double-click the included launcher script.</p>
 </div>
 
 <div class="step-card">
@@ -113,34 +113,46 @@ Multi-project health overview — all projects ranked by risk score. Perfect for
 
 ---
 
-## Flavors — One Engine, Many Agents
+## Flavours — One Engine, Many Agents
 
-AgentOS is built on a **flavor system** — each flavor is a specialized AI agent persona with its own personality, tools, and visual DNA.
+AgentOS is built on a **flavour system** — each flavour is a specialized AI agent persona with its own personality, tools, and visual DNA. All use the same commands: `agentos serve`, `agentos chat`, etc.
 
 <div class="flavor-grid" markdown>
 
 <div class="flavor-card" markdown>
 <div class="flavor-icon">🎩</div>
 ### Jean-Pierre — The PM
-AI Project Management copilot. GitHub + Jira + Slack intelligence. Risk identifies and sprint management.
+AI Project Management copilot. GitHub + Jira + Slack intelligence. Risk identification and sprint management.
+<br>
+**Binary:** `agentos-pm` · **Status: ✅ Available**
+<br>
 [Learn more →](flavors/jean-pierre.md)
-</div>
-
-<div class="flavor-card" markdown>
-<div class="flavor-icon">🏢</div>
-### Office Assistant
-Document management, scheduling, and workflow automation for office productivity.
-<em>Coming soon</em>
 </div>
 
 <div class="flavor-card" markdown>
 <div class="flavor-icon">🛒</div>
 ### Retail Ops
 Inventory tracking, order management, and retail analytics AI assistant.
-<em>Coming soon</em>
+<br>
+**Binary:** `agentos-retail` · **Status: ✅ Available**
+</div>
+
+<div class="flavor-card" markdown>
+<div class="flavor-icon">🏢</div>
+### Office Assistant
+Document management, scheduling, and workflow automation for office productivity.
+<br>
+**Binary:** `agentos-office` · **Status: ✅ Available**
 </div>
 
 </div>
+
+```bash
+# Install a specific flavour:
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
+```
 
 ---
 
@@ -182,9 +194,9 @@ All communication with UnicoLab Watchtower is limited to **license validation** 
 AgentOS is an **experimental AI platform** — an autonomous compute node for advanced project management. We are offering free access to the PM flavor (Jean-Pierre) during the public beta.
 
 ### How to get started:
-1. **Download** from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
+1. **Download** your preferred flavour from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
 2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your activation key.
-3. **Launch and Configure** — See the [Quick Start Guide](getting-started/quick-start.md) to get running in minutes.
+3. **Launch** — double-click the included launcher or run `agentos serve`. See the [Quick Start Guide](getting-started/quick-start.md).
 
 <div class="hero-cta" markdown>
 

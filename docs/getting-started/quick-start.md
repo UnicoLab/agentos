@@ -17,9 +17,16 @@ Follow this 5-minute guide to go from zero to your first AI-powered project insi
 
 Before you begin, ensure you have the core engine ready:
 
-- [x] **AgentOS binary** — [Download latest version](https://github.com/UnicoLab/agentos/releases/latest)
+- [x] **AgentOS binary** — [Download your flavour](https://github.com/UnicoLab/agentos/releases/latest) (PM, Retail, or Office)
 - [x] **AI Provider** — [Ollama](../guides/ollama-setup.md) (Local) or API Key (OpenAI/Anthropic/Gemini)
 - [x] **Source Access** — GitHub personal access token (optional, but recommended)
+
+!!! tip "One-Line Install"
+    ```bash
+    # Default (PM flavour)
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+    # Or choose: --flavour retail / --flavour office
+    ```
 
 ---
 
@@ -32,7 +39,7 @@ You can set up AgentOS in two ways: via the CLI or directly in the Web UI.
 <div class="step-card" markdown>
 <div class="step-num">1</div>
 ### Launch
-Run `agentos serve` in your terminal. Your dashboard will automatically open at `http://localhost:18080`.
+Double-click `Start AgentOS.command` (macOS) or `Start AgentOS.bat` (Windows), or run `agentos serve` in your terminal. Your dashboard opens at `http://localhost:18080`.
 </div>
 
 <div class="step-card" markdown>

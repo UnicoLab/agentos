@@ -97,7 +97,7 @@ nav:
       - GitHub Setup: guides/github-setup.md
       - Jira Setup: guides/jira-setup.md
       - Slack Setup: guides/slack-setup.md
-      - AIFlow Sync: guides/aiflow-sync.md
+      - AIFlow Integration: guides/aiflow-sync.md
       - Background Service: guides/background-service.md
   - Reference:
       - CLI Commands: reference/cli.md

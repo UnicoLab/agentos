@@ -114,6 +114,16 @@ agentos serve
 
 That's it! 🎉 Open `http://localhost:18080` and configure everything in the **Web UI Settings**.
 
+### 🖱️ No Terminal Needed
+
+Every download includes **double-click launcher scripts** — no command line required:
+
+| Platform | File | Action |
+|----------|------|--------|
+| **macOS** | `Start AgentOS.command` | Double-click in Finder — clears Gatekeeper, opens browser |
+| **Windows** | `Start AgentOS.bat` | Double-click in Explorer — opens browser |
+| **Linux** | `start-agentos.sh` | Make executable, double-click in file manager |
+
 > 📖 **Detailed guides:** [Installation](https://unicolab.github.io/agentos/getting-started/installation/) · [Ollama Setup](https://unicolab.github.io/agentos/guides/ollama-setup/) · [GitHub Setup](https://unicolab.github.io/agentos/guides/github-setup/)
 
 ---

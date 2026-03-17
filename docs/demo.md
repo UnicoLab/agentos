@@ -1,6 +1,6 @@
 ---
 title: Product Tour
-description: Discover how Jean-Pierre saves project managers 10+ hours per week with AI-powered project intelligence.
+description: "Discover how AgentOS saves project managers 10+ hours per week with AI-powered project intelligence — all running locally on your machine."
 ---
 
 <div class="hero" markdown>
@@ -11,24 +11,24 @@ description: Discover how Jean-Pierre saves project managers 10+ hours per week 
 
 <div class="hero-cta" markdown>
 [Install in 10 Seconds :material-download:](#get-started){ .md-button .md-button--primary }
-[See What It Does :material-arrow-down:](#the-problem){ .md-button }
+[See What It Does :material-arrow-down:](#the-challenge){ .md-button }
 </div>
 
 </div>
 
 ---
 
-## The Problem
+## The Challenge
 
-Every week, project managers lose **10+ hours** to:
+Every week, project managers lose **10+ hours** to fragmented tooling:
 
-| Activity | Time Wasted | Why |
-|----------|------------|-----|
-| Gathering status from GitHub, Jira, Slack | ~3 hours | Context-switching between 5+ tools |
-| Preparing for standup + sprint meetings | ~2 hours | Manually aggregating data |
-| Answering "what's the status?" questions | ~2 hours | No single source of truth |
-| Identifying risks and blockers | ~2 hours | Reactive, not proactive |
-| Writing reports and summaries | ~2 hours | Copy-paste from multiple sources |
+| Activity | Time Lost | Root Cause |
+|----------|-----------|------------|
+| Gathering status from GitHub, Jira, Slack | ~3 hours | Context-switching between 5+ disconnected tools |
+| Preparing for standup + sprint meetings | ~2 hours | Manually aggregating data from multiple sources |
+| Answering "what's the status?" questions | ~2 hours | No single source of truth for project health |
+| Identifying risks and blockers | ~2 hours | Reactive discovery — problems found too late |
+| Writing reports and summaries | ~2 hours | Copy-paste from multiple dashboards |
 
 **Jean-Pierre eliminates all of this.**
 
@@ -39,6 +39,10 @@ Every week, project managers lose **10+ hours** to:
 ### :material-atom: A Living Intelligence Dashboard
 
 Not a static dashboard — a **living, breathing project surface**. Jean-Pierre's orbital view puts the agent at the center of your project universe, with live metrics orbiting around it:
+
+<div class="screenshot" markdown>
+![Jean-Pierre Living Dashboard](assets/screens/flavors/pm/living-view.png)
+</div>
 
 === "Real-Time Health"
     A continuously-updated **health score** tells you instantly if your project is on track, at risk, or needs immediate attention. No more guessing.
@@ -60,6 +64,10 @@ Not a static dashboard — a **living, breathing project surface**. Jean-Pierre'
 ### :material-robot: An AI That Knows Your Projects
 
 JP isn't a generic chatbot. It's an AI that's **connected to your live data** and understands your projects deeply.
+
+<div class="screenshot" markdown>
+![JP Chat & Planning](assets/screens/flavors/pm/JP-chat-planning.png)
+</div>
 
 **Ask anything:**
 
@@ -113,6 +121,10 @@ No configuration needed. JP learns from your conversations and applies this know
 
 The **Strategic Canvas** gives you a visual overview of your entire portfolio:
 
+<div class="screenshot" markdown>
+![Strategic Board](assets/screens/flavors/pm/strategic-board.png)
+</div>
+
 - **Live project cards** with health badges, commit sparklines, and key metrics
 - **Smart connections** between projects (dependencies, blockers, team sharing)
 - **AI analysis** that sees cross-project risks invisible in individual dashboards
@@ -120,7 +132,7 @@ The **Strategic Canvas** gives you a visual overview of your entire portfolio:
 | Without Canvas | With Canvas |
 |---------------|-------------|
 | Risks discovered in meetings (too late) | AI-detected cross-project risks in real-time |
-| Dependencies tracked in spreadsheets | Visual dependency map |
+| Dependencies tracked in spreadsheets | Visual dependency map with typed relationships |
 | Strategic analysis takes hours | One-click AI portfolio analysis |
 
 [Learn more about Strategic Canvas →](features/canvas.md)
@@ -133,6 +145,10 @@ The **Strategic Canvas** gives you a visual overview of your entire portfolio:
 ### :material-view-grid: Multi-Project Radar
 
 Managing 5, 10, 20 projects? **Fleet View** ranks all projects by risk score. Open it at 9am and you know in 10 seconds which projects need your attention today.
+
+<div class="screenshot" markdown>
+![Fleet Intelligence](assets/screens/flavors/pm/fleet-intelligence.png)
+</div>
 
 !!! success "Impact"
     **No more checking each project individually.** One screen, all projects, highest risk first.
@@ -152,7 +168,7 @@ JP works even when you don't ask:
 
 ---
 
-## :material-shield-lock: Enterprise Security
+## :material-shield-lock: Enterprise-Grade Security
 
 <div class="feature-grid" markdown>
 
@@ -205,7 +221,7 @@ macOS (Intel + Apple Silicon) · Linux · Windows
 <div class="step-card" markdown>
 <div class="step-num">🔑</div>
 ### Licensing
-Per-seat via Watchtower · Free beta available
+Per-seat via Watchtower · Free evaluation available
 </div>
 
 </div>
@@ -249,9 +265,9 @@ Open [http://localhost:18080](http://localhost:18080) — the onboarding wizard 
 | **Windows** (amd64) | [Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest) |
 
 !!! info "What you'll need"
-    - :robot: **AI Provider**: [Ollama](guides/ollama-setup.md) (free, local) or OpenAI/Anthropic/Gemini API key
+    - :material-robot: **AI Provider**: [Ollama](guides/ollama-setup.md) (free, local) or OpenAI/Anthropic/Gemini API key
     - :material-github: **GitHub Token**: For repository tracking
-    - :material-key: **License Key**: Request at [info@unicolab.ai](mailto:info@unicolab.ai)
+    - :material-key: **License Key**: Request a free evaluation key at [info@unicolab.ai](mailto:info@unicolab.ai)
 
 ---
 
@@ -259,7 +275,7 @@ Open [http://localhost:18080](http://localhost:18080) — the onboarding wizard 
   <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Ready to get 10 hours back every week?</h2>
   <p style="opacity: 0.7; font-size: 1.1rem; margin-bottom: 1.5rem;"><em>"Jean-Pierre doesn't just show you data — he understands your projects."</em></p>
   <a href="https://github.com/UnicoLab/agentos/releases/latest" class="md-button md-button--primary" style="margin: 0 8px;">Download Now</a>
-  <a href="getting-started/installation.html" class="md-button" style="margin: 0 8px;">Installation Guide</a>
+  <a href="getting-started/installation.md" class="md-button" style="margin: 0 8px;">Installation Guide</a>
   <br><br>
   <p style="opacity: 0.5; font-size: 0.85rem;">Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a> · <a href="mailto:info@unicolab.ai">info@unicolab.ai</a></p>
 </div>

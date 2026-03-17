@@ -1,3 +1,8 @@
+---
+title: GitHub Integration
+description: "Connect AgentOS to your GitHub repositories to track PRs, commits, issues, and contributor velocity in real-time."
+---
+
 <div class="hero" markdown>
 
 # 🐙 GitHub Integration
@@ -44,9 +49,6 @@ Copy the token and paste it into the **Settings > Integrations > GitHub** panel 
 
 Once the connector is active, you can link repositories to your projects.
 
-<div class="screenshot" markdown>
-![GitHub Configuration](../assets/screens/flavors/pm/github-config.png)
-</div>
 
 ### Multi-Repo Aggregation
 Jean-Pierre can track multiple repositories under a single project. This is perfect for microservices or mono-repo workflows where a single "product" spans several codebases.

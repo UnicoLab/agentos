@@ -1,3 +1,8 @@
+---
+title: "Jean-Pierre — The AI PM Copilot"
+description: "A local-first AI copilot that connects your GitHub, Jira, and documentation into one real-time, intelligent command center for every project you manage."
+---
+
 <div class="hero" markdown>
 
 # Jean-Pierre — The AI PM Copilot 🎩

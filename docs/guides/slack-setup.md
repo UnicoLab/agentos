@@ -1,3 +1,8 @@
+---
+title: Slack Integration
+description: "Send standup reports and automated notifications from AgentOS directly to your Slack channels."
+---
+
 <div class="hero" markdown>
 
 # 💬 Slack Integration

@@ -1,6 +1,15 @@
-# API Endpoints
+---
+title: API Endpoints
+description: "REST API reference for AgentOS. Programmatic access to chat, projects, fleet, memory, and monitoring endpoints."
+---
+
+<div class="hero" markdown>
+
+# :material-api: API Endpoints
 
 AgentOS exposes a REST API for programmatic access. All endpoints are available at `http://localhost:18080` when the server is running.
+
+</div>
 
 ---
 
@@ -58,3 +67,10 @@ AgentOS exposes a REST API for programmatic access. All endpoints are available 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `POST` | `/v1/webhook/github` | GitHub webhook receiver |
+
+---
+
+<div class="hero-cta" markdown>
+[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
+[CLI Reference :material-console:](cli.md){ .md-button }
+</div>

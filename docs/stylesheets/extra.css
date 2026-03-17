@@ -623,6 +623,95 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   METRICS BAR — Horizontal Stat Counter
+   ══════════════════════════════════════════════════════════════ */
+
+.metrics-bar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.metric-item {
+  text-align: center;
+  min-width: 100px;
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--md-default-fg-color--light);
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TESTIMONIAL CARD
+   ══════════════════════════════════════════════════════════════ */
+
+.testimonial-card {
+  padding: 2.5rem 2rem;
+  border-radius: var(--card-radius);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  text-align: center;
+  position: relative;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -0.2em;
+  left: 1.5rem;
+  font-size: 5rem;
+  font-weight: 900;
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.25;
+  line-height: 1;
+}
+
+.testimonial-card blockquote {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--md-default-fg-color);
+}
+
+.testimonial-card .testimonial-author {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color--light);
+  font-style: normal;
+}
+
+/* ══════════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════════ */
 
@@ -646,5 +735,11 @@
     width: 100%;
     max-width: 280px;
     text-align: center;
+  }
+  .metrics-bar {
+    gap: 1.5rem;
+  }
+  .metric-value {
+    font-size: 1.8rem;
   }
 }

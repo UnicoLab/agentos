@@ -1,3 +1,8 @@
+---
+title: Installation
+description: "Install AgentOS on macOS, Linux, or Windows with one command. Get your AI project intelligence running in under a minute."
+---
+
 <div class="hero" markdown>
 
 # 🛠️ Installation

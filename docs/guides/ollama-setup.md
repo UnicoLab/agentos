@@ -1,3 +1,8 @@
+---
+title: Ollama Setup — Free Local AI
+description: "Run high-fidelity LLMs entirely on your machine with Ollama. Maximum privacy, zero recurring costs."
+---
+
 <div class="hero" markdown>
 
 # 🤖 Ollama Setup — Free Local AI

@@ -1,17 +1,22 @@
+---
+title: Security & Privacy
+description: "AgentOS runs 100% locally. Your project data, conversations, and configurations never leave your machine. Learn about our privacy-first architecture."
+---
+
 <div class="hero" markdown>
 
-# Security & Privacy
+# :material-shield-lock: Security & Privacy
 
 <div class="privacy-badge">🔒 Your data stays on your machine</div>
 
-Local-first AI agents for your workflow — private, powerful, and fully customizable.
-Your data never leaves your machine. You choose the model, the prompt, the tools.
+Your intelligence. Your infrastructure. Your rules.<br>
+AgentOS is built on a **zero-trust, local-first architecture** — every byte of your project data stays on your hardware.
 
 </div>
 
 ---
 
-## Our Privacy Promise
+## Our Privacy Commitment
 
 **Your data stays on YOUR machine.** AgentOS runs entirely locally — all project data, conversations, memories, and configurations are stored in an encrypted SQLite database on your computer. There is no cloud backend, no shared server, and no telemetry on your project data.
 
@@ -22,22 +27,22 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 <div class="feature-grid" markdown>
 
 <div class="feature-card" markdown>
-### 📂 Project Data
+### :material-folder-lock: Project Data
 Commits, PRs, issues, and sprint data are stored locally. Fetched via encrypted API calls directly to GitHub/Jira — the same calls your browser makes.
 </div>
 
 <div class="feature-card" markdown>
-### 💬 Chat History
-All your conversations with Jean-Pierre are stored in your local SQLite database. 100% private. No cloud logging.
+### :material-message-lock: Chat History
+All your conversations with your AI agent are stored in your local SQLite database. 100% private. No cloud logging.
 </div>
 
 <div class="feature-card" markdown>
-### 🧠 Agent Memory
+### :material-head-lightbulb: Agent Memory
 Your preferences, learned facts, team structures, and corrections stay local. Memory is persisted in the same encrypted store.
 </div>
 
 <div class="feature-card" markdown>
-### 📝 Meeting Notes
+### :material-note-text: Meeting Notes
 All AI-generated meeting minutes, action items, and follow-ups are stored locally. Your meeting intelligence is yours alone.
 </div>
 
@@ -45,7 +50,7 @@ All AI-generated meeting minutes, action items, and follow-ups are stored locall
 
 ---
 
-## 🔐 Encryption & Password Security
+## :material-lock: Encryption & Key Security
 
 AgentOS takes data protection seriously at every layer:
 
@@ -113,7 +118,38 @@ Anonymized feature usage statistics to help us improve the engine. **Never your 
 
 ---
 
-## 📐 Architecture Design
+## :material-check-decagram: Compliance Readiness
+
+AgentOS's local-first architecture inherently addresses key compliance and regulatory requirements:
+
+| Requirement | How AgentOS Addresses It |
+|-------------|--------------------------|
+| **Data Residency** | All data stored on your hardware — you choose the jurisdiction |
+| **GDPR / Data Minimization** | No personal data collected or stored by UnicoLab |
+| **Access Control** | Single-user local instance — no shared access by default |
+| **Audit Trail** | Full action chain with complete tool call transparency |
+| **Right to Erasure** | Delete the local database — all data gone instantly |
+| **Vendor Risk** | No cloud dependency — zero third-party data processing |
+
+!!! tip "Enterprise Security Review"
+    Need a formal security assessment for your procurement process? Contact our team at [security@unicolab.ai](mailto:security@unicolab.ai) — we're happy to provide detailed documentation for your security review.
+
+---
+
+## :material-compare: AgentOS vs. Traditional SaaS
+
+| Concern | Traditional SaaS PM Tools | AgentOS |
+|---------|--------------------------|---------|
+| **Data Location** | Vendor's cloud servers | ✅ Your local machine |
+| **Data Access** | Vendor employees can access | ✅ Only you |
+| **API Keys** | Stored on vendor servers | ✅ Stored locally, never shared |
+| **Conversations** | Logged on vendor servers | ✅ Local SQLite, never transmitted |
+| **Vendor Breach Risk** | Your data exposed | ✅ Nothing to breach — no cloud data |
+| **Offline Operation** | Requires internet | ✅ Full functionality with Ollama |
+
+---
+
+## :material-drawing: Architecture Design
 
 <div class="screenshot" markdown>
 ![Architecture](assets/images/architecture.png)
@@ -123,7 +159,7 @@ AgentOS is built as a **self-contained autonomous compute node**. The single bin
 
 ---
 
-## 🚀 Scalability — Zero Bottlenecks
+## :material-chart-timeline-variant: Scalability — Zero Bottlenecks
 
 !!! tip "Built for Any Team Size"
     Since AgentOS runs **fully locally on each user's machine**, there are no scalability bottlenecks — whether you have 1 user or 1,000 users in your organization.

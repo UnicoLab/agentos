@@ -1,3 +1,8 @@
+---
+title: Background Service
+description: "Run AgentOS as a persistent background service that starts automatically when you log in on macOS, Linux, or Windows."
+---
+
 # Background Service
 
 Run AgentOS as a persistent background service that starts automatically when you log in.

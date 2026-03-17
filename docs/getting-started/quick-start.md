@@ -1,3 +1,8 @@
+---
+title: Quick Start Guide
+description: "Go from zero to your first AI-powered project insight in 5 minutes. Follow this step-by-step guide to set up AgentOS."
+---
+
 <div class="hero" markdown>
 
 # ⚡ Quick Start Guide

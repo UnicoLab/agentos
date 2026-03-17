@@ -1,3 +1,8 @@
+---
+title: AgentOS Flavours
+description: "One engine, many agents. Each AgentOS flavour is a specialized AI persona with its own personality, tools, and dashboard — tailored for a specific role."
+---
+
 # AgentOS Flavours
 
 AgentOS is built on a **flavour system** — each flavour is a specialized AI agent persona with its own personality, tools, dashboard configuration, and use case. Each flavour is a **separate binary** that you download and run.

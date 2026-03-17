@@ -1,3 +1,8 @@
+---
+title: Configuration
+description: "Configure AgentOS AI providers, project tracking, and integrations. Manage everything through the Web UI or by editing config files directly."
+---
+
 <div class="hero" markdown>
 
 # ⚙️ Configuration

@@ -1,6 +1,15 @@
-# CLI Commands
+---
+title: CLI Commands
+description: "Complete reference for all AgentOS CLI commands, including serve, chat, setup, and interactive slash commands."
+---
 
-AgentOS provides a powerful command-line interface for all operations.
+<div class="hero" markdown>
+
+# :material-console: CLI Commands
+
+AgentOS provides a powerful command-line interface for all operations — from launching the server to interactive AI chat sessions.
+
+</div>
 
 ---
 
@@ -75,7 +84,14 @@ Interactive wizard for first-time configuration. Walks you through:
 
 ```bash
 $ agentos version
-Jean-Pierre v0.8.1 (abc1234) built 2026-03-10T12:00:00Z
+Jean-Pierre v0.13.0 (abc1234) built 2026-03-15T12:00:00Z
 Pack: aiflow-pm (Jean-Pierre — The PM 🎩)
 License: 🟢 enterprise (active) [3/10 seats]
 ```
+
+---
+
+<div class="hero-cta" markdown>
+[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
+[Quick Start Guide :material-rocket-launch:](../getting-started/quick-start.md){ .md-button }
+</div>

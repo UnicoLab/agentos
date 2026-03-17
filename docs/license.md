@@ -1,28 +1,40 @@
-# License
+---
+title: License & Evaluation
+description: "Get a free evaluation license for AgentOS. Join our early access program and experience AI-powered project management with zero risk."
+---
+
+<div class="hero" markdown>
+
+# :material-key-variant: License & Evaluation
 
 AgentOS requires a valid license key to operate. Licenses are managed through the **Watchtower** licensing service by UnicoLab.
 
+<div class="hero-cta" markdown>
+[Request Free License :material-email:](mailto:info@unicolab.ai){ .md-button .md-button--primary }
+[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button }
+</div>
+
+</div>
+
 ---
 
-## 🧪 R&D Testing Program — Free Access
+## :material-star-shooting: Early Access Program — Free Evaluation
 
-!!! warning "License Required"
-    AgentOS **will not work** without a valid license key. To obtain a free testing license, contact us at **[info@unicolab.ai](mailto:info@unicolab.ai)**.
+!!! success "Your Opportunity"
+    AgentOS is an **innovative AI platform** currently in active development. We're inviting early adopters to experience the future of project management — **completely free**. This is your chance to get hands-on with cutting-edge technology, provide feedback, and help shape the product before general availability.
 
-AgentOS is currently an **experimental R&D project** — an autonomous compute node for our project management platform solution. We're actively developing and testing it, and **there may be bugs** as the project is in active research and development.
-
-We're offering **free limited access** to the PM flavor (Jean-Pierre) in exchange for your feedback:
+As an early-stage platform, you may encounter occasional rough edges — but that's also what makes this an **incredible opportunity**: free access to enterprise-grade AI project intelligence with direct influence on the roadmap.
 
 ### What You Get
-- ✅ **Free license key** for testing — no cost, no commitment
-- ✅ **Full access** to the Jean-Pierre PM flavor
-- ✅ **Priority support** from the development team
-- ✅ **Direct influence** on the product roadmap
+- ✅ **Free evaluation license** — full access to the Jean-Pierre PM flavor, no cost
+- ✅ **Priority support** from the core development team
+- ✅ **Direct influence** on the product roadmap — your feedback shapes the future
+- ✅ **First look** at new features, flavours, and capabilities
 
-### What We Ask
-- 💬 **Your feedback** — What works? What doesn't? What's missing?
-- 🐛 **Bug reports** — Help us find and fix issues
-- 💡 **Feature suggestions** — Tell us what you need
+### What We Value
+- 💬 **Your feedback** — What works? What could be better? What's missing?
+- 🐛 **Bug reports** — Help us polish the experience
+- 💡 **Feature ideas** — Tell us what would make AgentOS indispensable for you
 
 ### How to Get Your License
 
@@ -81,15 +93,15 @@ $ agentos license
 
 ---
 
-## No Vendor Lock-In
+## :material-lock-open-variant: No Vendor Lock-In
 
 AgentOS gives you **full control**:
 
-- 🤖 **Choose your AI model** — Use Ollama (free, local), OpenAI, Anthropic, or Gemini. Switch anytime.
-- 📝 **Customize prompts** — Full control over the system prompt and agent behavior
-- 🧰 **Choose your tools** — Enable only the integrations you need
-- 📂 **Own your data** — Everything stored locally in standard SQLite. Export anytime.
-- 🔧 **Extensible** — The flavor system lets you adapt the agent to any use case
+- :material-robot: **Choose your AI model** — Use Ollama (free, local), OpenAI, Anthropic, or Gemini. Switch anytime.
+- :material-pencil: **Customize prompts** — Full control over the system prompt and agent behavior
+- :material-wrench: **Choose your tools** — Enable only the integrations you need
+- :material-folder: **Own your data** — Everything stored locally in standard SQLite. Export anytime.
+- :material-cog: **Extensible** — The flavor system lets you adapt the agent to any use case
 
 You're never locked into a specific AI provider, model, or workflow. AgentOS is a **base engine** that you control.
 

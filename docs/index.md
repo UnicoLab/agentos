@@ -1,4 +1,6 @@
 ---
+title: AgentOS — Local-First AI Agents
+description: "Private, powerful AI agents that run entirely on your machine. Connect GitHub, Jira, and Slack — get instant project intelligence without sending a single byte to the cloud."
 hide:
   - navigation
   - toc
@@ -11,15 +13,15 @@ hide:
 # AgentOS
 
 <p class="subtitle">
-Local-first AI agents for your workflow — private, powerful, and fully customizable.<br>
-Your data never leaves your machine. You choose the model, the prompt, the tools. <strong>No vendor lock-in.</strong>
+Your projects. Your machine. Your intelligence.<br>
+AI agents that connect your dev tools, synthesize live data, and deliver instant project insights — <strong>100% locally</strong>. No cloud. No vendor lock-in. No compromises.
 </p>
 
 <div class="hero-badges" markdown>
 
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=flat-square)]()
-[![License](https://img.shields.io/badge/License-Free%20Testing-brightgreen?style=flat-square)](mailto:info@unicolab.ai)
-[![Privacy](https://img.shields.io/badge/Privacy-Local%20First-success?style=flat-square)](security.md)
+[![License](https://img.shields.io/badge/License-Free%20Evaluation-brightgreen?style=flat-square)](mailto:info@unicolab.ai)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-success?style=flat-square)](security.md)
 
 </div>
 
@@ -34,15 +36,40 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 ---
 
-## What is AgentOS?
+<div class="metrics-bar" markdown>
+
+<div class="metric-item">
+<div class="metric-value">10+</div>
+<div class="metric-label">Hours Saved / Week</div>
+</div>
+
+<div class="metric-item">
+<div class="metric-value">100%</div>
+<div class="metric-label">Private & Local</div>
+</div>
+
+<div class="metric-item">
+<div class="metric-value">3</div>
+<div class="metric-label">Platforms Supported</div>
+</div>
+
+<div class="metric-item">
+<div class="metric-value">4</div>
+<div class="metric-label">AI Providers</div>
+</div>
+
+</div>
+
+---
+
+## Your Projects. One Command Center.
 
 **AgentOS** is an AI-powered agent platform that runs **entirely on your machine**. It connects to your development tools — GitHub, Jira, Slack, and more — synthesizes everything into a premium intelligence dashboard, and lets you interact with your projects through natural language.
 
+No cloud servers. No shared databases. No data leaving your machine. Just a single binary that turns your laptop into a **project intelligence powerhouse**.
+
 !!! tip "100% Private & Secure"
-    All your project data, chat conversations, and configurations stay on your local machine. The **only** external communication is for licensing validation, bug reports, feedback, and anonymized usage statistics — **never your project data**.
-
-
-
+    All your project data, chat conversations, and configurations stay on your local machine. The **only** external communication is for licensing validation and anonymized usage statistics — **never your project data**.
 
 ---
 
@@ -72,41 +99,43 @@ Your data never leaves your machine. You choose the model, the prompt, the tools
 
 ---
 
-## Key Features
+## Key Capabilities
 
 <div class="feature-grid" markdown>
 
 <div class="feature-card" markdown>
-### 🤖 AI Copilot
-Streaming chat with Ollama (local), OpenAI, Anthropic, or Gemini. Persistent memory that learns your preferences.
+### :material-robot: AI Copilot
+Streaming chat with Ollama (local), OpenAI, Anthropic, or Gemini. Persistent memory that learns your preferences and team dynamics.
 [AI Copilot →](features/ai-copilot.md)
 </div>
 
 <div class="feature-card" markdown>
-### 📊 Smart Dashboard
-24-card bento-grid: KPIs, Risk Radar, Velocity, Gantt, Heatmaps, Sprint Status, and more — all drag-and-drop.
+### :material-view-dashboard: Smart Dashboard
+24-card bento-grid command center: KPIs, Risk Radar, Velocity, Gantt, Heatmaps, Sprint Status — all drag-and-drop.
 [Dashboard →](features/dashboard.md)
 </div>
 
 <div class="feature-card" markdown>
-### 🐙 Multi-Source Sync
-Aggregate GitHub repos and Jira boards in one view. Track PRs, commits, issues, and contributor velocity.
+### :material-source-branch: Multi-Source Sync
+Aggregate GitHub repos and Jira boards in one view. Track PRs, commits, issues, and contributor velocity across your entire stack.
+[Integrations →](features/integrations.md)
 </div>
 
 <div class="feature-card" markdown>
-### 🔒 Local-First Privacy
-Runs on YOUR machine. Data sovereignty by design. SQLite storage, no cloud sync mandatory.
+### :material-shield-lock: Local-First Privacy
+Runs on YOUR machine. Data sovereignty by design. Encrypted SQLite storage, zero cloud dependency.
 [Security →](security.md)
 </div>
 
 <div class="feature-card" markdown>
-### ⚡ Action Chain
-Watch your AI agent work. Tool calls visualized as an expanding chain with per-step timing and outputs.
+### :material-link-variant: Action Chain
+Watch your AI agent work. Every tool call visualized as an expanding chain with per-step timing, arguments, and outputs — complete transparency.
 </div>
 
 <div class="feature-card" markdown>
-### 🛸 Fleet View
-Multi-project health overview — all projects ranked by risk score. Perfect for engineering managers.
+### :material-rocket-launch: Fleet View
+Multi-project health overview — all projects ranked by risk score. One screen, all projects, highest risk first.
+[Fleet View →](features/fleet-view.md)
 </div>
 
 </div>
@@ -156,18 +185,18 @@ curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour of
 
 ---
 
-## 🔓 No Vendor Lock-In — Full Control
+## :material-lock-open-variant: Full Control — No Vendor Lock-In
 
 AgentOS puts **you** in charge of your intelligence infrastructure:
 
-- 🤖 **Choose your AI model** — Ollama (local), OpenAI, Anthropic, or Gemini. Switch anytime.
-- 📝 **Customize prompts** — Full control over system prompts and agent behavior.
-- 🧰 **Pick your tools** — Enable only what is necessary for your workflow.
-- 📂 **Own your data** — Standard SQLite storage. Export anytime. We never touch it.
+- :material-robot: **Choose your AI model** — Ollama (local), OpenAI, Anthropic, or Gemini. Switch anytime.
+- :material-pencil: **Customize prompts** — Full control over system prompts and agent behavior.
+- :material-wrench: **Pick your tools** — Enable only what is necessary for your workflow.
+- :material-folder: **Own your data** — Standard SQLite storage. Export anytime. We never touch it.
 
 ---
 
-## 🔒 Privacy & Data Security
+## :material-shield-lock: Privacy & Data Security
 
 <div class="privacy-badge">🔒 Your data stays on your machine</div>
 
@@ -186,22 +215,56 @@ All communication with UnicoLab Watchtower is limited to **license validation** 
 
 ---
 
-## 🧪 R&D Testing Program — Try It Free
+## Built For
 
-!!! warning "License Required"
-    AgentOS requires a valid license key to operate. To get a **free testing license**, contact our team at **[info@unicolab.ai](mailto:info@unicolab.ai)**.
+<div class="feature-grid" markdown>
 
-AgentOS is an **experimental AI platform** — an autonomous compute node for advanced project management. We are offering free access to the PM flavor (Jean-Pierre) during the public beta.
+<div class="feature-card" markdown>
+### :material-account-tie: Engineering Managers
+Real-time team velocity, PR throughput, contribution heatmaps, and risk radar for every project in your portfolio.
+</div>
+
+<div class="feature-card" markdown>
+### :material-clipboard-check: Technical PMs
+Automated reporting, sprint planning, cross-team coordination, and boardroom-ready executive summaries.
+</div>
+
+<div class="feature-card" markdown>
+### :material-code-braces: Freelance Developers
+Manage multiple client projects from one hub. Fleet View keeps every project at your fingertips.
+</div>
+
+<div class="feature-card" markdown>
+### :material-rocket-launch: Startup CTOs
+Enterprise-grade project intelligence on your local machine — without the enterprise price tag.
+</div>
+
+</div>
+
+---
+
+## :material-star-shooting: Early Access Program — Try It Free
+
+!!! success "Be Among the First"
+    AgentOS is in active development and we're inviting early adopters to **experience the future of project management** — completely free. This is your chance to get hands-on with cutting-edge AI project intelligence and help shape the product.
+
+As an early-stage platform, you may encounter occasional rough edges — but that's also what makes this the perfect time to get involved. **Early adopters get free licenses, priority support, and direct influence on the roadmap.**
+
+### What you get:
+- ✅ **Free evaluation license** — full access, no cost, no commitment
+- ✅ **Priority support** from the core development team
+- ✅ **Direct influence** on the product roadmap
+- ✅ **First look** at new features and flavours
 
 ### How to get started:
 1. **Download** your preferred flavour from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
-2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your activation key.
-3. **Launch** — double-click the included launcher or run `agentos serve`. See the [Quick Start Guide](getting-started/quick-start.md).
+2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your activation key
+3. **Launch** — double-click the included launcher or run `agentos serve`. See the [Quick Start Guide](getting-started/quick-start.md)
 
 <div class="hero-cta" markdown>
 
 [Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Email for Key :material-email:](mailto:info@unicolab.ai){ .md-button }
+[Request Free License :material-email:](mailto:info@unicolab.ai){ .md-button }
 
 </div>
 

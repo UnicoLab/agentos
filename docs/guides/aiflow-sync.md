@@ -1,3 +1,8 @@
+---
+title: AIFlow Integration
+description: "Connect AgentOS to AIFlow for centralized intelligence, cross-project analytics, and multi-agent orchestration."
+---
+
 <div class="hero" markdown>
 
 # AIFlow Integration

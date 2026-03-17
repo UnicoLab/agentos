@@ -1,3 +1,8 @@
+---
+title: Jira Integration
+description: "Connect AgentOS to your Jira boards to track sprints, issues, epics, and team workload with AI-powered analytics."
+---
+
 <div class="hero" markdown>
 
 # 📋 Jira Integration
@@ -40,9 +45,6 @@ Add your Board IDs to your project configuration. Jean-Pierre will begin hydrati
 
 ## 📊 Mapping Your Jira Boards
 
-<div class="screenshot" markdown>
-![Jira Configuration](../assets/screens/flavors/pm/jira-config.png)
-</div>
 
 !!! info "Finding your Board ID"
     Open your Jira board in a browser. The numerical value at the end of the URL (e.g., `.../boards/42`) is your **Board ID**.

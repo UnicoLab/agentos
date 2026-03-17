@@ -1,6 +1,6 @@
 site_name: AgentOS by UnicoLab
 site_url: https://unicolab.github.io/agentos
-site_description: "Local-first AI agents for your workflow — private, powerful, and customizable."
+site_description: "Private, powerful AI agents that run entirely on your machine. Connect GitHub, Jira, and Slack — get instant project intelligence without sending a single byte to the cloud."
 site_author: UnicoLab
 repo_url: https://github.com/UnicoLab/agentos
 repo_name: UnicoLab/agentos
@@ -109,6 +109,6 @@ nav:
       - Overview: flavors/index.md
       - "Jean-Pierre — PM": flavors/jean-pierre.md
   - Security & Privacy: security.md
-  - License: license.md
+  - License & Evaluation: license.md
 
 copyright: "Built with ❤️ by <a href='https://unicolab.ai'>UnicoLab</a> · &copy; 2024–2026 UnicoLab. All rights reserved."

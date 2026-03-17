@@ -1,6 +1,6 @@
 ---
 title: Strategic Canvas
-description: A visual portfolio board that gives you real-time project health, dependency mapping, and AI-powered strategic recommendations.
+description: "A visual portfolio board that gives you real-time project health, dependency mapping, and AI-powered strategic recommendations — all on one canvas."
 ---
 
 <div class="hero" markdown>
@@ -9,6 +9,11 @@ description: A visual portfolio board that gives you real-time project health, d
 
 **See your entire portfolio at a glance.** Live project health, smart dependency mapping, and AI-powered strategic recommendations — all on one visual board.
 
+<div class="hero-cta" markdown>
+[View Jean-Pierre Flavor →](../flavors/jean-pierre.md){ .md-button .md-button--primary }
+[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button }
+</div>
+
 </div>
 
 ---
@@ -16,6 +21,10 @@ description: A visual portfolio board that gives you real-time project health, d
 ## Why It Matters
 
 Managing multiple projects means juggling fragmented views across GitHub, Jira, and spreadsheets. The Strategic Canvas gives you something you've never had before: a **single visual board** where every project shows real-time health and you can map relationships between them.
+
+<div class="screenshot" markdown>
+![Strategic Board](../assets/screens/flavors/pm/strategic-board.png)
+</div>
 
 !!! success "The Value"
     - **Cut status meeting prep from 30 minutes to 30 seconds**
@@ -90,3 +99,10 @@ See immediately: *"3 projects healthy, 1 at risk, 1 critical. Overall health: 72
 | Risks discovered in meetings (too late) | AI-detected cross-project risks in real-time |
 | Manual status aggregation | Auto-populated live metrics |
 | Strategic analysis takes hours | One-click AI analysis of entire portfolio |
+
+---
+
+<div class="hero-cta" markdown>
+[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
+[Quick Start Guide :material-rocket-launch:](../getting-started/quick-start.md){ .md-button }
+</div>

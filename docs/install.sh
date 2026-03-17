@@ -19,6 +19,7 @@
 #    • Selects the correct per-flavour binary
 #    • macOS: clears Gatekeeper quarantine + ad-hoc code signs
 #    • Installs to /usr/local/bin (admin) or ~/.local/bin (no admin)
+#    • Supports --install-dir for custom install location
 #    • Automatically adds to PATH if needed
 #    • Launches AgentOS after install
 #    • Full error handling with actionable messages
@@ -177,6 +178,18 @@ macos_security() {
 install_binary() {
   SRC="$1"
 
+  # If a custom install dir was specified, use it directly
+  if [ -n "$INSTALL_DIR" ]; then
+    TARGET_DIR=$(eval echo "$INSTALL_DIR")  # Expand ~ and $HOME
+    mkdir -p "$TARGET_DIR"
+    mv "$SRC" "${TARGET_DIR}/${BINARY_NAME}"
+    chmod +x "${TARGET_DIR}/${BINARY_NAME}"
+    FINAL_DIR="$TARGET_DIR"
+    success "Installed to ${BOLD}${TARGET_DIR}/${BINARY_NAME}${NC}"
+    ensure_path "$TARGET_DIR"
+    return 0
+  fi
+
   # Strategy 1: System-wide install (/usr/local/bin)
   SYSTEM_DIR="/usr/local/bin"
   if [ -w "$SYSTEM_DIR" ]; then
@@ -253,6 +266,7 @@ ensure_path() {
 # ─── Parse arguments ───
 parse_args() {
   FLAVOUR="pm"
+  INSTALL_DIR=""
 
   while [ $# -gt 0 ]; do
     case "$1" in
@@ -264,13 +278,23 @@ parse_args() {
           fail "--flavour requires a value.\n    Usage: curl ... | sh -s -- --flavour pm\n    Options: pm, retail, office"
         fi
         ;;
+      --install-dir|--dir)
+        if [ -n "$2" ]; then
+          INSTALL_DIR="$2"
+          shift 2
+        else
+          fail "--install-dir requires a path.\n    Usage: curl ... | sh -s -- --install-dir ~/my-tools"
+        fi
+        ;;
       --help|-h)
         printf "\n${BOLD}AgentOS Installer${NC}\n\n"
         printf "  ${CYAN}Usage:${NC}\n"
         printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh\n"
-        printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail\n\n"
+        printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail\n"
+        printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --install-dir ~/testing\n\n"
         printf "  ${CYAN}Options:${NC}\n"
         printf "    --flavour <name>   Select agent flavour (default: pm)\n"
+        printf "    --install-dir <path>  Install to a specific directory (e.g., ~/testing)\n"
         printf "    --help             Show this help message\n\n"
         printf "  ${CYAN}Available flavours:${NC}\n"
         printf "    ${BOLD}pm${NC}       Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"

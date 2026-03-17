@@ -29,41 +29,33 @@ Jean-Pierre eliminates the noise. He **connects** to your GitHub repos, Jira boa
 
 ---
 
-## 🧠 AI Intelligence
+## 🤖 AI Chat & Planning
 
-<div class="feature-grid" markdown>
-
-<div class="feature-card" markdown>
-### 🎯 Risk Radar
-Real-time **0–100 risk score** computed from stale PRs, no-reviewer PRs, low velocity, sprint lag, and open blockers. Spot trouble before it becomes a crisis.
+<div class="screenshot" markdown>
+![JP Chat & Planning — Orbital view with live AI execution pipeline](../assets/screens/flavors/pm/JP-chat-planning.png)
 </div>
 
-<div class="feature-card" markdown>
-### 🧠 JP Memory
-**Autonomous long-term memory.** Jean-Pierre auto-extracts facts, team structures, preferences, and corrections from every conversation. He learns and improves with every interaction.
+Jean-Pierre's **Living View** puts the AI agent at the center of your project universe. Ask anything in natural language — *"Give me a full status report"* — and watch JP plan, execute tools, and synthesize a structured response in real-time. Quick-action pills (Standup, Status, Blockers, Sprint, Report) let you trigger common workflows with one click.
+
+---
+
+## 📁 Projects
+
+<div class="screenshot" markdown>
+![Projects — Multi-project management hub](../assets/screens/flavors/pm/projects.png)
 </div>
 
-<div class="feature-card" markdown>
-### 🎯 Action Center
-Centralized risks, **AI-generated recommendations**, and a checkable task list with real-time progress tracking. Your cockpit for what to do next.
-</div>
-
-<div class="feature-card" markdown>
-### 📅 Sprint Planner
-JP generates **data-driven sprint plans** from live Jira + GitHub backlog data. Refine tasks interactively, adjust scope — plan smarter, ship faster.
-</div>
-
-</div>
+Your **command center starts here**. Each project card shows connected integrations (GitHub, Jira), tech stack tags, and quick-access buttons for Status, PRs, and Issues. Add new projects in seconds and switch between them instantly from the sidebar.
 
 ---
 
 ## 📊 Command Center Dashboard
 
 <div class="screenshot" markdown>
-![Dashboard](../assets/screens/flavors/pm/classic-view-dashboard.png)
+![Classic Dashboard — Full 24-card bento-grid command center](../assets/screens/flavors/pm/classic-view-dashboard.png)
 </div>
 
-A **24-card, drag-and-drop bento-grid dashboard** gives you a complete picture of every project at a glance. Every card is interactive — click **"Ask JP"** on any widget for instant AI analysis.
+The **Classic View** is a premium, 24-card bento-grid dashboard that gives you a complete picture of every project at a glance. Includes Quick JP Analysis prompts, Production Pipelines (Weekly Report, Risk Assessment, Standup, Sprint Planning), Actionable Alerts with AI Auto-Fix, Open PRs list, Commit Activity charts, PR Timeline, and a **Pinned Insights** carousel of past AI analyses. Every card is interactive — click **"Ask JP"** on any widget for instant AI analysis.
 
 <div class="feature-grid" markdown>
 
@@ -98,6 +90,154 @@ Open PRs, issues, commits, stars — **dynamic labels** that auto-adapt based on
 </div>
 
 </div>
+
+---
+
+## ✨ Living View
+
+<div class="screenshot" markdown>
+![Living View — Orbital project surface with real-time metrics](../assets/screens/flavors/pm/living-view.png)
+</div>
+
+Not a static dashboard — a **living, breathing project surface**. JP's orbital view puts the agent at the center with live metrics orbiting around it: Sprint progress, KPIs, PRs, Risk score, Team, Gantt, Insights, and Actions. A continuously-updated **health score** tells you instantly if your project is on track. Click any orbital node to drill in or ask JP directly.
+
+---
+
+## 🧠 AI Intelligence
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### 🎯 Risk Radar
+Real-time **0–100 risk score** computed from stale PRs, no-reviewer PRs, low velocity, sprint lag, and open blockers. Spot trouble before it becomes a crisis.
+</div>
+
+<div class="feature-card" markdown>
+### 🧠 JP Memory
+**Autonomous long-term memory.** Jean-Pierre auto-extracts facts, team structures, preferences, and corrections from every conversation. He learns and improves with every interaction.
+</div>
+
+<div class="feature-card" markdown>
+### 🎯 Action Center
+Centralized risks, **AI-generated recommendations**, and a checkable task list with real-time progress tracking. Your cockpit for what to do next.
+</div>
+
+<div class="feature-card" markdown>
+### 📅 Sprint Planner
+JP generates **data-driven sprint plans** from live Jira + GitHub backlog data. Refine tasks interactively, adjust scope — plan smarter, ship faster.
+</div>
+
+</div>
+
+---
+
+## 🔨 Sprint Forge
+
+<div class="screenshot" markdown>
+![Sprint Forge — AI-powered sprint planning and refinement](../assets/screens/flavors/pm/sprint-forge.png)
+</div>
+
+**Plan sprints with AI intelligence.** Sprint Forge pulls live backlog data from Jira and GitHub, analyzes team velocity, and generates optimized sprint plans. Adjust scope, reassign tasks, and refine estimates — all within a single, focused interface. JP suggests task priorities and flags capacity risks before you commit.
+
+---
+
+## 📡 Delivery Pulse
+
+<div class="screenshot" markdown>
+![Delivery Pulse — Delivery health and milestone tracking](../assets/screens/flavors/pm/delivery-pulse.png)
+</div>
+
+**Track delivery health in real-time.** Delivery Pulse visualizes project velocity, milestone progress, and completion trends across sprints. Spot delivery risks early with AI-powered burndown analysis and proactive alerts when timelines slip. Your single view for answering *"Are we going to ship on time?"*
+
+---
+
+## 🔄 Retro Intelligence
+
+<div class="screenshot" markdown>
+![Retro Intelligence — AI-generated retrospective analysis](../assets/screens/flavors/pm/retro-intelligence.png)
+</div>
+
+**Retrospectives powered by data, not opinions.** JP analyzes sprint metrics, PR patterns, commit activity, and blockers to generate structured retrospective reports. Get AI-driven insights on what went well, what needs improvement, and concrete action items — all backed by real project data.
+
+---
+
+## 🗺️ Roadmap
+
+<div class="screenshot" markdown>
+![Roadmap — Visual project timeline with milestones](../assets/screens/flavors/pm/roadmap.png)
+</div>
+
+**Visualize your project trajectory.** The Roadmap view displays milestones, release targets, and key deliverables on an interactive timeline. Drag, adjust, and share with stakeholders. JP can auto-generate roadmaps from your sprint data and Jira epics.
+
+---
+
+## 🔗 Dependency Radar
+
+<div class="screenshot" markdown>
+![Dependency Radar — Cross-project dependency visualization](../assets/screens/flavors/pm/dependency-radar.png)
+</div>
+
+**See what blocks what — before it blocks you.** Dependency Radar creates a visual map of cross-project dependencies, upstream/downstream relationships, and critical-path items. AI highlights high-risk dependency chains and suggests mitigation actions. No more discovering dependency conflicts in standup meetings.
+
+---
+
+## 📋 Standup Scribe
+
+<div class="screenshot" markdown>
+![Standup Scribe — AI-generated daily standup with structured sections](../assets/screens/flavors/pm/standup.png)
+</div>
+
+**One-click standups, zero manual effort.** JP generates a professional daily standup from real commit, PR, and sprint data — structured into **Yesterday / Done**, **Today / In Progress**, and **Blockers / Risks** sections. Each item is tagged (FEATURE, FIX, OPS, TECH, DEPENDENCY) and the full report is auto-saved as a project note. Enhance with one-click buttons: Add Metrics, Sharpen Blockers, Executive Summary.
+
+---
+
+## 👥 Team Pulse
+
+<div class="screenshot" markdown>
+![Team Pulse — Team workload analysis with AI insights](../assets/screens/flavors/pm/team-pulse.png)
+</div>
+
+**Understand your team's real capacity.** Team Pulse shows every contributor with their role, workload status (Balanced, Overloaded, Light, Heavy), commit/PR/review counts, and focus area. The **Insights** panel provides AI-generated warnings about burnout risks, collaboration patterns, and actionable recommendations. The **Collaboration** graph visualizes who reviews whom. Quick analysis buttons: Workload Balance, Bus Factor, Team Velocity.
+
+---
+
+## 🛸 Fleet Intelligence
+
+<div class="screenshot" markdown>
+![Fleet Intelligence — Portfolio-wide AI analysis with risk radar](../assets/screens/flavors/pm/fleet-intelligence.png)
+</div>
+
+Managing multiple projects? **Fleet Intelligence** gives you a portfolio-wide command center with a daily greeting, overall health summary, and an **AI-powered query bar** for asking cross-project questions. Tabs for Risk Overview, Team Velocity, PR Bottlenecks, Sprint Health, Improvement Areas, and Quick Wins let you drill into any dimension. The **Risk Radar** button triggers a full portfolio risk scan.
+
+---
+
+## 🎯 Strategic Board
+
+<div class="screenshot" markdown>
+![Strategic Board — Visual strategy canvas with KPIs and dependencies](../assets/screens/flavors/pm/strategic-board.png)
+</div>
+
+**Your portfolio on a canvas.** The Strategic Board is a free-form visual workspace where you can place project cards, KPI widgets, charts, risk gauges, notes, and dependency links. Map your entire portfolio, track cross-project KPIs, and connect dependencies visually. AI Insight provides strategic analysis of your project landscape. Save multiple boards for different stakeholder views.
+
+---
+
+## ✅ Tasks
+
+<div class="screenshot" markdown>
+![Tasks — Kanban board with AI-driven task creation](../assets/screens/flavors/pm/tasks.png)
+</div>
+
+**AI-powered task management.** The Tasks view is a full Kanban board (To Do → In Progress → Done → Blocked) with search, filtering, and status counters. Ask JP to *"Create a task based on the current project status and priorities"* — he'll analyze commits, PRs, and risks, then auto-generate prioritized tasks with descriptions, priority tags, and assignees. The AI execution pipeline is fully visible in the sidebar.
+
+---
+
+## ⚡ Automation Hub
+
+<div class="screenshot" markdown>
+![Automation Hub — 18 quick-start templates for scheduled workflows](../assets/screens/flavors/pm/automation.png)
+</div>
+
+**Put JP on autopilot.** The Automation Hub provides **18 ready-to-use templates** across four categories: **Reports** (Daily Status, Weekly Digest, CTO Board Update, Sprint Review, Monthly Summary, Custom Metrics), **Monitoring** (Risk Monitor, Stale PR Alert, Dependency Audit, Security Scan, SLA Breach Watch), **Agile** (Sprint Health Check, Sprint Review, Dependency Audit, Sprint Health Check), and **Communication** (Slack Standup, Team Digest, Stakeholder Update). Create custom schedules with natural language or use the + New Schedule button. Each automation runs on your configured cadence — daily, weekly, bi-weekly, or custom intervals.
 
 ---
 
@@ -175,16 +315,6 @@ Connect to **AIFlow** for centralized intelligence, advanced analytics, and mult
 
 ---
 
-## 🛸 Fleet View — Multi-Project Command
-
-<div class="screenshot" markdown>
-![Projects Page](../assets/screens/flavors/pm/projects-page.png)
-</div>
-
-Managing multiple projects? **Fleet View** gives you a bird's-eye overview with all projects **ranked by risk score**. Instantly identify which projects need attention, drill down into any project, and compare health metrics across your entire portfolio.
-
----
-
 ## ⛓️ Action Chain — Full Transparency
 
 Watch exactly how Jean-Pierre works. Every tool call is visualized as an **expanding chain** with:
@@ -233,29 +363,6 @@ Jean-Pierre doesn't just output text. He generates **interactive, data-rich comp
 Jean-Pierre runs **entirely on your machine**. Conversations, project data, meeting notes, and memories — everything stays local in an encrypted SQLite database. No cloud storage, no third-party analytics. **Your project intelligence is yours alone.**
 
 [Learn more about our security model →](../security.md)
-
----
-
-## Configuration
-
-<div class="feature-grid" markdown>
-
-<div class="feature-card" markdown>
-![Model Configuration](../assets/screens/flavors/pm/model-config.png)
-*AI Provider Setup — Ollama (local), OpenAI, Anthropic, or Gemini*
-</div>
-
-<div class="feature-card" markdown>
-![GitHub Configuration](../assets/screens/flavors/pm/github-config.png)
-*Source Control Sync — Multi-repo aggregation*
-</div>
-
-<div class="feature-card" markdown>
-![Jira Configuration](../assets/screens/flavors/pm/jira-config.png)
-*Sprint Tracking — Multi-board synchronization*
-</div>
-
-</div>
 
 ---
 

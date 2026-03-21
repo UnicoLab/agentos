@@ -90,6 +90,7 @@ nav:
       - Configuration: getting-started/configuration.md
   - Features:
       - AI Copilot: features/ai-copilot.md
+      - Self-Evolving Memory: features/self-evolving-memory.md
       - Recipe Composer: features/recipes.md
       - Dashboard: features/dashboard.md
       - Strategic Canvas: features/canvas.md

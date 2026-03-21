@@ -2,98 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://unicolab.github.io/agentos/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/demo/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/license/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/security/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/features/ai-copilot/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/features/canvas/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/features/dashboard/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/features/fleet-view/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/features/integrations/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/features/recipes/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
+    </url>
+    <url>
+         <loc>https://unicolab.github.io/agentos/features/self-evolving-memory/</loc>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/flavors/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/flavors/jean-pierre/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/getting-started/configuration/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/getting-started/installation/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/getting-started/quick-start/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/guides/aiflow-sync/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/guides/background-service/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/guides/github-setup/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/guides/jira-setup/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/guides/ollama-setup/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/guides/slack-setup/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/reference/api/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/reference/cli/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
     <url>
          <loc>https://unicolab.github.io/agentos/reference/keyboard-shortcuts/</loc>
-         <lastmod>2026-03-17</lastmod>
+         <lastmod>2026-03-21</lastmod>
     </url>
 </urlset>

@@ -62,6 +62,40 @@ Once connected, your dashboard is enriched with professional project metrics:
 
 ---
 
+## 🚀 What Jira Unlocks
+
+Connect Jira to power these features with your sprint and backlog data:
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-hammer-wrench: Sprint Forge
+AI sprint planning that pulls live backlog data, analyzes velocity, and generates scoped sprint plans.
+[Learn more →](../features/sprint-forge.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-map-marker-path: Roadmap
+Auto-generated timelines from your Jira epics and release targets — always current.
+[Learn more →](../features/roadmap.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-checkbox-marked: Tasks
+AI-generated task lists from sprint risks, open blockers, and backlog priorities.
+[Learn more →](../features/tasks.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-radar: Dependency Radar
+Cross-project dependency visualization from Jira issue links and epic relationships.
+[Learn more →](../features/dependency-radar.md)
+</div>
+
+</div>
+
+---
+
 <div class="hero-cta" markdown>
 [Next: Connect Slack →](slack-setup.md){ .md-button }
 </div>

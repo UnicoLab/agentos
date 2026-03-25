@@ -77,6 +77,40 @@ By default, AgentOS polls GitHub every few minutes. If you want instant updates,
 
 ---
 
+## 🚀 What GitHub Unlocks
+
+Once connected, these features come alive with your real GitHub data:
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-heart-pulse: Delivery Pulse
+Real-time velocity tracking and AI burndown predictions from your commit and PR history.
+[Learn more →](../features/delivery-pulse.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-hammer-wrench: Sprint Forge
+AI sprint planning calibrated to your team's real velocity from GitHub activity.
+[Learn more →](../features/sprint-forge.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-account-group: Team Pulse
+Workload analysis and burnout detection from contributor commit and review patterns.
+[Learn more →](../features/team-pulse.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-lightbulb-on: Retro Intelligence
+Data-driven retrospectives using PR cycle times, commit patterns, and blocker durations.
+[Learn more →](../features/retro-intelligence.md)
+</div>
+
+</div>
+
+---
+
 <div class="hero-cta" markdown>
 [Next: Connect Jira →](jira-setup.md){ .md-button }
 </div>

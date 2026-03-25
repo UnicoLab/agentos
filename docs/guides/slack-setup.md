@@ -67,6 +67,28 @@ Ask Jean-Pierre: *"Send a standup report for the Web App project to Slack."*
 
 ---
 
+## 🚀 What Slack Unlocks
+
+Connect Slack to power these features with direct team communication:
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-clipboard-text: Standup Scribe
+One-click standup reports posted directly to your team's Slack channel — no copy-paste required.
+[Learn more →](../features/standup-scribe.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-lightning-bolt: Automation Hub
+Schedule automated reports, risk alerts, and team digests delivered to Slack on autopilot.
+[Learn more →](../features/automation-hub.md)
+</div>
+
+</div>
+
+---
+
 <div class="hero-cta" markdown>
 [Back to Quick Start →](../getting-started/quick-start.md){ .md-button }
 </div>

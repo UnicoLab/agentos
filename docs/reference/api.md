@@ -27,10 +27,49 @@ AgentOS exposes a REST API for programmatic access. All endpoints are available 
 |--------|----------|-------------|
 | `GET` | `/v1/projects` | List all projects |
 | `GET` | `/v1/projects/{id}` | Get project details |
+| `POST` | `/v1/projects` | Create a new project |
+| `PUT` | `/v1/projects/{id}` | Update a project |
+| `DELETE` | `/v1/projects/{id}` | Delete a project |
 | `GET` | `/v1/projects/{id}/insights` | Full dashboard data (KPIs, charts, etc.) |
 | `GET` | `/v1/projects/{id}/prs/{num}/suggest-reviewer` | AI-powered reviewer suggestion |
 | `GET` | `/v1/projects/{id}/briefs` | Daily briefings |
 | `POST` | `/v1/projects/{id}/standup/send` | Send standup to Slack |
+
+---
+
+## Tasks
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/v1/projects/{id}/tasks` | List all tasks |
+| `POST` | `/v1/projects/{id}/tasks` | Create a task |
+| `PUT` | `/v1/projects/{id}/tasks/{tid}` | Update a task |
+| `DELETE` | `/v1/projects/{id}/tasks/{tid}` | Delete a task |
+
+---
+
+## Recipes & Automation
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/v1/recipes` | List all recipes |
+| `POST` | `/v1/recipes` | Create a recipe |
+| `PUT` | `/v1/recipes/{id}` | Update a recipe |
+| `DELETE` | `/v1/recipes/{id}` | Delete a recipe |
+| `POST` | `/v1/recipes/{id}/run` | Execute a recipe |
+| `GET` | `/v1/automations` | List scheduled automations |
+| `POST` | `/v1/automations` | Create an automation |
+
+---
+
+## Sessions
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/v1/sessions` | List chat sessions |
+| `POST` | `/v1/sessions` | Create a new session |
+| `GET` | `/v1/sessions/{id}` | Get session details |
+| `GET` | `/v1/sessions/{id}/messages` | Get session messages |
 
 ---
 
@@ -59,6 +98,8 @@ AgentOS exposes a REST API for programmatic access. All endpoints are available 
 | `GET` | `/v1/usage` | LLM token usage + cost tracking |
 | `DELETE` | `/v1/usage` | Clear usage data |
 | `GET` | `/v1/health` | Health check |
+| `GET` | `/v1/tools` | List available agent tools |
+| `GET` | `/v1/models` | List available AI models |
 
 ---
 

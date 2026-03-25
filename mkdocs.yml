@@ -89,13 +89,27 @@ nav:
       - Quick Start: getting-started/quick-start.md
       - Configuration: getting-started/configuration.md
   - Features:
+      # Core Intelligence
       - AI Copilot: features/ai-copilot.md
       - Self-Evolving Memory: features/self-evolving-memory.md
       - Recipe Composer: features/recipes.md
+      # Project Command Center
       - Dashboard: features/dashboard.md
-      - Strategic Canvas: features/canvas.md
-      - Integrations: features/integrations.md
+      - Standup Scribe: features/standup-scribe.md
+      - Sprint Forge: features/sprint-forge.md
+      - Delivery Pulse: features/delivery-pulse.md
+      - Retro Intelligence: features/retro-intelligence.md
+      - Tasks: features/tasks.md
+      - Roadmap: features/roadmap.md
+      # Team & Portfolio
+      - Team Pulse: features/team-pulse.md
       - Fleet View: features/fleet-view.md
+      - Strategic Canvas: features/canvas.md
+      - Dependency Radar: features/dependency-radar.md
+      # Automation & Productivity
+      - Automation Hub: features/automation-hub.md
+      - Meeting Notes: features/meeting-notes.md
+      - Integrations: features/integrations.md
   - Guides:
       - Ollama Setup: guides/ollama-setup.md
       - GitHub Setup: guides/github-setup.md

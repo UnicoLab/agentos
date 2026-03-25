@@ -89,11 +89,11 @@ No typing needed for common workflows:
 
 | | Command | What You Get |
 |---|---------|-------------|
-| 📋 | **Standup Report** | Structured report with metrics, risks, and action items |
-| 🔍 | **Sprint Status** | Sprint progress + milestone timeline across all projects |
+| 📋 | **[Standup Report](features/standup-scribe.md)** | Structured report with metrics, risks, and action items |
+| 🔍 | **[Sprint Status](features/sprint-forge.md)** | Sprint progress + milestone timeline across all projects |
 | 📈 | **Project Progress** | Full progress report with trends and recommendations |
-| 📝 | **Meeting Notes** | Structured minutes with decisions and tracked action items |
-| ✅ | **Smart Tasks** | AI-prioritized task list based on current project state |
+| 📝 | **[Meeting Notes](features/meeting-notes.md)** | Structured minutes with decisions and tracked action items |
+| ✅ | **[Smart Tasks](features/tasks.md)** | AI-prioritized task list based on current project state |
 | 📤 | **Sync to AIFlow** | Push intelligence to the central platform |
 
 !!! success "Impact"
@@ -160,8 +160,9 @@ Managing 5, 10, 20 projects? **Fleet View** ranks all projects by risk score. Op
 JP works even when you don't ask:
 
 - **Morning Brief** — auto-generated daily summary: yesterday's activity, today's urgents, current blockers
-- **Slack Delivery** — standup summaries pushed directly to your team's Slack channel
-- **Scheduled Reports** — weekly sprint reviews, retrospectives, progress summaries on autopilot
+- **Slack Delivery** — [standup summaries](features/standup-scribe.md) pushed directly to your team's Slack channel
+- **Scheduled Reports** — weekly sprint reviews, [retrospectives](features/retro-intelligence.md), progress summaries on autopilot
+- **[Automation Hub](features/automation-hub.md)** — 18 ready-to-use templates for scheduled workflows on autopilot
 
 !!! success "Impact"
     **Your morning routine is automated.** Open your laptop, the brief is already there.
@@ -241,6 +242,47 @@ Per-seat via Watchtower · Free evaluation available
 
 !!! tip "That's 500+ hours per year per PM"
     At $75/hour, that's **$37,500 in annual productivity gains** per project manager.
+
+---
+
+## :material-star-shooting: Explore Every Feature
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### Core Intelligence
+- [AI Copilot](features/ai-copilot.md)
+- [Self-Evolving Memory](features/self-evolving-memory.md)
+- [Recipe Composer](features/recipes.md)
+</div>
+
+<div class="feature-card" markdown>
+### Project Command Center
+- [Dashboard](features/dashboard.md)
+- [Standup Scribe](features/standup-scribe.md)
+- [Sprint Forge](features/sprint-forge.md)
+- [Delivery Pulse](features/delivery-pulse.md)
+- [Retro Intelligence](features/retro-intelligence.md)
+- [Tasks](features/tasks.md)
+- [Roadmap](features/roadmap.md)
+</div>
+
+<div class="feature-card" markdown>
+### Team & Portfolio
+- [Team Pulse](features/team-pulse.md)
+- [Fleet View](features/fleet-view.md)
+- [Strategic Canvas](features/canvas.md)
+- [Dependency Radar](features/dependency-radar.md)
+</div>
+
+<div class="feature-card" markdown>
+### Automation & Productivity
+- [Automation Hub](features/automation-hub.md)
+- [Meeting Notes](features/meeting-notes.md)
+- [Integrations](features/integrations.md)
+</div>
+
+</div>
 
 ---
 

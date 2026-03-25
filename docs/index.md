@@ -62,9 +62,21 @@ AI agents that connect your dev tools, synthesize live data, and deliver instant
 
 ---
 
+## See Jean-Pierre in Action
+
+<div class="screenshot" markdown>
+![Jean-Pierre Living View — Orbital project intelligence surface](assets/screens/flavors/pm/living-view.png)
+</div>
+
+Not a static dashboard — a **living, breathing project surface**. Jean-Pierre's orbital view puts the AI agent at the center, with live metrics orbiting around it: Sprint progress, KPIs, PRs, Risk score, Team, Gantt, Insights, and Actions.
+
+[Take the Full Product Tour →](demo.md){ .md-button }
+
+---
+
 ## Your Projects. One Command Center.
 
-**AgentOS** is an AI-powered agent platform that runs **entirely on your machine**. It connects to your development tools — GitHub, Jira, Slack, and more — synthesizes everything into a premium intelligence dashboard, and lets you interact with your projects through natural language.
+**AgentOS** is an AI-powered agent platform that runs **entirely on your machine**. It connects to your development tools — GitHub, Jira, Slack, and more — synthesizes everything into a premium intelligence dashboard, and lets you interact with your projects through natural language. **17 specialized features** designed to eliminate every PM pain point.
 
 No cloud servers. No shared databases. No data leaving your machine. Just a single binary that turns your laptop into a **project intelligence powerhouse**.
 
@@ -116,9 +128,39 @@ Streaming chat with Ollama (local), OpenAI, Anthropic, or Gemini. Persistent mem
 </div>
 
 <div class="feature-card" markdown>
+### :material-clipboard-text: Standup Scribe
+One-click daily standups from real commit, PR, and sprint data. Auto-tagged, structured, ready for Slack.
+[Standup Scribe →](features/standup-scribe.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-hammer-wrench: Sprint Forge
+AI-powered sprint planning calibrated to real team velocity. Plan smarter sprints in minutes, not hours.
+[Sprint Forge →](features/sprint-forge.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-account-group: Team Pulse
+Workload analysis, burnout detection, and collaboration graphs. Understand your team's real capacity.
+[Team Pulse →](features/team-pulse.md)
+</div>
+
+<div class="feature-card" markdown>
 ### :material-source-branch: Multi-Source Sync
 Aggregate GitHub repos and Jira boards in one view. Track PRs, commits, issues, and contributor velocity across your entire stack.
 [Integrations →](features/integrations.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-lightning-bolt: Automation Hub
+18 ready-to-use templates for scheduled workflows — reports, monitoring, agile ceremonies, and team communication on autopilot.
+[Automation Hub →](features/automation-hub.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-rocket-launch: Fleet View
+Multi-project health overview — all projects ranked by risk score. One screen, all projects, highest risk first.
+[Fleet View →](features/fleet-view.md)
 </div>
 
 <div class="feature-card" markdown>
@@ -130,12 +172,6 @@ Runs on YOUR machine. Data sovereignty by design. Encrypted SQLite storage, zero
 <div class="feature-card" markdown>
 ### :material-link-variant: Action Chain
 Watch your AI agent work. Every tool call visualized as an expanding chain with per-step timing, arguments, and outputs — complete transparency.
-</div>
-
-<div class="feature-card" markdown>
-### :material-rocket-launch: Fleet View
-Multi-project health overview — all projects ranked by risk score. One screen, all projects, highest risk first.
-[Fleet View →](features/fleet-view.md)
 </div>
 
 </div>

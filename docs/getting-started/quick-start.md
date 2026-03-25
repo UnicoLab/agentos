@@ -114,9 +114,41 @@ Track sprints, epics, and WIP across your organization.
 </div>
 
 <div class="feature-card" markdown>
-### ⚙️ Full Reference
-Explore every CLI command and configuration option.
-[CLI Reference →](../reference/cli.md)
+### 💬 Slack Delivery
+Post standups and risk alerts directly to your team channels.
+[Slack Guide →](../guides/slack-setup.md)
+</div>
+
+</div>
+
+---
+
+## Explore Powerful Features
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-clipboard-text: Standup Scribe
+One-click daily standups from real data — structured, tagged, ready for Slack.
+[Standup Scribe →](../features/standup-scribe.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-hammer-wrench: Sprint Forge
+AI-powered sprint planning calibrated to your team's real velocity.
+[Sprint Forge →](../features/sprint-forge.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-account-group: Team Pulse
+Workload analysis, burnout detection, and collaboration insights.
+[Team Pulse →](../features/team-pulse.md)
+</div>
+
+<div class="feature-card" markdown>
+### :material-lightning-bolt: Automation Hub
+18 templates for reports, monitoring, and team communication — on autopilot.
+[Automation Hub →](../features/automation-hub.md)
 </div>
 
 </div>

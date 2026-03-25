@@ -178,26 +178,56 @@ Watch your AI agent work. Every tool call visualized as an expanding chain with 
 
 ---
 
-## Flavours — One Engine, Many Agents
+## 🧱 Modular Platform — Built Like LEGO
 
-AgentOS is built on a **flavour system** — each flavour is a specialized AI agent persona with its own personality, tools, and visual DNA. All use the same commands: `agentos serve`, `agentos chat`, etc.
+Jean-Pierre is just the **first flavour**. Under the hood, AgentOS is a fully modular AI agent platform where every layer is an independent, composable block:
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-engine: Core Engine
+Battle-tested Go backend with streaming AI, tool orchestration, memory, and a full REST API. **Shared across all flavours.**
+</div>
+
+<div class="feature-card" markdown>
+### :material-puzzle-edit: Tool Packs
+Plug-and-play integrations — GitHub, Jira, CRMs, ERPs, custom APIs. **Add or remove tools like LEGO bricks.**
+</div>
+
+<div class="feature-card" markdown>
+### :material-view-dashboard: Dashboard Widgets
+Premium UI components — Kanban, Gantt, heatmaps, KPI cards — that **assemble into role-specific dashboards** automatically.
+</div>
+
+<div class="feature-card" markdown>
+### :material-robot: Agent Persona
+AI personality, domain expertise, system prompts, and communication style. **What makes each flavour a specialist.**
+</div>
+
+</div>
+
+**Same engine. Same UI framework. Different configuration.** That's how we launch a new AI copilot for a completely different industry in days, not months.
+
+[Explore the Platform Architecture →](flavors/index.md){ .md-button }
+
+### Available Flavours
 
 <div class="flavor-grid" markdown>
 
 <div class="flavor-card" markdown>
 <div class="flavor-icon">🎩</div>
 ### Jean-Pierre — The PM
-AI Project Management copilot. GitHub + Jira + Slack intelligence. Risk identification and sprint management.
+AI Project Management copilot. GitHub + Jira + Slack intelligence. 17 specialized features.
 <br>
 **Binary:** `agentos-pm` · **Status: ✅ Available**
 <br>
-[Learn more →](flavors/jean-pierre.md)
+[Explore →](flavors/jean-pierre.md)
 </div>
 
 <div class="flavor-card" markdown>
 <div class="flavor-icon">🛒</div>
 ### Retail Ops
-Inventory tracking, order management, and retail analytics AI assistant.
+Inventory, orders, shift management, and retail analytics. Same engine, different tools.
 <br>
 **Binary:** `agentos-retail` · **Status: ✅ Available**
 </div>
@@ -205,19 +235,15 @@ Inventory tracking, order management, and retail analytics AI assistant.
 <div class="flavor-card" markdown>
 <div class="flavor-icon">🏢</div>
 ### Office Assistant
-Document management, scheduling, and workflow automation for office productivity.
+Document management, scheduling, and workflow automation. Same LEGO blocks, different world.
 <br>
 **Binary:** `agentos-office` · **Status: ✅ Available**
 </div>
 
 </div>
 
-```bash
-# Install a specific flavour:
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
-```
+!!! tip "Enterprise Customization"
+    Need a custom flavour? We build tailored AI copilots for any role — Customer Success, Sales Ops, Compliance, Healthcare, Logistics — using the same proven engine. **[Contact us](mailto:info@unicolab.ai)** to discuss.
 
 ---
 

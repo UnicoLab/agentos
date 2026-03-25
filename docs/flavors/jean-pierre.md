@@ -1,6 +1,6 @@
 ---
 title: "Jean-Pierre — The AI PM Copilot"
-description: "A local-first AI copilot that connects your GitHub, Jira, and documentation into one real-time, intelligent command center for every project you manage."
+description: "The Project Management flavour of AgentOS — a local-first AI copilot built on a modular platform that connects your GitHub, Jira, and documentation into one intelligent command center."
 ---
 
 <div class="hero" markdown>
@@ -11,7 +11,7 @@ description: "A local-first AI copilot that connects your GitHub, Jira, and docu
 
 > "I don't just show you data — I understand your projects."
 
-Jean-Pierre is the **Project Management flavor** of AgentOS — a local-first AI copilot that connects your GitHub, Jira, and documentation into **one real-time, intelligent command center** for every project you manage.
+Jean-Pierre is the **Project Management flavour** of AgentOS — built on a [modular platform](index.md) where every component is a composable LEGO block. Same battle-tested engine that powers every flavour — configured with PM-specific tools, dashboards, and AI expertise to turn your GitHub, Jira, and documentation into **one real-time, intelligent command center**.
 
 <div class="hero-cta" markdown>
 [Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
@@ -19,6 +19,9 @@ Jean-Pierre is the **Project Management flavor** of AgentOS — a local-first AI
 </div>
 
 </div>
+
+!!! info "One of Many Possible Flavours"
+    Jean-Pierre proves what the AgentOS platform can do for Project Management. The same modular architecture — engine, tool packs, dashboard widgets, AI persona — can be configured for **any company role**: Sales Ops, Customer Success, Compliance, Healthcare, Logistics, and more. [Learn about the platform →](index.md)
 
 ---
 

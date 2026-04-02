@@ -6,13 +6,15 @@
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 #
 #  Choose a flavor:
+#    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
 #
 #  Available flavours:
-#    pm      — Jean-Pierre, AI Project Management Copilot (default)
-#    retail  — Retail Operations Assistant
-#    office  — Office Productivity Assistant
+#    pm         — Jean-Pierre, AI Project Management Copilot (default)
+#    freelancer — Yvette, Freelance Project Management Copilot
+#    retail     — Retail Operations Assistant
+#    office     — Office Productivity Assistant
 #
 #  Features:
 #    • Auto-detects OS (macOS/Linux) and architecture (arm64/amd64)
@@ -33,11 +35,12 @@ BINARY_NAME="agentos"
 # Maps user-friendly names to binary archive prefixes
 flavour_to_binary() {
   case "$1" in
-    pm|aiflow-pm)   echo "agentos-pm" ;;
+    pm|aiflow-pm)      echo "agentos-pm" ;;
+    freelancer)        echo "agentos-freelancer" ;;
     retail|retail-ops) echo "agentos-retail" ;;
-    office)         echo "agentos-office" ;;
+    office)            echo "agentos-office" ;;
     *)
-      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}      — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}retail${NC}  — Retail Operations Assistant\n      ${CYAN}office${NC}  — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm"
+      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}         — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}freelancer${NC} — Yvette, Freelance Project Management Copilot\n      ${CYAN}retail${NC}     — Retail Operations Assistant\n      ${CYAN}office${NC}     — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm"
       ;;
   esac
 }
@@ -45,6 +48,7 @@ flavour_to_binary() {
 flavour_display_name() {
   case "$1" in
     pm|aiflow-pm)      echo "Jean-Pierre — The PM 🎩" ;;
+    freelancer)        echo "Yvette — Freelancer PM 💼" ;;
     retail|retail-ops)  echo "Retail Ops 🛒" ;;
     office)            echo "Office Assistant 🏢" ;;
     *)                 echo "$1" ;;
@@ -136,15 +140,33 @@ detect_arch() {
   esac
 }
 
-# ─── Fetch latest version (handles pre-releases) ───
+# ── Fetch latest version for a specific flavour ──
+# Per-flavour releases use tags like "freelancer/v1.0.0".
+# We search recent releases for one whose assets match the requested binary.
 get_latest_version() {
+  WANTED_BINARY="$1"  # e.g. "agentos-freelancer"
   TAG=""
 
-  # Try stable releases first
-  TAG=$(http_get "https://api.github.com/repos/${REPO}/releases/latest" "" 2>/dev/null \
-    | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
+  # Strategy 1: Search recent releases for one containing the requested flavour's archive
+  ALL_RELEASES=$(http_get "https://api.github.com/repos/${REPO}/releases?per_page=20" "" 2>/dev/null || true)
 
-  # Fallback: include pre-releases
+  if [ -n "$ALL_RELEASES" ]; then
+    # Find the first release whose assets contain our binary name
+    TAG=$(echo "$ALL_RELEASES" \
+      | grep -E '"tag_name"|"name"' \
+      | awk -v bin="${WANTED_BINARY}" '
+        /"tag_name"/ { gsub(/.*"tag_name": *"|".*/, ""); current_tag = $0 }
+        /"name"/ && index($0, bin) { print current_tag; exit }
+      ')
+  fi
+
+  # Strategy 2: Fallback to /releases/latest (unified releases or first available)
+  if [ -z "$TAG" ]; then
+    TAG=$(http_get "https://api.github.com/repos/${REPO}/releases/latest" "" 2>/dev/null \
+      | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
+  fi
+
+  # Strategy 3: Fallback to any release (pre-releases included)
   if [ -z "$TAG" ]; then
     TAG=$(http_get "https://api.github.com/repos/${REPO}/releases" "" 2>/dev/null \
       | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
@@ -275,7 +297,7 @@ parse_args() {
           FLAVOUR="$2"
           shift 2
         else
-          fail "--flavour requires a value.\n    Usage: curl ... | sh -s -- --flavour pm\n    Options: pm, retail, office"
+          fail "--flavour requires a value.\n    Usage: curl ... | sh -s -- --flavour pm\n    Options: pm, freelancer, retail, office"
         fi
         ;;
       --install-dir|--dir)
@@ -297,9 +319,10 @@ parse_args() {
         printf "    --install-dir <path>  Install to a specific directory (e.g., ~/testing)\n"
         printf "    --help             Show this help message\n\n"
         printf "  ${CYAN}Available flavours:${NC}\n"
-        printf "    ${BOLD}pm${NC}       Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"
-        printf "    ${BOLD}retail${NC}   Retail Operations Assistant\n"
-        printf "    ${BOLD}office${NC}   Office Productivity Assistant\n\n"
+        printf "    ${BOLD}pm${NC}         Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"
+        printf "    ${BOLD}freelancer${NC} Yvette — Freelance Project Management Copilot\n"
+        printf "    ${BOLD}retail${NC}     Retail Operations Assistant\n"
+        printf "    ${BOLD}office${NC}     Office Productivity Assistant\n\n"
         exit 0
         ;;
       *)
@@ -327,13 +350,15 @@ main() {
   ARCH=$(detect_arch)
   info "Platform: ${BOLD}${OS}/${ARCH}${NC}"
 
-  # Resolve version
-  info "Fetching latest release..."
-  VERSION=$(get_latest_version)
+  # Resolve version (flavour-aware: finds the release containing our binary)
+  info "Fetching latest release for ${BOLD}${SOURCE_BINARY}${NC}..."
+  VERSION=$(get_latest_version "$SOURCE_BINARY")
   info "Version:  ${BOLD}${VERSION}${NC}"
 
   # Download — archive naming: agentos-pm_0.12.0_darwin_arm64.tar.gz
-  VERSION_NUM="${VERSION#v}"
+  # Strip flavour prefix from tag: "freelancer/v1.0.0" → "v1.0.0", "v1.0.0" → "v1.0.0"
+  VERSION_CLEAN="${VERSION##*/}"
+  VERSION_NUM="${VERSION_CLEAN#v}"
   ARCHIVE="${SOURCE_BINARY}_${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
   URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARCHIVE}"
 

@@ -79,6 +79,14 @@ AI Project Management copilot. GitHub + Jira + Slack intelligence. 17 specialize
 </div>
 
 <div class="flavor-card" markdown>
+<div class="flavor-icon">💼</div>
+### Yvette — Freelancer PM
+Freelance project management copilot. Time tracking, budget management, invoice generation, standup reports, and decision logging — built for independent consultants and developers.
+<br>
+**Binary:** `agentos-freelancer` · **Status: ✅ Available**
+</div>
+
+<div class="flavor-card" markdown>
 <div class="flavor-icon">🛒</div>
 ### Retail Ops
 Inventory, orders, shift management, and retail analytics assistant. Different tools, different dashboard, same powerful engine.
@@ -151,6 +159,9 @@ Each flavour is installed with the same one-line command — just specify which 
     # Jean-Pierre PM (default)
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
+    # Yvette Freelancer PM
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
+
     # Retail Ops
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 
@@ -166,6 +177,9 @@ Each flavour is installed with the same one-line command — just specify which 
 
     # Jean-Pierre PM (default)
     .\install.bat
+
+    # Yvette Freelancer PM
+    .\install.bat --flavour freelancer
 
     # Retail Ops
     .\install.bat --flavour retail

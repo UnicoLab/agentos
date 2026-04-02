@@ -26,11 +26,52 @@ jobs:
           repositories: |
             ul_aiflow_AgentOS
 
+      # ── Resolve flavour and version from dispatch payload ──
+      - name: Resolve release metadata
+        id: resolve
+        run: |
+          TAG="${{ github.event.client_payload.tag }}"
+          FLAVOUR="${{ github.event.client_payload.flavour }}"
+          VERSION="${{ github.event.client_payload.version }}"
+
+          # Fallback: parse tag if flavour/version not in payload (backward compat)
+          if [ -z "$FLAVOUR" ]; then
+            if [[ "$TAG" == */v* ]]; then
+              FLAVOUR="${TAG%%/v*}"
+            else
+              FLAVOUR="all"
+            fi
+          fi
+          if [ -z "$VERSION" ]; then
+            if [[ "$TAG" == */v* ]]; then
+              VERSION="${TAG#*/}"
+            else
+              VERSION="$TAG"
+            fi
+          fi
+
+          # Determine display info
+          case "$FLAVOUR" in
+            pm)         DISPLAY="🎩 Jean-Pierre — PM" ;;
+            freelancer) DISPLAY="💼 Yvette — Freelancer PM" ;;
+            retail)     DISPLAY="🛒 Retail Ops" ;;
+            office)     DISPLAY="🏢 Office Assistant" ;;
+            all)        DISPLAY="📦 All Flavours" ;;
+            *)          DISPLAY="$FLAVOUR" ;;
+          esac
+
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "flavour=${FLAVOUR}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "display=${DISPLAY}" >> "$GITHUB_OUTPUT"
+
+          echo "📦 Release: flavour=${FLAVOUR} version=${VERSION} tag=${TAG}"
+
       - name: Download release assets from private repo
         env:
           GH_TOKEN: ${{ steps.generate_token.outputs.token }}
         run: |
-          TAG="${{ github.event.client_payload.tag }}"
+          TAG="${{ steps.resolve.outputs.tag }}"
           PRIVATE_REPO="UnicoLab/ul_aiflow_AgentOS"
 
           echo "📦 Downloading release ${TAG} from ${PRIVATE_REPO}..."
@@ -49,34 +90,53 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG="${{ github.event.client_payload.tag }}"
+          TAG="${{ steps.resolve.outputs.tag }}"
+          FLAVOUR="${{ steps.resolve.outputs.flavour }}"
+          VERSION="${{ steps.resolve.outputs.version }}"
+          DISPLAY="${{ steps.resolve.outputs.display }}"
 
-          cat > /tmp/release-notes.md << 'NOTES'
-          ## ⚡ Quick Install
+          # Build flavour-aware release notes
+          if [ "$FLAVOUR" = "all" ]; then
+            TITLE="AgentOS ${VERSION}"
+            INSTALL_CMD="curl -fsSL https://unicolab.github.io/agentos/install.sh | sh"
+            FLAVOUR_TABLE="| Flavour | Install Command |
+          |---------|----------------|
+          | 🎩 **Jean-Pierre — PM** (default) | \`curl ... \| sh\` |
+          | 💼 **Yvette — Freelancer PM** | \`curl ... \| sh -s -- --flavour freelancer\` |
+          | 🛒 **Retail Ops** | \`curl ... \| sh -s -- --flavour retail\` |
+          | 🏢 **Office Assistant** | \`curl ... \| sh -s -- --flavour office\` |"
+          else
+            TITLE="AgentOS ${DISPLAY} ${VERSION}"
+            INSTALL_CMD="curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour ${FLAVOUR}"
+            FLAVOUR_TABLE=""
+          fi
+
+          cat > /tmp/release-notes.md << NOTES
+          ## ${DISPLAY} — ${VERSION}
+
+          ### ⚡ Quick Install
 
           **macOS / Linux:**
-          ```bash
-          curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
-          ```
+          \`\`\`bash
+          ${INSTALL_CMD}
+          \`\`\`
 
           **Windows:**
-          ```powershell
-          curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
-          ```
+          \`\`\`powershell
+          curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat${FLAVOUR:+ --flavour ${FLAVOUR}}
+          \`\`\`
 
           Or just **double-click** the included launcher script — no terminal needed.
 
           ---
 
-          ### 🎩 Choose Your Flavour
+          ${FLAVOUR_TABLE:+### 🎩 Choose Your Flavour
 
-          | Flavour | Install Command |
-          |---------|----------------|
-          | 🎩 **Jean-Pierre — PM** (default) | `curl ... \| sh` |
-          | 🛒 **Retail Ops** | `curl ... \| sh -s -- --flavour retail` |
-          | 🏢 **Office Assistant** | `curl ... \| sh -s -- --flavour office` |
+          ${FLAVOUR_TABLE}
 
-          > All flavours install as `agentos` — same commands: `agentos serve`, `agentos chat`, etc.
+          > All flavours install as \`agentos\` — same commands: \`agentos serve\`, \`agentos chat\`, etc.
+
+          ---}
 
           ### 🔑 License
 
@@ -86,7 +146,7 @@ jobs:
           NOTES
 
           gh release create "${TAG}" ./release-assets/* \
-            --title "AgentOS ${TAG}" \
+            --title "${TITLE}" \
             --notes-file /tmp/release-notes.md
 
-          echo "✅ Public release ${TAG} created!"
+          echo "✅ Public release ${TAG} (${DISPLAY}) created!"

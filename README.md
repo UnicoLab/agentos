@@ -49,6 +49,7 @@ You have **full control** over which AI model to use, which prompts to configure
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
 # Choose a different flavour:
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
 ```
@@ -62,6 +63,7 @@ This auto-detects your OS and architecture, downloads the correct flavour binary
 curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
 
 # Choose a different flavour:
+install.bat --flavour freelancer
 install.bat --flavour retail
 install.bat --flavour office
 ```
@@ -80,6 +82,9 @@ Each flavour is a separate binary. Choose the one you need:
 | 🎩 **PM** | macOS Apple Silicon | arm64 | `agentos-pm_*_darwin_arm64.tar.gz` |
 | 🎩 **PM** | macOS Intel | amd64 | `agentos-pm_*_darwin_amd64.tar.gz` |
 | 🎩 **PM** | Linux x86 | amd64 | `agentos-pm_*_linux_amd64.tar.gz` |
+| 💼 **Freelancer** | macOS Apple Silicon | arm64 | `agentos-freelancer_*_darwin_arm64.tar.gz` |
+| 💼 **Freelancer** | macOS Intel | amd64 | `agentos-freelancer_*_darwin_amd64.tar.gz` |
+| 💼 **Freelancer** | Linux x86 | amd64 | `agentos-freelancer_*_linux_amd64.tar.gz` |
 | 🛒 **Retail** | macOS Apple Silicon | arm64 | `agentos-retail_*_darwin_arm64.tar.gz` |
 | 🛒 **Retail** | macOS Intel | amd64 | `agentos-retail_*_darwin_amd64.tar.gz` |
 | 🛒 **Retail** | Linux x86 | amd64 | `agentos-retail_*_linux_amd64.tar.gz` |
@@ -206,6 +211,7 @@ AgentOS uses a **flavour system** — each flavour is a specialized agent person
 | Flavour | Binary | Description | Status |
 |---------|--------|-------------|--------|
 | 🎩 **Jean-Pierre — The PM** | `agentos-pm` | Project management copilot (GitHub + Jira + Slack) | ✅ Free testing access |
+| 💼 **Yvette — Freelancer PM** | `agentos-freelancer` | Freelance project management, time tracking & invoicing | ✅ Free testing access |
 | 🛒 **Retail Ops** | `agentos-retail` | Inventory & retail analytics | ✅ Free testing access |
 | 🏢 **Office Assistant** | `agentos-office` | Document management & workflow automation | ✅ Free testing access |
 
@@ -216,6 +222,7 @@ All flavours share the same powerful engine — they differ in their AI persona,
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
 # Install a different flavour
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 ```
 

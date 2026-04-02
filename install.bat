@@ -4,13 +4,15 @@ REM  AgentOS — Windows Installer
 REM
 REM  Usage:
 REM    install.bat              (installs PM flavour by default)
+REM    install.bat --flavour freelancer
 REM    install.bat --flavour retail
 REM    install.bat --flavour office
 REM
 REM  Available flavours:
-REM    pm      — Jean-Pierre, AI Project Management Copilot (default)
-REM    retail  — Retail Operations Assistant
-REM    office  — Office Productivity Assistant
+REM    pm         — Jean-Pierre, AI Project Management Copilot (default)
+REM    freelancer — Yvette, Freelance Project Management Copilot
+REM    retail     — Retail Operations Assistant
+REM    office     — Office Productivity Assistant
 REM ──────────────────────────────────────────────────────────────
 setlocal enabledelayedexpansion
 
@@ -49,6 +51,9 @@ if /I "%FLAVOUR%"=="pm" (
 ) else if /I "%FLAVOUR%"=="aiflow-pm" (
     set "SOURCE_BINARY=agentos-pm"
     set "DISPLAY_NAME=Jean-Pierre — The PM"
+) else if /I "%FLAVOUR%"=="freelancer" (
+    set "SOURCE_BINARY=agentos-freelancer"
+    set "DISPLAY_NAME=Yvette — Freelancer PM"
 ) else if /I "%FLAVOUR%"=="retail" (
     set "SOURCE_BINARY=agentos-retail"
     set "DISPLAY_NAME=Retail Ops"
@@ -63,9 +68,10 @@ if /I "%FLAVOUR%"=="pm" (
     echo  ERROR: Unknown flavour "%FLAVOUR%"
     echo.
     echo  Available flavours:
-    echo    pm       Jean-Pierre, AI Project Management Copilot ^(default^)
-    echo    retail   Retail Operations Assistant
-    echo    office   Office Productivity Assistant
+    echo    pm         Jean-Pierre, AI Project Management Copilot ^(default^)
+    echo    freelancer Yvette, Freelance Project Management Copilot
+    echo    retail     Retail Operations Assistant
+    echo    office     Office Productivity Assistant
     echo.
     exit /b 1
 )
@@ -186,13 +192,15 @@ echo.
 echo  AgentOS Windows Installer
 echo.
 echo  Usage:
-echo    install.bat                        Install PM flavour (default)
-echo    install.bat --flavour retail       Install Retail Ops flavour
-echo    install.bat --flavour office       Install Office flavour
+echo    install.bat                             Install PM flavour (default)
+echo    install.bat --flavour freelancer        Install Freelancer flavour (Yvette)
+echo    install.bat --flavour retail            Install Retail Ops flavour
+echo    install.bat --flavour office            Install Office flavour
 echo.
 echo  Available flavours:
-echo    pm       Jean-Pierre — AI Project Management Copilot (default)
-echo    retail   Retail Operations Assistant
-echo    office   Office Productivity Assistant
+echo    pm         Jean-Pierre — AI Project Management Copilot (default)
+echo    freelancer Yvette — Freelance Project Management Copilot
+echo    retail     Retail Operations Assistant
+echo    office     Office Productivity Assistant
 echo.
 goto :eof

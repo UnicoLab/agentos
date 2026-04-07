@@ -1,6 +1,6 @@
 site_name: AgentOS by UnicoLab
 site_url: https://unicolab.github.io/agentos
-site_description: "Private, powerful AI agents that run entirely on your machine. Connect GitHub, Jira, and Slack — get instant project intelligence without sending a single byte to the cloud."
+site_description: "A composable, local-first AI agent platform with specialized copilots. Two flagships: Jean-Pierre for Project Management and Michelle for Analytics Intelligence. 100% private."
 site_author: UnicoLab
 repo_url: https://github.com/UnicoLab/agentos
 repo_name: UnicoLab/agentos
@@ -88,12 +88,16 @@ nav:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
       - Configuration: getting-started/configuration.md
+  - Copilots:
+      - Overview: flavors/index.md
+      - "🎩 Jean-Pierre — PM": flavors/jean-pierre.md
+      - "📊 Michelle — Analytics": flavors/michelle.md
   - Features:
-      # Core Intelligence
+      # Core Intelligence (Platform)
       - AI Copilot: features/ai-copilot.md
       - Self-Evolving Memory: features/self-evolving-memory.md
       - Recipe Composer: features/recipes.md
-      # Project Command Center
+      # Jean-Pierre (PM)
       - Dashboard: features/dashboard.md
       - Standup Scribe: features/standup-scribe.md
       - Sprint Forge: features/sprint-forge.md
@@ -101,7 +105,7 @@ nav:
       - Retro Intelligence: features/retro-intelligence.md
       - Tasks: features/tasks.md
       - Roadmap: features/roadmap.md
-      # Team & Portfolio
+      # Team & Portfolio (PM)
       - Team Pulse: features/team-pulse.md
       - Fleet View: features/fleet-view.md
       - Strategic Canvas: features/canvas.md
@@ -121,10 +125,8 @@ nav:
       - CLI Commands: reference/cli.md
       - API Endpoints: reference/api.md
       - Keyboard Shortcuts: reference/keyboard-shortcuts.md
-  - Flavors:
-      - Overview: flavors/index.md
-      - "Jean-Pierre — PM": flavors/jean-pierre.md
   - Security & Privacy: security.md
   - License & Evaluation: license.md
 
 copyright: "Built with ❤️ by <a href='https://unicolab.ai'>UnicoLab</a> · &copy; 2024–2026 UnicoLab. All rights reserved."
+

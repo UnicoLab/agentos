@@ -712,6 +712,148 @@
 }
 
 /* ══════════════════════════════════════════════════════════════
+   FLAGSHIP SHOWCASE — Dual Hero Cards
+   ══════════════════════════════════════════════════════════════ */
+
+.flagship-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2.5rem 0;
+}
+
+.flagship-card {
+  padding: 2.5rem 2rem;
+  border-radius: var(--card-radius);
+  border: 2px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.flagship-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--brand-gradient);
+  opacity: 0.6;
+}
+
+.flagship-card:hover {
+  border-color: rgba(124, 58, 237, 0.35);
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-8px);
+}
+
+.flagship-card:hover::before {
+  opacity: 1;
+}
+
+.flagship-card .flagship-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.25);
+  margin-bottom: 1rem;
+}
+
+.flagship-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.flagship-card .flagship-tagline {
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.flagship-card .flagship-screenshot {
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--glass-border);
+}
+
+.flagship-card .flagship-screenshot img {
+  width: 100%;
+  display: block;
+}
+
+.flagship-card ul {
+  text-align: left;
+  padding-left: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.8;
+}
+
+.flagship-card ul li strong {
+  color: var(--md-default-fg-color);
+}
+
+.flagship-card .md-button {
+  margin-top: 1rem;
+}
+
+/* Screenshot gallery for feature pages */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.screenshot-gallery .screenshot {
+  margin: 0;
+}
+
+/* Secondary flavour cards (smaller) */
+.secondary-flavor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.secondary-flavor-card {
+  padding: 1.5rem 1.25rem;
+  border-radius: 16px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  text-align: center;
+  transition: var(--transition);
+  font-size: 0.88rem;
+}
+
+.secondary-flavor-card:hover {
+  border-color: rgba(124, 58, 237, 0.2);
+  box-shadow: var(--card-shadow);
+  transform: translateY(-4px);
+}
+
+.secondary-flavor-card .flavor-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.secondary-flavor-card h4 {
+  font-weight: 700;
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+/* ══════════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════════ */
 
@@ -724,6 +866,8 @@
   }
   .feature-grid,
   .flavor-grid,
+  .flagship-grid,
+  .screenshot-gallery,
   .step-grid {
     grid-template-columns: 1fr;
   }

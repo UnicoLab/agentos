@@ -1,6 +1,6 @@
 ---
-title: AgentOS — Local-First AI Agents
-description: "Private, powerful AI agents that run entirely on your machine. Connect GitHub, Jira, and Slack — get instant project intelligence without sending a single byte to the cloud."
+title: AgentOS — Composable AI Agent Platform
+description: "A modular, local-first AI agent platform that builds specialized copilots for any role. Two flagship copilots available today: Jean-Pierre for Project Management and Michelle for Analytics Intelligence. 100% private. No cloud. No compromise."
 hide:
   - navigation
   - toc
@@ -8,13 +8,12 @@ hide:
 
 <div class="hero" markdown>
 
-<img src="assets/images/jp-orbital.png" alt="Jean-Pierre — AI PM Copilot" style="max-width: 400px; margin: 0 auto 1rem; display: block;">
-
 # AgentOS
 
 <p class="subtitle">
-Your projects. Your machine. Your intelligence.<br>
-AI agents that connect your dev tools, synthesize live data, and deliver instant project insights — <strong>100% locally</strong>. No cloud. No vendor lock-in. No compromises.
+<strong>One platform. Specialized copilots. Your data, your machine.</strong><br>
+A composable AI agent engine that builds role-specific copilots — each with its own tools, dashboards, and domain expertise. Two flagships ready today. Infinite possibilities ahead.<br>
+<strong>100% local. No cloud. No vendor lock-in.</strong>
 </p>
 
 <div class="hero-badges" markdown>
@@ -22,13 +21,14 @@ AI agents that connect your dev tools, synthesize live data, and deliver instant
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-Free%20Evaluation-brightgreen?style=flat-square)](mailto:info@unicolab.ai)
 [![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-success?style=flat-square)](security.md)
+[![Copilots](https://img.shields.io/badge/Copilots-2%20Flagships-blue?style=flat-square)](flavors/index.md)
 
 </div>
 
 <div class="hero-cta" markdown>
 
 [Download Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Get Started :material-rocket-launch:](getting-started/installation.md){ .md-button }
+[Explore the Platform :material-puzzle:](flavors/index.md){ .md-button }
 
 </div>
 
@@ -39,8 +39,13 @@ AI agents that connect your dev tools, synthesize live data, and deliver instant
 <div class="metrics-bar" markdown>
 
 <div class="metric-item">
-<div class="metric-value">10+</div>
-<div class="metric-label">Hours Saved / Week</div>
+<div class="metric-value">2</div>
+<div class="metric-label">Flagship Copilots</div>
+</div>
+
+<div class="metric-item">
+<div class="metric-value">30+</div>
+<div class="metric-label">Specialized Features</div>
 </div>
 
 <div class="metric-item">
@@ -53,35 +58,107 @@ AI agents that connect your dev tools, synthesize live data, and deliver instant
 <div class="metric-label">Platforms Supported</div>
 </div>
 
-<div class="metric-item">
-<div class="metric-value">4</div>
-<div class="metric-label">AI Providers</div>
+</div>
+
+---
+
+## Meet the Flagships
+
+Two production-ready AI copilots — each built on the same composable engine, each a **specialist in its domain**.
+
+<div class="flagship-grid" markdown>
+
+<div class="flagship-card" markdown>
+<img src="assets/images/jp-avatar.png" alt="Jean-Pierre" class="flagship-avatar">
+
+### 🎩 Jean-Pierre — The PM
+
+<div class="flagship-tagline">AI Project Management copilot that connects your GitHub, Jira, and Slack into one real-time command center.</div>
+
+<div class="flagship-screenshot">
+<img src="assets/screens/flavors/pm/living-view.png" alt="Jean-Pierre Living Dashboard">
+</div>
+
+- **10+ hours saved per week** — automated standups, sprint plans, and reports
+- **Proactive risk detection** — catches problems before stakeholders notice
+- **17 specialized features** — from sprint planning to portfolio analytics
+- **Multi-project fleet view** — all projects ranked by risk, one screen
+
+[Explore Jean-Pierre →](flavors/jean-pierre.md){ .md-button .md-button--primary }
+</div>
+
+<div class="flagship-card" markdown>
+<img src="assets/images/michelle-avatar.png" alt="Michelle" class="flagship-avatar">
+
+### 📊 Michelle — Analytics Intelligence
+
+<div class="flagship-tagline">AI Analytics copilot that connects to your databases and lets anyone ask data questions in plain English — with verified, hallucination-proof answers.</div>
+
+<div class="flagship-screenshot">
+<img src="assets/screens/flavors/michelle/analytics-dashboard.png" alt="Michelle Analytics Dashboard">
+</div>
+
+- **15+ hours saved per week** — instant answers to ad-hoc data requests
+- **Zero hallucinations** — every answer backed by real SQL and provenance
+- **Shared team brain** — one analyst teaches, everyone benefits
+- **Self-healing knowledge** — learns from corrections automatically
+
+[Explore Michelle →](flavors/michelle.md){ .md-button .md-button--primary }
 </div>
 
 </div>
 
 ---
 
-## See Jean-Pierre in Action
+## Same Engine. Different Superpowers.
 
-<div class="screenshot" markdown>
-![Jean-Pierre Living View — Orbital project intelligence surface](assets/screens/flavors/pm/living-view.png)
+**AgentOS** is not a single tool — it's a **composable AI agent platform**. A battle-tested backend engine with plug-and-play tool packs, role-specific dashboards, and AI personas that can be configured for **any role, any industry, any workflow**.
+
+Jean-Pierre and Michelle are the first two flagships. They prove the power of the platform — and they won't be the last.
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-brain: Adaptive Memory
+Every copilot learns from your interactions — preferences, corrections, team dynamics. **Same code, evolved mind.** No manual configuration needed.
 </div>
 
-Not a static dashboard — a **living, breathing project surface**. Jean-Pierre's orbital view puts the AI agent at the center, with live metrics orbiting around it: Sprint progress, KPIs, PRs, Risk score, Team, Gantt, Insights, and Actions.
+<div class="feature-card" markdown>
+### :material-dna: Evolutionary Context
+Context windows that **grow, adapt, and self-heal**. AgentOS tracks conversation evolution to prevent hallucinations and maintain accuracy over time.
+</div>
 
-[Take the Full Product Tour →](demo.md){ .md-button }
+<div class="feature-card" markdown>
+### :material-chart-line: Dynamic Dashboards
+Premium, interactive dashboards with drag-and-drop widgets, real-time data, and AI-powered insights. Each copilot gets **role-specific visualizations**.
+</div>
 
----
+<div class="feature-card" markdown>
+### :material-link-variant: Action Chain Transparency
+Watch your AI work. Every tool call visualized as an expanding chain with arguments, outputs, and timing. **No black boxes. Full transparency.**
+</div>
 
-## Your Projects. One Command Center.
+<div class="feature-card" markdown>
+### :material-shield-lock: 100% Private by Design
+Runs entirely on **your machine**. Your data, conversations, credentials, and configurations never leave. Air-gap ready with local AI models.
+</div>
 
-**AgentOS** is an AI-powered agent platform that runs **entirely on your machine**. It connects to your development tools — GitHub, Jira, Slack, and more — synthesizes everything into a premium intelligence dashboard, and lets you interact with your projects through natural language. **17 specialized features** designed to eliminate every PM pain point.
+<div class="feature-card" markdown>
+### :material-chef-hat: Recipe Automation
+Build multi-step AI workflows, version them, schedule them. Each copilot comes with **pre-built recipes** tailored to its domain.
+</div>
 
-No cloud servers. No shared databases. No data leaving your machine. Just a single binary that turns your laptop into a **project intelligence powerhouse**.
+<div class="feature-card" markdown>
+### :material-robot: Multi-Provider AI
+Choose your brain: Ollama (free, local), OpenAI, Anthropic, or Google Gemini. **Switch anytime** — or route different tasks to different models.
+</div>
 
-!!! tip "100% Private & Secure"
-    All your project data, chat conversations, and configurations stay on your local machine. The **only** external communication is for licensing validation and anonymized usage statistics — **never your project data**.
+<div class="feature-card" markdown>
+### :material-puzzle-edit: Modular Architecture
+Every layer is a LEGO block — engine, tools, dashboard widgets, AI persona. **Swap, extend, customize** without touching the core.
+</div>
+
+</div>
 
 ---
 
@@ -91,159 +168,70 @@ No cloud servers. No shared databases. No data leaving your machine. Just a sing
 
 <div class="step-card">
 <div class="step-num">1</div>
-<h3>Download</h3>
-<p>Choose your flavour and install with one command — or just double-click the included launcher script.</p>
+<h3>Choose Your Copilot</h3>
+<p>Download <strong>Jean-Pierre</strong> for PM, <strong>Michelle</strong> for analytics — or both. Each is a self-contained binary.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">2</div>
-<h3>Configure</h3>
-<p>Configuration is <strong>optional</strong> — skip the CLI and go straight to the <strong>Web UI Settings</strong> to connect your agents and tools in seconds.</p>
+<h3>Connect Your Tools</h3>
+<p>GitHub, Jira, Slack, databases — connect through the <strong>Web UI Settings</strong> in seconds. No CLI required.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">3</div>
-<h3>Interact</h3>
-<p>AgentOS is live at <code>localhost:18080</code>. Your project intelligence is ready for natural language chat.</p>
+<h3>Start Asking</h3>
+<p>Open <code>localhost:18080</code>. Your copilot is ready — ask anything in natural language, explore dashboards, automate workflows.</p>
 </div>
 
 </div>
 
 ---
 
-## Key Capabilities
+## 🧱 Built Like LEGO — More Copilots Coming
 
-<div class="feature-grid" markdown>
+The platform is **designed for expansion**. New copilots can be built for any role that involves data, tools, and decisions:
 
-<div class="feature-card" markdown>
-### :material-robot: AI Copilot
-Streaming chat with Ollama (local), OpenAI, Anthropic, or Gemini. Persistent memory that learns your preferences and team dynamics.
-[AI Copilot →](features/ai-copilot.md)
+<div class="secondary-flavor-grid" markdown>
+
+<div class="secondary-flavor-card" markdown>
+<div class="flavor-icon">💼</div>
+
+#### Yvette — Freelancer PM
+Time tracking, invoicing, standups, and multi-client management.
+**Status: ✅ Available**
 </div>
 
-<div class="feature-card" markdown>
-### :material-view-dashboard: Smart Dashboard
-24-card bento-grid command center: KPIs, Risk Radar, Velocity, Gantt, Heatmaps, Sprint Status — all drag-and-drop.
-[Dashboard →](features/dashboard.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-clipboard-text: Standup Scribe
-One-click daily standups from real commit, PR, and sprint data. Auto-tagged, structured, ready for Slack.
-[Standup Scribe →](features/standup-scribe.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-hammer-wrench: Sprint Forge
-AI-powered sprint planning calibrated to real team velocity. Plan smarter sprints in minutes, not hours.
-[Sprint Forge →](features/sprint-forge.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-account-group: Team Pulse
-Workload analysis, burnout detection, and collaboration graphs. Understand your team's real capacity.
-[Team Pulse →](features/team-pulse.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-source-branch: Multi-Source Sync
-Aggregate GitHub repos and Jira boards in one view. Track PRs, commits, issues, and contributor velocity across your entire stack.
-[Integrations →](features/integrations.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-lightning-bolt: Automation Hub
-18 ready-to-use templates for scheduled workflows — reports, monitoring, agile ceremonies, and team communication on autopilot.
-[Automation Hub →](features/automation-hub.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-rocket-launch: Fleet View
-Multi-project health overview — all projects ranked by risk score. One screen, all projects, highest risk first.
-[Fleet View →](features/fleet-view.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-shield-lock: Local-First Privacy
-Runs on YOUR machine. Data sovereignty by design. Encrypted SQLite storage, zero cloud dependency.
-[Security →](security.md)
-</div>
-
-<div class="feature-card" markdown>
-### :material-link-variant: Action Chain
-Watch your AI agent work. Every tool call visualized as an expanding chain with per-step timing, arguments, and outputs — complete transparency.
-</div>
-
-</div>
-
----
-
-## 🧱 Modular Platform — Built Like LEGO
-
-Jean-Pierre is just the **first flavour**. Under the hood, AgentOS is a fully modular AI agent platform where every layer is an independent, composable block:
-
-<div class="feature-grid" markdown>
-
-<div class="feature-card" markdown>
-### :material-engine: Core Engine
-Battle-tested Go backend with streaming AI, tool orchestration, memory, and a full REST API. **Shared across all flavours.**
-</div>
-
-<div class="feature-card" markdown>
-### :material-puzzle-edit: Tool Packs
-Plug-and-play integrations — GitHub, Jira, CRMs, ERPs, custom APIs. **Add or remove tools like LEGO bricks.**
-</div>
-
-<div class="feature-card" markdown>
-### :material-view-dashboard: Dashboard Widgets
-Premium UI components — Kanban, Gantt, heatmaps, KPI cards — that **assemble into role-specific dashboards** automatically.
-</div>
-
-<div class="feature-card" markdown>
-### :material-robot: Agent Persona
-AI personality, domain expertise, system prompts, and communication style. **What makes each flavour a specialist.**
-</div>
-
-</div>
-
-**Same engine. Same UI framework. Different configuration.** That's how we launch a new AI copilot for a completely different industry in days, not months.
-
-[Explore the Platform Architecture →](flavors/index.md){ .md-button }
-
-### Available Flavours
-
-<div class="flavor-grid" markdown>
-
-<div class="flavor-card" markdown>
-<div class="flavor-icon">🎩</div>
-### Jean-Pierre — The PM
-AI Project Management copilot. GitHub + Jira + Slack intelligence. 17 specialized features.
-<br>
-**Binary:** `agentos-pm` · **Status: ✅ Available**
-<br>
-[Explore →](flavors/jean-pierre.md)
-</div>
-
-<div class="flavor-card" markdown>
+<div class="secondary-flavor-card" markdown>
 <div class="flavor-icon">🛒</div>
-### Retail Ops
-Inventory, orders, shift management, and retail analytics. Same engine, different tools.
-<br>
-**Binary:** `agentos-retail` · **Status: ✅ Available**
+
+#### Retail Ops
+Inventory, orders, shift management, and retail analytics.
+**Status: ✅ Available**
 </div>
 
-<div class="flavor-card" markdown>
+<div class="secondary-flavor-card" markdown>
 <div class="flavor-icon">🏢</div>
-### Office Assistant
-Document management, scheduling, and workflow automation. Same LEGO blocks, different world.
-<br>
-**Binary:** `agentos-office` · **Status: ✅ Available**
+
+#### Office Assistant
+Document management, scheduling, and workflow automation.
+**Status: ✅ Available**
+</div>
+
+<div class="secondary-flavor-card" markdown>
+<div class="flavor-icon">🥐</div>
+
+#### Édith — Sales Intelligence
+CRM analytics, deal scoring, pipeline intelligence, and prospect research.
+**Status: ✅ Available**
 </div>
 
 </div>
 
 !!! tip "Enterprise Customization"
-    Need a custom flavour? We build tailored AI copilots for any role — Customer Success, Sales Ops, Compliance, Healthcare, Logistics — using the same proven engine. **[Contact us](mailto:info@unicolab.ai)** to discuss.
+    Need a custom copilot? We build tailored AI agents for any role — Customer Success, Compliance, Healthcare, Logistics — using the same proven engine. **[Contact us](mailto:info@unicolab.ai)** to discuss.
+
+[Explore the Full Platform →](flavors/index.md){ .md-button }
 
 ---
 
@@ -267,11 +255,12 @@ AgentOS was designed with a **privacy-first architecture**:
 | Data Type | Storage | Leaves Your Machine? |
 |---|---|---|
 | Project Data (Commits, PRs, etc) | Local SQLite | ❌ **Never** |
+| Database Queries & Results | Local SQLite | ❌ **Never** |
 | Chat Conversations | Local SQLite | ❌ **Never** |
-| Agent Memory | Local SQLite | ❌ **Never** |
+| Agent Memory & Knowledge | Local SQLite | ❌ **Never** |
 | API Keys & Tokens | Local Config | ❌ **Never** |
 
-All communication with UnicoLab Watchtower is limited to **license validation** and anonymous feature metrics.
+All communication with UnicoLab Watchtower is limited to **license validation** and anonymous feature metrics — **never your project or analytical data**.
 
 [Learn more about our security model →](security.md)
 
@@ -283,7 +272,7 @@ All communication with UnicoLab Watchtower is limited to **license validation** 
 
 <div class="feature-card" markdown>
 ### :material-account-tie: Engineering Managers
-Real-time team velocity, PR throughput, contribution heatmaps, and risk radar for every project in your portfolio.
+Real-time team velocity, PR throughput, contribution heatmaps, and risk radar — powered by **Jean-Pierre**.
 </div>
 
 <div class="feature-card" markdown>
@@ -292,13 +281,23 @@ Automated reporting, sprint planning, cross-team coordination, and boardroom-rea
 </div>
 
 <div class="feature-card" markdown>
+### :material-chart-bar: Data & Analytics Teams
+Instant data answers, shared metric definitions, and verified AI-generated SQL — powered by **Michelle**.
+</div>
+
+<div class="feature-card" markdown>
+### :material-briefcase: Product Managers
+Self-serve data questions without filing tickets. Strategic dashboards without development time.
+</div>
+
+<div class="feature-card" markdown>
 ### :material-code-braces: Freelance Developers
-Manage multiple client projects from one hub. Fleet View keeps every project at your fingertips.
+Manage multiple client projects from one hub. Time tracking, standups, and client reporting.
 </div>
 
 <div class="feature-card" markdown>
 ### :material-rocket-launch: Startup CTOs
-Enterprise-grade project intelligence on your local machine — without the enterprise price tag.
+Enterprise-grade project and data intelligence on your local machine — without the enterprise price tag.
 </div>
 
 </div>
@@ -308,18 +307,18 @@ Enterprise-grade project intelligence on your local machine — without the ente
 ## :material-star-shooting: Early Access Program — Try It Free
 
 !!! success "Be Among the First"
-    AgentOS is in active development and we're inviting early adopters to **experience the future of project management** — completely free. This is your chance to get hands-on with cutting-edge AI project intelligence and help shape the product.
+    AgentOS is in active development and we're inviting early adopters to **experience the future of AI copilots** — completely free. Two flagship copilots, six total flavours, and a composable engine ready for any challenge.
 
 As an early-stage platform, you may encounter occasional rough edges — but that's also what makes this the perfect time to get involved. **Early adopters get free licenses, priority support, and direct influence on the roadmap.**
 
 ### What you get:
-- ✅ **Free evaluation license** — full access, no cost, no commitment
+- ✅ **Free evaluation license** — full access to all copilots, no cost, no commitment
 - ✅ **Priority support** from the core development team
 - ✅ **Direct influence** on the product roadmap
 - ✅ **First look** at new features and flavours
 
 ### How to get started:
-1. **Download** your preferred flavour from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
+1. **Download** your preferred copilot from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
 2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your activation key
 3. **Launch** — double-click the included launcher or run `agentos serve`. See the [Quick Start Guide](getting-started/quick-start.md)
 
@@ -334,6 +333,6 @@ As an early-stage platform, you may encounter occasional rough edges — but tha
 
 <p style="text-align: center; color: var(--md-default-fg-color--light); font-size: 0.9rem;">
 <strong>Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a></strong><br>
-<em>An autonomous compute node for the <a href="https://ai-flow.ai">AIFlow</a> project management platform.</em><br>
+<em>Composable AI copilots for the <a href="https://ai-flow.ai">AIFlow</a> ecosystem.</em><br>
 © 2024–2026 UnicoLab. All rights reserved.
 </p>

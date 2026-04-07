@@ -7,7 +7,7 @@ description: "The Project Management flavour of AgentOS — a local-first AI cop
 
 # Jean-Pierre — The AI PM Copilot 🎩
 
-<img src="../assets/images/jp-avatar.png" alt="Jean-Pierre" style="width: 140px; border-radius: 50%; box-shadow: 0 12px 48px rgba(124, 58, 237, 0.3); margin: 2rem auto;">
+<img src="../../assets/images/jp-avatar.png" alt="Jean-Pierre" style="width: 140px; border-radius: 50%; box-shadow: 0 12px 48px rgba(124, 58, 237, 0.3); margin: 2rem auto;">
 
 > "I don't just show you data — I understand your projects."
 

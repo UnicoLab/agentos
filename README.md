@@ -2,9 +2,9 @@
 
 # AgentOS
 
-### 🤖 Local-First AI Agents for Your Workflow
+### 🤖 Composable AI Copilots — Local-First
 
-**Private. Powerful. Customizable.**
+**Two flagship copilots. One modular platform. 100% private.**
 
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=for-the-badge)](https://github.com/UnicoLab/agentos/releases/latest)
 [![License](https://img.shields.io/badge/License-Free%20Testing-brightgreen?style=for-the-badge)](mailto:info@unicolab.ai)
@@ -14,7 +14,8 @@
 
 ---
 
-<img src="docs/assets/images/jp-orbital.png" width="500" alt="Jean-Pierre — AI Project Management Copilot">
+<img src="docs/assets/images/jp-orbital.png" width="400" alt="Jean-Pierre — AI PM Copilot">
+<img src="docs/assets/images/michelle-avatar.png" width="120" alt="Michelle — AI Analytics Copilot" style="border-radius: 50%;">
 
 </div>
 
@@ -22,7 +23,7 @@
 
 ## What is AgentOS?
 
-**AgentOS** is an AI-powered agent platform that runs **entirely on your machine**. It connects to your development tools — GitHub, Jira, Slack — and gives you a premium intelligence dashboard with a natural-language AI copilot.
+**AgentOS** is a composable AI agent platform that runs **entirely on your machine**. It builds specialized copilots — **Jean-Pierre** for Project Management and **Michelle** for Analytics Intelligence — each with its own tools, dashboards, and domain expertise. Connect your GitHub, Jira, Slack, or databases and get instant intelligence through natural language.
 
 > ⚠️ **License Required** — AgentOS requires a valid license key. Email **[info@unicolab.ai](mailto:info@unicolab.ai)** for a **free testing license**.
 
@@ -45,13 +46,15 @@ You have **full control** over which AI model to use, which prompts to configure
 ### One-Line Install (macOS / Linux)
 
 ```bash
-# Default: installs Jean-Pierre (PM copilot)
+# Jean-Pierre PM (default)
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
-# Choose a different flavour:
+# Michelle Analytics
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
+
+# Other flavours:
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour edith
 ```
 
 This auto-detects your OS and architecture, downloads the correct flavour binary, handles macOS Gatekeeper security, installs to PATH, and launches AgentOS — all in one command. Works with or without admin access.
@@ -139,36 +142,28 @@ Every download includes **double-click launcher scripts** — no command line re
 <tr>
 <td width="50%">
 
-### 🤖 AI Copilot
-Streaming chat with **Ollama** (free, local), OpenAI, Anthropic, or Gemini. Agent memory that learns your preferences.
-
-### 📊 24-Card Dashboard
-KPIs, Risk Radar, Velocity Charts, Gantt, Heatmaps, Sprint Status, Team Leaderboard — all drag-and-drop.
-
-### 🐙 GitHub Integration
-Multi-repo: PRs, commits, issues, contributor activity. AI-powered reviewer suggestions.
-
-### 📋 Jira Integration
-Multi-board: sprint status, epics, mind map. Cross-referenced with GitHub data.
+### 🎩 Jean-Pierre — PM Copilot
+- **17 specialized features** — sprint planning, delivery tracking, team health
+- **24-card living dashboard** — KPIs, Risk Radar, Gantt, Velocity, Heatmaps
+- **Proactive risk detection** — catches problems before stakeholders notice
+- **GitHub + Jira + Slack** — multi-repo, multi-board intelligence
 
 </td>
 <td width="50%">
 
-### 🧠 Agent Memory
-Auto-extracts facts, preferences, and corrections. Remembers everything across sessions.
-
-### 🛸 Fleet View
-Multi-project health overview — all projects ranked by risk score at a glance.
-
-### ⚡ Action Chain
-Watch your AI agent work in real-time with expandable tool call visualization.
-
-### 🔒 Local-First Privacy
-Runs on YOUR machine. SQLite storage. No cloud sync unless you want it.
+### 📊 Michelle — Analytics Copilot
+- **Natural language SQL** — ask questions, get verified answers in seconds
+- **Zero hallucinations** — every answer backed by real SQL and provenance
+- **Shared team brain** — one teaches, everyone benefits
+- **Full data platform** — Schema Browser, SQL Studio, KPI Engine, Test Harness
 
 </td>
 </tr>
 </table>
+
+### Platform Capabilities (shared by all copilots)
+
+🧠 **Adaptive Memory** · 🧬 **Evolutionary Context** · 📊 **Dynamic Dashboards** · ⚡ **Action Chain Transparency** · 🔒 **100% Local Privacy** · 🤖 **Multi-Provider AI** (Ollama, OpenAI, Anthropic, Gemini)
 
 ---
 
@@ -204,29 +199,37 @@ Runs on YOUR machine. SQLite storage. No cloud sync unless you want it.
 
 ---
 
-## 🎩 Flavours
+## 🎩 Copilots & Flavours
 
-AgentOS uses a **flavour system** — each flavour is a specialized agent persona with its own binary:
+AgentOS uses a **composable flavour system** — each flavour is a specialized copilot with its own AI persona, tools, and dashboard:
 
-| Flavour | Binary | Description | Status |
+### Flagships
+
+| Copilot | Binary | Description | Status |
 |---------|--------|-------------|--------|
-| 🎩 **Jean-Pierre — The PM** | `agentos-pm` | Project management copilot (GitHub + Jira + Slack) | ✅ Free testing access |
-| 💼 **Yvette — Freelancer PM** | `agentos-freelancer` | Freelance project management, time tracking & invoicing | ✅ Free testing access |
+| 🎩 **Jean-Pierre — PM** | `agentos-pm` | Project management copilot (GitHub + Jira + Slack) | ✅ Free testing access |
+| 📊 **Michelle — Analytics** | `agentos-michelle` | Analytics intelligence (databases, SQL, KPIs) | ✅ Free testing access |
+
+### More Copilots
+
+| Copilot | Binary | Description | Status |
+|---------|--------|-------------|--------|
+| 💼 **Yvette — Freelancer PM** | `agentos-freelancer` | Time tracking, invoicing, multi-client management | ✅ Free testing access |
+| 🥐 **Édith — Sales Intelligence** | `agentos-edith` | CRM analytics, pipeline scoring, prospect research | ✅ Free testing access |
 | 🛒 **Retail Ops** | `agentos-retail` | Inventory & retail analytics | ✅ Free testing access |
 | 🏢 **Office Assistant** | `agentos-office` | Document management & workflow automation | ✅ Free testing access |
 
-All flavours share the same powerful engine — they differ in their AI persona, tools, and dashboard. Each binary works with the exact same commands (`serve`, `chat`, `setup`, etc.).
+All flavours share the same powerful engine — they differ in their AI persona, tools, and dashboard.
 
 ```bash
-# Install the PM flavour (default)
+# Install the PM copilot (default)
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
-# Install a different flavour
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
+# Install Michelle Analytics
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
 ```
 
-AgentOS is a **base engine** that can be extended to any profile, tools, or business needs. Contact us for custom flavours.
+AgentOS is a **composable engine** that can be extended to any role. [Contact us](mailto:info@unicolab.ai) for custom copilots.
 
 ---
 
@@ -295,9 +298,9 @@ Visit our full documentation at **[unicolab.github.io/agentos](https://unicolab.
 
 **Built with ❤️ by [UnicoLab](https://unicolab.ai)**
 
-*An autonomous compute node for the [AIFlow](https://ai-flow.ai) project management platform.*
+*Composable AI copilots for the [AIFlow](https://ai-flow.ai) ecosystem.*
 
-*"Jean-Pierre doesn't just show you data — he understands your projects."*
+*"AgentOS copilots don't just show you data — they understand your world."*
 
 [![UnicoLab](https://img.shields.io/badge/Made%20by-UnicoLab-6c63ff?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIgZmlsbD0id2hpdGUiLz48L3N2Zz4=)](https://unicolab.ai)
 [![AIFlow](https://img.shields.io/badge/Part%20of-AIFlow%20Ecosystem-06b6d4?style=flat-square)](https://ai-flow.ai)

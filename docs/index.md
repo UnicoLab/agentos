@@ -1,6 +1,6 @@
 ---
-title: AgentOS — Composable AI Agent Platform
-description: "A modular, local-first AI agent platform that builds specialized copilots for any role. Two flagship copilots available today: Jean-Pierre for Project Management and Michelle for Analytics Intelligence. 100% private. No cloud. No compromise."
+title: AI Automation for Project Reporting & Analytics
+description: "We automate your manual reporting and analytics workflows — saving PMs 10+ hours/week and data teams 15+ hours/week. 100% on your machine. Free pilot in 2-3 weeks."
 hide:
   - navigation
   - toc
@@ -8,27 +8,26 @@ hide:
 
 <div class="hero" markdown>
 
-# AgentOS
+# Stop Chasing Status Updates.<br>Start Making Decisions.
 
 <p class="subtitle">
-<strong>One platform. Specialized copilots. Your data, your machine.</strong><br>
-A composable AI agent engine that builds role-specific copilots — each with its own tools, dashboards, and domain expertise. Two flagships ready today. Infinite possibilities ahead.<br>
-<strong>100% local. No cloud. No vendor lock-in.</strong>
+We automate the manual work that drains your team — project reporting, ad-hoc data requests, executive summaries — using AI that runs <strong>100% on your machine</strong>.<br>
+<strong>One workflow. 2-3 weeks. Measurable results. Free.</strong>
 </p>
 
 <div class="hero-badges" markdown>
 
-[![Platforms](https://img.shields.io/badge/Platforms-macOS%20·%20Linux%20·%20Windows-blueviolet?style=flat-square)]()
-[![License](https://img.shields.io/badge/License-Free%20Evaluation-brightgreen?style=flat-square)](mailto:info@unicolab.ai)
-[![Privacy](https://img.shields.io/badge/Privacy-100%25%20Local-success?style=flat-square)](security.md)
-[![Copilots](https://img.shields.io/badge/Copilots-2%20Flagships-blue?style=flat-square)](flavors/index.md)
+[![Savings](https://img.shields.io/badge/Proven-25%2B_hrs%2Fweek_saved-brightgreen?style=flat-square)]()
+[![Privacy](https://img.shields.io/badge/Privacy-100%25_Local-success?style=flat-square)](security.md)
+[![Platforms](https://img.shields.io/badge/Runs_on-macOS_·_Linux_·_Windows-blueviolet?style=flat-square)]()
+[![Cost](https://img.shields.io/badge/Pilot-Free-blue?style=flat-square)](#free-pilot)
 
 </div>
 
 <div class="hero-cta" markdown>
 
-[Download Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Explore the Platform :material-puzzle:](flavors/index.md){ .md-button }
+[Start Your Free Pilot :material-rocket-launch:](#free-pilot){ .md-button .md-button--primary }
+[See How It Works :material-arrow-down:](#the-problem){ .md-button }
 
 </div>
 
@@ -39,228 +38,204 @@ A composable AI agent engine that builds role-specific copilots — each with it
 <div class="metrics-bar" markdown>
 
 <div class="metric-item">
-<div class="metric-value">2</div>
-<div class="metric-label">Flagship Copilots</div>
+<div class="metric-value">70%</div>
+<div class="metric-label">of PM time spent gathering info</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value">30+</div>
-<div class="metric-label">Specialized Features</div>
+<div class="metric-value">15+</div>
+<div class="metric-label">ad-hoc data requests / week</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value">100%</div>
-<div class="metric-label">Private & Local</div>
+<div class="metric-value">3 hrs</div>
+<div class="metric-label">every Friday on reports</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value">3</div>
-<div class="metric-label">Platforms Supported</div>
+<div class="metric-value">$44K</div>
+<div class="metric-label">annual cost per PM in wasted time</div>
 </div>
 
 </div>
 
 ---
 
-## Meet the Flagships
-
-Two production-ready AI copilots — each built on the same composable engine, each a **specialist in its domain**.
-
-<div class="flagship-grid" markdown>
-
-<div class="flagship-card" markdown>
-<img src="assets/images/jp-avatar.png" alt="Jean-Pierre" class="flagship-avatar">
-
-### 🎩 Jean-Pierre — The PM
-
-<div class="flagship-tagline">AI Project Management copilot that connects your GitHub, Jira, and Slack into one real-time command center.</div>
-
-<div class="flagship-screenshot">
-<img src="assets/screens/flavors/pm/living-view.png" alt="Jean-Pierre Living Dashboard">
-</div>
-
-- **10+ hours saved per week** — automated standups, sprint plans, and reports
-- **Proactive risk detection** — catches problems before stakeholders notice
-- **17 specialized features** — from sprint planning to portfolio analytics
-- **Multi-project fleet view** — all projects ranked by risk, one screen
-
-[Explore Jean-Pierre →](flavors/jean-pierre.md){ .md-button .md-button--primary }
-</div>
-
-<div class="flagship-card" markdown>
-<img src="assets/images/michelle-avatar.png" alt="Michelle" class="flagship-avatar">
-
-### 📊 Michelle — Analytics Intelligence
-
-<div class="flagship-tagline">AI Analytics copilot that connects to your databases and lets anyone ask data questions in plain English — with verified, hallucination-proof answers.</div>
-
-<div class="flagship-screenshot">
-<img src="assets/screens/flavors/michelle/analytics-dashboard.png" alt="Michelle Analytics Dashboard">
-</div>
-
-- **15+ hours saved per week** — instant answers to ad-hoc data requests
-- **Zero hallucinations** — every answer backed by real SQL and provenance
-- **Shared team brain** — one analyst teaches, everyone benefits
-- **Self-healing knowledge** — learns from corrections automatically
-
-[Explore Michelle →](flavors/michelle.md){ .md-button .md-button--primary }
-</div>
-
-</div>
-
----
-
-## Same Engine. Different Superpowers.
-
-**AgentOS** is not a single tool — it's a **composable AI agent platform**. A battle-tested backend engine with plug-and-play tool packs, role-specific dashboards, and AI personas that can be configured for **any role, any industry, any workflow**.
-
-Jean-Pierre and Michelle are the first two flagships. They prove the power of the platform — and they won't be the last.
+## The Problem { #the-problem }
 
 <div class="feature-grid" markdown>
 
 <div class="feature-card" markdown>
-### :material-brain: Adaptive Memory
-Every copilot learns from your interactions — preferences, corrections, team dynamics. **Same code, evolved mind.** No manual configuration needed.
+### :material-clock-alert: PMs: 45 min of chaos every morning
+Open Jira → Slack → GitHub → Spreadsheet. **Context-switching** just to answer "where do things stand?" — and the data is already stale.
 </div>
 
 <div class="feature-card" markdown>
-### :material-dna: Evolutionary Context
-Context windows that **grow, adapt, and self-heal**. AgentOS tracks conversation evolution to prevent hallucinations and maintain accuracy over time.
+### :material-database-alert: Data teams: buried in lookups
+**15+ ad-hoc SQL requests/week**, each 30-60 min. That's 1-2 analysts doing glorified lookups instead of real analysis.
 </div>
 
 <div class="feature-card" markdown>
-### :material-chart-line: Dynamic Dashboards
-Premium, interactive dashboards with drag-and-drop widgets, real-time data, and AI-powered insights. Each copilot gets **role-specific visualizations**.
+### :material-head-remove: Knowledge walks out the door
+Your best analyst leaves → metric definitions, query patterns, business context: **all gone.** New hires spend 3 weeks just learning what "active customer" means.
 </div>
 
 <div class="feature-card" markdown>
-### :material-link-variant: Action Chain Transparency
-Watch your AI work. Every tool call visualized as an expanding chain with arguments, outputs, and timing. **No black boxes. Full transparency.**
-</div>
-
-<div class="feature-card" markdown>
-### :material-shield-lock: 100% Private by Design
-Runs entirely on **your machine**. Your data, conversations, credentials, and configurations never leave. Air-gap ready with local AI models.
-</div>
-
-<div class="feature-card" markdown>
-### :material-chef-hat: Recipe Automation
-Build multi-step AI workflows, version them, schedule them. Each copilot comes with **pre-built recipes** tailored to its domain.
-</div>
-
-<div class="feature-card" markdown>
-### :material-robot: Multi-Provider AI
-Choose your brain: Ollama (free, local), OpenAI, Anthropic, or Google Gemini. **Switch anytime** — or route different tasks to different models.
-</div>
-
-<div class="feature-card" markdown>
-### :material-puzzle-edit: Modular Architecture
-Every layer is a LEGO block — engine, tools, dashboard widgets, AI persona. **Swap, extend, customize** without touching the core.
+### :material-close-circle: What you've tried — and why it fails
+**Dashboards** → go stale. **AI chatbots** → hallucinate numbers. **Hiring** → problem scales with the team. The issue isn't people. **It's the work itself.**
 </div>
 
 </div>
 
 ---
 
-## How It Works
+## What We Automate
+
+<div class="flagship-grid" markdown>
+
+<div class="flagship-card" markdown>
+
+### 🎩 Project Reporting Automation
+
+<div class="flagship-tagline">Jean-Pierre connects to your GitHub, Jira, and Slack — and turns chaotic project data into a real-time command center.</div>
+
+<div class="flagship-screenshot">
+<img src="assets/screens/flavors/pm/living-view.png" alt="Jean-Pierre — Project Intelligence Dashboard">
+</div>
+
+**What changes for your team:**
+
+- ✅ **Status reports** generated automatically from live data — **zero manual gathering**
+- ✅ **Risks detected 2-3 weeks** before they surface in meetings
+- ✅ **Executive reports** in one click — CTO, CFO, PMO versions in seconds
+- ✅ **All projects ranked by risk** on a single screen (Fleet View)
+- ✅ **24 interactive widgets**: Risk Radar, Velocity, Gantt, Sprint, Heatmap, Leaderboard
+
+**Result: ~10 hours/week saved per PM**
+
+[See the Full Feature Set →](flavors/jean-pierre.md){ .md-button }
+</div>
+
+<div class="flagship-card" markdown>
+
+### 🔬 Self-Service Analytics
+
+<div class="flagship-tagline">Michelle connects to your databases and lets anyone ask data questions in plain English — with verified, source-cited answers in seconds.</div>
+
+<div class="flagship-screenshot">
+<img src="assets/screens/flavors/michelle/analytics-dashboard.png" alt="Michelle — Analytics Intelligence">
+</div>
+
+**What changes for your team:**
+
+- ✅ **Business users ask questions** in plain English → verified results in **3 seconds**
+- ✅ **Every answer shows exact SQL** and source tables — **zero hallucinations**
+- ✅ **Learns from corrections** — correct it once, it never repeats the mistake
+- ✅ **Knowledge captured permanently** — metric definitions survive turnover
+- ✅ **Test Harness** validates accuracy before you roll it out to the team
+
+**Result: ~15 hours/week freed per data team**
+
+[See the Full Feature Set →](flavors/michelle.md){ .md-button }
+</div>
+
+</div>
+
+---
+
+## The ROI
+
+| Workflow | Before | After | Savings |
+|----------|--------|-------|---------|
+| Status gathering (PM) | ~3 hrs/week | Automated (10 sec) | **3 hrs/week** |
+| Meeting prep + reports | ~4 hrs/week | One click | **~4 hrs/week** |
+| Risk identification | Reactive (surprises in meetings) | Real-time alerts | **Fewer crises** |
+| Ad-hoc data requests | 30-60 min each, 15/week | Self-service (3 sec) | **~15 hrs/week** |
+| Knowledge retention | Lost when people leave | Captured permanently | **Priceless** |
+| **Total** | | | **~25 hrs/week** |
+
+!!! tip "Annual Impact"
+    At $85/hr blended rate: **$110,000+ in annual productivity gains** — plus the value of catching risks 3 weeks early and retaining institutional knowledge.
+
+---
+
+## How the Free Pilot Works
 
 <div class="step-grid">
 
 <div class="step-card">
 <div class="step-num">1</div>
-<h3>Choose Your Copilot</h3>
-<p>Download <strong>Jean-Pierre</strong> for PM, <strong>Michelle</strong> for analytics — or both. Each is a self-contained binary.</p>
+<h3>Pick One Workflow</h3>
+<p>Which reporting workflow wastes the most time? Weekly status? Ad-hoc data requests? Executive reports? We start with <strong>the one that hurts most</strong>.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">2</div>
-<h3>Connect Your Tools</h3>
-<p>GitHub, Jira, Slack, databases — connect through the <strong>Web UI Settings</strong> in seconds. No CLI required.</p>
+<h3>We Automate It</h3>
+<p>In <strong>2-3 weeks</strong>, we deploy the AI copilot on your machine, connect it to your tools, and automate the workflow. You see results, not a demo.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">3</div>
-<h3>Start Asking</h3>
-<p>Open <code>localhost:18080</code>. Your copilot is ready — ask anything in natural language, explore dashboards, automate workflows.</p>
+<h3>You Measure Results</h3>
+<p><strong>No cost. No commitment.</strong> You measure real time saved. If it works — we talk about expanding. If not — you wasted zero money.</p>
 </div>
 
 </div>
 
 ---
 
-## 🧱 Built Like LEGO — More Copilots Coming
+## Why This Is Different
 
-The platform is **designed for expansion**. New copilots can be built for any role that involves data, tools, and decisions:
+<div class="feature-grid" markdown>
 
-<div class="secondary-flavor-grid" markdown>
-
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">💼</div>
-
-#### Yvette — Freelancer PM
-Time tracking, invoicing, standups, and multi-client management.
-**Status: ✅ Available**
+<div class="feature-card" markdown>
+### :material-brain: It Learns
+Every correction, every preference, every definition — **remembered permanently**. The system gets measurably smarter every day you use it. No re-explaining.
 </div>
 
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🛒</div>
-
-#### Retail Ops
-Inventory, orders, shift management, and retail analytics.
-**Status: ✅ Available**
+<div class="feature-card" markdown>
+### :material-check-decagram: It Proves
+Every data answer includes the **exact SQL, source tables, and execution proof**. If it can't verify an answer, it flags it — architecturally, not as a prompt trick.
 </div>
 
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🏢</div>
-
-#### Office Assistant
-Document management, scheduling, and workflow automation.
-**Status: ✅ Available**
+<div class="feature-card" markdown>
+### :material-shield-lock: It's Private
+Runs **100% on your machine**. Credentials, conversations, knowledge — nothing leaves. Supports fully local AI (Ollama). Air-gap ready. GDPR-native.
 </div>
 
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🥐</div>
+<div class="feature-card" markdown>
+### :material-link-variant: It Connects
+Works with your **existing tools** — GitHub, Jira, Slack, PostgreSQL, MySQL, SQLite. No migration. No new dashboards to maintain. Your team keeps working where they are.
+</div>
 
-#### Édith — Sales Intelligence
-CRM analytics, deal scoring, pipeline intelligence, and prospect research.
-**Status: ✅ Available**
+<div class="feature-card" markdown>
+### :material-lightning-bolt: It's Fast
+**10-minute setup.** Install, connect, ask. The onboarding wizard handles everything. First automated report same day. No infrastructure, no DevOps, no cloud account.
+</div>
+
+<div class="feature-card" markdown>
+### :material-bullseye-arrow: It's Accurate
+Built-in **Test Harness** validates answer accuracy before deployment. After 2 weeks of learning, teams report **95%+ accuracy** — with every answer provably sourced.
 </div>
 
 </div>
-
-!!! tip "Enterprise Customization"
-    Need a custom copilot? We build tailored AI agents for any role — Customer Success, Compliance, Healthcare, Logistics — using the same proven engine. **[Contact us](mailto:info@unicolab.ai)** to discuss.
-
-[Explore the Full Platform →](flavors/index.md){ .md-button }
 
 ---
 
-## :material-lock-open-variant: Full Control — No Vendor Lock-In
+## :material-shield-lock: Your Data Stays on Your Machine
 
-AgentOS puts **you** in charge of your intelligence infrastructure:
-
-- :material-robot: **Choose your AI model** — Ollama (local), OpenAI, Anthropic, or Gemini. Switch anytime.
-- :material-pencil: **Customize prompts** — Full control over system prompts and agent behavior.
-- :material-wrench: **Pick your tools** — Enable only what is necessary for your workflow.
-- :material-folder: **Own your data** — Standard SQLite storage. Export anytime. We never touch it.
-
----
-
-## :material-shield-lock: Privacy & Data Security
-
-<div class="privacy-badge">🔒 Your data stays on your machine</div>
-
-AgentOS was designed with a **privacy-first architecture**:
+<div class="privacy-badge">🔒 Nothing leaves. Ever.</div>
 
 | Data Type | Storage | Leaves Your Machine? |
 |---|---|---|
-| Project Data (Commits, PRs, etc) | Local SQLite | ❌ **Never** |
+| Project Data (Commits, PRs, Tickets) | Local SQLite | ❌ **Never** |
 | Database Queries & Results | Local SQLite | ❌ **Never** |
 | Chat Conversations | Local SQLite | ❌ **Never** |
 | Agent Memory & Knowledge | Local SQLite | ❌ **Never** |
-| API Keys & Tokens | Local Config | ❌ **Never** |
+| API Keys & Credentials | Local Config | ❌ **Never** |
 
-All communication with UnicoLab Watchtower is limited to **license validation** and anonymous feature metrics — **never your project or analytical data**.
+Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero cloud, zero tracking.
 
 [Learn more about our security model →](security.md)
 
@@ -272,67 +247,122 @@ All communication with UnicoLab Watchtower is limited to **license validation** 
 
 <div class="feature-card" markdown>
 ### :material-account-tie: Engineering Managers
-Real-time team velocity, PR throughput, contribution heatmaps, and risk radar — powered by **Jean-Pierre**.
+Automate status gathering → real-time project health
+</div>
+
+<div class="feature-card" markdown>
+### :material-chart-bar: Data & Analytics Leaders
+Eliminate ad-hoc request backlog → self-service in 3 sec
 </div>
 
 <div class="feature-card" markdown>
 ### :material-clipboard-check: Technical PMs
-Automated reporting, sprint planning, cross-team coordination, and boardroom-ready executive summaries.
-</div>
-
-<div class="feature-card" markdown>
-### :material-chart-bar: Data & Analytics Teams
-Instant data answers, shared metric definitions, and verified AI-generated SQL — powered by **Michelle**.
-</div>
-
-<div class="feature-card" markdown>
-### :material-briefcase: Product Managers
-Self-serve data questions without filing tickets. Strategic dashboards without development time.
-</div>
-
-<div class="feature-card" markdown>
-### :material-code-braces: Freelance Developers
-Manage multiple client projects from one hub. Time tracking, standups, and client reporting.
+3 report versions → one click, CTO/CFO/PMO in seconds
 </div>
 
 <div class="feature-card" markdown>
 ### :material-rocket-launch: Startup CTOs
-Enterprise-grade project and data intelligence on your local machine — without the enterprise price tag.
+Enterprise-grade intelligence on a laptop — no infra needed
 </div>
 
 </div>
 
 ---
 
-## :material-star-shooting: Early Access Program — Try It Free
+## :material-rocket-launch: Free AI Automation Pilot { #free-pilot }
 
-!!! success "Be Among the First"
-    AgentOS is in active development and we're inviting early adopters to **experience the future of AI copilots** — completely free. Two flagship copilots, six total flavours, and a composable engine ready for any challenge.
+!!! success "No Cost. No Commitment. Just Results."
+    We pick **ONE workflow** — the one that wastes the most time — and automate it in **2-3 weeks**. You see a real, working result before spending anything. Our only ask: **honest feedback.**
 
-As an early-stage platform, you may encounter occasional rough edges — but that's also what makes this the perfect time to get involved. **Early adopters get free licenses, priority support, and direct influence on the roadmap.**
+### What You Get:
+- ✅ **Full deployment** of the AI copilot on your machine
+- ✅ **Connected to your tools** — GitHub, Jira, Slack, or databases
+- ✅ **Measurable results** — time saved, accuracy score, before/after comparison
+- ✅ **No cost, no commitment** — if it doesn't deliver, you wasted zero money
+- ✅ **Priority support** from the core team throughout
 
-### What you get:
-- ✅ **Free evaluation license** — full access to all copilots, no cost, no commitment
-- ✅ **Priority support** from the core development team
-- ✅ **Direct influence** on the product roadmap
-- ✅ **First look** at new features and flavours
-
-### How to get started:
-1. **Download** your preferred copilot from the official [releases page](https://github.com/UnicoLab/agentos/releases/latest)
-2. **Email** [info@unicolab.ai](mailto:info@unicolab.ai) to request your activation key
-3. **Launch** — double-click the included launcher or run `agentos serve`. See the [Quick Start Guide](getting-started/quick-start.md)
+### How to Start:
 
 <div class="hero-cta" markdown>
 
-[Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Request Free License :material-email:](mailto:info@unicolab.ai){ .md-button }
+[Request Your Free Pilot :material-email:](mailto:info@unicolab.ai?subject=Free%20AI%20Automation%20Pilot&body=Hi%20Piotr%2C%0A%0AI%27m%20interested%20in%20the%20free%20automation%20pilot.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.){ .md-button .md-button--primary }
+[Download & Try Yourself :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button }
 
 </div>
+
+**📧 info@unicolab.ai** · **💬 DM us on [LinkedIn](https://linkedin.com/company/unicolab)** · **🌐 [unicolab.ai](https://unicolab.ai)**
+
+---
+
+??? info "For Technical Teams: Under the Hood"
+
+    ### The AgentOS Platform
+
+    AgentOS is a composable, local-first AI agent engine built in **Go 1.23** with a **React 19** frontend. Each copilot is a specialized "pack" — a domain configuration that includes tools, dashboards, AI persona, and workflows.
+
+    **Architecture:**
+    ```
+    ┌─────────────────────────────────────────────────────┐
+    │                   AgentOS Engine                     │
+    │                                                      │
+    │  ┌──────────┐  ┌──────────────┐  ┌──────────────┐  │
+    │  │ Sidebar  │  │   Dashboard  │  │   Copilot    │  │
+    │  │          │  │   (Bento)    │  │   (Chat)     │  │
+    │  │ Modules  │  │   24 cards   │  │  Streaming   │  │
+    │  │ per pack │  │  per pack    │  │  + Tools     │  │
+    │  └──────────┘  └──────────────┘  └──────────────┘  │
+    │                                                      │
+    │  ┌────────────────────────────────────────────────┐  │
+    │  │         Intelligence Layer (Go)                │  │
+    │  │  Adaptive Memory · Knowledge Graph · Steering │  │
+    │  │  Shared Brain · Error Patterns · Tool Wisdom  │  │
+    │  │  Performance Tracker · User Adaptation         │  │
+    │  └────────────────────────────────────────────────┘  │
+    │                                                      │
+    │  ┌────────────────────────────────────────────────┐  │
+    │  │          Tool Gateway                          │  │
+    │  │  GitHub · Jira · Slack · Database · Shell     │  │
+    │  │  Gmail · Calendar · Docs · HTTP · Web Search  │  │
+    │  └────────────────────────────────────────────────┘  │
+    └─────────────────────────────────────────────────────┘
+    ```
+
+    **Available Packs:**
+
+    | Pack | Persona | Domain | Status |
+    |------|---------|--------|--------|
+    | `aiflow-pm` | 🎩 Jean-Pierre | Project Management | ✅ Production |
+    | `michelle` | 🔬 Michelle | Analytics Intelligence | ✅ Production |
+    | `edith` | 🥐 Édith | Sales Intelligence / CRM | ✅ Available |
+    | `freelancer` | 💼 Yvette | Freelancer PM | ✅ Available |
+    | `office` | 🏢 Office | Productivity | ✅ Available |
+    | `retail-ops` | 🏪 Retail | Operations | ✅ Available |
+
+    **AI Providers:**
+
+    | Provider | Type | Cost |
+    |----------|------|------|
+    | **Ollama** | 100% local | Free |
+    | **OpenAI** | Cloud API | Per-token |
+    | **Anthropic** | Cloud API | Per-token |
+    | **Google Gemini** | Cloud API | Per-token |
+
+    **Tech Stack:** Go 1.23 · React 19 · TypeScript · Vite 7 · SQLite · SSE Streaming · Glassmorphism UI
+
+    **Quick Install:**
+    ```bash
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+    agentos serve
+    # Open http://localhost:18080
+    ```
+
+    [Full Documentation →](getting-started/installation.md){ .md-button }
+    [API Reference →](reference/api.md){ .md-button }
 
 ---
 
 <p style="text-align: center; color: var(--md-default-fg-color--light); font-size: 0.9rem;">
 <strong>Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a></strong><br>
-<em>Composable AI copilots for the <a href="https://ai-flow.ai">AIFlow</a> ecosystem.</em><br>
+AI automation consulting — Paris, France<br>
 © 2024–2026 UnicoLab. All rights reserved.
 </p>

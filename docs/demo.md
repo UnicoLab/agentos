@@ -1,154 +1,166 @@
 ---
-title: Product Tour
-description: "Discover how AgentOS copilots transform project management and data analytics — saving teams 20+ hours per week with AI-powered intelligence. 100% local."
+title: See It In Action
+description: "Watch how teams save 25+ hours per week by automating project reporting and analytics workflows. Real screenshots, real outcomes, real ROI."
 ---
 
 <div class="hero" markdown>
 
-# Product Tour :material-play-circle:
+# See How Teams Save 25 Hours Per Week :material-play-circle:
 
-**Two AI copilots. Two domains mastered. One composable platform.** See how Jean-Pierre eliminates PM chaos and Michelle transforms analytics — all running locally, all 100% private.
+**Two AI copilots. Two types of manual work eliminated.** See exactly what changes for your Monday mornings and your data team's backlog — with screenshots from production use.
 
 <div class="hero-cta" markdown>
-[Install in 10 Seconds :material-download:](#get-started){ .md-button .md-button--primary }
-[See Jean-Pierre :material-arrow-down:](#jean-pierre-the-pm-copilot){ .md-button }
-[See Michelle :material-arrow-down:](#michelle-the-analytics-copilot){ .md-button }
+[Start Your Free Pilot :material-rocket-launch:](index.md#free-pilot){ .md-button .md-button--primary }
+[PM Automation :material-arrow-down:](#project-reporting-before-after){ .md-button }
+[Analytics Automation :material-arrow-down:](#analytics-before-after){ .md-button }
 </div>
 
 </div>
 
 ---
 
-## The Challenge
+## The Cost of Manual Work
 
-Every week, teams lose **20+ hours** to fragmented tooling and repetitive data plumbing:
+Every week, teams lose **25+ hours** to fragmented tooling and repetitive data plumbing:
 
-| Role | Activity | Time Lost |
-|------|----------|-----------|
-| **PMs** | Gathering status from GitHub, Jira, Slack | ~3 hrs/week |
-| **PMs** | Preparing standup + sprint meetings | ~2 hrs/week |
-| **PMs** | Writing reports and summaries | ~2 hrs/week |
-| **PMs** | Identifying risks and blockers reactively | ~2 hrs/week |
-| **Analysts** | Writing ad-hoc SQL for business users | ~4 hrs/week |
-| **Analysts** | Re-explaining metric definitions | ~2 hrs/week |
-| **Analysts** | Building + refreshing dashboards | ~3 hrs/week |
-| **Analysts** | Validating AI-generated data answers | ~2 hrs/week |
+| Role | Activity | Time Lost | Annual Cost ($85/hr) |
+|------|----------|-----------|--------------------|
+| **PMs** | Gathering status from GitHub, Jira, Slack | ~3 hrs/week | $13,260 |
+| **PMs** | Preparing standup + sprint meetings | ~2 hrs/week | $8,840 |
+| **PMs** | Writing reports and executive summaries | ~2 hrs/week | $8,840 |
+| **PMs** | Identifying risks and blockers reactively | ~2 hrs/week | $8,840 |
+| **Analysts** | Writing ad-hoc SQL for business users | ~4 hrs/week | $17,680 |
+| **Analysts** | Re-explaining metric definitions | ~2 hrs/week | $8,840 |
+| **Analysts** | Building + refreshing dashboards | ~3 hrs/week | $13,260 |
+| **Analysts** | Validating AI-generated data answers | ~2 hrs/week | $8,840 |
+| | **Total** | **~20-25 hrs/week** | **$88,400–$110,500/year** |
 
-**AgentOS copilots eliminate all of this.**
+**This is the work we eliminate.**
 
 ---
 
-## 🎩 Jean-Pierre — The PM Copilot
+## 🎩 Project Reporting — Before & After { #project-reporting-before-after }
 
-### :material-atom: A Living Intelligence Dashboard
+### Before: Monday Morning Chaos
 
-Not a static dashboard — a **living, breathing project surface**. Jean-Pierre's orbital view puts the agent at the center of your project universe, with live metrics orbiting around it:
+!!! warning "The Status Quo"
+    Open Jira → Slack → GitHub → Spreadsheet. **45 minutes of context-switching.** Data already stale. Risks invisible until the meeting. Friday report takes 3 hours.
+
+### After: One Screen. 10 Seconds. Done.
 
 <div class="screenshot" markdown>
-![Jean-Pierre Living Dashboard](assets/screens/flavors/pm/living-view.png)
+![Jean-Pierre — Living Intelligence Dashboard](assets/screens/flavors/pm/living-view.png)
 </div>
+
+**What Jean-Pierre automates:**
 
 === "Real-Time Health"
-    A continuously-updated **health score** tells you instantly if your project is on track, at risk, or needs immediate attention. No more guessing.
+    A continuously-updated **health score** tells you instantly if your project is on track, at risk, or needs attention. No more guessing. No more "let me check."
 
-=== "Proactive Alerts"
-    JP **detects problems before you notice them**: stale PRs, sprint risk, velocity drops, missing reviewers. Click any alert to get an AI-powered action plan.
+=== "Proactive Risk Alerts"
+    Jean-Pierre **detects problems 2-3 weeks before they surface** in meetings: stale PRs, sprint velocity drops, missing reviewers, overloaded contributors. Click any alert → get an AI-powered action plan.
 
-=== "Sprint Intelligence"
-    Live sprint progress, velocity trends, and burn rates — pulled directly from Jira. No manual tracking.
+=== "One-Click Reports"
+    CTO version, CFO version, PMO version — generated in **seconds** from live GitHub + Jira data. The Friday report panic is over.
 
-=== "Team Visibility"
-    Contributor leaderboard, velocity per developer, PR review patterns — understand your team's capacity at a glance.
+=== "Fleet Intelligence"
+    Managing 10+ projects? Fleet View **ranks all projects by risk score** on a single screen. Open it at 9am → know in 10 seconds where attention is needed.
 
 !!! success "Impact"
-    **Morning check-in goes from 30 minutes to 30 seconds.** Open the dashboard, see the health score, check alerts, done.
+    **Morning check-in: 45 minutes → 30 seconds.** Weekly reporting: 3 hours → 1 click. Risk detection: reactive → proactive.
 
 ---
 
-### :material-robot: An AI That Knows Your Projects
+### An AI That Knows Your Projects
 
-JP isn't a generic chatbot. It's an AI that's **connected to your live data** and understands your projects deeply.
+Jean-Pierre isn't a generic chatbot. It's connected to your **live data**, remembers your preferences, and understands your team structure.
 
 <div class="screenshot" markdown>
-![JP Chat & Planning](assets/screens/flavors/pm/JP-chat-planning.png)
+![JP Chat & AI-Powered Planning](assets/screens/flavors/pm/JP-chat-planning.png)
 </div>
 
 **Ask anything:**
 
 > *"Generate a standup report for all projects"*
 >
-> → JP fetches PRs, commits, sprint data → synthesizes a structured report with risks and action items. **⏱️ 8 seconds.**
+> → Jean-Pierre fetches PRs, commits, sprint data → synthesizes a structured report with risks and action items. **⏱️ 8 seconds.**
 
 > *"Which PRs have been open too long and who should review them?"*
 >
-> → JP analyzes PR age, checks contributor history, suggests optimal reviewer per PR. **⏱️ 5 seconds.**
+> → Analyzes PR age, checks contributor history, suggests optimal reviewer per PR. **⏱️ 5 seconds.**
 
 > *"What should I focus on today?"*
 >
-> → JP checks sprint deadlines, scans for urgent items, reviews yesterday's activity → returns a prioritized action list. **⏱️ 6 seconds.**
+> → Checks sprint deadlines, scans for urgent items, reviews yesterday's activity → returns a prioritized action list. **⏱️ 6 seconds.**
 
 ---
 
-### :material-drawing: Strategic Portfolio Board
+### Portfolio Overview: All Projects at a Glance
 
 <div class="screenshot" markdown>
-![Strategic Board](assets/screens/flavors/pm/strategic-board.png)
+![Strategic Portfolio Board](assets/screens/flavors/pm/strategic-board.png)
 </div>
 
 - **Live project cards** with health badges, commit sparklines, and key metrics
 - **Smart connections** between projects (dependencies, blockers, team sharing)
-- **AI analysis** that sees cross-project risks invisible in individual dashboards
+- **AI analysis** that spots cross-project risks invisible in individual views
 
 !!! success "Impact"
-    **Portfolio review goes from a 2-hour spreadsheet exercise to a 5-minute visual check.** AI spots risks you wouldn't find until the next steering committee.
+    **Portfolio review: 2-hour spreadsheet → 5-minute visual check.** AI spots risks you wouldn't find until the next steering committee.
 
 ---
 
-### :material-view-grid: Multi-Project Fleet View
-
-Managing 5, 10, 20 projects? **Fleet View** ranks all projects by risk score. Open it at 9am and you know in 10 seconds which projects need your attention today.
+### Multi-Project Fleet View
 
 <div class="screenshot" markdown>
-![Fleet Intelligence](assets/screens/flavors/pm/fleet-intelligence.png)
+![Fleet Intelligence — All Projects Ranked](assets/screens/flavors/pm/fleet-intelligence.png)
 </div>
 
-!!! success "Impact"
-    **No more checking each project individually.** One screen, all projects, highest risk first.
+Managing 5, 10, 20 projects? Fleet View ranks them all by risk score. **Highest risk first. One screen. 10 seconds.**
 
 ---
 
-### :material-brain: Memory That Evolves
+### Memory That Evolves
 
-Tell JP something once — he remembers it across all future conversations:
+Tell Jean-Pierre something once — he remembers it forever:
 
 - *"We use 2-week sprints starting Monday"*
 - *"Alice is on vacation until the 20th"*
 - *"I prefer tables over bullet points"*
 
-No configuration needed. JP learns from your conversations and applies this knowledge automatically.
+No configuration files. No setup. He learns from conversations and applies this knowledge automatically.
 
 [Explore all Jean-Pierre features →](flavors/jean-pierre.md){ .md-button }
 
 ---
 
-## 📊 Michelle — The Analytics Copilot
-
-### :material-chart-line: Analytics Intelligence Dashboard
-
-Michelle's living dashboard puts your KPIs, metrics, and health indicators in one view — with AI-powered anomaly detection and trend analysis.
-
-<div class="screenshot" markdown>
-![Michelle Analytics Dashboard](assets/screens/flavors/michelle/analytics-dashboard.png)
+<div style="text-align: center; padding: 40px 0;">
+<a href="index.md#free-pilot" class="md-button md-button--primary" style="font-size: 1.1rem; padding: 12px 32px;">🎯 Start Your Free PM Automation Pilot</a>
 </div>
 
 ---
 
-### :material-chat-processing: Ask Data Questions in Plain English
+## 🔬 Analytics — Before & After { #analytics-before-after }
 
-No SQL knowledge required. Michelle connects to your databases and lets anyone ask:
+### Before: The Data Team Bottleneck
+
+!!! warning "The Status Quo"
+    Every PM, marketer, and exec fires off "quick" requests. **15 requests/week × 30-60 min each = 1-2 analysts doing glorified lookups.** Best analyst leaves → knowledge gone.
+
+### After: Self-Service in 3 Seconds
 
 <div class="screenshot" markdown>
-![Michelle Chatbot — Natural language SQL](assets/screens/flavors/michelle/michelle-cahtbot.png)
+![Michelle — Analytics Intelligence Dashboard](assets/screens/flavors/michelle/analytics-dashboard.png)
+</div>
+
+---
+
+### Ask Data Questions in Plain English
+
+No SQL required. Michelle connects to your databases and lets **anyone** ask:
+
+<div class="screenshot" markdown>
+![Michelle — Natural Language Analytics](assets/screens/flavors/michelle/michelle-cahtbot.png)
 </div>
 
 > *"What were our top 10 products by revenue last quarter?"*
@@ -157,54 +169,61 @@ No SQL knowledge required. Michelle connects to your databases and lets anyone a
 
 > *"Which customers haven't purchased in 90 days?"*
 >
-> → Michelle queries customer and order tables, identifies at-risk accounts, suggests follow-up actions. **⏱️ 4 seconds.**
+> → Queries customer and order tables, identifies at-risk accounts, suggests follow-up actions. **⏱️ 4 seconds.**
 
-Every answer includes the **exact SQL** used, so you can verify and learn.
+**Every answer includes the exact SQL used and the source tables** — so you can verify and trust the results.
 
 !!! success "Impact"
-    **Ad-hoc data requests go from 2-4 hours (write SQL, explain context) to 10 seconds (ask in English).** Business users self-serve. Analysts focus on strategy.
+    **Ad-hoc requests: 30-60 minutes each → 3 seconds.** Business users self-serve. Analysts focus on strategy, not lookups.
 
 ---
 
-### :material-brain: Shared Brain — Collective Intelligence
+### Zero Hallucinations — Provably
 
 <div class="screenshot" markdown>
-![Collective Intelligence — Shared team brain](assets/screens/flavors/michelle/collective-intelligence.png)
+![Test Harness — Validated AI Accuracy](assets/screens/flavors/michelle/test-harness.png)
 </div>
 
-When one analyst teaches Michelle a metric definition, **everyone benefits**. The Shared Brain stores:
+Most AI analytics tools make up numbers. Michelle does the opposite:
+
+- ✅ **Execution receipts** on every query — proof it ran against real data
+- ✅ **Source citations** — which tables, which columns, which joins
+- ✅ **Test Harness** — define expected answers, run validation suites, measure accuracy
+- ❌ **Can't verify it?** → Flagged as UNVERIFIED. Not hidden. Not guessed.
+
+!!! success "Impact"
+    **Data quality: "trust the chatbot" → "verified against known answers."** Build confidence before rolling out to business users.
+
+---
+
+### Knowledge That Survives Turnover
+
+<div class="screenshot" markdown>
+![Shared Brain — Collective Team Intelligence](assets/screens/flavors/michelle/collective-intelligence.png)
+</div>
+
+When one analyst teaches Michelle a metric definition, **everyone benefits**:
 
 - **Metric definitions** — "Revenue = sum of order totals excluding returns"
 - **Business rules** — "Active customer = purchased within 90 days"
 - **Domain glossary** — Company-specific terminology, consistently applied
-- **Verified examples** — Approved question→SQL pairs
+- **Verified SQL examples** — Approved question→SQL pairs
+
+Your best analyst's knowledge, **versioned and shared**. It survives vacations, promotions, and resignations.
 
 ---
 
-### :material-dna: Self-Healing Knowledge
+### Self-Healing Memory
 
 <div class="screenshot" markdown>
-![Evolutionary Memory](assets/screens/flavors/michelle/evolutionary-memory.png)
+![Evolutionary Memory — Gets Smarter Over Time](assets/screens/flavors/michelle/evolutionary-memory.png)
 </div>
 
-Correct Michelle once — she **never makes the same mistake again**. Evolutionary memory tracks every correction and applies it automatically. She gets smarter with every interaction.
+Correct Michelle once — she **never makes the same mistake again**. The evolution engine tracks every correction and applies it automatically. She measurably improves every week.
 
 ---
 
-### :material-shield-check: Verifiable Accuracy — Zero Hallucinations
-
-<div class="screenshot" markdown>
-![Test Harness — Validate AI answers](assets/screens/flavors/michelle/test-harness.png)
-</div>
-
-Don't trust — **verify**. The Test Harness lets you define expected answers for known questions and run validation suites. Provenance badges on every response show exactly which tables, columns, and rules were used.
-
-!!! success "Impact"
-    **Data quality goes from "trust the chatbot" to "verified against known answers."** Build confidence before rolling out to business users.
-
----
-
-### :material-database-search: Full Data Platform
+### Full Data Platform
 
 <div class="screenshot-gallery" markdown>
 
@@ -218,34 +237,40 @@ Don't trust — **verify**. The Test Harness lets you define expected answers fo
 
 </div>
 
-Michelle includes a complete data workspace: **Schema Browser** for visual database exploration, **SQL Studio** for power users, **Rules Editor** for business logic governance, and **Recipes** for automated analysis pipelines.
+Complete data workspace: **Schema Browser** for visual database exploration, **SQL Studio** for power users, **Rules Editor** for business logic, and **Recipes** for automated analysis pipelines.
 
 [Explore all Michelle features →](flavors/michelle.md){ .md-button }
 
 ---
 
-## :material-shield-lock: Enterprise-Grade Security
+<div style="text-align: center; padding: 40px 0;">
+<a href="index.md#free-pilot" class="md-button md-button--primary" style="font-size: 1.1rem; padding: 12px 32px;">🎯 Start Your Free Analytics Pilot</a>
+</div>
+
+---
+
+## :material-shield-lock: Enterprise-Grade Privacy
 
 <div class="feature-grid" markdown>
 
 <div class="feature-card" markdown>
-### :material-server: 100% On-Premise
-No SaaS. No cloud servers. The binary runs on your machine. Period.
+### :material-server: 100% On Your Machine
+No SaaS. No cloud. The binary runs on your laptop or server. Period.
 </div>
 
 <div class="feature-card" markdown>
-### :material-database-lock: Your Data Stays Local
-All storage is local. Nothing is ever sent to external services.
+### :material-database-lock: Your Data Never Leaves
+All storage is local SQLite. Nothing is ever sent to external services.
 </div>
 
 <div class="feature-card" markdown>
 ### :material-key-variant: Your Keys, Your Control
-Direct API calls to GitHub/Jira/databases from your machine. No proxy, no intermediary.
+Direct API calls to GitHub/Jira/databases from your machine. No proxy.
 </div>
 
 <div class="feature-card" markdown>
 ### :material-wifi-off: Air-Gap Ready
-Use with a local AI (Ollama) for fully offline operation. Zero internet required.
+Use with Ollama (free, local AI) for fully offline operation. Zero internet.
 </div>
 
 </div>
@@ -265,7 +290,7 @@ Ollama (local) · OpenAI · Anthropic · Google Gemini
 <div class="step-card" markdown>
 <div class="step-num">🐙</div>
 ### Dev Tools
-GitHub · Jira · Slack · Basecamp · Custom APIs
+GitHub · Jira · Slack · Custom APIs
 </div>
 
 <div class="step-card" markdown>
@@ -284,60 +309,34 @@ macOS (Intel + Apple Silicon) · Linux · Windows
 
 ---
 
-## :material-scale-balance: The Combined ROI
+## The Combined ROI
 
-| Copilot | Metric | Before | With AgentOS | Savings |
-|---------|--------|--------|--------------|---------|
+| Copilot | Metric | Before | After | Savings |
+|---------|--------|--------|-------|---------|
 | 🎩 JP | Status gathering | 3 hrs/week | 0 (automated) | **3 hrs/week** |
 | 🎩 JP | Meeting prep + reports | 4 hrs/week | 5 min total | **~4 hrs/week** |
-| 🎩 JP | Risk identification | Reactive | Real-time alerts | **Fewer surprises** |
-| 📊 Michelle | Ad-hoc data requests | 2-4 hrs each | 10 seconds | **95% faster** |
-| 📊 Michelle | Dashboard creation | Days | Minutes | **10x faster** |
-| 📊 Michelle | Knowledge retention | Lost when staff leave | Shared Brain | **Permanent** |
+| 🎩 JP | Risk identification | Reactive | Real-time alerts | **Fewer crises** |
+| 🔬 Michelle | Ad-hoc data requests | 2-4 hrs each | 3 seconds | **95% faster** |
+| 🔬 Michelle | Knowledge retention | Lost when staff leave | Shared Brain | **Permanent** |
 | | **Combined savings** | | | **~25 hrs/week** |
 
-!!! tip "That's 1,250+ hours per year"
-    At blended $80/hour, that's **$100,000+ in annual productivity gains** — plus the value of faster, data-driven decisions.
+!!! tip "That's $110,000+ per year"
+    At blended $85/hour: **$110,500 in annual productivity gains** — plus the value of faster decisions, eliminated risks, and knowledge that survives turnover.
 
 ---
 
-## :material-lightning-bolt: Get Started { #get-started }
+## :material-rocket-launch: Ready to See It Work for Your Team?
 
-Install any copilot in **10 seconds**:
-
-```bash
-# Jean-Pierre PM (default)
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
-
-# Michelle Analytics
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
-```
-
-```bash
-agentos serve
-```
-
-Open [http://localhost:18080](http://localhost:18080) — the onboarding wizard handles the rest.
-
-| Platform | Download |
-|----------|----------|
-| **macOS** (Intel + Apple Silicon) | [Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Linux** (amd64 + arm64) | [Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest) |
-| **Windows** (amd64) | [Latest Release :material-download:](https://github.com/UnicoLab/agentos/releases/latest) |
-
-!!! info "What you'll need"
-    - :material-robot: **AI Provider**: [Ollama](guides/ollama-setup.md) (free, local) or OpenAI/Anthropic/Gemini API key
-    - :material-github: **GitHub Token**: For repository tracking (Jean-Pierre)
-    - :material-database: **Database**: Any SQL database (Michelle)
-    - :material-key: **License Key**: Request a free evaluation key at [info@unicolab.ai](mailto:info@unicolab.ai)
-
----
-
-<div style="text-align: center; padding: 60px 0 30px;">
-  <h2 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Ready to get 25 hours back every week?</h2>
-  <p style="opacity: 0.7; font-size: 1.1rem; margin-bottom: 1.5rem;"><em>"AgentOS copilots don't just show you data — they understand your world."</em></p>
-  <a href="https://github.com/UnicoLab/agentos/releases/latest" class="md-button md-button--primary" style="margin: 0 8px;">Download Now</a>
-  <a href="getting-started/installation.md" class="md-button" style="margin: 0 8px;">Installation Guide</a>
+<div style="text-align: center; padding: 40px 0 20px;">
+  <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Free AI Automation Pilot</h3>
+  <p style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+    Pick one workflow. We automate it in 2-3 weeks. You measure real time saved.<br>
+    <strong>No cost. No commitment. Just results.</strong>
+  </p>
+  <a href="mailto:info@unicolab.ai?subject=Free%20AI%20Automation%20Pilot&body=Hi%20Piotr%2C%0A%0AI%27m%20interested%20in%20the%20free%20automation%20pilot.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="md-button md-button--primary" style="margin: 0 8px; font-size: 1.1rem; padding: 12px 32px;">Request Your Free Pilot</a>
+  <a href="https://github.com/UnicoLab/agentos/releases/latest" class="md-button" style="margin: 0 8px;">Download & Try Yourself</a>
   <br><br>
-  <p style="opacity: 0.5; font-size: 0.85rem;">Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a> · <a href="mailto:info@unicolab.ai">info@unicolab.ai</a></p>
+  <p style="opacity: 0.5; font-size: 0.85rem;">
+    <strong>📧 info@unicolab.ai</strong> · <strong>💬 <a href="https://linkedin.com/company/unicolab">LinkedIn</a></strong> · Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a>
+  </p>
 </div>

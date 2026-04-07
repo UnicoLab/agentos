@@ -1,6 +1,6 @@
-site_name: AgentOS by UnicoLab
+site_name: AgentOS — AI Automation for PM & Analytics
 site_url: https://unicolab.github.io/agentos
-site_description: "A composable, local-first AI agent platform with specialized copilots. Two flagships: Jean-Pierre for Project Management and Michelle for Analytics Intelligence. 100% private."
+site_description: "We automate manual reporting and analytics workflows — saving PMs 10+ hrs/week and data teams 15+ hrs/week. Runs 100% on your machine. Free pilot in 2-3 weeks."
 site_author: UnicoLab
 repo_url: https://github.com/UnicoLab/agentos
 repo_name: UnicoLab/agentos
@@ -83,15 +83,15 @@ plugins:
 
 nav:
   - Home: index.md
-  - Product Tour: demo.md
+  - See It In Action: demo.md
   - Getting Started:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
       - Configuration: getting-started/configuration.md
-  - Copilots:
+  - What We Automate:
       - Overview: flavors/index.md
-      - "🎩 Jean-Pierre — PM": flavors/jean-pierre.md
-      - "📊 Michelle — Analytics": flavors/michelle.md
+      - "🎩 PM Reporting — Jean-Pierre": flavors/jean-pierre.md
+      - "🔬 Analytics — Michelle": flavors/michelle.md
   - Features:
       # Core Intelligence (Platform)
       - AI Copilot: features/ai-copilot.md

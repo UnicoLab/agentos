@@ -31,6 +31,10 @@ We automate the manual work that drains your team — project reporting, ad-hoc 
 
 </div>
 
+<div class="hero-image-showcase">
+<img src="assets/images/hero-command-center.png" alt="AgentOS — AI Command Center Dashboard">
+</div>
+
 </div>
 
 ---
@@ -38,22 +42,22 @@ We automate the manual work that drains your team — project reporting, ad-hoc 
 <div class="metrics-bar" markdown>
 
 <div class="metric-item">
-<div class="metric-value">70%</div>
+<div class="metric-value" data-count="70">70%</div>
 <div class="metric-label">of PM time spent gathering info</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value">15+</div>
+<div class="metric-value" data-count="15">15+</div>
 <div class="metric-label">ad-hoc data requests / week</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value">3 hrs</div>
+<div class="metric-value" data-count="3">3 hrs</div>
 <div class="metric-label">every Friday on reports</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value">$44K</div>
+<div class="metric-value" data-count="44">$44K</div>
 <div class="metric-label">annual cost per PM in wasted time</div>
 </div>
 
@@ -91,71 +95,142 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 
 ## What We Automate
 
-<div class="flagship-grid" markdown>
+<div class="showcase-section">
 
-<div class="flagship-card" markdown>
-
-### 🎩 Project Reporting Automation
-
-<div class="flagship-tagline">Jean-Pierre connects to your GitHub, Jira, and Slack — and turns chaotic project data into a real-time command center.</div>
-
-<div class="flagship-screenshot">
-<img src="assets/screens/flavors/pm/living-view.png" alt="Jean-Pierre — Project Intelligence Dashboard">
+<div class="showcase-item">
+<div class="showcase-visual">
+<div class="showcase-badge">🎩 Jean-Pierre</div>
+<div class="carousel-track" id="jp-track">
+<div class="carousel-slide"><img src="assets/screens/flavors/pm/living-view.png" alt="Living Dashboard"><div class="carousel-caption">Living Dashboard</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/pm/fleet-intelligence.png" alt="Fleet View"><div class="carousel-caption">Fleet View</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/pm/sprint-forge.png" alt="Sprint Forge"><div class="carousel-caption">Sprint Forge</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/pm/delivery-pulse.png" alt="Delivery Pulse"><div class="carousel-caption">Delivery Pulse</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/pm/team-pulse.png" alt="Team Pulse"><div class="carousel-caption">Team Pulse</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/pm/strategic-board.png" alt="Strategic Board"><div class="carousel-caption">Strategic Board</div></div>
+</div>
+<div class="carousel-nav">
+<button class="carousel-btn" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollBy({left:-t.clientWidth,behavior:'smooth'})">❮</button>
+<button class="carousel-btn" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollBy({left:t.clientWidth,behavior:'smooth'})">❯</button>
+</div>
+<div class="carousel-dots">
+<button class="carousel-dot active" onclick="this.closest('.showcase-visual').querySelector('.carousel-track').scrollTo({left:0,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*2,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*3,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*4,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*5,behavior:'smooth'})"></button>
+</div>
+</div>
+<div class="showcase-content">
+<h3>Project Reporting Automation</h3>
+<p class="showcase-tagline">Connects to your GitHub, Jira, and Slack — turns chaotic project data into a real-time command center.</p>
+<div class="outcome-list">
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Status reports</strong> generated automatically</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Risks detected 2-3 weeks</strong> early</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Executive reports</strong> in one click</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>All projects ranked</strong> by risk</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>24 interactive widgets</strong></span></div>
+</div>
+<div class="outcome-result">Result: ~10 hours/week saved per PM</div>
+<a href="flavors/jean-pierre.md" class="md-button">See Full Feature Set →</a>
+</div>
 </div>
 
-**What changes for your team:**
-
-- ✅ **Status reports** generated automatically from live data — **zero manual gathering**
-- ✅ **Risks detected 2-3 weeks** before they surface in meetings
-- ✅ **Executive reports** in one click — CTO, CFO, PMO versions in seconds
-- ✅ **All projects ranked by risk** on a single screen (Fleet View)
-- ✅ **24 interactive widgets**: Risk Radar, Velocity, Gantt, Sprint, Heatmap, Leaderboard
-
-**Result: ~10 hours/week saved per PM**
-
-[See the Full Feature Set →](flavors/jean-pierre.md){ .md-button }
+<div class="showcase-item">
+<div class="showcase-visual">
+<div class="showcase-badge">🔬 Michelle</div>
+<div class="carousel-track" id="michelle-track">
+<div class="carousel-slide"><img src="assets/screens/flavors/michelle/analytics-dashboard.png" alt="Analytics Dashboard"><div class="carousel-caption">Analytics Dashboard</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/michelle/kpi-dashboard.png" alt="KPI Dashboard"><div class="carousel-caption">KPI Dashboard</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/michelle/michelle-cahtbot.png" alt="AI Chat"><div class="carousel-caption">AI Chat</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/michelle/schema-browser.png" alt="Schema Browser"><div class="carousel-caption">Schema Browser</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/michelle/evolutionary-memory.png" alt="Evolutionary Memory"><div class="carousel-caption">Evolutionary Memory</div></div>
+<div class="carousel-slide"><img src="assets/screens/flavors/michelle/test-harness.png" alt="Test Harness"><div class="carousel-caption">Test Harness</div></div>
 </div>
-
-<div class="flagship-card" markdown>
-
-### 🔬 Self-Service Analytics
-
-<div class="flagship-tagline">Michelle connects to your databases and lets anyone ask data questions in plain English — with verified, source-cited answers in seconds.</div>
-
-<div class="flagship-screenshot">
-<img src="assets/screens/flavors/michelle/analytics-dashboard.png" alt="Michelle — Analytics Intelligence">
+<div class="carousel-nav">
+<button class="carousel-btn" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollBy({left:-t.clientWidth,behavior:'smooth'})">❮</button>
+<button class="carousel-btn" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollBy({left:t.clientWidth,behavior:'smooth'})">❯</button>
 </div>
-
-**What changes for your team:**
-
-- ✅ **Business users ask questions** in plain English → verified results in **3 seconds**
-- ✅ **Every answer shows exact SQL** and source tables — **zero hallucinations**
-- ✅ **Learns from corrections** — correct it once, it never repeats the mistake
-- ✅ **Knowledge captured permanently** — metric definitions survive turnover
-- ✅ **Test Harness** validates accuracy before you roll it out to the team
-
-**Result: ~15 hours/week freed per data team**
-
-[See the Full Feature Set →](flavors/michelle.md){ .md-button }
+<div class="carousel-dots">
+<button class="carousel-dot active" onclick="this.closest('.showcase-visual').querySelector('.carousel-track').scrollTo({left:0,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*2,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*3,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*4,behavior:'smooth'})"></button>
+<button class="carousel-dot" onclick="var t=this.closest('.showcase-visual').querySelector('.carousel-track');t.scrollTo({left:t.clientWidth*5,behavior:'smooth'})"></button>
+</div>
+</div>
+<div class="showcase-content">
+<h3>Self-Service Analytics</h3>
+<p class="showcase-tagline">Connects to your databases — anyone can ask data questions in plain English with verified, source-cited answers.</p>
+<div class="outcome-list">
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Plain English → verified results</strong> in 3 sec</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Exact SQL + source</strong> shown</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Learns from corrections</strong></span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Knowledge retained</strong> permanently</span></div>
+<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Test Harness</strong> validates accuracy</span></div>
+</div>
+<div class="outcome-result">Result: ~15 hours/week freed per data team</div>
+<a href="flavors/michelle.md" class="md-button">See Full Feature Set →</a>
+</div>
 </div>
 
 </div>
 
 ---
 
+
+
 ## The ROI
 
-| Workflow | Before | After | Savings |
-|----------|--------|-------|---------|
-| Status gathering (PM) | ~3 hrs/week | Automated (10 sec) | **3 hrs/week** |
-| Meeting prep + reports | ~4 hrs/week | One click | **~4 hrs/week** |
-| Risk identification | Reactive (surprises in meetings) | Real-time alerts | **Fewer crises** |
-| Ad-hoc data requests | 30-60 min each, 15/week | Self-service (3 sec) | **~15 hrs/week** |
-| Knowledge retention | Lost when people leave | Captured permanently | **Priceless** |
-| **Total** | | | **~25 hrs/week** |
+<div class="roi-visual">
 
-!!! tip "Annual Impact"
-    At $85/hr blended rate: **$110,000+ in annual productivity gains** — plus the value of catching risks 3 weeks early and retaining institutional knowledge.
+<div class="roi-card">
+<div class="roi-before">
+<div class="roi-label">Before</div>
+<div class="roi-bar" style="--bar-width: 90%">~3 hrs/week</div>
+<div class="roi-desc">Status gathering</div>
+</div>
+<div class="roi-after">
+<div class="roi-label roi-label--after">After</div>
+<div class="roi-bar roi-bar--after" style="--bar-width: 3%">10 sec</div>
+<div class="roi-desc">Automated</div>
+</div>
+</div>
+
+<div class="roi-card">
+<div class="roi-before">
+<div class="roi-label">Before</div>
+<div class="roi-bar" style="--bar-width: 80%">~4 hrs/week</div>
+<div class="roi-desc">Meeting prep + reports</div>
+</div>
+<div class="roi-after">
+<div class="roi-label roi-label--after">After</div>
+<div class="roi-bar roi-bar--after" style="--bar-width: 5%">One click</div>
+<div class="roi-desc">Instant generation</div>
+</div>
+</div>
+
+<div class="roi-card">
+<div class="roi-before">
+<div class="roi-label">Before</div>
+<div class="roi-bar" style="--bar-width: 95%">30-60 min each, 15/week</div>
+<div class="roi-desc">Ad-hoc data requests</div>
+</div>
+<div class="roi-after">
+<div class="roi-label roi-label--after">After</div>
+<div class="roi-bar roi-bar--after" style="--bar-width: 4%">3 sec</div>
+<div class="roi-desc">Self-service</div>
+</div>
+</div>
+
+</div>
+
+<div class="roi-total">
+<div class="roi-total-number">~25 hrs/week saved</div>
+<div class="roi-total-money">$110,000+ in annual productivity gains</div>
+<div class="roi-total-sub">Plus: risks caught 3 weeks early · institutional knowledge retained · eliminated team dependencies</div>
+</div>
 
 ---
 
@@ -187,36 +262,50 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 
 ## Why This Is Different
 
-<div class="feature-grid" markdown>
+<div class="differentiator-section">
 
-<div class="feature-card" markdown>
-### :material-brain: It Learns
-Every correction, every preference, every definition — **remembered permanently**. The system gets measurably smarter every day you use it. No re-explaining.
+<div class="differentiator-visual">
+<img src="assets/images/integrations-hub.png" alt="Intelligent Integrations Hub">
 </div>
 
-<div class="feature-card" markdown>
-### :material-check-decagram: It Proves
-Every data answer includes the **exact SQL, source tables, and execution proof**. If it can't verify an answer, it flags it — architecturally, not as a prompt trick.
+<div class="differentiator-grid">
+
+<div class="diff-card" markdown>
+<div class="diff-icon">🧠</div>
+<h4>It Learns</h4>
+<p>Every correction, preference, definition — <strong>remembered permanently</strong>. Gets measurably smarter every day. No re-explaining.</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-shield-lock: It's Private
-Runs **100% on your machine**. Credentials, conversations, knowledge — nothing leaves. Supports fully local AI (Ollama). Air-gap ready. GDPR-native.
+<div class="diff-card" markdown>
+<div class="diff-icon">✓</div>
+<h4>It Proves</h4>
+<p>Every data answer includes <strong>exact SQL, source tables, execution proof</strong>. If it can't verify, it flags it — architecturally.</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-link-variant: It Connects
-Works with your **existing tools** — GitHub, Jira, Slack, PostgreSQL, MySQL, SQLite. No migration. No new dashboards to maintain. Your team keeps working where they are.
+<div class="diff-card" markdown>
+<div class="diff-icon">🔒</div>
+<h4>It's Private</h4>
+<p>Runs <strong>100% on your machine</strong>. Nothing leaves. Supports local AI (Ollama). Air-gap ready. GDPR-native.</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-lightning-bolt: It's Fast
-**10-minute setup.** Install, connect, ask. The onboarding wizard handles everything. First automated report same day. No infrastructure, no DevOps, no cloud account.
+<div class="diff-card" markdown>
+<div class="diff-icon">🔗</div>
+<h4>It Connects</h4>
+<p>Works with <strong>GitHub, Jira, Slack, PostgreSQL, MySQL, SQLite</strong>. No migration. No new dashboards.</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-bullseye-arrow: It's Accurate
-Built-in **Test Harness** validates answer accuracy before deployment. After 2 weeks of learning, teams report **95%+ accuracy** — with every answer provably sourced.
+<div class="diff-card" markdown>
+<div class="diff-icon">⚡</div>
+<h4>It's Fast</h4>
+<p><strong>10-minute setup.</strong> Install, connect, ask. First automated report same day. No infra needed.</p>
+</div>
+
+<div class="diff-card" markdown>
+<div class="diff-icon">🎯</div>
+<h4>It's Accurate</h4>
+<p>Built-in <strong>Test Harness</strong> validates accuracy. Teams report <strong>95%+ accuracy</strong> — every answer provably sourced.</p>
+</div>
+
 </div>
 
 </div>
@@ -225,44 +314,81 @@ Built-in **Test Harness** validates answer accuracy before deployment. After 2 w
 
 ## :material-shield-lock: Your Data Stays on Your Machine
 
+<div class="privacy-section">
+
+<div class="privacy-visual">
+<img src="assets/images/privacy-local.png" alt="100% Local Data Privacy">
+</div>
+
+<div class="privacy-content">
+
 <div class="privacy-badge">🔒 Nothing leaves. Ever.</div>
 
-| Data Type | Storage | Leaves Your Machine? |
-|---|---|---|
-| Project Data (Commits, PRs, Tickets) | Local SQLite | ❌ **Never** |
-| Database Queries & Results | Local SQLite | ❌ **Never** |
-| Chat Conversations | Local SQLite | ❌ **Never** |
-| Agent Memory & Knowledge | Local SQLite | ❌ **Never** |
-| API Keys & Credentials | Local Config | ❌ **Never** |
+<div class="privacy-grid">
+
+<div class="privacy-item">
+<div class="privacy-status">❌ Never</div>
+<div class="privacy-data">Project Data (Commits, PRs, Tickets)</div>
+</div>
+
+<div class="privacy-item">
+<div class="privacy-status">❌ Never</div>
+<div class="privacy-data">Database Queries & Results</div>
+</div>
+
+<div class="privacy-item">
+<div class="privacy-status">❌ Never</div>
+<div class="privacy-data">Chat Conversations</div>
+</div>
+
+<div class="privacy-item">
+<div class="privacy-status">❌ Never</div>
+<div class="privacy-data">Agent Memory & Knowledge</div>
+</div>
+
+<div class="privacy-item">
+<div class="privacy-status">❌ Never</div>
+<div class="privacy-data">API Keys & Credentials</div>
+</div>
+
+</div>
 
 Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero cloud, zero tracking.
 
 [Learn more about our security model →](security.md)
 
+</div>
+
+</div>
+
 ---
 
 ## Built For
 
-<div class="feature-grid" markdown>
+<div class="persona-strip">
 
-<div class="feature-card" markdown>
-### :material-account-tie: Engineering Managers
-Automate status gathering → real-time project health
+<div class="persona-card">
+<div class="persona-icon">👔</div>
+<h4>Engineering Managers</h4>
+<p>Automate status gathering → real-time project health</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-chart-bar: Data & Analytics Leaders
-Eliminate ad-hoc request backlog → self-service in 3 sec
+<div class="persona-card">
+<div class="persona-icon">📊</div>
+<h4>Data & Analytics Leaders</h4>
+<p>Eliminate ad-hoc request backlog → self-service in 3 sec</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-clipboard-check: Technical PMs
-3 report versions → one click, CTO/CFO/PMO in seconds
+<div class="persona-card">
+<div class="persona-icon">📋</div>
+<h4>Technical PMs</h4>
+<p>3 report versions → one click, CTO/CFO/PMO in seconds</p>
 </div>
 
-<div class="feature-card" markdown>
-### :material-rocket-launch: Startup CTOs
-Enterprise-grade intelligence on a laptop — no infra needed
+<div class="persona-card">
+<div class="persona-icon">🚀</div>
+<h4>Startup CTOs</h4>
+<p>Enterprise-grade intelligence on a laptop — no infra needed</p>
 </div>
 
 </div>
@@ -271,26 +397,32 @@ Enterprise-grade intelligence on a laptop — no infra needed
 
 ## :material-rocket-launch: Free AI Automation Pilot { #free-pilot }
 
-!!! success "No Cost. No Commitment. Just Results."
-    We pick **ONE workflow** — the one that wastes the most time — and automate it in **2-3 weeks**. You see a real, working result before spending anything. Our only ask: **honest feedback.**
+<div class="cta-section">
 
-### What You Get:
-- ✅ **Full deployment** of the AI copilot on your machine
-- ✅ **Connected to your tools** — GitHub, Jira, Slack, or databases
-- ✅ **Measurable results** — time saved, accuracy score, before/after comparison
-- ✅ **No cost, no commitment** — if it doesn't deliver, you wasted zero money
-- ✅ **Priority support** from the core team throughout
+<div class="cta-content">
 
-### How to Start:
+<div class="cta-headline">No Cost. No Commitment. Just Results.</div>
 
-<div class="hero-cta" markdown>
+<p>We pick <strong>ONE workflow</strong> — the one that wastes the most time — and automate it in <strong>2-3 weeks</strong>. You see a real, working result before spending anything. Our only ask: <strong>honest feedback.</strong></p>
 
-[Request Your Free Pilot :material-email:](mailto:info@unicolab.ai?subject=Free%20AI%20Automation%20Pilot&body=Hi%20Piotr%2C%0A%0AI%27m%20interested%20in%20the%20free%20automation%20pilot.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.){ .md-button .md-button--primary }
-[Download & Try Yourself :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button }
+<div class="cta-checklist">
+<div class="cta-check">✅ Full deployment on your machine</div>
+<div class="cta-check">✅ Connected to your tools — GitHub, Jira, Slack, or databases</div>
+<div class="cta-check">✅ Measurable results — time saved, accuracy score, before/after</div>
+<div class="cta-check">✅ No cost, no commitment — zero risk</div>
+<div class="cta-check">✅ Priority support from the core team</div>
+</div>
+
+<div class="hero-cta">
+<a href="mailto:info@unicolab.ai?subject=Free%20AI%20Automation%20Pilot&body=Hi%20Piotr%2C%0A%0AI%27m%20interested%20in%20the%20free%20automation%20pilot.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="md-button md-button--primary">Request Your Free Pilot ✉️</a>
+<a href="https://github.com/UnicoLab/agentos/releases/latest" class="md-button">Download &amp; Try Yourself ⬇️</a>
+</div>
+
+<p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">📧 <strong>info@unicolab.ai</strong> · 💬 <strong>DM us on <a href="https://linkedin.com/company/unicolab">LinkedIn</a></strong> · 🌐 <strong><a href="https://unicolab.ai">unicolab.ai</a></strong></p>
 
 </div>
 
-**📧 info@unicolab.ai** · **💬 DM us on [LinkedIn](https://linkedin.com/company/unicolab)** · **🌐 [unicolab.ai](https://unicolab.ai)**
+</div>
 
 ---
 
@@ -366,3 +498,20 @@ Enterprise-grade intelligence on a laptop — no infra needed
 AI automation consulting — Paris, France<br>
 © 2024–2026 UnicoLab. All rights reserved.
 </p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.showcase-visual').forEach(function(visual) {
+    var track = visual.querySelector('.carousel-track');
+    var dots = visual.querySelectorAll('.carousel-dot');
+    if (!track || !dots.length) return;
+    track.addEventListener('scroll', function() {
+      var idx = Math.round(track.scrollLeft / track.clientWidth);
+      dots.forEach(function(d, i) {
+        d.classList.toggle('active', i === idx);
+      });
+    });
+  });
+});
+</script>
+

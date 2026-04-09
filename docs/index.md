@@ -1,6 +1,6 @@
 ---
 title: AI Automation for Project Reporting & Analytics
-description: "We automate your manual reporting and analytics workflows — saving PMs 10+ hours/week and data teams 15+ hours/week. 100% on your machine. Free pilot in 2-3 weeks."
+description: "Jean-Pierre and Michelle — purpose-built AI agents that automate project reporting and analytics. They learn your domain, validate every answer, and run 100% on your machine. Free pilot in 2-3 weeks."
 hide:
   - navigation
   - toc
@@ -8,11 +8,12 @@ hide:
 
 <div class="hero" markdown>
 
-# Stop Chasing Status Updates.<br>Start Making Decisions.
+# Meet Jean-Pierre & Michelle.<br>AI That Actually *Works*.
 
 <p class="subtitle">
-We automate the manual work that drains your team — project reporting, ad-hoc data requests, executive summaries — using AI that runs <strong>100% on your machine</strong>.<br>
-<strong>One workflow. 2-3 weeks. Measurable results. Free.</strong>
+Two purpose-built agents that automate project reporting and analytics intelligence.<br>
+They connect to your tools, learn your domain, validate every answer, and get measurably smarter every week.<br>
+<strong>100% on your machine. Zero cloud dependency. Free pilot.</strong>
 </p>
 
 <div class="hero-badges" markdown>
@@ -27,7 +28,7 @@ We automate the manual work that drains your team — project reporting, ad-hoc 
 <div class="hero-cta" markdown>
 
 [Start Your Free Pilot :material-rocket-launch:](#free-pilot){ .md-button .md-button--primary }
-[See How It Works :material-arrow-down:](#the-problem){ .md-button }
+[See How It Works :material-arrow-down:](#what-they-do){ .md-button }
 
 </div>
 
@@ -42,58 +43,78 @@ We automate the manual work that drains your team — project reporting, ad-hoc 
 <div class="metrics-bar" markdown>
 
 <div class="metric-item">
-<div class="metric-value" data-count="70">70%</div>
-<div class="metric-label">of PM time spent gathering info</div>
+<div class="metric-value" data-count="25">25+</div>
+<div class="metric-label">hrs/week saved per team</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value" data-count="15">15+</div>
-<div class="metric-label">ad-hoc data requests / week</div>
+<div class="metric-value" data-count="3">3 sec</div>
+<div class="metric-label">from question to verified answer</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value" data-count="3">3 hrs</div>
-<div class="metric-label">every Friday on reports</div>
+<div class="metric-value" data-count="9">9</div>
+<div class="metric-label">anti-hallucination layers</div>
 </div>
 
 <div class="metric-item">
-<div class="metric-value" data-count="44">$44K</div>
-<div class="metric-label">annual cost per PM in wasted time</div>
+<div class="metric-value" data-count="0">$0</div>
+<div class="metric-label">pilot cost — measurable ROI first</div>
 </div>
 
 </div>
 
 ---
 
-## The Problem { #the-problem }
+## What They Automate For You { #what-they-do }
 
-<div class="feature-grid" markdown>
+<div class="flagship-duo">
 
-<div class="feature-card" markdown>
-### :material-clock-alert: PMs: 45 min of chaos every morning
-Open Jira → Slack → GitHub → Spreadsheet. **Context-switching** just to answer "where do things stand?" — and the data is already stale.
+<div class="flagship-hero-card">
+<div class="flagship-hero-header">
+<img src="assets/images/jp-avatar.png" alt="Jean-Pierre" class="flagship-avatar-img">
+<div>
+<h3>🎩 Jean-Pierre</h3>
+<p class="flagship-role">Project Reporting Automation</p>
+</div>
+</div>
+<p class="flagship-pitch">Connects to GitHub, Jira, and Slack — turns chaotic project data into a real-time command center with <strong>proactive risk scoring</strong> and <strong>24/7 background monitoring</strong>.</p>
+<div class="flagship-outcomes">
+<div class="flagship-outcome"><span>✅</span> Status reports generated automatically — no manual gathering</div>
+<div class="flagship-outcome"><span>✅</span> Risks detected 2-3 weeks early via real-time scoring (0-100)</div>
+<div class="flagship-outcome"><span>✅</span> Executive reports in one click — CTO / CFO / PMO variants</div>
+<div class="flagship-outcome"><span>✅</span> All projects ranked by risk across your portfolio</div>
+<div class="flagship-outcome"><span>✅</span> Evolution Memory — learns your preferences, never re-explain</div>
+</div>
+<div class="flagship-result">~10 hrs/week saved per project manager</div>
+<a href="flavors/jean-pierre.md" class="md-button">Explore Jean-Pierre →</a>
 </div>
 
-<div class="feature-card" markdown>
-### :material-database-alert: Data teams: buried in lookups
-**15+ ad-hoc SQL requests/week**, each 30-60 min. That's 1-2 analysts doing glorified lookups instead of real analysis.
+<div class="flagship-hero-card flagship-hero-card--michelle">
+<div class="flagship-hero-header">
+<img src="assets/images/michelle-avatar.png" alt="Michelle" class="flagship-avatar-img">
+<div>
+<h3>🔬 Michelle</h3>
+<p class="flagship-role">Analytics Intelligence</p>
 </div>
-
-<div class="feature-card" markdown>
-### :material-head-remove: Knowledge walks out the door
-Your best analyst leaves → metric definitions, query patterns, business context: **all gone.** New hires spend 3 weeks just learning what "active customer" means.
 </div>
-
-<div class="feature-card" markdown>
-### :material-close-circle: What you've tried — and why it fails
-**Dashboards** → go stale. **AI chatbots** → hallucinate numbers. **Hiring** → problem scales with the team. The issue isn't people. **It's the work itself.**
+<p class="flagship-pitch">Connects to your databases — anyone can ask data questions in plain English with <strong>verified, source-cited answers</strong> backed by a <strong>9-layer anti-hallucination architecture</strong>.</p>
+<div class="flagship-outcomes">
+<div class="flagship-outcome"><span>✅</span> Plain English → verified results in 3 seconds</div>
+<div class="flagship-outcome"><span>✅</span> Exact SQL + source tables shown — full auditability</div>
+<div class="flagship-outcome"><span>✅</span> Learns from corrections — never makes the same mistake twice</div>
+<div class="flagship-outcome"><span>✅</span> Shared Brain — knowledge retained, governed via PR review</div>
+<div class="flagship-outcome"><span>✅</span> KPI engine with cron schedules, thresholds, sparklines</div>
+</div>
+<div class="flagship-result">~15 hrs/week freed per data team</div>
+<a href="flavors/michelle.md" class="md-button">Explore Michelle →</a>
 </div>
 
 </div>
 
 ---
 
-## What We Automate
+## See the Results
 
 <div class="showcase-section">
 
@@ -123,16 +144,14 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 </div>
 <div class="showcase-content">
 <h3>Project Reporting Automation</h3>
-<p class="showcase-tagline">Connects to your GitHub, Jira, and Slack — turns chaotic project data into a real-time command center.</p>
+<p class="showcase-tagline">From chaotic project data → real-time command center with proactive risk scoring, fleet intelligence, and executive-ready reports.</p>
 <div class="outcome-list">
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Status reports</strong> generated automatically</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Risks detected 2-3 weeks</strong> early</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Executive reports</strong> in one click</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>All projects ranked</strong> by risk</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>24 interactive widgets</strong></span></div>
+<div class="outcome-item"><span class="outcome-icon">📊</span><span><strong>Living Dashboard</strong> — 24 bento cards, always current</span></div>
+<div class="outcome-item"><span class="outcome-icon">🚨</span><span><strong>Risk Scoring</strong> — 0-100 scale with 2-3 week early warning</span></div>
+<div class="outcome-item"><span class="outcome-icon">📋</span><span><strong>Fleet View</strong> — all projects ranked by risk</span></div>
+<div class="outcome-item"><span class="outcome-icon">📝</span><span><strong>One-Click Reports</strong> — CTO, CFO, PMO variants</span></div>
+<div class="outcome-item"><span class="outcome-icon">🧠</span><span><strong>Evolution Memory</strong> — learns your style, never re-explain</span></div>
 </div>
-<div class="outcome-result">Result: ~10 hours/week saved per PM</div>
-<a href="flavors/jean-pierre.md" class="md-button">See Full Feature Set →</a>
 </div>
 </div>
 
@@ -161,17 +180,15 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 </div>
 </div>
 <div class="showcase-content">
-<h3>Self-Service Analytics</h3>
-<p class="showcase-tagline">Connects to your databases — anyone can ask data questions in plain English with verified, source-cited answers.</p>
+<h3>Analytics Intelligence</h3>
+<p class="showcase-tagline">From ad-hoc SQL requests → self-service analytics with verified answers, interactive dashboards, and automated KPI tracking.</p>
 <div class="outcome-list">
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Plain English → verified results</strong> in 3 sec</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Exact SQL + source</strong> shown</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Learns from corrections</strong></span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Knowledge retained</strong> permanently</span></div>
-<div class="outcome-item"><span class="outcome-icon">✅</span><span><strong>Test Harness</strong> validates accuracy</span></div>
+<div class="outcome-item"><span class="outcome-icon">💬</span><span><strong>Plain English</strong> → verified SQL in 3 seconds</span></div>
+<div class="outcome-item"><span class="outcome-icon">📈</span><span><strong>9 Chart Types</strong> — pins, gauges, sparklines, drill-downs</span></div>
+<div class="outcome-item"><span class="outcome-icon">🎯</span><span><strong>KPI Engine</strong> — cron schedules, thresholds, automated alerts</span></div>
+<div class="outcome-item"><span class="outcome-icon">🔍</span><span><strong>Source Citations</strong> — clickable provenance on every number</span></div>
+<div class="outcome-item"><span class="outcome-icon">🧠</span><span><strong>Shared Brain</strong> — team knowledge retained, governed via PRs</span></div>
 </div>
-<div class="outcome-result">Result: ~15 hours/week freed per data team</div>
-<a href="flavors/michelle.md" class="md-button">See Full Feature Set →</a>
 </div>
 </div>
 
@@ -179,9 +196,219 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 
 ---
 
+## :material-shield-check: Why They Don't Hallucinate { #anti-hallucination }
 
+<div class="pillars-section">
 
-## The ROI
+<div class="pillar-card pillar-card--evolves">
+<div class="pillar-header">
+<div class="pillar-icon">🧬</div>
+<h3>They Evolve</h3>
+</div>
+<p class="pillar-lead">Generic AI resets every session. These agents get <strong>measurably smarter every week</strong>.</p>
+<div class="pillar-details">
+<div class="pillar-detail">6-namespace Evolution Memory — errors, corrections, tool wisdom, user adaptation, performance, knowledge</div>
+<div class="pillar-detail">Same question, better answer next week — tracked and verifiable</div>
+<div class="pillar-detail">Shared Brain: GitHub-backed, PR-reviewed → when your analyst leaves, knowledge stays</div>
+</div>
+</div>
+
+<div class="pillar-card pillar-card--validates">
+<div class="pillar-header">
+<div class="pillar-icon">✓</div>
+<h3>They Validate</h3>
+</div>
+<p class="pillar-lead">Every answer comes with <strong>proof</strong> — exact SQL, source tables, execution evidence.</p>
+<div class="pillar-details">
+<div class="pillar-detail">9-layer anti-hallucination architecture: Triage → Generate → Execute → Learn</div>
+<div class="pillar-detail">Clickable [source:N] provenance badges on every data answer</div>
+<div class="pillar-detail">Business glossary + rules enforced architecturally — not just in prompts</div>
+</div>
+</div>
+
+<div class="pillar-card pillar-card--private">
+<div class="pillar-header">
+<div class="pillar-icon">🔒</div>
+<h3>They Stay Private</h3>
+</div>
+<p class="pillar-lead"><strong>100% on your machine.</strong> Nothing — not data, not queries, not memory — leaves.</p>
+<div class="pillar-details">
+<div class="pillar-detail">Single binary, no Docker, no cloud — runs locally on macOS, Linux, Windows</div>
+<div class="pillar-detail">Supports Ollama for fully local AI — zero API calls possible</div>
+<div class="pillar-detail">GDPR-native, air-gap ready, no telemetry, no tracking</div>
+</div>
+</div>
+
+</div>
+
+---
+
+## :material-shield-check: 9 Layers of Anti-Hallucination
+
+<div class="hallucination-section">
+
+<div class="hallucination-visual">
+<img src="assets/images/anti-hallucination-pipeline.png" alt="Anti-Hallucination Pipeline">
+</div>
+
+<div class="hallucination-content">
+
+<p class="section-intro" style="text-align:left;margin:0 0 1.5rem">Text-to-SQL tools generate queries. Michelle generates queries, <strong>validates them</strong>, learns from corrections, shares knowledge across your team, and gets measurably more accurate every day.</p>
+
+<div class="pipeline-visual">
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">🧠</div>
+<div class="pipeline-step-name">Triage</div>
+<div class="pipeline-step-desc">Can it be answered from context?</div>
+</div>
+<div class="pipeline-arrow-icon">→</div>
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">⚡</div>
+<div class="pipeline-step-name">Generate</div>
+<div class="pipeline-step-desc">SQL with full schema context</div>
+</div>
+<div class="pipeline-arrow-icon">→</div>
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">▶️</div>
+<div class="pipeline-step-name">Execute</div>
+<div class="pipeline-step-desc">Run with provenance tracking</div>
+</div>
+<div class="pipeline-arrow-icon">→</div>
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">📈</div>
+<div class="pipeline-step-name">Learn</div>
+<div class="pipeline-step-desc">Record into evolution memory</div>
+</div>
+</div>
+
+<div class="layer-grid">
+<div class="layer-item"><strong>Adaptive Schema</strong> — Tiered injection handles 100+ tables</div>
+<div class="layer-item"><strong>Business Glossary</strong> — Your definitions, injected per prompt</div>
+<div class="layer-item"><strong>Business Rules</strong> — "Exclude deleted" enforced architecturally</div>
+<div class="layer-item"><strong>Validated Examples</strong> — Approved NL→SQL as few-shot training</div>
+<div class="layer-item"><strong>Evolution Memory</strong> — 6 namespaces that persist across sessions</div>
+<div class="layer-item"><strong>Semantic Joins</strong> — LLM-assisted FK discovery beyond constraints</div>
+<div class="layer-item"><strong>Provenance Tags</strong> — Clickable [source:N] citations on every answer</div>
+<div class="layer-item"><strong>Test Harness</strong> — Validate accuracy before deploying to team</div>
+<div class="layer-item"><strong>Multi-Model Routing</strong> — Right model per task: SQL, Q&A, enrichment</div>
+</div>
+
+</div>
+
+</div>
+
+---
+
+## "But I Already Have Claude…" { #why-not-claude }
+
+<div class="comparison-section" markdown>
+
+<p class="section-intro">Claude is brilliant at conversation. But <strong>conversation isn't operations</strong>. Here's what changes when you move from a generic AI chatbot to purpose-built operational agents.</p>
+
+<div class="comparison-table-wrapper">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Capability</th>
+<th>Claude / ChatGPT + MCP</th>
+<th>Jean-Pierre & Michelle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Schema knowledge</strong></td>
+<td class="cmp-part">⚠️ MCP can fetch — no tiered caching</td>
+<td class="cmp-yes">✅ Auto-synced with adaptive tiered injection</td>
+</tr>
+<tr>
+<td><strong>Persistent memory</strong></td>
+<td class="cmp-no">❌ Session resets — SKILLS.md is static</td>
+<td class="cmp-yes">✅ 6-namespace Evolution Memory</td>
+</tr>
+<tr>
+<td><strong>Query validation</strong></td>
+<td class="cmp-no">❌ You validate manually</td>
+<td class="cmp-yes">✅ Triage → Generate → Execute → Learn</td>
+</tr>
+<tr>
+<td><strong>KPI tracking</strong></td>
+<td class="cmp-no">❌ No persistence, schedules, thresholds</td>
+<td class="cmp-yes">✅ KPI engine with cron, history, alerts</td>
+</tr>
+<tr>
+<td><strong>Team knowledge</strong></td>
+<td class="cmp-no">❌ Each user starts from zero</td>
+<td class="cmp-yes">✅ GitHub-backed Shared Brain + PR review</td>
+</tr>
+<tr>
+<td><strong>Data sovereignty</strong></td>
+<td class="cmp-no">❌ Data goes to Anthropic / OpenAI</td>
+<td class="cmp-yes">✅ Local binary, air-gap capable</td>
+</tr>
+<tr>
+<td><strong>Interactive dashboards</strong></td>
+<td class="cmp-no">❌ Text + static artifacts</td>
+<td class="cmp-yes">✅ Charts, pins, KPI gauges, drill-downs</td>
+</tr>
+<tr>
+<td><strong>Proactive monitoring</strong></td>
+<td class="cmp-no">❌ Reactive — you ask, it answers</td>
+<td class="cmp-yes">✅ Background daemon with risk scoring</td>
+</tr>
+<tr>
+<td><strong>Business glossary</strong></td>
+<td class="cmp-part">⚠️ Static SKILLS.md — no enforcement</td>
+<td class="cmp-yes">✅ Dynamic glossary + rules, enforced per query</td>
+</tr>
+<tr>
+<td><strong>Improves over time</strong></td>
+<td class="cmp-no">❌ Same accuracy week 1 and week 52</td>
+<td class="cmp-yes">✅ Measurably smarter every week</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+!!! quote "The Bottom Line"
+    **Claude is a brilliant conversationalist.** Jean-Pierre and Michelle are purpose-built operational systems — they live on your machine, learn your domain, validate every answer, and get smarter every week. One is a tool. The other is a teammate.
+
+</div>
+
+---
+
+## The Time You're Losing Today { #the-problem }
+
+<p class="section-intro">Every week, your team loses 25+ hours to manual reporting, ad-hoc data requests, and knowledge gaps. Here's where the time goes.</p>
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-clock-alert: PMs: 45 min of chaos every morning
+Open Jira → Slack → GitHub → Spreadsheet. **Context-switching** just to answer "where do things stand?" — and the data is already stale.
+</div>
+
+<div class="feature-card" markdown>
+### :material-database-alert: Data teams: buried in lookups
+**15+ ad-hoc SQL requests/week**, each 30-60 min. That's 1-2 analysts doing glorified lookups instead of real analysis.
+</div>
+
+<div class="feature-card" markdown>
+### :material-head-remove: Knowledge walks out the door
+Your best analyst leaves → metric definitions, query patterns, business context: **all gone.** New hires spend 3 weeks just learning what "active customer" means.
+</div>
+
+<div class="feature-card" markdown>
+### :material-robot-confused: AI chatbots hallucinate numbers
+You tried ChatGPT / Claude for analytics. It **invents data**, forgets corrections next session, and every team member starts from zero. The issue isn't AI. **It's stateless AI.**
+</div>
+
+</div>
+
+---
+
+## The Time You Get Back
+
+<p class="section-intro">Side-by-side: what your team does manually today vs. what the agents automate.</p>
 
 <div class="roi-visual">
 
@@ -224,17 +451,32 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 </div>
 </div>
 
+<div class="roi-card">
+<div class="roi-before">
+<div class="roi-label">Before</div>
+<div class="roi-bar" style="--bar-width: 85%">3 weeks onboarding</div>
+<div class="roi-desc">New hire learns definitions</div>
+</div>
+<div class="roi-after">
+<div class="roi-label roi-label--after">After</div>
+<div class="roi-bar roi-bar--after" style="--bar-width: 3%">Instant</div>
+<div class="roi-desc">Shared Brain has it all</div>
+</div>
+</div>
+
 </div>
 
 <div class="roi-total">
 <div class="roi-total-number">~25 hrs/week saved</div>
 <div class="roi-total-money">$110,000+ in annual productivity gains</div>
-<div class="roi-total-sub">Plus: risks caught 3 weeks early · institutional knowledge retained · eliminated team dependencies</div>
+<div class="roi-total-sub">Plus: risks caught 3 weeks early · institutional knowledge retained · eliminated team dependencies · measurably improving accuracy</div>
 </div>
 
 ---
 
 ## How the Free Pilot Works
+
+<p class="section-intro">Zero risk. We automate one workflow in 2-3 weeks — you measure the results before spending anything.</p>
 
 <div class="step-grid">
 
@@ -247,65 +489,13 @@ Your best analyst leaves → metric definitions, query patterns, business contex
 <div class="step-card">
 <div class="step-num">2</div>
 <h3>We Automate It</h3>
-<p>In <strong>2-3 weeks</strong>, we deploy the AI copilot on your machine, connect it to your tools, and automate the workflow. You see results, not a demo.</p>
+<p>In <strong>2-3 weeks</strong>, we deploy the agent on your machine, connect it to your tools, configure your Shared Brain, and automate the workflow end-to-end.</p>
 </div>
 
 <div class="step-card">
 <div class="step-num">3</div>
 <h3>You Measure Results</h3>
-<p><strong>No cost. No commitment.</strong> You measure real time saved. If it works — we talk about expanding. If not — you wasted zero money.</p>
-</div>
-
-</div>
-
----
-
-## Why This Is Different
-
-<div class="differentiator-section">
-
-<div class="differentiator-visual">
-<img src="assets/images/integrations-hub.png" alt="Intelligent Integrations Hub">
-</div>
-
-<div class="differentiator-grid">
-
-<div class="diff-card" markdown>
-<div class="diff-icon">🧠</div>
-<h4>It Learns</h4>
-<p>Every correction, preference, definition — <strong>remembered permanently</strong>. Gets measurably smarter every day. No re-explaining.</p>
-</div>
-
-<div class="diff-card" markdown>
-<div class="diff-icon">✓</div>
-<h4>It Proves</h4>
-<p>Every data answer includes <strong>exact SQL, source tables, execution proof</strong>. If it can't verify, it flags it — architecturally.</p>
-</div>
-
-<div class="diff-card" markdown>
-<div class="diff-icon">🔒</div>
-<h4>It's Private</h4>
-<p>Runs <strong>100% on your machine</strong>. Nothing leaves. Supports local AI (Ollama). Air-gap ready. GDPR-native.</p>
-</div>
-
-<div class="diff-card" markdown>
-<div class="diff-icon">🔗</div>
-<h4>It Connects</h4>
-<p>Works with <strong>GitHub, Jira, Slack, PostgreSQL, MySQL, SQLite</strong>. No migration. No new dashboards.</p>
-</div>
-
-<div class="diff-card" markdown>
-<div class="diff-icon">⚡</div>
-<h4>It's Fast</h4>
-<p><strong>10-minute setup.</strong> Install, connect, ask. First automated report same day. No infra needed.</p>
-</div>
-
-<div class="diff-card" markdown>
-<div class="diff-icon">🎯</div>
-<h4>It's Accurate</h4>
-<p>Built-in <strong>Test Harness</strong> validates accuracy. Teams report <strong>95%+ accuracy</strong> — every answer provably sourced.</p>
-</div>
-
+<p><strong>No cost. No commitment.</strong> You measure real time saved, accuracy scores, and evolution learning rate. If it works — we expand. If not — zero money wasted.</p>
 </div>
 
 </div>
@@ -363,9 +553,15 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 
 ---
 
-## Built For
+## Built For Your Role
 
 <div class="persona-strip">
+
+<div class="persona-card">
+<div class="persona-icon">🏗️</div>
+<h4>CTOs & VP Engineering</h4>
+<p>Portfolio risk visibility → proactive decisions, not fire drills</p>
+</div>
 
 <div class="persona-card">
 <div class="persona-icon">👔</div>
@@ -382,13 +578,7 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 <div class="persona-card">
 <div class="persona-icon">📋</div>
 <h4>Technical PMs</h4>
-<p>3 report versions → one click, CTO/CFO/PMO in seconds</p>
-</div>
-
-<div class="persona-card">
-<div class="persona-icon">🚀</div>
-<h4>Startup CTOs</h4>
-<p>Enterprise-grade intelligence on a laptop — no infra needed</p>
+<p>3 report variants → one click, CTO/CFO/PMO in seconds</p>
 </div>
 
 </div>
@@ -408,9 +598,9 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 <div class="cta-checklist">
 <div class="cta-check">✅ Full deployment on your machine</div>
 <div class="cta-check">✅ Connected to your tools — GitHub, Jira, Slack, or databases</div>
-<div class="cta-check">✅ Measurable results — time saved, accuracy score, before/after</div>
+<div class="cta-check">✅ Shared Brain configured with your team's KPIs & glossary</div>
+<div class="cta-check">✅ Measurable results — time saved, accuracy score, evolution rate</div>
 <div class="cta-check">✅ No cost, no commitment — zero risk</div>
-<div class="cta-check">✅ Priority support from the core team</div>
 </div>
 
 <div class="hero-cta">
@@ -514,4 +704,3 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-

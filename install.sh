@@ -6,15 +6,19 @@
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 #
 #  Choose a flavor:
+#    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
 #
 #  Available flavours:
-#    pm         — Jean-Pierre, AI Project Management Copilot (default)
-#    freelancer — Yvette, Freelance Project Management Copilot
-#    retail     — Retail Operations Assistant
-#    office     — Office Productivity Assistant
+#    pm              — Jean-Pierre, AI Project Management Copilot (default)
+#    jean-pierre     — Alias for pm
+#    michelle        — Michelle, Analytics Intelligence Copilot
+#    freelancer      — Yvette, Freelance Project Management Copilot
+#    edith           — Édith, Sales Intelligence Copilot
+#    retail          — Retail Operations Assistant
+#    office          — Office Productivity Assistant
 #
 #  Features:
 #    • Auto-detects OS (macOS/Linux) and architecture (arm64/amd64)
@@ -35,23 +39,27 @@ BINARY_NAME="agentos"
 # Maps user-friendly names to binary archive prefixes
 flavour_to_binary() {
   case "$1" in
-    pm|aiflow-pm)      echo "agentos-pm" ;;
-    freelancer)        echo "agentos-freelancer" ;;
-    retail|retail-ops) echo "agentos-retail" ;;
-    office)            echo "agentos-office" ;;
+    pm|aiflow-pm|jean-pierre) echo "agentos-pm" ;;
+    michelle)                 echo "agentos-michelle" ;;
+    freelancer)               echo "agentos-freelancer" ;;
+    edith|sales)              echo "agentos-edith" ;;
+    retail|retail-ops)        echo "agentos-retail" ;;
+    office)                   echo "agentos-office" ;;
     *)
-      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}         — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}freelancer${NC} — Yvette, Freelance Project Management Copilot\n      ${CYAN}retail${NC}     — Retail Operations Assistant\n      ${CYAN}office${NC}     — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm"
+      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}              — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}jean-pierre${NC}     — Alias for pm\n      ${CYAN}michelle${NC}        — Michelle, Analytics Intelligence Copilot\n      ${CYAN}freelancer${NC}      — Yvette, Freelance Project Management Copilot\n      ${CYAN}edith${NC}           — Édith, Sales Intelligence Copilot\n      ${CYAN}retail${NC}          — Retail Operations Assistant\n      ${CYAN}office${NC}          — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle"
       ;;
   esac
 }
 
 flavour_display_name() {
   case "$1" in
-    pm|aiflow-pm)      echo "Jean-Pierre — The PM 🎩" ;;
-    freelancer)        echo "Yvette — Freelancer PM 💼" ;;
-    retail|retail-ops)  echo "Retail Ops 🛒" ;;
-    office)            echo "Office Assistant 🏢" ;;
-    *)                 echo "$1" ;;
+    pm|aiflow-pm|jean-pierre) echo "Jean-Pierre — The PM 🎩" ;;
+    michelle)                 echo "Michelle — Analytics Intelligence 📊" ;;
+    freelancer)               echo "Yvette — Freelancer PM 💼" ;;
+    edith|sales)              echo "Édith — Sales Intelligence 🥐" ;;
+    retail|retail-ops)        echo "Retail Ops 🛒" ;;
+    office)                   echo "Office Assistant 🏢" ;;
+    *)                        echo "$1" ;;
   esac
 }
 
@@ -61,10 +69,12 @@ RED="${ESC}[0;31m"; GREEN="${ESC}[0;32m"; CYAN="${ESC}[0;36m"
 YELLOW="${ESC}[1;33m"; BOLD="${ESC}[1m"; DIM="${ESC}[2m"; NC="${ESC}[0m"
 
 # ─── Logging ───
+STEP_NUM=0
 info()    { printf "%s\n" "${CYAN}ℹ${NC}  $1"; }
+step()    { STEP_NUM=$((STEP_NUM + 1)); printf "%s\n" "${CYAN}[${STEP_NUM}]${NC} $1"; }
 success() { printf "%s\n" "${GREEN}✅${NC} $1"; }
 warn()    { printf "%s\n" "${YELLOW}⚠️${NC}  $1"; }
-fail()    { printf "%s\n" "${RED}❌${NC} $1"; exit 1; }
+fail()    { printf "\n%s\n" "${RED}❌ ERROR${NC}  $1"; printf "\n    ${DIM}Need help? Email info@unicolab.ai or visit https://unicolab.github.io/agentos/${NC}\n\n"; exit 1; }
 
 header() {
   printf "\n"
@@ -77,31 +87,84 @@ header() {
 # ─── Dependency Check ───
 check_dependencies() {
   if ! command -v curl >/dev/null 2>&1 && ! command -v wget >/dev/null 2>&1; then
-    fail "Neither ${BOLD}curl${NC} nor ${BOLD}wget${NC} found. Please install one:\n    macOS:  brew install curl\n    Linux:  sudo apt install curl"
+    fail "Neither ${BOLD}curl${NC} nor ${BOLD}wget${NC} found. Please install one:\n    macOS:  ${CYAN}brew install curl${NC}\n    Ubuntu: ${CYAN}sudo apt install curl${NC}\n    Fedora: ${CYAN}sudo dnf install curl${NC}"
   fi
 
   if ! command -v tar >/dev/null 2>&1; then
-    fail "${BOLD}tar${NC} not found. Please install it:\n    Linux:  sudo apt install tar"
+    fail "${BOLD}tar${NC} not found. Please install it:\n    Ubuntu: ${CYAN}sudo apt install tar${NC}\n    Fedora: ${CYAN}sudo dnf install tar${NC}"
   fi
 }
 
-# ─── HTTP GET helper (works with curl or wget) ───
+# ─── Network connectivity pre-check ───
+check_network() {
+  if command -v curl >/dev/null 2>&1; then
+    if ! curl -fsS --max-time 10 "https://api.github.com/rate_limit" >/dev/null 2>&1; then
+      fail "Cannot reach GitHub API.\n\n    Possible causes:\n      • No internet connection\n      • Firewall or proxy blocking HTTPS to github.com\n      • GitHub is experiencing an outage (check ${CYAN}https://githubstatus.com${NC})\n\n    Try:  ${CYAN}curl -I https://api.github.com${NC}  to diagnose"
+    fi
+  elif command -v wget >/dev/null 2>&1; then
+    if ! wget -q --timeout=10 --spider "https://api.github.com/rate_limit" 2>/dev/null; then
+      fail "Cannot reach GitHub API.\n\n    Possible causes:\n      • No internet connection\n      • Firewall or proxy blocking HTTPS to github.com\n\n    Try:  ${CYAN}wget --spider https://api.github.com${NC}  to diagnose"
+    fi
+  fi
+}
+
+# ─── HTTP GET with retry (3 attempts, exponential backoff) ───
 http_get() {
   URL="$1"
   OUTPUT="$2"
-  if command -v curl >/dev/null 2>&1; then
-    if [ -n "$OUTPUT" ]; then
-      curl -fsSL "$URL" -o "$OUTPUT"
-    else
-      curl -fsSL "$URL"
+  MAX_RETRIES=3
+  ATTEMPT=1
+
+  while [ "$ATTEMPT" -le "$MAX_RETRIES" ]; do
+    HTTP_ERR=""
+    if command -v curl >/dev/null 2>&1; then
+      if [ -n "$OUTPUT" ]; then
+        HTTP_ERR=$(curl -fsSL "$URL" -o "$OUTPUT" 2>&1) && return 0
+      else
+        HTTP_ERR=$(curl -fsSL "$URL" 2>/dev/null) && return 0
+      fi
+    elif command -v wget >/dev/null 2>&1; then
+      if [ -n "$OUTPUT" ]; then
+        HTTP_ERR=$(wget -q "$URL" -O "$OUTPUT" 2>&1) && return 0
+      else
+        wget -qO- "$URL" 2>/dev/null && return 0
+      fi
     fi
-  elif command -v wget >/dev/null 2>&1; then
-    if [ -n "$OUTPUT" ]; then
-      wget -q "$URL" -O "$OUTPUT"
-    else
-      wget -qO- "$URL"
+
+    if [ "$ATTEMPT" -lt "$MAX_RETRIES" ]; then
+      WAIT=$((ATTEMPT * 2))
+      warn "Attempt ${ATTEMPT}/${MAX_RETRIES} failed. Retrying in ${WAIT}s... ${DIM}(${HTTP_ERR})${NC}"
+      sleep "$WAIT"
     fi
-  fi
+    ATTEMPT=$((ATTEMPT + 1))
+  done
+
+  # All retries exhausted — return failure
+  return 1
+}
+
+# ─── HTTP GET for JSON (no output file, captures stdout, with retry) ───
+http_get_json() {
+  URL="$1"
+  MAX_RETRIES=3
+  ATTEMPT=1
+
+  while [ "$ATTEMPT" -le "$MAX_RETRIES" ]; do
+    RESULT=""
+    if command -v curl >/dev/null 2>&1; then
+      RESULT=$(curl -fsSL "$URL" 2>/dev/null) && { echo "$RESULT"; return 0; }
+    elif command -v wget >/dev/null 2>&1; then
+      RESULT=$(wget -qO- "$URL" 2>/dev/null) && { echo "$RESULT"; return 0; }
+    fi
+
+    if [ "$ATTEMPT" -lt "$MAX_RETRIES" ]; then
+      WAIT=$((ATTEMPT * 2))
+      warn "API request failed (attempt ${ATTEMPT}/${MAX_RETRIES}). Retrying in ${WAIT}s..."
+      sleep "$WAIT"
+    fi
+    ATTEMPT=$((ATTEMPT + 1))
+  done
+  return 1
 }
 
 # ─── Detect OS ───
@@ -141,39 +204,50 @@ detect_arch() {
 }
 
 # ── Fetch latest version for a specific flavour ──
-# Per-flavour releases use tags like "freelancer/v1.0.0".
+# Per-flavour releases use tags like "michelle/v1.4.1".
 # We search recent releases for one whose assets match the requested binary.
 get_latest_version() {
-  WANTED_BINARY="$1"  # e.g. "agentos-freelancer"
+  WANTED_BINARY="$1"  # e.g. "agentos-michelle"
   TAG=""
 
   # Strategy 1: Search recent releases for one containing the requested flavour's archive
-  ALL_RELEASES=$(http_get "https://api.github.com/repos/${REPO}/releases?per_page=20" "" 2>/dev/null || true)
+  ALL_RELEASES=$(http_get_json "https://api.github.com/repos/${REPO}/releases?per_page=20" 2>/dev/null || true)
 
   if [ -n "$ALL_RELEASES" ]; then
-    # Find the first release whose assets contain our binary name
-    TAG=$(echo "$ALL_RELEASES" \
-      | grep -E '"tag_name"|"name"' \
-      | awk -v bin="${WANTED_BINARY}" '
-        /"tag_name"/ { gsub(/.*"tag_name": *"|".*/, ""); current_tag = $0 }
-        /"name"/ && index($0, bin) { print current_tag; exit }
-      ')
+    # Check for API rate limiting
+    if echo "$ALL_RELEASES" | grep -q '"rate limit"' 2>/dev/null; then
+      warn "GitHub API rate limit reached. Trying fallback strategies..."
+    else
+      # Find the first release whose assets contain our binary name
+      TAG=$(echo "$ALL_RELEASES" \
+        | grep -E '"tag_name"|"name"' \
+        | awk -v bin="${WANTED_BINARY}" '
+          /"tag_name"/ { gsub(/.*"tag_name": *"|".*/, ""); current_tag = $0 }
+          /"name"/ && index($0, bin) { print current_tag; exit }
+        ')
+    fi
   fi
 
   # Strategy 2: Fallback to /releases/latest (unified releases or first available)
   if [ -z "$TAG" ]; then
-    TAG=$(http_get "https://api.github.com/repos/${REPO}/releases/latest" "" 2>/dev/null \
-      | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
+    info "Searching latest release..."
+    LATEST=$(http_get_json "https://api.github.com/repos/${REPO}/releases/latest" 2>/dev/null || true)
+    if [ -n "$LATEST" ]; then
+      TAG=$(echo "$LATEST" | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+    fi
   fi
 
   # Strategy 3: Fallback to any release (pre-releases included)
   if [ -z "$TAG" ]; then
-    TAG=$(http_get "https://api.github.com/repos/${REPO}/releases" "" 2>/dev/null \
-      | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//' || true)
+    info "Searching all releases (including pre-releases)..."
+    ANY=$(http_get_json "https://api.github.com/repos/${REPO}/releases" 2>/dev/null || true)
+    if [ -n "$ANY" ]; then
+      TAG=$(echo "$ANY" | grep '"tag_name"' | head -1 | sed 's/.*"tag_name": *"//;s/".*//')
+    fi
   fi
 
   if [ -z "$TAG" ]; then
-    fail "Could not determine latest version.\n    Check: ${CYAN}https://github.com/${REPO}/releases${NC}\n    This may be a network issue or GitHub API rate limiting."
+    fail "Could not determine latest version for ${BOLD}${WANTED_BINARY}${NC}.\n\n    Possible causes:\n      • GitHub API rate limit exceeded (60 req/hr for unauthenticated users)\n      • No releases published yet for this flavour\n      • Network issue\n\n    Manual fix:\n      1. Visit ${CYAN}https://github.com/${REPO}/releases${NC}\n      2. Download the archive for your platform\n      3. Extract and run: ${CYAN}./agentos serve${NC}\n\n    Check rate limit: ${CYAN}curl -s https://api.github.com/rate_limit | grep remaining${NC}"
   fi
 
   echo "$TAG"
@@ -297,7 +371,7 @@ parse_args() {
           FLAVOUR="$2"
           shift 2
         else
-          fail "--flavour requires a value.\n    Usage: curl ... | sh -s -- --flavour pm\n    Options: pm, freelancer, retail, office"
+          fail "--flavour requires a value.\n    Usage: curl ... | sh -s -- --flavour pm\n    Options: pm, jean-pierre, michelle, freelancer, edith, retail, office"
         fi
         ;;
       --install-dir|--dir)
@@ -319,10 +393,13 @@ parse_args() {
         printf "    --install-dir <path>  Install to a specific directory (e.g., ~/testing)\n"
         printf "    --help             Show this help message\n\n"
         printf "  ${CYAN}Available flavours:${NC}\n"
-        printf "    ${BOLD}pm${NC}         Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"
-        printf "    ${BOLD}freelancer${NC} Yvette — Freelance Project Management Copilot\n"
-        printf "    ${BOLD}retail${NC}     Retail Operations Assistant\n"
-        printf "    ${BOLD}office${NC}     Office Productivity Assistant\n\n"
+        printf "    ${BOLD}pm${NC}              Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"
+        printf "    ${BOLD}jean-pierre${NC}     Alias for pm\n"
+        printf "    ${BOLD}michelle${NC}        Michelle — Analytics Intelligence Copilot\n"
+        printf "    ${BOLD}freelancer${NC}      Yvette — Freelance Project Management Copilot\n"
+        printf "    ${BOLD}edith${NC}           Édith — Sales Intelligence Copilot\n"
+        printf "    ${BOLD}retail${NC}          Retail Operations Assistant\n"
+        printf "    ${BOLD}office${NC}          Office Productivity Assistant\n\n"
         exit 0
         ;;
       *)
@@ -342,21 +419,30 @@ main() {
   DISPLAY_NAME=$(flavour_display_name "$FLAVOUR")
   info "Flavour:  ${BOLD}${DISPLAY_NAME}${NC} → archive ${CYAN}${SOURCE_BINARY}${NC}"
   info "Binary:   ${BOLD}${BINARY_NAME}${NC} (all flavours install as '${BINARY_NAME}')"
+  printf "\n"
 
+  step "Checking dependencies..."
   check_dependencies
+  success "Dependencies OK"
 
   # Detect platform
+  step "Detecting platform..."
   OS=$(detect_os)
   ARCH=$(detect_arch)
-  info "Platform: ${BOLD}${OS}/${ARCH}${NC}"
+  success "Platform: ${BOLD}${OS}/${ARCH}${NC}"
+
+  # Network connectivity check
+  step "Checking network connectivity..."
+  check_network
+  success "GitHub API reachable"
 
   # Resolve version (flavour-aware: finds the release containing our binary)
-  info "Fetching latest release for ${BOLD}${SOURCE_BINARY}${NC}..."
+  step "Fetching latest release for ${BOLD}${SOURCE_BINARY}${NC}..."
   VERSION=$(get_latest_version "$SOURCE_BINARY")
-  info "Version:  ${BOLD}${VERSION}${NC}"
+  success "Version: ${BOLD}${VERSION}${NC}"
 
   # Download — archive naming: agentos-pm_0.12.0_darwin_arm64.tar.gz
-  # Strip flavour prefix from tag: "freelancer/v1.0.0" → "v1.0.0", "v1.0.0" → "v1.0.0"
+  # Strip flavour prefix from tag: "michelle/v1.4.1" → "v1.4.1", "v1.0.0" → "v1.0.0"
   VERSION_CLEAN="${VERSION##*/}"
   VERSION_NUM="${VERSION_CLEAN#v}"
   ARCHIVE="${SOURCE_BINARY}_${VERSION_NUM}_${OS}_${ARCH}.tar.gz"
@@ -365,13 +451,24 @@ main() {
   WORK=$(mktemp -d)
   trap 'rm -rf "$WORK"' EXIT
 
-  info "Downloading ${BOLD}${ARCHIVE}${NC}..."
-  http_get "$URL" "${WORK}/${ARCHIVE}" || fail "Download failed.\n    URL: ${CYAN}${URL}${NC}\n    Check your internet connection or try downloading manually.\n\n    💡 If the flavour-specific archive is not found, try:\n       ${CYAN}curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour pm${NC}"
-  success "Downloaded"
+  step "Downloading ${BOLD}${ARCHIVE}${NC}..."
+  info "URL: ${DIM}${URL}${NC}"
+  if ! http_get "$URL" "${WORK}/${ARCHIVE}"; then
+    fail "Download failed after 3 attempts.\n\n    URL: ${CYAN}${URL}${NC}\n\n    Possible causes:\n      • Archive does not exist for this platform (${OS}/${ARCH})\n      • Release ${BOLD}${VERSION}${NC} may not include ${BOLD}${SOURCE_BINARY}${NC}\n      • Network or firewall issue\n\n    Try manually:\n      ${CYAN}curl -fsSL \"${URL}\" -o ${ARCHIVE}${NC}\n\n    Or browse releases:\n      ${CYAN}https://github.com/${REPO}/releases${NC}\n\n    💡 For the default PM flavour:\n       ${CYAN}curl -fsSL https://unicolab.github.io/agentos/install.sh | sh${NC}"
+  fi
+
+  # Validate downloaded file
+  if [ ! -s "${WORK}/${ARCHIVE}" ]; then
+    fail "Downloaded file is empty (0 bytes).\n\n    URL: ${CYAN}${URL}${NC}\n    This usually means the asset does not exist in the release.\n\n    Browse available downloads:\n      ${CYAN}https://github.com/${REPO}/releases/tag/${VERSION}${NC}"
+  fi
+  FILESIZE=$(wc -c < "${WORK}/${ARCHIVE}" 2>/dev/null | tr -d ' ')
+  success "Downloaded (${FILESIZE} bytes)"
 
   # Extract
-  info "Extracting..."
-  tar xzf "${WORK}/${ARCHIVE}" -C "${WORK}" || fail "Extraction failed. The archive may be corrupted.\n    Try downloading again from: ${CYAN}https://github.com/${REPO}/releases${NC}"
+  step "Extracting archive..."
+  if ! tar xzf "${WORK}/${ARCHIVE}" -C "${WORK}" 2>/dev/null; then
+    fail "Extraction failed. The archive may be corrupted or incomplete.\n\n    Archive: ${BOLD}${ARCHIVE}${NC} (${FILESIZE} bytes)\n\n    Try:\n      1. Download again:  ${CYAN}curl -fsSL \"${URL}\" -o ${ARCHIVE}${NC}\n      2. Check integrity:  ${CYAN}file ${ARCHIVE}${NC}\n      3. Extract manually: ${CYAN}tar xzf ${ARCHIVE}${NC}"
+  fi
   success "Extracted"
 
   # Rename flavour binary → agentos (so all commands stay compatible)
@@ -380,8 +477,16 @@ main() {
     info "Renamed ${SOURCE_BINARY} → ${BINARY_NAME}"
   fi
 
+  # Verify binary exists after extraction
+  if [ ! -f "${WORK}/${BINARY_NAME}" ]; then
+    # List what was extracted for debugging
+    EXTRACTED=$(ls -1 "${WORK}" 2>/dev/null | grep -v '\.tar\.gz$' | head -10)
+    fail "Binary ${BOLD}${BINARY_NAME}${NC} not found after extraction.\n\n    Expected: ${BOLD}${SOURCE_BINARY}${NC} or ${BOLD}${BINARY_NAME}${NC}\n    Found:    ${DIM}${EXTRACTED:-nothing}${NC}\n\n    The archive structure may have changed. Try extracting manually:\n      ${CYAN}tar xzf ${ARCHIVE} && ls -la${NC}"
+  fi
+
   # macOS: Gatekeeper clearance
   if [ "$OS" = "darwin" ]; then
+    step "Clearing macOS security restrictions..."
     macos_security "${WORK}/${BINARY_NAME}"
   fi
 
@@ -389,11 +494,13 @@ main() {
   chmod +x "${WORK}/${BINARY_NAME}"
 
   # Install with smart fallback
+  step "Installing binary..."
   FINAL_DIR=""
   install_binary "${WORK}/${BINARY_NAME}"
 
   # Verify installation
   printf "\n"
+  step "Verifying installation..."
   if command -v "${BINARY_NAME}" >/dev/null 2>&1; then
     INSTALLED_VERSION=$("${BINARY_NAME}" version 2>/dev/null || echo "installed")
     success "${BOLD}AgentOS${NC} ${DISPLAY_NAME} ${INSTALLED_VERSION}"
@@ -403,6 +510,7 @@ main() {
   else
     warn "Binary installed but not in PATH. Run it directly:"
     printf "    ${CYAN}${FINAL_DIR}/${BINARY_NAME} serve${NC}\n"
+    warn "Or restart your terminal to pick up PATH changes."
   fi
 
   # Summary
@@ -427,3 +535,4 @@ main() {
 }
 
 main "$@"
+

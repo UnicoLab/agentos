@@ -27,6 +27,8 @@ The fastest way to get started on **macOS** or **Linux**. This script auto-detec
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
 # Choose a different flavour:
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
 ```
@@ -35,6 +37,10 @@ curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour of
     | Flavour | Description |
     |---------|-------------|
     | **pm** (default) | Jean-Pierre — AI Project Management Copilot |
+    | **jean-pierre** | Alias for pm |
+    | **michelle** | Michelle — Analytics Intelligence Copilot |
+    | **freelancer** | Yvette — Freelance Project Management Copilot |
+    | **edith** | Édith — Sales Intelligence Copilot |
     | **retail** | Retail Operations Assistant |
     | **office** | Office Productivity Assistant |
 
@@ -51,6 +57,9 @@ Each flavour has its own archive. Choose the one that matches your role:
 | Flavour | Platform | Archive Pattern |
 |---------|----------|---------|
 | 🎩 **PM** | macOS arm64 / amd64, Linux | `agentos-pm_{version}_{os}_{arch}.tar.gz` |
+| 📊 **Michelle** | macOS arm64 / amd64, Linux | `agentos-michelle_{version}_{os}_{arch}.tar.gz` |
+| 💼 **Freelancer** | macOS arm64 / amd64, Linux | `agentos-freelancer_{version}_{os}_{arch}.tar.gz` |
+| 🥐 **Edith** | macOS arm64 / amd64, Linux | `agentos-edith_{version}_{os}_{arch}.tar.gz` |
 | 🛒 **Retail** | macOS arm64 / amd64, Linux | `agentos-retail_{version}_{os}_{arch}.tar.gz` |
 | 🏢 **Office** | macOS arm64 / amd64, Linux | `agentos-office_{version}_{os}_{arch}.tar.gz` |
 
@@ -134,6 +143,7 @@ If you prefer to install manually:
     .\install.bat
 
     # Choose a different flavour:
+    .\install.bat --flavour michelle
     .\install.bat --flavour retail
     ```
 

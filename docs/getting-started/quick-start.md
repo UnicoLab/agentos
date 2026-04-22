@@ -22,15 +22,15 @@ Follow this 5-minute guide to go from zero to your first AI-powered project insi
 
 Before you begin, ensure you have the core engine ready:
 
-- [x] **AgentOS binary** — [Download your flavour](https://github.com/UnicoLab/agentos/releases/latest) (PM, Retail, or Office)
+- [x] **AgentOS binary** — [Download your flavour](https://github.com/UnicoLab/agentos/releases/latest) (PM, Michelle, Freelancer, Retail, or Office)
 - [x] **AI Provider** — [Ollama](../guides/ollama-setup.md) (Local) or API Key (OpenAI/Anthropic/Gemini)
 - [x] **Source Access** — GitHub personal access token (optional, but recommended)
 
 !!! tip "One-Line Install"
     ```bash
-    # Default (PM flavour)
+    # Default (Jean-Pierre PM flavour)
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
-    # Or choose: --flavour retail / --flavour office
+    # Or choose: --flavour michelle / --flavour freelancer / --flavour retail / --flavour office
     ```
 
 ---

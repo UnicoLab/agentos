@@ -53,7 +53,9 @@ jobs:
           # Determine display info
           case "$FLAVOUR" in
             pm)         DISPLAY="🎩 Jean-Pierre — PM" ;;
+            michelle)   DISPLAY="📊 Michelle — Analytics Intelligence" ;;
             freelancer) DISPLAY="💼 Yvette — Freelancer PM" ;;
+            edith)      DISPLAY="🥐 Édith — Sales Intelligence" ;;
             retail)     DISPLAY="🛒 Retail Ops" ;;
             office)     DISPLAY="🏢 Office Assistant" ;;
             all)        DISPLAY="📦 All Flavours" ;;

@@ -66,6 +66,7 @@ This auto-detects your OS and architecture, downloads the correct flavour binary
 curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
 
 # Choose a different flavour:
+install.bat --flavour michelle
 install.bat --flavour freelancer
 install.bat --flavour retail
 install.bat --flavour office
@@ -85,9 +86,15 @@ Each flavour is a separate binary. Choose the one you need:
 | 🎩 **PM** | macOS Apple Silicon | arm64 | `agentos-pm_*_darwin_arm64.tar.gz` |
 | 🎩 **PM** | macOS Intel | amd64 | `agentos-pm_*_darwin_amd64.tar.gz` |
 | 🎩 **PM** | Linux x86 | amd64 | `agentos-pm_*_linux_amd64.tar.gz` |
+| 📊 **Michelle** | macOS Apple Silicon | arm64 | `agentos-michelle_*_darwin_arm64.tar.gz` |
+| 📊 **Michelle** | macOS Intel | amd64 | `agentos-michelle_*_darwin_amd64.tar.gz` |
+| 📊 **Michelle** | Linux x86 | amd64 | `agentos-michelle_*_linux_amd64.tar.gz` |
 | 💼 **Freelancer** | macOS Apple Silicon | arm64 | `agentos-freelancer_*_darwin_arm64.tar.gz` |
 | 💼 **Freelancer** | macOS Intel | amd64 | `agentos-freelancer_*_darwin_amd64.tar.gz` |
 | 💼 **Freelancer** | Linux x86 | amd64 | `agentos-freelancer_*_linux_amd64.tar.gz` |
+| 🥐 **Edith** | macOS Apple Silicon | arm64 | `agentos-edith_*_darwin_arm64.tar.gz` |
+| 🥐 **Edith** | macOS Intel | amd64 | `agentos-edith_*_darwin_amd64.tar.gz` |
+| 🥐 **Edith** | Linux x86 | amd64 | `agentos-edith_*_linux_amd64.tar.gz` |
 | 🛒 **Retail** | macOS Apple Silicon | arm64 | `agentos-retail_*_darwin_arm64.tar.gz` |
 | 🛒 **Retail** | macOS Intel | amd64 | `agentos-retail_*_darwin_amd64.tar.gz` |
 | 🛒 **Retail** | Linux x86 | amd64 | `agentos-retail_*_linux_amd64.tar.gz` |

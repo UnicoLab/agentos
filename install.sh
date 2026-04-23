@@ -363,6 +363,7 @@ ensure_path() {
 parse_args() {
   FLAVOUR="pm"
   INSTALL_DIR=""
+  DEMO_MODE="false"
 
   while [ $# -gt 0 ]; do
     case "$1" in
@@ -382,14 +383,20 @@ parse_args() {
           fail "--install-dir requires a path.\n    Usage: curl ... | sh -s -- --install-dir ~/my-tools"
         fi
         ;;
+      --demo)
+        DEMO_MODE="true"
+        shift
+        ;;
       --help|-h)
         printf "\n${BOLD}AgentOS Installer${NC}\n\n"
         printf "  ${CYAN}Usage:${NC}\n"
         printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh\n"
         printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail\n"
+        printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle --demo\n"
         printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --install-dir ~/testing\n\n"
         printf "  ${CYAN}Options:${NC}\n"
         printf "    --flavour <name>   Select agent flavour (default: pm)\n"
+        printf "    --demo             Provision demo data after install (Michelle only)\n"
         printf "    --install-dir <path>  Install to a specific directory (e.g., ~/testing)\n"
         printf "    --help             Show this help message\n\n"
         printf "  ${CYAN}Available flavours:${NC}\n"
@@ -524,13 +531,64 @@ main() {
   printf "  ${CYAN}Documentation:${NC}  https://unicolab.github.io/agentos/\n"
   printf "\n"
 
-  # Auto-launch
-  info "Starting AgentOS... ${DIM}(Ctrl+C to stop)${NC}"
-  printf "\n"
-  if command -v "${BINARY_NAME}" >/dev/null 2>&1; then
-    "${BINARY_NAME}" serve
+  # Auto-launch (with optional demo provisioning for Michelle)
+  if [ "$DEMO_MODE" = "true" ] && [ "$FLAVOUR" = "michelle" ]; then
+    info "Starting AgentOS with demo mode... ${DIM}(Ctrl+C to stop)${NC}"
+    printf "\n"
+
+    # Start server in background
+    AGENTOS_BIN="${BINARY_NAME}"
+    if ! command -v "${BINARY_NAME}" >/dev/null 2>&1; then
+      AGENTOS_BIN="${FINAL_DIR}/${BINARY_NAME}"
+    fi
+    "${AGENTOS_BIN}" serve &
+    SERVER_PID=$!
+
+    # Wait for server to be healthy (max 30s)
+    step "Waiting for server to be ready..."
+    RETRIES=0
+    while [ $RETRIES -lt 30 ]; do
+      if curl -s -o /dev/null http://localhost:18080/healthz 2>/dev/null; then
+        break
+      fi
+      RETRIES=$((RETRIES + 1))
+      sleep 1
+    done
+
+    if [ $RETRIES -ge 30 ]; then
+      warn "Server didn't start in time. Demo provisioning skipped."
+      warn "Run manually: agentos demo setup"
+    else
+      step "Provisioning Michelle demo data..."
+      DEMO_RESULT=$(curl -s -X POST http://localhost:18080/v1/michelle/demo/demo-ecommerce 2>/dev/null || echo '{"status":"error"}')
+      DEMO_STATUS=$(echo "$DEMO_RESULT" | python3 -c 'import sys,json; print(json.load(sys.stdin).get("status","error"))' 2>/dev/null || echo "error")
+      if [ "$DEMO_STATUS" = "created" ]; then
+        success "Demo mode provisioned! E-commerce database + full analytics context ready."
+        printf "\n"
+        printf "  ${CYAN}Try these questions in Michelle:${NC}\n"
+        printf "    ${DIM}• \"What is the total revenue?\"${NC}\n"
+        printf "    ${DIM}• \"Show me top 10 products by quantity sold\"${NC}\n"
+        printf "    ${DIM}• \"Compare revenue by sales channel\"${NC}\n"
+        printf "\n"
+        printf "  ${DIM}Remove demo: agentos demo remove${NC}\n"
+      else
+        warn "Demo provisioning returned: $DEMO_STATUS"
+        warn "Try manually: agentos demo setup"
+      fi
+    fi
+
+    # Bring server to foreground
+    printf "\n"
+    info "AgentOS is running... ${DIM}(Ctrl+C to stop)${NC}"
+    wait $SERVER_PID
   else
-    "${FINAL_DIR}/${BINARY_NAME}" serve
+    info "Starting AgentOS... ${DIM}(Ctrl+C to stop)${NC}"
+    printf "\n"
+    if command -v "${BINARY_NAME}" >/dev/null 2>&1; then
+      "${BINARY_NAME}" serve
+    else
+      "${FINAL_DIR}/${BINARY_NAME}" serve
+    fi
   fi
 }
 

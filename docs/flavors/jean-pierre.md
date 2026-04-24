@@ -277,6 +277,49 @@ Jean-Pierre runs **entirely on your machine**. Conversations, project data, meet
 
 ---
 
+## ✨ Why You Can Trust Jean-Pierre
+
+<p class="section-intro"><strong>An AI PM copilot you can actually rely on.</strong> Not a chatbot that generates reports from stale context. A connected intelligence system that watches your projects 24/7 and proves every claim.</p>
+
+Most AI tools let you _ask_ about your project. Jean-Pierre is fundamentally different: he **connects to your live systems**, monitors continuously in the background, and builds a compounding intelligence that gets measurably better every week. Here's the trust architecture:
+
+<div class="feature-grid" markdown>
+
+<div class="feature-card" markdown>
+### :material-connection: Always Connected, Never Stale
+Jean-Pierre is plugged into GitHub, Jira, and Slack **in real time** — not working from a snapshot. Every status report, risk score, and recommendation reflects the **actual state right now**. When you share a report at 4pm, it's accurate at 4pm.
+</div>
+
+<div class="feature-card" markdown>
+### :material-shield-alert: Proactive Risk Detection
+JP doesn't wait for you to ask "how's the sprint?" — his **background daemon** continuously scans velocity, PR age, contributor load, and blocker patterns. He surfaces risks **2-3 weeks before they become crises** with a quantified 0-100 risk score, not vague warnings.
+</div>
+
+<div class="feature-card" markdown>
+### :material-eye: Full Transparency — Action Chain
+Every AI decision is visible. JP shows the **complete action chain** — which tools he called, what arguments he used, what data came back, and how long each step took. No black box. You can inspect, verify, and challenge every conclusion.
+</div>
+
+<div class="feature-card" markdown>
+### :material-brain: Self-Evolving Memory
+Tell JP something once — he remembers it forever. **6-namespace Evolution Memory** (errors, corrections, preferences, tool wisdom, performance, knowledge) means the same question gets a smarter answer next week. Track his evolution through measurable accuracy metrics.
+</div>
+
+<div class="feature-card" markdown>
+### :material-chart-line: Everything Integrated — Not Glued Together
+Living dashboard (24 bento cards), sprint planning, fleet intelligence, executive reports, standup scribe, delivery pulse, retro intelligence, team pulse, dependency radar, automation hub — all **built in and interconnected**. One engine, not 5 SaaS tools duct-taped together.
+</div>
+
+<div class="feature-card" markdown>
+### :material-account-switch: Knowledge That Survives Turnover
+When a PM leaves, their project knowledge usually walks out too. JP's memory **persists**: project patterns, team preferences, reporting styles, correction history. New PM gets instant context from months of accumulated intelligence — no 3-week onboarding cliff.
+</div>
+
+</div>
+
+!!! quote "The Bottom Line"
+    Generic AI assistants answer questions from a static context window. Jean-Pierre **lives inside your project** — connected 24/7, monitoring proactively, proving every claim with transparent action chains, and compounding intelligence daily. That's not an assistant — that's an **operational intelligence system you can trust**.
+
 ## Who is it for?
 
 <div class="feature-grid" markdown>

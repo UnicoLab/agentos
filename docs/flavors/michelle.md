@@ -261,38 +261,48 @@ Feed Michelle curated question→SQL pairs, business rules, and domain glossary 
 
 ---
 
-## ✨ What Makes Michelle Different
+## ✨ Why You Can Trust Michelle
+
+<p class="section-intro"><strong>Self-service analytics you can trust.</strong> Not because we say so — because we engineered an entire ecosystem to make it provably true.</p>
+
+Most AI analytics tools generate SQL and hope for the best. Michelle is different: she was architected from the ground up to ensure that **every number that comes out is transparent, auditable, and continuously improving**. Here's how:
 
 <div class="feature-grid" markdown>
 
 <div class="feature-card" markdown>
-### :material-shield-check: Zero Hallucinations
-Every answer is backed by **actual SQL and source data**. Provenance badges on every response show exactly which tables, columns, and rules were used. No made-up numbers.
+### :material-shield-check: Transparent by Design
+Every answer shows the **exact SQL**, the source tables, and clickable `[source:N]` provenance badges. You don't trust a black box — you **verify** the data path. If something can't be verified, it's flagged UNVERIFIED — never presented as fact.
 </div>
 
 <div class="feature-card" markdown>
-### :material-brain: Self-Healing Knowledge
-Correct Michelle once, she **remembers forever**. Evolutionary memory tracks every correction and applies it automatically to future responses. She gets smarter every day.
+### :material-brain: Self-Reflection & Memory
+Michelle doesn't just answer — she **reflects on her own outputs**. Evolutionary Memory across 6 namespaces (errors, corrections, tool wisdom, user adaptation, performance, knowledge) means she learns from every interaction. Same question, better answer next week — tracked and verifiable.
 </div>
 
 <div class="feature-card" markdown>
-### :material-account-group: Shared Team Brain
-When one analyst teaches Michelle a metric definition, **the whole team benefits**. Centralized knowledge with PR-based governance ensures consistency across all analytics.
+### :material-account-group: Federated Knowledge & Governance
+The **Shared Brain** captures metric definitions, business rules, and validated SQL patterns — versioned in Git with PR-based review. When one analyst teaches Michelle "Revenue = orders minus returns," **everyone gets it right**. Knowledge survives vacations, promotions, and resignations.
 </div>
 
 <div class="feature-card" markdown>
-### :material-lock: 100% Private & Local
-Your database credentials, queries, and results **never leave your machine**. Michelle runs entirely locally — air-gap ready with no cloud dependency.
+### :material-chart-box: Everything Integrated
+Charts (9 types), interactive dashboards, KPI gauges with thresholds, anomaly detection, sparklines, drill-downs, pinned insights, follow-up suggestions, and scheduled reports — all **built in**. No switching between tools. From question to chart to board deck in one flow.
 </div>
 
 <div class="feature-card" markdown>
-### :material-test-tube: Verifiable Accuracy
-The Test Harness lets you validate outputs against known answers **before** rolling out to business users. Measure accuracy, catch regressions, build confidence.
+### :material-auto-fix: Auto-Correction & Anomaly Detection
+Correct a result once → Michelle **never makes the same mistake again**. The KPI engine runs on cron, detects anomalies against historical baselines, and alerts you **before** wrong numbers reach a stakeholder. Test Harness validates accuracy against known answers before deployment.
 </div>
 
 <div class="feature-card" markdown>
-### :material-tune-vertical: Multi-Model Routing
-Route SQL generation to one model, analysis to another, and simple lookups to a third. **Optimize for cost, speed, and accuracy** simultaneously.
+### :material-book-open-page-variant: Context-Careful Crafting
+Business glossary, domain jargon, table relationships, column semantics — all injected **architecturally into every prompt**. Michelle doesn't guess what "active customer" means. She **knows** because you defined it, and it's enforced on every query, every time.
+</div>
+
+</div>
+
+!!! quote "The Bottom Line"
+    Other AI tools generate SQL. Michelle generates SQL, **validates it**, shows you the proof, learns from corrections, shares knowledge across your team, and gets measurably more accurate every day. That's not a feature list — that's an **engineered trust system**.
 </div>
 
 </div>

@@ -318,7 +318,7 @@ They connect to your tools, learn your domain, validate every answer, and compou
 
 <div class="comparison-section" markdown>
 
-<p class="section-intro">Claude is brilliant at conversation. But <strong>conversation isn't operations</strong>. Here's what changes when you move from a generic AI chatbot to purpose-built operational agents.</p>
+<p class="section-intro">Claude is brilliant at conversation. But <strong>conversation isn't operations, and "generating SQL" isn't analytics you can trust</strong>. We built an entire ecosystem — self-reflection, evolving memory, federated knowledge, business context enforcement, provenance tracking, anomaly detection, auto-corrections, integrated reporting — to make our agents <strong>provably trustworthy</strong>.</p>
 
 <div class="comparison-table-wrapper">
 <table class="comparison-table">
@@ -385,7 +385,7 @@ They connect to your tools, learn your domain, validate every answer, and compou
 </div>
 
 !!! quote "The Bottom Line"
-    **Claude is a brilliant conversationalist.** Jean-Pierre and Michelle are purpose-built operational systems — they live on your machine, learn your domain, validate every answer, and get smarter every week. One is a tool. The other is a teammate.
+    **Claude is a brilliant conversationalist.** But can you stake your board deck on it? Jean-Pierre and Michelle are purpose-built operational systems — they live on your machine, prove every claim with transparent action chains, learn from every correction, share knowledge across your team, and get measurably more accurate every week. One is a tool. The other is an **intelligence system you can trust**.
 
 </div>
 

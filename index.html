@@ -703,10 +703,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-agentos-platform" class="md-nav__link">
+  <a href="#agentos-composable-ai-copilots" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The AgentOS Platform
+        AgentOS — Composable AI Copilots
       
     </span>
   </a>
@@ -2220,10 +2220,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-agentos-platform" class="md-nav__link">
+  <a href="#agentos-composable-ai-copilots" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The AgentOS Platform
+        AgentOS — Composable AI Copilots
       
     </span>
   </a>
@@ -2831,39 +2831,15 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 
 <hr />
 <details class="info">
-<summary>For Technical Teams: Under the Hood</summary>
-<h3 id="the-agentos-platform">The AgentOS Platform<a class="headerlink" href="#the-agentos-platform" title="Permanent link">&para;</a></h3>
-<p>AgentOS is a composable, local-first AI agent engine built in <strong>Go 1.23</strong> with a <strong>React 19</strong> frontend. Each copilot is a specialized "pack" — a domain configuration that includes tools, dashboards, AI persona, and workflows.</p>
-<p><strong>Architecture:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────┐
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                   AgentOS Engine                     │
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│                                                      │
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│  ┌──────────┐  ┌──────────────┐  ┌──────────────┐  │
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│  │ Sidebar  │  │   Dashboard  │  │   Copilot    │  │
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  │          │  │   (Bento)    │  │   (Chat)     │  │
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│  │ Modules  │  │   24 cards   │  │  Streaming   │  │
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  │ per pack │  │  per pack    │  │  + Tools     │  │
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  └──────────┘  └──────────────┘  └──────────────┘  │
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│                                                      │
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>│  ┌────────────────────────────────────────────────┐  │
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│  │         Intelligence Layer (Go)                │  │
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│  │  Adaptive Memory · Knowledge Graph · Steering │  │
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│  │  Shared Brain · Error Patterns · Tool Wisdom  │  │
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│  │  Performance Tracker · User Adaptation         │  │
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>│  └────────────────────────────────────────────────┘  │
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>│                                                      │
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>│  ┌────────────────────────────────────────────────┐  │
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>│  │          Tool Gateway                          │  │
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>│  │  GitHub · Jira · Slack · Database · Shell     │  │
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>│  │  Gmail · Calendar · Docs · HTTP · Web Search  │  │
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>│  └────────────────────────────────────────────────┘  │
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>└─────────────────────────────────────────────────────┘
-</code></pre></div></p>
-<p><strong>Available Packs:</strong></p>
+<summary>For Technical Teams: The Platform</summary>
+<h3 id="agentos-composable-ai-copilots">AgentOS — Composable AI Copilots<a class="headerlink" href="#agentos-composable-ai-copilots" title="Permanent link">&para;</a></h3>
+<p>AgentOS is a <strong>LEGO-like platform</strong> for building and deploying specialized AI copilots. A battle-tested engine handles the hard parts — streaming AI orchestration, adaptive memory, tool execution, and real-time dashboards — while domain-specific <strong>packs</strong> configure each copilot for a particular role.</p>
+<p><strong>Think of it as:</strong> Engine (shared) + Pack (specialized) = Copilot ready in days, not months.</p>
+<p><strong>Available Copilots:</strong></p>
 <table>
 <thead>
 <tr>
-<th>Pack</th>
+<th>Copilot</th>
 <th>Persona</th>
 <th>Domain</th>
 <th>Status</th>
@@ -2871,39 +2847,39 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 </thead>
 <tbody>
 <tr>
-<td><code>aiflow-pm</code></td>
 <td>🎩 Jean-Pierre</td>
+<td>AI PM Copilot</td>
 <td>Project Management</td>
 <td>✅ Production</td>
 </tr>
 <tr>
-<td><code>michelle</code></td>
-<td>🔬 Michelle</td>
+<td>📊 Michelle</td>
 <td>Analytics Intelligence</td>
+<td>Data &amp; BI</td>
 <td>✅ Production</td>
 </tr>
 <tr>
-<td><code>edith</code></td>
 <td>🥐 Édith</td>
-<td>Sales Intelligence / CRM</td>
+<td>Sales Intelligence</td>
+<td>CRM &amp; Pipeline</td>
 <td>✅ Available</td>
 </tr>
 <tr>
-<td><code>freelancer</code></td>
 <td>💼 Yvette</td>
 <td>Freelancer PM</td>
+<td>Independent Consulting</td>
 <td>✅ Available</td>
 </tr>
 <tr>
-<td><code>office</code></td>
 <td>🏢 Office</td>
 <td>Productivity</td>
+<td>Document &amp; Workflow</td>
 <td>✅ Available</td>
 </tr>
 <tr>
-<td><code>retail-ops</code></td>
-<td>🏪 Retail</td>
+<td>🛒 Retail Ops</td>
 <td>Operations</td>
+<td>Inventory &amp; Analytics</td>
 <td>✅ Available</td>
 </tr>
 </tbody>
@@ -2940,14 +2916,14 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 </tr>
 </tbody>
 </table>
-<p><strong>Tech Stack:</strong> Go 1.23 · React 19 · TypeScript · Vite 7 · SQLite · SSE Streaming · Glassmorphism UI</p>
+<p><strong>Key:</strong> Pre-compiled binary · Runs on macOS, Linux, Windows · Single-command install · Air-gap ready with Ollama</p>
 <p><strong>Quick Install:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>agentos<span class="w"> </span>serve
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Open http://localhost:18080</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>agentos<span class="w"> </span>serve
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Open http://localhost:18080</span>
 </code></pre></div></p>
 <p><a class="md-button" href="getting-started/installation/">Full Documentation →</a>
-<a class="md-button" href="reference/api/">API Reference →</a></p>
+<a class="md-button" href="flavors/">Explore Copilots →</a></p>
 </details>
 <hr />
 <p style="text-align: center; color: var(--md-default-fg-color--light); font-size: 0.9rem;">

@@ -180,33 +180,98 @@ Every download includes **double-click launcher scripts** — no command line re
 
 ---
 
-## 🖼️ Screenshots
+## 🎯 See It In Action
+
+### Michelle — Ask Anything About Your Data
+
+> **You ask:** *"What are the recent sales trends compared to last year?"*
+>
+> **Michelle will:**
+> 1. Auto-discover your database schema (tables, columns, relations)
+> 2. Generate and validate SQL against your actual data
+> 3. Display results with charts, trend analysis, and confidence scores
+> 4. Flag anomalies and suggest follow-up questions like *"Which product category drove the biggest change?"*
+>
+> **Result:** Verified answer in 3 seconds — with exact SQL, source tables, and a full provenance trail.
+
+<img src="docs/assets/images/michelle-flow-schematic.png" width="100%" alt="Michelle Analytics Flow — from question to verified answer">
 
 <details>
-<summary><strong>📊 Dashboard — Classic View</strong></summary>
+<summary><strong>📊 Michelle Analytics Dashboard</strong></summary>
 
-<img src="docs/assets/screens/flavors/pm/classic-view-dashboard.png" width="100%" alt="Dashboard">
+<img src="docs/assets/screens/flavors/michelle/analytics-dashboard.png" width="100%" alt="Michelle Dashboard — live KPIs, verified SQL, charts, and provenance">
+
+</details>
+
+<details>
+<summary><strong>💬 Michelle Chatbot — Ask anything</strong></summary>
+
+<img src="docs/assets/screens/flavors/michelle/michelle-cahtbot.png" width="100%" alt="Michelle Chat — natural language to verified SQL">
+
+</details>
+
+<details>
+<summary><strong>📈 KPI Dashboard</strong></summary>
+
+<img src="docs/assets/screens/flavors/michelle/kpi-dashboard.png" width="100%" alt="Michelle KPI Dashboard">
+
+</details>
+
+<details>
+<summary><strong>🔍 Schema Browser</strong></summary>
+
+<img src="docs/assets/screens/flavors/michelle/schema-browser.png" width="100%" alt="Michelle Schema Browser — auto-discovered tables and relations">
+
+</details>
+
+<details>
+<summary><strong>📋 Report Builder</strong></summary>
+
+<img src="docs/assets/screens/flavors/michelle/report-builder.png" width="100%" alt="Michelle Report Builder">
+
+</details>
+
+---
+
+### Jean-Pierre — Your AI Project Manager
+
+> **You ask:** *"Give me the CTO status report for all projects"*
+>
+> **Jean-Pierre will:**
+> 1. Pull live data from GitHub, Jira, and Slack across all your projects
+> 2. Analyze velocity, risk scores, blockers, and team health
+> 3. Generate a professional executive report with KPIs, risk radar, and recommendations
+> 4. Flag the projects that need immediate attention and suggest action items
+>
+> **Result:** Multi-project executive report in 30 seconds — with live data, not stale spreadsheets.
+
+<img src="docs/assets/images/jp-flow-schematic.png" width="100%" alt="Jean-Pierre PM Flow — connect tools to intelligence">
+
+<details>
+<summary><strong>📊 Project Dashboard — Classic View</strong></summary>
+
+<img src="docs/assets/screens/flavors/pm/classic-view-dashboard.png" width="100%" alt="Jean-Pierre Dashboard — KPIs, risk radar, velocity, activity">
 
 </details>
 
 <details>
 <summary><strong>💬 AI Chat — Planning Session</strong></summary>
 
-<img src="docs/assets/screens/flavors/pm/JP-chat-planning.png" width="100%" alt="Chat">
+<img src="docs/assets/screens/flavors/pm/JP-chat-planning.png" width="100%" alt="Jean-Pierre Chat — planning session with action chains">
 
 </details>
 
 <details>
-<summary><strong>📁 Projects Page</strong></summary>
+<summary><strong>🗺️ Strategic Canvas</strong></summary>
 
-<img src="docs/assets/screens/flavors/pm/projects-page.png" width="100%" alt="Projects">
+<img src="docs/assets/screens/flavors/pm/strategic-board.png" width="100%" alt="Jean-Pierre Strategic Canvas — portfolio health at a glance">
 
 </details>
 
 <details>
-<summary><strong>⚙️ Settings — Model Configuration</strong></summary>
+<summary><strong>👥 Team Pulse</strong></summary>
 
-<img src="docs/assets/screens/flavors/pm/model-config.png" width="100%" alt="Model Config">
+<img src="docs/assets/screens/flavors/pm/team-pulse.png" width="100%" alt="Jean-Pierre Team Pulse — contributor health and workload">
 
 </details>
 

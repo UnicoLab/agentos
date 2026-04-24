@@ -274,6 +274,35 @@ Every download includes **double-click launcher scripts** — no command line re
 <img src="docs/assets/screens/flavors/pm/team-pulse.png" width="100%" alt="Jean-Pierre Team Pulse — contributor health and workload">
 
 </details>
+---
+
+## 💡 Imagine What Changes
+
+### With Michelle — Your Data, Liberated
+
+| Instead of... | You get... |
+|---|---|
+| **100 dashboards** to pilot your business | One local assistant providing instant, verified insights from all your data sources — in plain English |
+| **Waiting for a data analyst** to answer your question | Unlimited, instant, ad-hoc questions — no queue, no ticket, no waiting. Even at 11 PM on a Sunday |
+| **Being locked into one database view** | Multiple scopes, projects, and sources — deep-dive until you know everything. Explore autonomously |
+| **Static dashboards** that get stale | A dynamic dashboard that learns and improves itself. Every correction, every KPI, every rule — Michelle remembers |
+| **Manually checking metrics** every morning | Automated monitoring, anomaly detection, and report generation. Set it and forget it |
+| **Sending business data to the cloud** | Everything runs 100% locally. Your data never leaves. Start instantly — no infrastructure required |
+
+> 💡 **Michelle works 100% independently.** Start asking questions immediately — no cloud, no waiting. Syncs with AIFlow when you're ready, but delivers value from minute one.
+
+### With Jean-Pierre — Your Projects, Under Control
+
+| Instead of... | You get... |
+|---|---|
+| **Collecting status updates** across 5 different tools | One unified view that cross-references GitHub, Jira, and Slack in real time — instant updates, plans, and warnings |
+| **Guessing what the tech team is doing** | Plain English translations of commits, PRs, and sprint data that any stakeholder can understand |
+| **Discovering problems at the sprint review** | Risk detection 3 weeks early — sprint delays, team overload, stale PRs, missing reviewers |
+| **Spending half a day building a CTO report** | One question, 30 seconds: executive report with live data, risk scores, and actionable recommendations |
+| **One-time check-ins** that miss the big picture | Scheduled deep-dive checks, progress reports, daily standups, and weekly retrospectives — all automatic |
+| **Waiting for IT to set everything up** | One install command, 5 minutes to value. 100% local. No cloud dependency |
+
+> 💡 **Jean-Pierre works 100% independently.** Install and connect in 5 minutes. Syncs with AIFlow when you're ready, but works completely standalone.
 
 ---
 

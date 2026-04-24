@@ -159,10 +159,16 @@ Every download includes **double-click launcher scripts** — no command line re
 <td width="50%">
 
 ### 📊 Michelle — Analytics Copilot
-- **Natural language SQL** — ask questions, get verified answers in seconds
-- **Zero hallucinations** — every answer backed by real SQL and provenance
-- **Shared team brain** — one teaches, everyone benefits
-- **Full data platform** — Schema Browser, SQL Studio, KPI Engine, Test Harness
+- **Business answers in plain English** — ask questions, get verified SQL answers in seconds
+- **Anti-hallucination engine** — every answer verified against real DB execution, auto-corrected if wrong
+- **Full auditability** — see exact SQL, source tables, confidence scores, and provenance trail
+- **DB auto-discovery** — connects to your databases, detects schemas, tables, columns, and relations automatically
+- **Business context** — define KPIs, glossary, rules, and templates used as context for every answer
+- **Shared Brain** — federated learning across agents, knowledge survives team turnover
+- **Dynamic dashboards** — 9 chart types, KPI monitoring, alerting, and pinnacle insights
+- **Background scheduling** — schedule reports and monitoring tasks, set and forget
+- **Extensible connectors** — connect to any data source, use any LLM or local SLM
+- **Report builder** — SQL playground, visualizer, and one-click executive reports
 
 </td>
 </tr>
@@ -170,7 +176,7 @@ Every download includes **double-click launcher scripts** — no command line re
 
 ### Platform Capabilities (shared by all copilots)
 
-🧠 **Adaptive Memory** · 🧬 **Evolutionary Context** · 📊 **Dynamic Dashboards** · ⚡ **Action Chain Transparency** · 🔒 **100% Local Privacy** · 🤖 **Multi-Provider AI** (Ollama, OpenAI, Anthropic, Gemini)
+🧠 **Adaptive Memory** · 🧬 **Self-Reflection & Dreaming Cycles** · 📊 **Dynamic Dashboards** · ⚡ **Action Chain Transparency** · 🔒 **100% Local Privacy** · 🤖 **Multi-Provider AI** (Ollama, OpenAI, Anthropic, Gemini) · 🔄 **Federated Learning** · 📋 **Background Scheduling** · 🔌 **Extensible Connectors**
 
 ---
 

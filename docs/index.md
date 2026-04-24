@@ -631,49 +631,24 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 
 ---
 
-??? info "For Technical Teams: Under the Hood"
+??? info "For Technical Teams: The Platform"
 
-    ### The AgentOS Platform
+    ### AgentOS — Composable AI Copilots
 
-    AgentOS is a composable, local-first AI agent engine built in **Go 1.23** with a **React 19** frontend. Each copilot is a specialized "pack" — a domain configuration that includes tools, dashboards, AI persona, and workflows.
+    AgentOS is a **LEGO-like platform** for building and deploying specialized AI copilots. A battle-tested engine handles the hard parts — streaming AI orchestration, adaptive memory, tool execution, and real-time dashboards — while domain-specific **packs** configure each copilot for a particular role.
 
-    **Architecture:**
-    ```
-    ┌─────────────────────────────────────────────────────┐
-    │                   AgentOS Engine                     │
-    │                                                      │
-    │  ┌──────────┐  ┌──────────────┐  ┌──────────────┐  │
-    │  │ Sidebar  │  │   Dashboard  │  │   Copilot    │  │
-    │  │          │  │   (Bento)    │  │   (Chat)     │  │
-    │  │ Modules  │  │   24 cards   │  │  Streaming   │  │
-    │  │ per pack │  │  per pack    │  │  + Tools     │  │
-    │  └──────────┘  └──────────────┘  └──────────────┘  │
-    │                                                      │
-    │  ┌────────────────────────────────────────────────┐  │
-    │  │         Intelligence Layer (Go)                │  │
-    │  │  Adaptive Memory · Knowledge Graph · Steering │  │
-    │  │  Shared Brain · Error Patterns · Tool Wisdom  │  │
-    │  │  Performance Tracker · User Adaptation         │  │
-    │  └────────────────────────────────────────────────┘  │
-    │                                                      │
-    │  ┌────────────────────────────────────────────────┐  │
-    │  │          Tool Gateway                          │  │
-    │  │  GitHub · Jira · Slack · Database · Shell     │  │
-    │  │  Gmail · Calendar · Docs · HTTP · Web Search  │  │
-    │  └────────────────────────────────────────────────┘  │
-    └─────────────────────────────────────────────────────┘
-    ```
+    **Think of it as:** Engine (shared) + Pack (specialized) = Copilot ready in days, not months.
 
-    **Available Packs:**
+    **Available Copilots:**
 
-    | Pack | Persona | Domain | Status |
-    |------|---------|--------|--------|
-    | `aiflow-pm` | 🎩 Jean-Pierre | Project Management | ✅ Production |
-    | `michelle` | 🔬 Michelle | Analytics Intelligence | ✅ Production |
-    | `edith` | 🥐 Édith | Sales Intelligence / CRM | ✅ Available |
-    | `freelancer` | 💼 Yvette | Freelancer PM | ✅ Available |
-    | `office` | 🏢 Office | Productivity | ✅ Available |
-    | `retail-ops` | 🏪 Retail | Operations | ✅ Available |
+    | Copilot | Persona | Domain | Status |
+    |---------|---------|--------|--------|
+    | 🎩 Jean-Pierre | AI PM Copilot | Project Management | ✅ Production |
+    | 📊 Michelle | Analytics Intelligence | Data & BI | ✅ Production |
+    | 🥐 Édith | Sales Intelligence | CRM & Pipeline | ✅ Available |
+    | 💼 Yvette | Freelancer PM | Independent Consulting | ✅ Available |
+    | 🏢 Office | Productivity | Document & Workflow | ✅ Available |
+    | 🛒 Retail Ops | Operations | Inventory & Analytics | ✅ Available |
 
     **AI Providers:**
 
@@ -684,7 +659,7 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
     | **Anthropic** | Cloud API | Per-token |
     | **Google Gemini** | Cloud API | Per-token |
 
-    **Tech Stack:** Go 1.23 · React 19 · TypeScript · Vite 7 · SQLite · SSE Streaming · Glassmorphism UI
+    **Key:** Pre-compiled binary · Runs on macOS, Linux, Windows · Single-command install · Air-gap ready with Ollama
 
     **Quick Install:**
     ```bash
@@ -694,7 +669,7 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
     ```
 
     [Full Documentation →](getting-started/installation.md){ .md-button }
-    [API Reference →](reference/api.md){ .md-button }
+    [Explore Copilots →](flavors/index.md){ .md-button }
 
 ---
 

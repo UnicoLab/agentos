@@ -149,13 +149,9 @@ AgentOS's local-first architecture inherently addresses key compliance and regul
 
 ---
 
-## :material-drawing: Architecture Design
+## :material-drawing: How It Works
 
-<div class="screenshot" markdown>
-![Architecture](assets/images/architecture.png)
-</div>
-
-AgentOS is built as a **self-contained autonomous compute node**. The single binary embeds the entire web UI, AI engine, tool system, and database — requiring no external server, no Docker, and no complex infrastructure to operate.
+AgentOS is built as a **self-contained autonomous compute node**. A single pre-compiled binary embeds the entire web UI, AI engine, tool system, and local database — requiring no external server, no Docker, and no complex infrastructure to operate. Everything runs on your machine, from first install to daily use.
 
 ---
 

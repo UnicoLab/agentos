@@ -41,7 +41,7 @@ Two production-grade AI copilots — each built from the same composable blocks,
 - **17 specialized features** — Sprint Forge, Delivery Pulse, Fleet View, and more
 - **Automated standups, reports, and sprint plans** — one-click
 
-**Binary:** `agentos-pm` · **Status: ✅ Available**
+**Status: ✅ Production**
 
 [Explore Jean-Pierre →](jean-pierre.md){ .md-button .md-button--primary }
 </div>
@@ -62,7 +62,7 @@ Two production-grade AI copilots — each built from the same composable blocks,
 - **Shared team brain** — distributed learning, one teaches all
 - **Self-healing knowledge** — learns from every correction, never repeats mistakes
 
-**Binary:** `agentos-michelle` · **Status: ✅ Available**
+**Status: ✅ Production**
 
 [Explore Michelle →](michelle.md){ .md-button .md-button--primary }
 </div>
@@ -79,7 +79,7 @@ This is the real power of AgentOS: **every layer is modular**. The backend engin
 
 <div class="feature-card" markdown>
 ### :material-engine: Core Engine
-A battle-tested Go backend with streaming AI orchestration, tool execution, adaptive memory, sessions, and a REST API. **Shared across all flavours** — proven, scalable, rock-solid.
+A battle-tested backend with streaming AI orchestration, tool execution, adaptive memory, sessions, and real-time APIs. **Shared across all copilots** — proven, scalable, rock-solid.
 </div>
 
 <div class="feature-card" markdown>
@@ -108,11 +108,11 @@ A flavour is the **combination** of these LEGO blocks into a tailored experience
 | Layer | What It Configures | Jean-Pierre (PM) | Michelle (Analytics) |
 |-------|-------------------|-------------------|---------------------|
 | **Agent Persona** | Name, expertise, style | French PM expert, formal | Data analyst, precise, source-citing |
-| **Tool Pack** | Which integrations | GitHub, Jira, Slack | Database connectors, SQL engine |
-| **Dashboard Layout** | Which widgets appear | 24-card bento grid, Risk Radar | KPI engine, schema browser, SQL studio |
+| **Integrations** | Which tools connect | GitHub, Jira, Slack | Database connectors, SQL engine |
+| **Dashboard** | Which widgets appear | Living View, Fleet Intelligence | KPI engine, Schema Browser, SQL Studio |
 | **Quick Actions** | One-click workflows | Standup Report, Sprint Plan | Revenue Analysis, Customer Churn |
-| **Recipes** | Automation templates | 18 PM templates | Analytics pipelines |
-| **Memory** | Domain knowledge | Team dynamics, sprint preferences | Metric definitions, business rules |
+| **Automation** | Scheduled pipelines | 18 PM recipes | Analytics pipelines |
+| **Domain Knowledge** | Learned context | Team dynamics, sprint preferences | Metric definitions, business rules |
 
 **Same engine. Same UI framework. Different configuration.** That's why we can launch a new copilot for a completely different industry in days, not months.
 
@@ -130,7 +130,7 @@ Beyond the flagships, four additional flavours are available:
 #### Yvette — Freelancer PM
 Freelance project management: time tracking, budget management, invoice generation, daily standups, and decision logging. Built for independent consultants and developers.
 
-**Binary:** `agentos-freelancer`
+**Status: ✅ Available**
 </div>
 
 <div class="secondary-flavor-card" markdown>
@@ -139,7 +139,7 @@ Freelance project management: time tracking, budget management, invoice generati
 #### Édith — Sales Intelligence
 CRM analytics, deal scoring, pipeline intelligence, prospect research, and automated sales reporting.
 
-**Binary:** `agentos-edith`
+**Status: ✅ Available**
 </div>
 
 <div class="secondary-flavor-card" markdown>
@@ -148,7 +148,7 @@ CRM analytics, deal scoring, pipeline intelligence, prospect research, and autom
 #### Retail Ops
 Inventory, orders, shift management, and retail analytics. Different tools, different dashboard, same powerful engine.
 
-**Binary:** `agentos-retail`
+**Status: ✅ Available**
 </div>
 
 <div class="secondary-flavor-card" markdown>
@@ -157,7 +157,7 @@ Inventory, orders, shift management, and retail analytics. Different tools, diff
 #### Office Assistant
 Document management, scheduling, and workflow automation for office productivity.
 
-**Binary:** `agentos-office`
+**Status: ✅ Available**
 </div>
 
 </div>

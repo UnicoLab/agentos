@@ -37,6 +37,31 @@ Jean-Pierre eliminates the noise. He **connects** to your GitHub repos, Jira boa
 
 ---
 
+## 🎯 Real-World Scenarios
+
+!!! example "Friday 4pm — CTO Wants a Status Update"
+    Without JP: 3 hours of frantic data gathering across GitHub, Jira, and Slack. Stale by the time you send it.
+
+    **With JP:** *"Generate executive status report"* → CTO-ready report with risk scoring, velocity trends, and action items in **8 seconds**.
+
+!!! example "Sprint Is Slipping — Nobody Noticed"
+    Without JP: You find out at the sprint review that 3 stories didn't make it. Too late to course-correct.
+
+    **With JP:** Background daemon detects velocity drop on Day 3. Proactive alert: *"Sprint at risk — 2 blockers identified, 1 contributor overloaded."* → You intervene **2 weeks early**.
+
+!!! example "Best PM Is Leaving — All Knowledge Walks Out"
+    Without JP: New PM spends 3 weeks learning project context, team preferences, and reporting patterns.
+
+    **With JP:** Evolution Memory retains all context — preferences, corrections, team patterns. New PM asks *"What should I know about this project?"* → instant onboarding from **accumulated intelligence**.
+
+<div class="roi-total">
+<div class="roi-total-number">~10 hrs/week saved per PM</div>
+<div class="roi-total-money">€44,000 in annual productivity gains</div>
+<div class="roi-total-sub">Plus: risks caught 3 weeks early · reports in seconds · institutional knowledge retained</div>
+</div>
+
+---
+
 ## 🤖 AI Chat & Planning
 
 <div class="screenshot" markdown>
@@ -282,5 +307,5 @@ Enterprise-grade project intelligence on your local machine — without the ente
 
 <div class="hero-cta" markdown>
 [Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Request Invite :material-email:](mailto:info@unicolab.ai){ .md-button }
+[Apply as Founding Member :material-email:](mailto:info@unicolab.ai?subject=Founding%20Member%20-%20Jean-Pierre){ .md-button }
 </div>

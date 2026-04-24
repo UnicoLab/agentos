@@ -47,6 +47,31 @@ No hallucinations. No black boxes. No data leaving your machine.
 
 ---
 
+## 🎯 Real-World Scenarios
+
+!!! example "\"What\'s our MRR?\" — CEO Asks at 3pm"
+    Without Michelle: 2-hour ticket filed with the data team. Analyst writes SQL, sends a spreadsheet. CEO doesn't trust the number.
+
+    **With Michelle:** CEO types *"What's our MRR by segment?"* → 3 seconds later: table with exact SQL, source tables, and provenance badge. **Verified. Trusted. Done.**
+
+!!! example "Best Analyst Just Quit"
+    Without Michelle: 3 weeks of onboarding. New analyst re-discovers metric definitions, query patterns, business context.
+
+    **With Michelle:** Everything is in the Shared Brain — definitions, rules, examples, corrections. New analyst asks *"How do we calculate churn?"* → instant, governed answer from **accumulated team intelligence**.
+
+!!! example "Board Deck Needs Numbers — Nobody Trusts the AI"
+    Without Michelle: Team goes back to manual SQL to be safe. 4 hours of double-checking.
+
+    **With Michelle:** Test Harness validates every key metric against known answers. Provenance badges prove the data path. **Board trusts the numbers because they can verify them.**
+
+<div class="roi-total">
+<div class="roi-total-number">~15 hrs/week freed per data team</div>
+<div class="roi-total-money">€63,750 in annual productivity gains</div>
+<div class="roi-total-sub">Plus: 95% accuracy by day 14 · zero hallucinations · knowledge survives turnover</div>
+</div>
+
+---
+
 ## 📊 Analytics Living Dashboard
 
 <div class="screenshot" markdown>
@@ -286,7 +311,51 @@ Route SQL generation to one model, analysis to another, and simple lookups to a 
 | **Total time saved** | | | **~15 hrs/week per team** |
 
 !!! tip "That's 750+ hours per year per analytics team"
-    At $85/hour for analyst time, that's **$63,750 in annual productivity gains** per team — plus the value of better, faster decisions.
+    At €85/hour for analyst time, that's **€63,750 in annual productivity gains** per team — plus the value of better, faster decisions.
+
+---
+
+## :material-shield-check: 9 Layers of Anti-Hallucination
+
+Text-to-SQL tools generate queries. Michelle generates queries, **validates them**, learns from corrections, shares knowledge across your team, and gets measurably more accurate every day.
+
+<div class="pipeline-visual">
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">🧠</div>
+<div class="pipeline-step-name">Triage</div>
+<div class="pipeline-step-desc">Can it be answered from context?</div>
+</div>
+<div class="pipeline-arrow-icon">→</div>
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">⚡</div>
+<div class="pipeline-step-name">Generate</div>
+<div class="pipeline-step-desc">SQL with full schema context</div>
+</div>
+<div class="pipeline-arrow-icon">→</div>
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">▶️</div>
+<div class="pipeline-step-name">Execute</div>
+<div class="pipeline-step-desc">Run with provenance tracking</div>
+</div>
+<div class="pipeline-arrow-icon">→</div>
+<div class="pipeline-step-card">
+<div class="pipeline-step-icon">📈</div>
+<div class="pipeline-step-name">Learn</div>
+<div class="pipeline-step-desc">Record into evolution memory</div>
+</div>
+</div>
+
+<div class="layer-grid">
+<div class="layer-item"><strong>Adaptive Schema</strong> — Tiered injection handles 100+ tables</div>
+<div class="layer-item"><strong>Business Glossary</strong> — Your definitions, injected per prompt</div>
+<div class="layer-item"><strong>Business Rules</strong> — "Exclude deleted" enforced architecturally</div>
+<div class="layer-item"><strong>Validated Examples</strong> — Approved NL→SQL as few-shot training</div>
+<div class="layer-item"><strong>Evolution Memory</strong> — 6 namespaces that persist across sessions</div>
+<div class="layer-item"><strong>Semantic Joins</strong> — LLM-assisted FK discovery beyond constraints</div>
+<div class="layer-item"><strong>Provenance Tags</strong> — Clickable [source:N] citations on every answer</div>
+<div class="layer-item"><strong>Test Harness</strong> — Validate accuracy before deploying to team</div>
+<div class="layer-item"><strong>Multi-Model Routing</strong> — Right model per task: SQL, Q&A, enrichment</div>
+</div>
 
 ---
 
@@ -320,5 +389,5 @@ Boardroom-ready reports and KPI dashboards that update automatically. Ask strate
 
 <div class="hero-cta" markdown>
 [Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button .md-button--primary }
-[Request Free License :material-email:](mailto:info@unicolab.ai){ .md-button }
+[Apply as Founding Member :material-email:](mailto:info@unicolab.ai?subject=Founding%20Member%20-%20Michelle){ .md-button }
 </div>

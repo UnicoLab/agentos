@@ -11,9 +11,9 @@ hide:
 # Meet Jean-Pierre & Michelle.<br>AI That Actually *Works*.
 
 <p class="subtitle">
-Two purpose-built agents that automate project reporting and analytics intelligence.<br>
-They connect to your tools, learn your domain, validate every answer, and get measurably smarter every week.<br>
-<strong>100% on your machine. Zero cloud dependency. Free pilot.</strong>
+Two purpose-built AI copilots that automate project reporting and analytics intelligence.<br>
+They connect to your tools, learn your domain, validate every answer, and compound intelligence daily.<br>
+<strong>100% on your machine. Zero cloud. Part of the <a href="https://ai-flow.ai" style="color: inherit; text-decoration: underline">AIFlow</a> ecosystem.</strong>
 </p>
 
 <div class="hero-badges" markdown>
@@ -21,13 +21,13 @@ They connect to your tools, learn your domain, validate every answer, and get me
 [![Savings](https://img.shields.io/badge/Proven-25%2B_hrs%2Fweek_saved-brightgreen?style=flat-square)]()
 [![Privacy](https://img.shields.io/badge/Privacy-100%25_Local-success?style=flat-square)](security.md)
 [![Platforms](https://img.shields.io/badge/Runs_on-macOS_·_Linux_·_Windows-blueviolet?style=flat-square)]()
-[![Cost](https://img.shields.io/badge/Pilot-Free-blue?style=flat-square)](#free-pilot)
+[![Founding](https://img.shields.io/badge/Founding_Member-Apply_Now-blue?style=flat-square)](#founding-member)
 
 </div>
 
 <div class="hero-cta" markdown>
 
-[Start Your Free Pilot :material-rocket-launch:](#free-pilot){ .md-button .md-button--primary }
+[Become a Founding Member :material-rocket-launch:](#founding-member){ .md-button .md-button--primary }
 [See How It Works :material-arrow-down:](#what-they-do){ .md-button }
 
 </div>
@@ -58,8 +58,8 @@ They connect to your tools, learn your domain, validate every answer, and get me
 </div>
 
 <div class="metric-item">
-<div class="metric-value" data-count="0">$0</div>
-<div class="metric-label">pilot cost — measurable ROI first</div>
+<div class="metric-value" data-count="0">€0</div>
+<div class="metric-label">founding member pilot — results first</div>
 </div>
 
 </div>
@@ -196,6 +196,21 @@ They connect to your tools, learn your domain, validate every answer, and get me
 
 ---
 
+## :material-connection: Part of the AIFlow Ecosystem { #aiflow }
+
+<div class="aiflow-strip">
+<div class="aiflow-strip-content">
+<div class="aiflow-strip-icon">🔗</div>
+<div>
+<h3>AgentOS + AIFlow = Complete Intelligence</h3>
+<p><strong>AgentOS</strong> agents are the local compute nodes — running on your machine, ensuring data sovereignty and low-latency processing. <strong>AIFlow</strong> is the centralized brain that sees your entire portfolio. Together, they form the <strong>hub-and-spoke intelligence architecture</strong>.</p>
+<a href="https://ai-flow.ai" class="md-button" style="margin-top: 0.75rem;">Explore AIFlow Platform →</a>
+</div>
+</div>
+</div>
+
+---
+
 ## :material-shield-check: Why They Don't Hallucinate { #anti-hallucination }
 
 <div class="pillars-section">
@@ -299,7 +314,7 @@ They connect to your tools, learn your domain, validate every answer, and get me
 
 ---
 
-## "But I Already Have Claude…" { #why-not-claude }
+## Not Another Chatbot. An Intelligence Engine. { #why-not-claude }
 
 <div class="comparison-section" markdown>
 
@@ -468,15 +483,15 @@ You tried ChatGPT / Claude for analytics. It **invents data**, forgets correctio
 
 <div class="roi-total">
 <div class="roi-total-number">~25 hrs/week saved</div>
-<div class="roi-total-money">$110,000+ in annual productivity gains</div>
+<div class="roi-total-money">€110,000+ in annual productivity gains</div>
 <div class="roi-total-sub">Plus: risks caught 3 weeks early · institutional knowledge retained · eliminated team dependencies · measurably improving accuracy</div>
 </div>
 
 ---
 
-## How the Free Pilot Works
+## How the Founding Member Program Works
 
-<p class="section-intro">Zero risk. We automate one workflow in 2-3 weeks — you measure the results before spending anything.</p>
+<p class="section-intro">Zero risk. We automate one workflow in 2-3 weeks — you measure the results. Founding Members get priority onboarding, direct access, and shape the product roadmap.</p>
 
 <div class="step-grid">
 
@@ -585,30 +600,30 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 
 ---
 
-## :material-rocket-launch: Free AI Automation Pilot { #free-pilot }
+## :material-rocket-launch: Become a Founding Member { #founding-member }
 
 <div class="cta-section">
 
 <div class="cta-content">
 
-<div class="cta-headline">No Cost. No Commitment. Just Results.</div>
+<div class="cta-headline">No Cost. Direct Access. Shape the Roadmap.</div>
 
-<p>We pick <strong>ONE workflow</strong> — the one that wastes the most time — and automate it in <strong>2-3 weeks</strong>. You see a real, working result before spending anything. Our only ask: <strong>honest feedback.</strong></p>
+<p>We pick <strong>ONE workflow</strong> — the one that wastes the most time — and automate it in <strong>2-3 weeks</strong>. You see a real, working result before spending anything. As a Founding Member, you get <strong>direct access to the team, priority support, and influence on the product roadmap.</strong></p>
 
 <div class="cta-checklist">
 <div class="cta-check">✅ Full deployment on your machine</div>
 <div class="cta-check">✅ Connected to your tools — GitHub, Jira, Slack, or databases</div>
 <div class="cta-check">✅ Shared Brain configured with your team's KPIs & glossary</div>
 <div class="cta-check">✅ Measurable results — time saved, accuracy score, evolution rate</div>
-<div class="cta-check">✅ No cost, no commitment — zero risk</div>
+<div class="cta-check">✅ No cost, no commitment — Founding Member pricing locked in</div>
 </div>
 
 <div class="hero-cta">
-<a href="mailto:info@unicolab.ai?subject=Free%20AI%20Automation%20Pilot&body=Hi%20Piotr%2C%0A%0AI%27m%20interested%20in%20the%20free%20automation%20pilot.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="md-button md-button--primary">Request Your Free Pilot ✉️</a>
+<a href="mailto:info@unicolab.ai?subject=Founding%20Member%20Application&body=Hi%20Piotr%2C%0A%0AI%27d%20like%20to%20apply%20as%20a%20Founding%20Member.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="md-button md-button--primary">Apply as Founding Member ✉️</a>
 <a href="https://github.com/UnicoLab/agentos/releases/latest" class="md-button">Download &amp; Try Yourself ⬇️</a>
 </div>
 
-<p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">📧 <strong>info@unicolab.ai</strong> · 💬 <strong>DM us on <a href="https://linkedin.com/company/unicolab">LinkedIn</a></strong> · 🌐 <strong><a href="https://unicolab.ai">unicolab.ai</a></strong></p>
+<p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">📧 <strong>info@unicolab.ai</strong> · 💬 <strong>DM us on <a href="https://linkedin.com/company/unicolab">LinkedIn</a></strong> · 🌐 <strong><a href="https://ai-flow.ai">ai-flow.ai</a></strong></p>
 
 </div>
 
@@ -684,8 +699,8 @@ Using **Ollama**? Even your AI conversations stay 100% on your machine. Zero clo
 ---
 
 <p style="text-align: center; color: var(--md-default-fg-color--light); font-size: 0.9rem;">
-<strong>Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a></strong><br>
-AI automation consulting — Paris, France<br>
+<strong>Built with ❤️ by <a href="https://ai-flow.ai">UnicoLab</a></strong><br>
+Part of the <strong><a href="https://ai-flow.ai">AIFlow</a></strong> ecosystem · AI automation consulting — Paris, France<br>
 © 2024–2026 UnicoLab. All rights reserved.
 </p>
 

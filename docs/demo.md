@@ -10,7 +10,7 @@ description: "Watch how teams save 25+ hours per week by automating project repo
 **Two AI copilots. Two types of manual work eliminated.** See exactly what changes for your Monday mornings and your data team's backlog — with screenshots from production use.
 
 <div class="hero-cta" markdown>
-[Start Your Free Pilot :material-rocket-launch:](index.md#free-pilot){ .md-button .md-button--primary }
+[Become a Founding Member :material-rocket-launch:](index.md#founding-member){ .md-button .md-button--primary }
 [PM Automation :material-arrow-down:](#project-reporting-before-after){ .md-button }
 [Analytics Automation :material-arrow-down:](#analytics-before-after){ .md-button }
 </div>
@@ -23,17 +23,17 @@ description: "Watch how teams save 25+ hours per week by automating project repo
 
 Every week, teams lose **25+ hours** to fragmented tooling and repetitive data plumbing:
 
-| Role | Activity | Time Lost | Annual Cost ($85/hr) |
+| Role | Activity | Time Lost | Annual Cost (€85/hr) |
 |------|----------|-----------|--------------------|
-| **PMs** | Gathering status from GitHub, Jira, Slack | ~3 hrs/week | $13,260 |
-| **PMs** | Preparing standup + sprint meetings | ~2 hrs/week | $8,840 |
-| **PMs** | Writing reports and executive summaries | ~2 hrs/week | $8,840 |
-| **PMs** | Identifying risks and blockers reactively | ~2 hrs/week | $8,840 |
-| **Analysts** | Writing ad-hoc SQL for business users | ~4 hrs/week | $17,680 |
-| **Analysts** | Re-explaining metric definitions | ~2 hrs/week | $8,840 |
-| **Analysts** | Building + refreshing dashboards | ~3 hrs/week | $13,260 |
-| **Analysts** | Validating AI-generated data answers | ~2 hrs/week | $8,840 |
-| | **Total** | **~20-25 hrs/week** | **$88,400–$110,500/year** |
+| **PMs** | Gathering status from GitHub, Jira, Slack | ~3 hrs/week | €13,260 |
+| **PMs** | Preparing standup + sprint meetings | ~2 hrs/week | €8,840 |
+| **PMs** | Writing reports and executive summaries | ~2 hrs/week | €8,840 |
+| **PMs** | Identifying risks and blockers reactively | ~2 hrs/week | €8,840 |
+| **Analysts** | Writing ad-hoc SQL for business users | ~4 hrs/week | €17,680 |
+| **Analysts** | Re-explaining metric definitions | ~2 hrs/week | €8,840 |
+| **Analysts** | Building + refreshing dashboards | ~3 hrs/week | €13,260 |
+| **Analysts** | Validating AI-generated data answers | ~2 hrs/week | €8,840 |
+| | **Total** | **~20-25 hrs/week** | **€88,400–€110,500/year** |
 
 **This is the work we eliminate.**
 
@@ -135,7 +135,7 @@ No configuration files. No setup. He learns from conversations and applies this 
 ---
 
 <div style="text-align: center; padding: 40px 0;">
-<a href="index.md#free-pilot" class="md-button md-button--primary" style="font-size: 1.1rem; padding: 12px 32px;">🎯 Start Your Free PM Automation Pilot</a>
+<a href="index.md#founding-member" class="md-button md-button--primary" style="font-size: 1.1rem; padding: 12px 32px;">🎯 Become a Founding Member — PM Automation</a>
 </div>
 
 ---
@@ -244,7 +244,7 @@ Complete data workspace: **Schema Browser** for visual database exploration, **S
 ---
 
 <div style="text-align: center; padding: 40px 0;">
-<a href="index.md#free-pilot" class="md-button md-button--primary" style="font-size: 1.1rem; padding: 12px 32px;">🎯 Start Your Free Analytics Pilot</a>
+<a href="index.md#founding-member" class="md-button md-button--primary" style="font-size: 1.1rem; padding: 12px 32px;">🎯 Become a Founding Member — Analytics</a>
 </div>
 
 ---
@@ -320,23 +320,23 @@ macOS (Intel + Apple Silicon) · Linux · Windows
 | 🔬 Michelle | Knowledge retention | Lost when staff leave | Shared Brain | **Permanent** |
 | | **Combined savings** | | | **~25 hrs/week** |
 
-!!! tip "That's $110,000+ per year"
-    At blended $85/hour: **$110,500 in annual productivity gains** — plus the value of faster decisions, eliminated risks, and knowledge that survives turnover.
+!!! tip "That's €110,000+ per year"
+    At blended €85/hour: **€110,500 in annual productivity gains** — plus the value of faster decisions, eliminated risks, and knowledge that survives turnover.
 
 ---
 
 ## :material-rocket-launch: Ready to See It Work for Your Team?
 
 <div style="text-align: center; padding: 40px 0 20px;">
-  <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Free AI Automation Pilot</h3>
+  <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Founding Member Program</h3>
   <p style="opacity: 0.8; font-size: 1.1rem; margin-bottom: 1.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
     Pick one workflow. We automate it in 2-3 weeks. You measure real time saved.<br>
-    <strong>No cost. No commitment. Just results.</strong>
+    <strong>No cost. Direct access. Shape the product.</strong>
   </p>
-  <a href="mailto:info@unicolab.ai?subject=Free%20AI%20Automation%20Pilot&body=Hi%20Piotr%2C%0A%0AI%27m%20interested%20in%20the%20free%20automation%20pilot.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="md-button md-button--primary" style="margin: 0 8px; font-size: 1.1rem; padding: 12px 32px;">Request Your Free Pilot</a>
+  <a href="mailto:info@unicolab.ai?subject=Founding%20Member%20Application&body=Hi%20Piotr%2C%0A%0AI%27d%20like%20to%20apply%20as%20a%20Founding%20Member.%0A%0AMy%20role%3A%20%0AMy%20team%20size%3A%20%0AThe%20workflow%20that%20wastes%20the%20most%20time%3A%20%0ATools%20we%20use%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you." class="md-button md-button--primary" style="margin: 0 8px; font-size: 1.1rem; padding: 12px 32px;">Apply as Founding Member</a>
   <a href="https://github.com/UnicoLab/agentos/releases/latest" class="md-button" style="margin: 0 8px;">Download & Try Yourself</a>
   <br><br>
   <p style="opacity: 0.5; font-size: 0.85rem;">
-    <strong>📧 info@unicolab.ai</strong> · <strong>💬 <a href="https://linkedin.com/company/unicolab">LinkedIn</a></strong> · Built with ❤️ by <a href="https://unicolab.ai">UnicoLab</a>
+    <strong>📧 info@unicolab.ai</strong> · <strong>💬 <a href="https://linkedin.com/company/unicolab">LinkedIn</a></strong> · Part of the <strong><a href="https://ai-flow.ai">AIFlow</a></strong> ecosystem
   </p>
 </div>

@@ -1,6 +1,6 @@
-site_name: AgentOS — AI Automation for PM & Analytics
+site_name: AgentOS Documentation
 site_url: https://unicolab.github.io/agentos
-site_description: "Jean-Pierre and Michelle — purpose-built AI copilots that automate project reporting and analytics. They learn your domain, validate every answer, and run 100% on your machine. Part of the AIFlow ecosystem."
+site_description: "Install, configure, and use AgentOS — local-first AI copilots for project management and analytics."
 site_author: UnicoLab
 repo_url: https://github.com/UnicoLab/agentos
 repo_name: UnicoLab/agentos
@@ -86,50 +86,33 @@ plugins:
 
 nav:
   - Home: index.md
-  - See It In Action: demo.md
   - Getting Started:
       - Installation: getting-started/installation.md
       - Quick Start: getting-started/quick-start.md
       - Configuration: getting-started/configuration.md
-  - What We Automate:
+  - Copilots:
       - Overview: flavors/index.md
-      - "🎩 PM Reporting — Jean-Pierre": flavors/jean-pierre.md
-      - "🔬 Analytics — Michelle": flavors/michelle.md
+      - "🎩 Jean-Pierre — PM": flavors/jean-pierre.md
+      - "🔬 Michelle — Analytics": flavors/michelle.md
   - Features:
-      # Core Intelligence (Platform)
       - AI Copilot: features/ai-copilot.md
-      - Self-Evolving Memory: features/self-evolving-memory.md
-      - Recipe Composer: features/recipes.md
-      # Jean-Pierre (PM)
       - Dashboard: features/dashboard.md
-      - Standup Scribe: features/standup-scribe.md
-      - Sprint Forge: features/sprint-forge.md
-      - Delivery Pulse: features/delivery-pulse.md
-      - Retro Intelligence: features/retro-intelligence.md
+      - Memory & Evolution: features/self-evolving-memory.md
+      - Recipes: features/recipes.md
       - Tasks: features/tasks.md
-      - Roadmap: features/roadmap.md
-      # Team & Portfolio (PM)
-      - Team Pulse: features/team-pulse.md
-      - Fleet View: features/fleet-view.md
-      - Strategic Canvas: features/canvas.md
-      - Dependency Radar: features/dependency-radar.md
-      # Automation & Productivity
-      - Automation Hub: features/automation-hub.md
-      - Meeting Notes: features/meeting-notes.md
       - Integrations: features/integrations.md
   - Guides:
       - Ollama Setup: guides/ollama-setup.md
       - GitHub Setup: guides/github-setup.md
       - Jira Setup: guides/jira-setup.md
       - Slack Setup: guides/slack-setup.md
-      - AIFlow Integration: guides/aiflow-sync.md
+      - AIFlow Sync: guides/aiflow-sync.md
       - Background Service: guides/background-service.md
   - Reference:
       - CLI Commands: reference/cli.md
       - API Endpoints: reference/api.md
       - Keyboard Shortcuts: reference/keyboard-shortcuts.md
   - Security & Privacy: security.md
-  - License & Evaluation: license.md
+  - License: license.md
 
 copyright: "Built with ❤️ by <a href='https://unicolab.ai'>UnicoLab</a> · &copy; 2024–2026 UnicoLab. All rights reserved."
-

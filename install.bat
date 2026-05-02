@@ -5,6 +5,7 @@ REM
 REM  Usage:
 REM    install.bat              (installs PM flavour by default)
 REM    install.bat --flavour michelle
+REM    install.bat --flavour brigitte
 REM    install.bat --flavour freelancer
 REM    install.bat --flavour retail
 REM    install.bat --flavour office
@@ -13,6 +14,7 @@ REM  Available flavours:
 REM    pm              — Jean-Pierre, AI Project Management Copilot (default)
 REM    jean-pierre     — Alias for pm
 REM    michelle        — Michelle, Analytics Intelligence Copilot
+REM    brigitte        — Brigitte, Management Intelligence Copilot
 REM    freelancer      — Yvette, Freelance Project Management Copilot
 REM    edith           — Édith, Sales Intelligence Copilot
 REM    retail          — Retail Operations Assistant
@@ -61,6 +63,9 @@ if /I "%FLAVOUR%"=="pm" (
 ) else if /I "%FLAVOUR%"=="michelle" (
     set "SOURCE_BINARY=agentos-michelle"
     set "DISPLAY_NAME=Michelle — Analytics Intelligence"
+) else if /I "%FLAVOUR%"=="brigitte" (
+    set "SOURCE_BINARY=agentos-brigitte"
+    set "DISPLAY_NAME=Brigitte — Management Intelligence"
 ) else if /I "%FLAVOUR%"=="freelancer" (
     set "SOURCE_BINARY=agentos-freelancer"
     set "DISPLAY_NAME=Yvette — Freelancer PM"
@@ -87,6 +92,7 @@ if /I "%FLAVOUR%"=="pm" (
     echo    pm              Jean-Pierre, AI Project Management Copilot ^(default^)
     echo    jean-pierre     Alias for pm
     echo    michelle        Michelle, Analytics Intelligence Copilot
+    echo    brigitte        Brigitte, Management Intelligence Copilot
     echo    freelancer      Yvette, Freelance Project Management Copilot
     echo    edith           Edith, Sales Intelligence Copilot
     echo    retail          Retail Operations Assistant
@@ -367,6 +373,7 @@ echo  Available flavours:
 echo    pm              Jean-Pierre — AI Project Management Copilot (default)
 echo    jean-pierre     Alias for pm
 echo    michelle        Michelle — Analytics Intelligence Copilot
+echo    brigitte        Brigitte — Management Intelligence Copilot
 echo    freelancer      Yvette — Freelance Project Management Copilot
 echo    edith           Edith — Sales Intelligence Copilot
 echo    retail          Retail Operations Assistant

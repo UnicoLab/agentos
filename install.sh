@@ -7,6 +7,7 @@
 #
 #  Choose a flavor:
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
+#    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 #    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
@@ -15,6 +16,7 @@
 #    pm              — Jean-Pierre, AI Project Management Copilot (default)
 #    jean-pierre     — Alias for pm
 #    michelle        — Michelle, Analytics Intelligence Copilot
+#    brigitte        — Brigitte, Management Intelligence Copilot
 #    freelancer      — Yvette, Freelance Project Management Copilot
 #    edith           — Édith, Sales Intelligence Copilot
 #    retail          — Retail Operations Assistant
@@ -41,12 +43,13 @@ flavour_to_binary() {
   case "$1" in
     pm|aiflow-pm|jean-pierre) echo "agentos-pm" ;;
     michelle)                 echo "agentos-michelle" ;;
+    brigitte)                 echo "agentos-brigitte" ;;
     freelancer)               echo "agentos-freelancer" ;;
     edith|sales)              echo "agentos-edith" ;;
     retail|retail-ops)        echo "agentos-retail" ;;
     office)                   echo "agentos-office" ;;
     *)
-      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}              — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}jean-pierre${NC}     — Alias for pm\n      ${CYAN}michelle${NC}        — Michelle, Analytics Intelligence Copilot\n      ${CYAN}freelancer${NC}      — Yvette, Freelance Project Management Copilot\n      ${CYAN}edith${NC}           — Édith, Sales Intelligence Copilot\n      ${CYAN}retail${NC}          — Retail Operations Assistant\n      ${CYAN}office${NC}          — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle"
+      fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}              — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}jean-pierre${NC}     — Alias for pm\n      ${CYAN}michelle${NC}        — Michelle, Analytics Intelligence Copilot\n      ${CYAN}brigitte${NC}        — Brigitte, Management Intelligence Copilot\n      ${CYAN}freelancer${NC}      — Yvette, Freelance Project Management Copilot\n      ${CYAN}edith${NC}           — Édith, Sales Intelligence Copilot\n      ${CYAN}retail${NC}          — Retail Operations Assistant\n      ${CYAN}office${NC}          — Office Productivity Assistant\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte"
       ;;
   esac
 }
@@ -55,6 +58,7 @@ flavour_display_name() {
   case "$1" in
     pm|aiflow-pm|jean-pierre) echo "Jean-Pierre — The PM 🎩" ;;
     michelle)                 echo "Michelle — Analytics Intelligence 📊" ;;
+    brigitte)                 echo "Brigitte — Management Intelligence 🧠" ;;
     freelancer)               echo "Yvette — Freelancer PM 💼" ;;
     edith|sales)              echo "Édith — Sales Intelligence 🥐" ;;
     retail|retail-ops)        echo "Retail Ops 🛒" ;;
@@ -396,13 +400,14 @@ parse_args() {
         printf "    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --install-dir ~/testing\n\n"
         printf "  ${CYAN}Options:${NC}\n"
         printf "    --flavour <name>   Select agent flavour (default: pm)\n"
-        printf "    --demo             Provision demo data after install (Michelle only)\n"
+        printf "    --demo             Provision demo data after install\n"
         printf "    --install-dir <path>  Install to a specific directory (e.g., ~/testing)\n"
         printf "    --help             Show this help message\n\n"
         printf "  ${CYAN}Available flavours:${NC}\n"
         printf "    ${BOLD}pm${NC}              Jean-Pierre — AI Project Management Copilot ${GREEN}(default)${NC}\n"
         printf "    ${BOLD}jean-pierre${NC}     Alias for pm\n"
         printf "    ${BOLD}michelle${NC}        Michelle — Analytics Intelligence Copilot\n"
+        printf "    ${BOLD}brigitte${NC}        Brigitte — Management Intelligence Copilot\n"
         printf "    ${BOLD}freelancer${NC}      Yvette — Freelance Project Management Copilot\n"
         printf "    ${BOLD}edith${NC}           Édith — Sales Intelligence Copilot\n"
         printf "    ${BOLD}retail${NC}          Retail Operations Assistant\n"

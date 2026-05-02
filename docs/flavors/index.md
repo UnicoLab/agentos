@@ -12,6 +12,7 @@ AgentOS is a **composable AI agent platform** — a production-grade engine with
 <div class="hero-cta" markdown>
 [Meet Jean-Pierre →](jean-pierre.md){ .md-button .md-button--primary }
 [Meet Michelle →](michelle.md){ .md-button .md-button--primary }
+[Meet Brigitte →](brigitte.md){ .md-button .md-button--primary }
 [Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button }
 </div>
 
@@ -120,9 +121,18 @@ A flavour is the **combination** of these LEGO blocks into a tailored experience
 
 ## 🌐 More Copilots — Ready Today
 
-Beyond the flagships, four additional flavours are available:
+Beyond the flagships, additional flavours are available:
 
 <div class="secondary-flavor-grid" markdown>
+
+<div class="secondary-flavor-card" markdown>
+<div class="flavor-icon">🧠</div>
+
+#### Brigitte — Management Intelligence
+Executive coaching and management copilot: team dynamics analysis, leadership scoring, meeting intelligence, and organizational health dashboards. Built for managers and executives.
+
+**Status: ✅ Available**
+</div>
 
 <div class="secondary-flavor-card" markdown>
 <div class="flavor-icon">💼</div>
@@ -210,6 +220,9 @@ Each flavour is installed with the same one-line command — just specify which 
     # Michelle Analytics
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
 
+    # Brigitte Management Intelligence
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
+
     # Yvette Freelancer PM
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 
@@ -235,6 +248,9 @@ Each flavour is installed with the same one-line command — just specify which 
     # Michelle Analytics
     .\install.bat --flavour michelle
 
+    # Brigitte Management Intelligence
+    .\install.bat --flavour brigitte
+
     # Yvette Freelancer PM
     .\install.bat --flavour freelancer
     ```
@@ -259,5 +275,6 @@ Every download includes launcher scripts so you can start AgentOS **without open
 <div class="hero-cta" markdown>
 [Meet Jean-Pierre →](jean-pierre.md){ .md-button .md-button--primary }
 [Meet Michelle →](michelle.md){ .md-button .md-button--primary }
+[Meet Brigitte →](brigitte.md){ .md-button .md-button--primary }
 [Download AgentOS :material-download:](https://github.com/UnicoLab/agentos/releases/latest){ .md-button }
 </div>

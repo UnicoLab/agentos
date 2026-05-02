@@ -94,6 +94,7 @@ nav:
       - Overview: flavors/index.md
       - "🎩 Jean-Pierre — PM": flavors/jean-pierre.md
       - "🔬 Michelle — Analytics": flavors/michelle.md
+      - "🧠 Brigitte — Management": flavors/brigitte.md
   - Features:
       - AI Copilot: features/ai-copilot.md
       - Dashboard: features/dashboard.md

@@ -28,6 +28,7 @@ curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 
 # Choose a different flavour:
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
@@ -39,6 +40,7 @@ curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour of
     | **pm** (default) | Jean-Pierre — AI Project Management Copilot |
     | **jean-pierre** | Alias for pm |
     | **michelle** | Michelle — Analytics Intelligence Copilot |
+    | **brigitte** | Brigitte — Management Intelligence Copilot |
     | **freelancer** | Yvette — Freelance Project Management Copilot |
     | **edith** | Édith — Sales Intelligence Copilot |
     | **retail** | Retail Operations Assistant |
@@ -58,6 +60,7 @@ Each flavour has its own archive. Choose the one that matches your role:
 |---------|----------|---------|
 | 🎩 **PM** | macOS arm64 / amd64, Linux | `agentos-pm_{version}_{os}_{arch}.tar.gz` |
 | 📊 **Michelle** | macOS arm64 / amd64, Linux | `agentos-michelle_{version}_{os}_{arch}.tar.gz` |
+| 🧠 **Brigitte** | macOS arm64 / amd64, Linux | `agentos-brigitte_{version}_{os}_{arch}.tar.gz` |
 | 💼 **Freelancer** | macOS arm64 / amd64, Linux | `agentos-freelancer_{version}_{os}_{arch}.tar.gz` |
 | 🥐 **Edith** | macOS arm64 / amd64, Linux | `agentos-edith_{version}_{os}_{arch}.tar.gz` |
 | 🛒 **Retail** | macOS arm64 / amd64, Linux | `agentos-retail_{version}_{os}_{arch}.tar.gz` |
@@ -144,6 +147,7 @@ If you prefer to install manually:
 
     # Choose a different flavour:
     .\install.bat --flavour michelle
+    .\install.bat --flavour brigitte
     .\install.bat --flavour retail
     ```
 

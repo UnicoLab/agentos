@@ -51,10 +51,6 @@ flavour_to_binary() {
     pm|aiflow-pm|jean-pierre) echo "agentos-pm" ;;
     michelle)                 echo "agentos-michelle" ;;
     brigitte)                 echo "agentos-brigitte" ;;
-    freelancer)               echo "agentos-freelancer" ;;
-    edith|sales)              echo "agentos-edith" ;;
-    retail|retail-ops)        echo "agentos-retail" ;;
-    office)                   echo "agentos-office" ;;
     *)
       fail "Unknown flavour: ${BOLD}$1${NC}\n\n    Available flavours:\n      ${CYAN}pm${NC}              — Jean-Pierre, AI Project Management Copilot (default)\n      ${CYAN}jean-pierre${NC}     — Alias for pm\n      ${CYAN}michelle${NC}        — Michelle, Analytics Intelligence Copilot\n      ${CYAN}brigitte${NC}        — Brigitte, Management Intelligence Copilot\n      ${CYAN}all${NC}             — Install all three agents at once\n\n    Usage: curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte"
       ;;
@@ -66,10 +62,6 @@ flavour_display_name() {
     pm|aiflow-pm|jean-pierre) echo "Jean-Pierre — The PM 🎩" ;;
     michelle)                 echo "Michelle — Analytics Intelligence 📊" ;;
     brigitte)                 echo "Brigitte — Management Intelligence 🧠" ;;
-    freelancer)               echo "Yvette — Freelancer PM 💼" ;;
-    edith|sales)              echo "Édith — Sales Intelligence 🥐" ;;
-    retail|retail-ops)        echo "Retail Ops 🛒" ;;
-    office)                   echo "Office Assistant 🏢" ;;
     *)                        echo "$1" ;;
   esac
 }
@@ -437,10 +429,6 @@ flavour_to_local_name() {
     pm|aiflow-pm|jean-pierre) echo "agentos-pm" ;;
     michelle)                 echo "agentos-michelle" ;;
     brigitte)                 echo "agentos-brigitte" ;;
-    freelancer)               echo "agentos-freelancer" ;;
-    edith|sales)              echo "agentos-edith" ;;
-    retail|retail-ops)        echo "agentos-retail" ;;
-    office)                   echo "agentos-office" ;;
     *)                        echo "agentos-$1" ;;
   esac
 }

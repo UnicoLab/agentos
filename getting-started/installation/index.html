@@ -1686,16 +1686,16 @@
 </div>
 <hr />
 <h2 id="one-line-install-recommended">⚡ One-Line Install (Recommended)<a class="headerlink" href="#one-line-install-recommended" title="Permanent link">&para;</a></h2>
-<p>The fastest way to get started on <strong>macOS</strong> or <strong>Linux</strong>. This script auto-detects your OS and architecture, downloads the correct flavour binary, renames it to <code>agentos</code>, and installs it to your PATH:</p>
+<p>The fastest way to get started on <strong>macOS</strong> or <strong>Linux</strong>. This script auto-detects your OS and architecture, downloads the correct binary, and installs it to your PATH:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Default: installs Jean-Pierre (PM copilot)</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Choose a different flavour:</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>michelle
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>brigitte
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>freelancer
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>retail
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>office
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Install all agents at once:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>all
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Available Flavours</p>
@@ -1724,25 +1724,13 @@
 <td>Brigitte — Management Intelligence Copilot</td>
 </tr>
 <tr>
-<td><strong>freelancer</strong></td>
-<td>Yvette — Freelance Project Management Copilot</td>
-</tr>
-<tr>
-<td><strong>edith</strong></td>
-<td>Édith — Sales Intelligence Copilot</td>
-</tr>
-<tr>
-<td><strong>retail</strong></td>
-<td>Retail Operations Assistant</td>
-</tr>
-<tr>
-<td><strong>office</strong></td>
-<td>Office Productivity Assistant</td>
+<td><strong>all</strong></td>
+<td>Install all three agents at once</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>That's it! After installation, just run <code>agentos serve</code> and you're live. 🎉 The binary is always called <code>agentos</code> regardless of flavour.</p>
+<p>That's it! After installation, run <code>agentos-pm serve</code> (or <code>agentos-michelle</code>, <code>agentos-brigitte</code>) and you're live. 🎉 Each agent installs as a separate binary for safe multi-agent coexistence.</p>
 <hr />
 <h2 id="supported-platforms">🏗️ Supported Platforms<a class="headerlink" href="#supported-platforms" title="Permanent link">&para;</a></h2>
 <p>All architectures are pre-built and available on the <a href="https://github.com/UnicoLab/agentos/releases/latest">Releases Page</a>.</p>
@@ -1758,38 +1746,18 @@
 <tbody>
 <tr>
 <td>🎩 <strong>PM</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
+<td>macOS arm64 / amd64, Linux, Windows</td>
 <td><code>agentos-pm_{version}_{os}_{arch}.tar.gz</code></td>
 </tr>
 <tr>
 <td>📊 <strong>Michelle</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
+<td>macOS arm64 / amd64, Linux, Windows</td>
 <td><code>agentos-michelle_{version}_{os}_{arch}.tar.gz</code></td>
 </tr>
 <tr>
 <td>🧠 <strong>Brigitte</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
+<td>macOS arm64 / amd64, Linux, Windows</td>
 <td><code>agentos-brigitte_{version}_{os}_{arch}.tar.gz</code></td>
-</tr>
-<tr>
-<td>💼 <strong>Freelancer</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
-<td><code>agentos-freelancer_{version}_{os}_{arch}.tar.gz</code></td>
-</tr>
-<tr>
-<td>🥐 <strong>Edith</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
-<td><code>agentos-edith_{version}_{os}_{arch}.tar.gz</code></td>
-</tr>
-<tr>
-<td>🛒 <strong>Retail</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
-<td><code>agentos-retail_{version}_{os}_{arch}.tar.gz</code></td>
-</tr>
-<tr>
-<td>🏢 <strong>Office</strong></td>
-<td>macOS arm64 / amd64, Linux</td>
-<td><code>agentos-office_{version}_{os}_{arch}.tar.gz</code></td>
 </tr>
 </tbody>
 </table>
@@ -1798,8 +1766,8 @@
 <p>Run <code>uname -m</code> in Terminal. <code>arm64</code> = Apple Silicon, <code>x86_64</code> = Intel.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Binary is always called <code>agentos</code></p>
-<p>The install script automatically renames the per-flavour binary to <code>agentos</code>. If installing manually, rename it yourself: <code>mv agentos-pm agentos</code>.</p>
+<p class="admonition-title">Per-flavour binary names</p>
+<p>Each agent installs as <code>agentos-&lt;flavour&gt;</code> (e.g. <code>agentos-pm</code>, <code>agentos-michelle</code>). This allows multiple agents to run side-by-side. A fleet manager <code>agentos</code> command is also installed for managing all agents.</p>
 </div>
 <hr />
 <h2 id="manual-install">🖥️ Manual Install<a class="headerlink" href="#manual-install" title="Permanent link">&para;</a></h2>
@@ -1861,13 +1829,7 @@
 <div class="tabbed-block">
 <p><strong>Automatic (recommended):</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c"># Download and run the installer (default: PM flavour)</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">curl </span><span class="n">-fsSL</span> <span class="n">https</span><span class="p">://</span><span class="n">unicolab</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">agentos</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="n">-o</span> <span class="n">install</span><span class="p">.</span><span class="n">bat</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">bat</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c"># Choose a different flavour:</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="p">-</span><span class="n">-flavour</span> <span class="n">michelle</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="p">-</span><span class="n">-flavour</span> <span class="n">brigitte</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">.\</span><span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="p">-</span><span class="n">-flavour</span> <span class="n">retail</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">irm </span><span class="n">https</span><span class="p">://</span><span class="n">unicolab</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">agentos</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span> <span class="p">|</span> <span class="nb">iex</span>
 </code></pre></div>
 <p><strong>Manual:</strong></p>
 <ol>

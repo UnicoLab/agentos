@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgentOS — Installation &amp; Quick Start Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --surface2: #f1f5f9;
+  --border: #e2e8f0;
+  --text: #1e293b;
+  --text-muted: #64748b;
+  --accent: #6366f1;
+  --accent2: #8b5cf6;
+  --cyan: #0d9488;
+  --green: #059669;
+  --amber: #d97706;
+  --pink: #db2777;
+  --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #db2777 100%);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 900px; margin: 0 auto; padding: 60px 40px; }
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 60px 0 50px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 50px;
+}
+.header img { height: 64px; margin-bottom: 16px; }
+.header .brand { font-size: 13px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.header h1 {
+  font-size: 38px; font-weight: 800; letter-spacing: -0.5px;
+  background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.header .subtitle { font-size: 16px; color: var(--text-muted); font-weight: 400; }
+.header .version { display: inline-block; margin-top: 16px; padding: 4px 14px; border-radius: 20px; background: var(--surface2); border: 1px solid var(--border); font-size: 12px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.5px; }
+
+/* Sections */
+.section { margin-bottom: 50px; }
+.section-title {
+  font-size: 22px; font-weight: 700; margin-bottom: 24px; padding-bottom: 12px;
+  border-bottom: 2px solid var(--border); display: flex; align-items: center; gap: 10px;
+}
+.section-title .num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px; border-radius: 8px; background: var(--gradient);
+  font-size: 14px; font-weight: 700; color: #fff; flex-shrink: 0;
+}
+.section-title .num span { -webkit-text-fill-color: #fff; }
+
+/* Agent Cards */
+.agent-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+.agent-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+  padding: 24px 20px; text-align: center; transition: all 0.3s;
+  position: relative; overflow: hidden;
+}
+.agent-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gradient); opacity: 0.7;
+}
+.agent-card .emoji { font-size: 36px; margin-bottom: 10px; display: block; }
+.agent-card .name { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+.agent-card .flavour { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); margin-bottom: 8px; }
+.agent-card .desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+/* Code blocks */
+pre {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 18px 22px; margin: 14px 0 20px; overflow-x: auto;
+  font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.8; color: var(--cyan);
+}
+pre .comment { color: var(--text-muted); }
+code {
+  font-family: 'JetBrains Mono', monospace; background: var(--surface2);
+  padding: 2px 7px; border-radius: 5px; font-size: 13px; color: var(--accent);
+}
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; }
+th {
+  text-align: left; padding: 12px 16px; background: var(--surface);
+  border-bottom: 2px solid var(--accent); font-weight: 600; font-size: 13px;
+  color: var(--accent); text-transform: uppercase; letter-spacing: 0.5px;
+}
+td { padding: 11px 16px; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+
+/* Steps */
+.steps { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 32px; }
+.steps::before { content: ''; position: absolute; left: 11px; top: 12px; bottom: 12px; width: 2px; background: var(--border); }
+.step {
+  display: flex; align-items: flex-start; gap: 14px; padding: 8px 0; position: relative;
+}
+.step::before {
+  content: ''; position: absolute; left: -25px; top: 14px;
+  width: 10px; height: 10px; border-radius: 50%; background: var(--accent);
+  border: 2px solid var(--bg); z-index: 1;
+}
+.step-text { font-size: 14px; }
+.step-text strong { color: var(--text); }
+.step-text span { color: var(--text-muted); }
+
+/* Info boxes */
+.info-box {
+  background: var(--surface); border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0; padding: 16px 20px; margin: 16px 0;
+  font-size: 14px; color: var(--text-muted);
+}
+.info-box strong { color: var(--text); }
+.info-box.green { border-left-color: var(--green); }
+.info-box.amber { border-left-color: var(--amber); }
+
+/* Tree */
+.tree {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 20px 24px; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  line-height: 1.9; color: var(--text-muted); margin: 14px 0 20px;
+}
+.tree .dir { color: var(--accent); font-weight: 500; }
+.tree .file { color: var(--text-muted); }
+.tree .label { color: var(--text-muted); font-family: 'Inter', sans-serif; font-size: 12px; opacity: 0.6; }
+
+/* Fleet output */
+.fleet-output {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
+  padding: 22px 26px; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  line-height: 1.8; margin: 14px 0 20px;
+}
+.fleet-output .box { color: var(--cyan); }
+.fleet-output .label { color: var(--text-muted); }
+.fleet-output .running { color: var(--green); }
+.fleet-output .stopped { color: var(--text-muted); opacity: 0.5; }
+.fleet-output .name { color: var(--text); font-weight: 500; }
+.fleet-output .ver { color: var(--text-muted); }
+
+p { margin-bottom: 14px; font-size: 15px; color: var(--text-muted); }
+p strong { color: var(--text); }
+ul { margin: 10px 0 16px 20px; }
+li { margin-bottom: 6px; font-size: 14px; color: var(--text-muted); }
+
+/* Footer */
+.footer {
+  text-align: center; padding: 40px 0 20px; margin-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.footer .brand { font-size: 12px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+.footer .copy { font-size: 12px; color: var(--text-muted); opacity: 0.5; }
+.footer .contact { margin-top: 12px; font-size: 13px; color: var(--accent); }
+
+/* Print */
+@media print {
+  .page { padding: 20px; }
+  .section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- Header -->
+<div class="header">
+  <img src="unicolab_logo.png" alt="UnicoLab">
+  <div class="brand">UnicoLab</div>
+  <h1>AgentOS</h1>
+  <div class="subtitle">Installation &amp; Quick Start Guide</div>
+  <div class="version">May 2026 · macOS · Linux · Windows</div>
+</div>
+
+<!-- Available Agents -->
+<div class="section">
+  <div class="section-title"><div class="num"><span>⬡</span></div> Available Agents</div>
+  <div class="agent-grid">
+    <div class="agent-card">
+      <span class="emoji">🎩</span>
+      <div class="name">Jean-Pierre</div>
+      <div class="flavour">--flavour pm</div>
+      <div class="desc">AI Project Management Copilot — GitHub, Jira, sprint tracking, standup reports</div>
+    </div>
+    <div class="agent-card">
+      <span class="emoji">📊</span>
+      <div class="name">Michelle</div>
+      <div class="flavour">--flavour michelle</div>
+      <div class="desc">Analytics Intelligence Copilot — connect any database, natural language SQL, dashboards</div>
+    </div>
+    <div class="agent-card">
+      <span class="emoji">🥐</span>
+      <div class="name">Brigitte</div>
+      <div class="flavour">--flavour brigitte</div>
+      <div class="desc">Management Intelligence Copilot — people, teams, 1:1s, health signals, coaching</div>
+    </div>
+  </div>
+  <p>Each agent runs as a <strong>self-contained local binary</strong> with its own database, configuration, and web UI. Multiple agents coexist safely on the same machine.</p>
+</div>
+
+<!-- Install -->
+<div class="section">
+  <div class="section-title"><div class="num">1</div> One-Line Install</div>
+  <p><strong>macOS &amp; Linux</strong></p>
+<pre><span class="comment"># Jean-Pierre (PM) — default</span>
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
+
+<span class="comment"># Michelle (Analytics)</span>
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
+
+<span class="comment"># Brigitte (Management)</span>
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
+
+<span class="comment"># All agents at once</span>
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour all</pre>
+
+  <p><strong>Windows (PowerShell)</strong></p>
+<pre>irm https://unicolab.github.io/agentos/install.ps1 | iex</pre>
+</div>
+
+<!-- Options -->
+<div class="section">
+  <div class="section-title"><div class="num">2</div> Installer Options</div>
+  <table>
+    <tr><th>Option</th><th>Description</th><th>Example</th></tr>
+    <tr><td><code>--flavour &lt;name&gt;</code></td><td>Select agent (default: pm)</td><td><code>--flavour michelle</code></td></tr>
+    <tr><td><code>--flavour all</code></td><td>Install all three agents</td><td><code>--flavour all</code></td></tr>
+    <tr><td><code>--install-dir &lt;path&gt;</code></td><td>Custom install directory</td><td><code>--install-dir ~/tools</code></td></tr>
+    <tr><td><code>--binary-name &lt;name&gt;</code></td><td>Custom binary name</td><td><code>--binary-name my-agent</code></td></tr>
+    <tr><td><code>--demo</code></td><td>Provision demo data (Michelle)</td><td><code>--flavour michelle --demo</code></td></tr>
+  </table>
+</div>
+
+<!-- What installer does -->
+<div class="section">
+  <div class="section-title"><div class="num">3</div> What the Installer Does</div>
+  <div class="steps">
+    <div class="step"><div class="step-text"><strong>Checks dependencies</strong> — <span>verifies curl/wget and tar</span></div></div>
+    <div class="step"><div class="step-text"><strong>Detects platform</strong> — <span>identifies OS and CPU architecture</span></div></div>
+    <div class="step"><div class="step-text"><strong>Validates connectivity</strong> — <span>confirms GitHub API is reachable</span></div></div>
+    <div class="step"><div class="step-text"><strong>Fetches latest release</strong> — <span>finds the newest version for your flavour</span></div></div>
+    <div class="step"><div class="step-text"><strong>Downloads &amp; extracts</strong> — <span>3-attempt retry with exponential backoff</span></div></div>
+    <div class="step"><div class="step-text"><strong>macOS security</strong> — <span>clears Gatekeeper quarantine + ad-hoc code signs</span></div></div>
+    <div class="step"><div class="step-text"><strong>Installs binary</strong> — <span>to /usr/local/bin (admin) or ~/.local/bin (user)</span></div></div>
+    <div class="step"><div class="step-text"><strong>Updates PATH</strong> — <span>adds install dir to your shell config</span></div></div>
+    <div class="step"><div class="step-text"><strong>Installs fleet manager</strong> — <span>creates the <code>agentos</code> dispatcher</span></div></div>
+    <div class="step"><div class="step-text"><strong>Launches the agent</strong> — <span>opens the web UI at localhost:18080</span></div></div>
+  </div>
+</div>
+
+<!-- Running -->
+<div class="section">
+  <div class="section-title"><div class="num">4</div> Running Your Agent</div>
+  <p><strong>Start directly</strong></p>
+<pre>agentos-pm serve          <span class="comment"># Jean-Pierre</span>
+agentos-michelle serve    <span class="comment"># Michelle</span>
+agentos-brigitte serve    <span class="comment"># Brigitte</span></pre>
+  <p>The web UI opens at <strong>http://localhost:18080</strong> — port auto-increments if occupied.</p>
+
+  <p><strong>Fleet Manager</strong> — manage multiple agents with one command:</p>
+<pre>agentos list              <span class="comment"># show installed agents + status</span>
+agentos start michelle    <span class="comment"># start Michelle</span>
+agentos stop michelle     <span class="comment"># stop Michelle</span>
+agentos restart brigitte  <span class="comment"># restart Brigitte</span>
+agentos status            <span class="comment"># running/stopped overview</span></pre>
+
+  <div class="fleet-output">
+    <div class="box">  ╔═══════════════════════════════════════════╗</div>
+    <div class="box">  ║   ⬡  AgentOS Fleet Manager                ║</div>
+    <div class="box">  ╚═══════════════════════════════════════════╝</div>
+    <br>
+    <div class="label">  Installed Agents</div>
+    <div class="label">  ────────────────────────────────────────────</div>
+    <div>  <span class="name">pm</span>           Jean-Pierre — PM 🎩             <span class="ver">v2.1.0</span>  <span class="running">● running</span></div>
+    <div>  <span class="name">michelle</span>     Michelle — Analytics 📊          <span class="ver">v2.1.0</span>  <span class="stopped">○ stopped</span></div>
+    <div>  <span class="name">brigitte</span>     Brigitte — Management 🥐         <span class="ver">v1.1.0</span>  <span class="stopped">○ stopped</span></div>
+    <div class="label">  ────────────────────────────────────────────</div>
+  </div>
+</div>
+
+<!-- Data Isolation -->
+<div class="section">
+  <div class="section-title"><div class="num">5</div> Data Isolation</div>
+  <p>Each agent maintains <strong>fully isolated storage</strong> — agents never share data:</p>
+  <div class="tree">
+<span class="dir">~/.agentos/</span>
+├── <span class="dir">aiflow-pm/</span>          <span class="label"># Jean-Pierre</span>
+│   ├── <span class="file">agentos.db</span>      <span class="label"># Local database</span>
+│   ├── <span class="dir">skills/</span>         <span class="label"># Installed skills</span>
+│   └── <span class="dir">config/</span>         <span class="label"># Configuration</span>
+├── <span class="dir">michelle/</span>           <span class="label"># Michelle</span>
+│   ├── <span class="file">agentos.db</span>
+│   └── <span class="dir">skills/</span>
+└── <span class="dir">brigitte/</span>           <span class="label"># Brigitte</span>
+    ├── <span class="file">agentos.db</span>
+    └── <span class="dir">skills/</span></div>
+  <div class="info-box green">
+    ✅ Safe to run all agents simultaneously — ports auto-increment: <strong>:18080</strong>, <strong>:18081</strong>, <strong>:18082</strong>
+  </div>
+</div>
+
+<!-- Licensing -->
+<div class="section">
+  <div class="section-title"><div class="num">6</div> Licensing</div>
+  <p>AgentOS requires a license key for full operation. Each agent validates against the <strong>Watchtower</strong> licensing platform.</p>
+  <p><strong>Activation is simple:</strong> on first startup, the agent prompts you to paste your license key directly in the web UI. No file editing required.</p>
+  <p>Alternatively, you can place a <code>.watchtower.json</code> configuration file in the agent's data directory before starting:</p>
+<pre>cp .watchtower.json ~/.agentos/&lt;flavour&gt;/</pre>
+  <p>To obtain a license, contact <strong>info@unicolab.ai</strong>.</p>
+</div>
+
+<!-- Updates -->
+<div class="section">
+  <div class="section-title"><div class="num">7</div> Automatic Update Notifications</div>
+  <p>Agents <strong>automatically detect</strong> when a new version is available and notify you through:</p>
+  <ul>
+    <li>🔔 <strong>Web UI</strong> — real-time notification banner</li>
+    <li>📦 <strong>CLI</strong> — version info when running <code>agentos-&lt;flavour&gt; license</code></li>
+    <li>📡 <strong>API</strong> — programmatic access via <code>GET /v1/update/status</code></li>
+  </ul>
+  <div class="info-box amber">
+    ⚠️ Updates are <strong>user-controlled</strong> — the agent notifies but never auto-updates.
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<div class="footer">
+  <div class="brand">UnicoLab</div>
+  <div class="contact">info@unicolab.ai · unicolab.ai</div>
+  <div class="copy">© 2026 UnicoLab — Confidential. All rights reserved.</div>
+</div>
+
+</div>
+</body>
+</html>

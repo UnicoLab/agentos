@@ -20,7 +20,7 @@ Getting AgentOS running on your machine takes **one command**.
 
 ## ⚡ One-Line Install (Recommended)
 
-The fastest way to get started on **macOS** or **Linux**. This script auto-detects your OS and architecture, downloads the correct flavour binary, renames it to `agentos`, and installs it to your PATH:
+The fastest way to get started on **macOS** or **Linux**. This script auto-detects your OS and architecture, downloads the correct binary, and installs it to your PATH:
 
 ```bash
 # Default: installs Jean-Pierre (PM copilot)
@@ -29,9 +29,9 @@ curl -fsSL https://unicolab.github.io/agentos/install.sh | sh
 # Choose a different flavour:
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
 curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
-curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
+
+# Install all agents at once:
+curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour all
 ```
 
 !!! info "Available Flavours"
@@ -41,12 +41,9 @@ curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour of
     | **jean-pierre** | Alias for pm |
     | **michelle** | Michelle — Analytics Intelligence Copilot |
     | **brigitte** | Brigitte — Management Intelligence Copilot |
-    | **freelancer** | Yvette — Freelance Project Management Copilot |
-    | **edith** | Édith — Sales Intelligence Copilot |
-    | **retail** | Retail Operations Assistant |
-    | **office** | Office Productivity Assistant |
+    | **all** | Install all three agents at once |
 
-That's it! After installation, just run `agentos serve` and you're live. 🎉 The binary is always called `agentos` regardless of flavour.
+That's it! After installation, run `agentos-pm serve` (or `agentos-michelle`, `agentos-brigitte`) and you're live. 🎉 Each agent installs as a separate binary for safe multi-agent coexistence.
 
 ---
 
@@ -58,19 +55,15 @@ Each flavour has its own archive. Choose the one that matches your role:
 
 | Flavour | Platform | Archive Pattern |
 |---------|----------|---------|
-| 🎩 **PM** | macOS arm64 / amd64, Linux | `agentos-pm_{version}_{os}_{arch}.tar.gz` |
-| 📊 **Michelle** | macOS arm64 / amd64, Linux | `agentos-michelle_{version}_{os}_{arch}.tar.gz` |
-| 🧠 **Brigitte** | macOS arm64 / amd64, Linux | `agentos-brigitte_{version}_{os}_{arch}.tar.gz` |
-| 💼 **Freelancer** | macOS arm64 / amd64, Linux | `agentos-freelancer_{version}_{os}_{arch}.tar.gz` |
-| 🥐 **Edith** | macOS arm64 / amd64, Linux | `agentos-edith_{version}_{os}_{arch}.tar.gz` |
-| 🛒 **Retail** | macOS arm64 / amd64, Linux | `agentos-retail_{version}_{os}_{arch}.tar.gz` |
-| 🏢 **Office** | macOS arm64 / amd64, Linux | `agentos-office_{version}_{os}_{arch}.tar.gz` |
+| 🎩 **PM** | macOS arm64 / amd64, Linux, Windows | `agentos-pm_{version}_{os}_{arch}.tar.gz` |
+| 📊 **Michelle** | macOS arm64 / amd64, Linux, Windows | `agentos-michelle_{version}_{os}_{arch}.tar.gz` |
+| 🧠 **Brigitte** | macOS arm64 / amd64, Linux, Windows | `agentos-brigitte_{version}_{os}_{arch}.tar.gz` |
 
 !!! tip "Not sure which macOS version?"
     Run `uname -m` in Terminal. `arm64` = Apple Silicon, `x86_64` = Intel.
 
-!!! note "Binary is always called `agentos`"
-    The install script automatically renames the per-flavour binary to `agentos`. If installing manually, rename it yourself: `mv agentos-pm agentos`.
+!!! note "Per-flavour binary names"
+    Each agent installs as `agentos-<flavour>` (e.g. `agentos-pm`, `agentos-michelle`). This allows multiple agents to run side-by-side. A fleet manager `agentos` command is also installed for managing all agents.
 
 ---
 
@@ -142,13 +135,7 @@ If you prefer to install manually:
 
     ```powershell
     # Download and run the installer (default: PM flavour)
-    curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat
-    .\install.bat
-
-    # Choose a different flavour:
-    .\install.bat --flavour michelle
-    .\install.bat --flavour brigitte
-    .\install.bat --flavour retail
+    irm https://unicolab.github.io/agentos/install.ps1 | iex
     ```
 
     **Manual:**

@@ -80,7 +80,7 @@ See which projects need your attention this week. Prioritize based on data, not 
 
 <div class="step-card" markdown>
 <div class="step-num">🚀</div>
-### Freelancers
+### Consultants
 Manage multiple client projects from one hub. Never lose track of a deliverable again.
 </div>
 

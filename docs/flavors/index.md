@@ -1,13 +1,13 @@
 ---
 title: "AgentOS Flavours — Composable AI Copilots"
-description: "AgentOS is a modular AI agent platform built like LEGO. Two flagship copilots — Jean-Pierre (PM) and Michelle (Analytics) — prove its power. More roles coming."
+description: "AgentOS is a modular AI agent platform built like LEGO. Three flagship copilots — Jean-Pierre (PM), Michelle (Analytics), and Brigitte (Management) — prove its power. More roles coming."
 ---
 
 <div class="hero" markdown>
 
 # :material-puzzle: One Platform. Specialized Copilots.
 
-AgentOS is a **composable AI agent platform** — a production-grade engine with plug-and-play packs that can be configured for **any company role, any industry, any workflow**. Two flagship copilots are ready today. The architecture supports infinite more.
+AgentOS is a **composable AI agent platform** — a production-grade engine with plug-and-play packs that can be configured for **any company role, any industry, any workflow**. Three flagship copilots are ready today. The architecture supports infinite more.
 
 <div class="hero-cta" markdown>
 [Meet Jean-Pierre →](jean-pierre.md){ .md-button .md-button--primary }
@@ -22,7 +22,7 @@ AgentOS is a **composable AI agent platform** — a production-grade engine with
 
 ## 🚀 Flagship Copilots
 
-Two production-grade AI copilots — each built from the same composable blocks, each a world-class specialist.
+Three production-grade AI copilots — each built from the same composable blocks, each a world-class specialist.
 
 <div class="flagship-grid" markdown>
 
@@ -119,60 +119,7 @@ A flavour is the **combination** of these LEGO blocks into a tailored experience
 
 ---
 
-## 🌐 More Copilots — Ready Today
 
-Beyond the flagships, additional flavours are available:
-
-<div class="secondary-flavor-grid" markdown>
-
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🧠</div>
-
-#### Brigitte — Management Intelligence
-Executive coaching and management copilot: team dynamics analysis, leadership scoring, meeting intelligence, and organizational health dashboards. Built for managers and executives.
-
-**Status: ✅ Available**
-</div>
-
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">💼</div>
-
-#### Yvette — Freelancer PM
-Freelance project management: time tracking, budget management, invoice generation, daily standups, and decision logging. Built for independent consultants and developers.
-
-**Status: ✅ Available**
-</div>
-
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🥐</div>
-
-#### Édith — Sales Intelligence
-CRM analytics, deal scoring, pipeline intelligence, prospect research, and automated sales reporting.
-
-**Status: ✅ Available**
-</div>
-
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🛒</div>
-
-#### Retail Ops
-Inventory, orders, shift management, and retail analytics. Different tools, different dashboard, same powerful engine.
-
-**Status: ✅ Available**
-</div>
-
-<div class="secondary-flavor-card" markdown>
-<div class="flavor-icon">🏢</div>
-
-#### Office Assistant
-Document management, scheduling, and workflow automation for office productivity.
-
-**Status: ✅ Available**
-</div>
-
-</div>
-
----
 
 ## 🌍 The Possibilities Are Endless
 
@@ -223,40 +170,19 @@ Each flavour is installed with the same one-line command — just specify which 
     # Brigitte Management Intelligence
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
 
-    # Yvette Freelancer PM
-    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour freelancer
-
-    # Édith Sales Intelligence
-    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour edith
-
-    # Retail Ops
-    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour retail
-
-    # Office Assistant
-    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour office
+    # All agents at once
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour all
     ```
 
 === "Windows"
 
     ```powershell
     # Download the installer
-    curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat
-
-    # Jean-Pierre PM (default)
-    .\install.bat
-
-    # Michelle Analytics
-    .\install.bat --flavour michelle
-
-    # Brigitte Management Intelligence
-    .\install.bat --flavour brigitte
-
-    # Yvette Freelancer PM
-    .\install.bat --flavour freelancer
+    irm https://unicolab.github.io/agentos/install.ps1 | iex
     ```
 
-!!! note "Binary is always called `agentos`"
-    The installer automatically renames the per-flavour binary to `agentos` (or `agentos.exe`). All commands work the same regardless of flavour: `agentos serve`, `agentos chat`, `agentos setup`.
+!!! note "Per-flavour binary names"
+    Each flavour installs as `agentos-<flavour>` (e.g. `agentos-pm`, `agentos-michelle`, `agentos-brigitte`). This allows multiple agents to coexist on the same machine. A fleet manager command `agentos` is also installed for multi-agent management.
 
 ---
 

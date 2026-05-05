@@ -6,19 +6,12 @@ REM  Usage:
 REM    install.bat              (installs PM flavour by default)
 REM    install.bat --flavour michelle
 REM    install.bat --flavour brigitte
-REM    install.bat --flavour freelancer
-REM    install.bat --flavour retail
-REM    install.bat --flavour office
 REM
 REM  Available flavours:
 REM    pm              — Jean-Pierre, AI Project Management Copilot (default)
 REM    jean-pierre     — Alias for pm
 REM    michelle        — Michelle, Analytics Intelligence Copilot
 REM    brigitte        — Brigitte, Management Intelligence Copilot
-REM    freelancer      — Yvette, Freelance Project Management Copilot
-REM    edith           — Édith, Sales Intelligence Copilot
-REM    retail          — Retail Operations Assistant
-REM    office          — Office Productivity Assistant
 REM ──────────────────────────────────────────────────────────────
 setlocal enabledelayedexpansion
 
@@ -66,24 +59,6 @@ if /I "%FLAVOUR%"=="pm" (
 ) else if /I "%FLAVOUR%"=="brigitte" (
     set "SOURCE_BINARY=agentos-brigitte"
     set "DISPLAY_NAME=Brigitte — Management Intelligence"
-) else if /I "%FLAVOUR%"=="freelancer" (
-    set "SOURCE_BINARY=agentos-freelancer"
-    set "DISPLAY_NAME=Yvette — Freelancer PM"
-) else if /I "%FLAVOUR%"=="edith" (
-    set "SOURCE_BINARY=agentos-edith"
-    set "DISPLAY_NAME=Edith — Sales Intelligence"
-) else if /I "%FLAVOUR%"=="sales" (
-    set "SOURCE_BINARY=agentos-edith"
-    set "DISPLAY_NAME=Edith — Sales Intelligence"
-) else if /I "%FLAVOUR%"=="retail" (
-    set "SOURCE_BINARY=agentos-retail"
-    set "DISPLAY_NAME=Retail Ops"
-) else if /I "%FLAVOUR%"=="retail-ops" (
-    set "SOURCE_BINARY=agentos-retail"
-    set "DISPLAY_NAME=Retail Ops"
-) else if /I "%FLAVOUR%"=="office" (
-    set "SOURCE_BINARY=agentos-office"
-    set "DISPLAY_NAME=Office Assistant"
 ) else (
     echo.
     echo  ERROR: Unknown flavour "%FLAVOUR%"
@@ -93,10 +68,6 @@ if /I "%FLAVOUR%"=="pm" (
     echo    jean-pierre     Alias for pm
     echo    michelle        Michelle, Analytics Intelligence Copilot
     echo    brigitte        Brigitte, Management Intelligence Copilot
-    echo    freelancer      Yvette, Freelance Project Management Copilot
-    echo    edith           Edith, Sales Intelligence Copilot
-    echo    retail          Retail Operations Assistant
-    echo    office          Office Productivity Assistant
     echo.
     exit /b 1
 )
@@ -364,19 +335,13 @@ echo  AgentOS Windows Installer
 echo.
 echo  Usage:
 echo    install.bat                             Install PM flavour (default)
-echo    install.bat --flavour michelle          Install Michelle Analytics flavour
-echo    install.bat --flavour freelancer        Install Freelancer flavour (Yvette)
-echo    install.bat --flavour retail            Install Retail Ops flavour
-echo    install.bat --flavour office            Install Office flavour
+echo    install.bat --flavour michelle          Install Michelle Analytics
+echo    install.bat --flavour brigitte          Install Brigitte Management
 echo.
 echo  Available flavours:
 echo    pm              Jean-Pierre — AI Project Management Copilot (default)
 echo    jean-pierre     Alias for pm
 echo    michelle        Michelle — Analytics Intelligence Copilot
 echo    brigitte        Brigitte — Management Intelligence Copilot
-echo    freelancer      Yvette — Freelance Project Management Copilot
-echo    edith           Edith — Sales Intelligence Copilot
-echo    retail          Retail Operations Assistant
-echo    office          Office Productivity Assistant
 echo.
 goto :eof

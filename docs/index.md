@@ -36,17 +36,17 @@ Local-first AI copilots that connect to your tools and run entirely on your mach
     # Michelle (Analytics)
     curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour michelle
 
-    # Other copilots: brigitte, freelancer, edith, retail, office
-    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour <name>
+    # Brigitte (Management)
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour brigitte
+
+    # All agents at once
+    curl -fsSL https://unicolab.github.io/agentos/install.sh | sh -s -- --flavour all
     ```
 
 === "Windows"
 
     ```powershell
-    curl -fsSL https://unicolab.github.io/agentos/install.bat -o install.bat && install.bat
-
-    # Choose a different copilot:
-    install.bat --flavour michelle
+    irm https://unicolab.github.io/agentos/install.ps1 | iex
     ```
 
 === "Manual"
@@ -116,10 +116,6 @@ Each copilot is a specialized AI agent with its own persona, tools, and dashboar
 | Copilot | Install Flag | Domain |
 |---------|-------------|--------|
 | 🧠 **Brigitte** | `--flavour brigitte` | Management coaching — leadership, team dynamics |
-| 💼 **Yvette** | `--flavour freelancer` | Freelancer PM — time tracking, invoicing |
-| 🥐 **Édith** | `--flavour edith` | Sales intelligence — CRM, pipeline |
-| 🛒 **Retail Ops** | `--flavour retail` | Inventory & retail analytics |
-| 🏢 **Office** | `--flavour office` | Document management & workflows |
 
 ---
 

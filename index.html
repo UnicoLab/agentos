@@ -1787,15 +1787,15 @@ Local-first AI copilots that connect to your tools and run entirely on your mach
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Michelle (Analytics)</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>michelle
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Other copilots: brigitte, freelancer, edith, retail, office</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>&lt;name&gt;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Brigitte (Management)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>brigitte
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># All agents at once</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://unicolab.github.io/agentos/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh<span class="w"> </span>-s<span class="w"> </span>--<span class="w"> </span>--flavour<span class="w"> </span>all
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">curl </span><span class="n">-fsSL</span> <span class="n">https</span><span class="p">://</span><span class="n">unicolab</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">agentos</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="n">-o</span> <span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="p">&amp;&amp;</span> <span class="n">install</span><span class="p">.</span><span class="n">bat</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c"># Choose a different copilot:</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">install</span><span class="p">.</span><span class="n">bat</span> <span class="p">-</span><span class="n">-flavour</span> <span class="n">michelle</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">irm </span><span class="n">https</span><span class="p">://</span><span class="n">unicolab</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">/</span><span class="n">agentos</span><span class="p">/</span><span class="n">install</span><span class="p">.</span><span class="n">ps1</span> <span class="p">|</span> <span class="nb">iex</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -1872,26 +1872,6 @@ Local-first AI copilots that connect to your tools and run entirely on your mach
 <td>🧠 <strong>Brigitte</strong></td>
 <td><code>--flavour brigitte</code></td>
 <td>Management coaching — leadership, team dynamics</td>
-</tr>
-<tr>
-<td>💼 <strong>Yvette</strong></td>
-<td><code>--flavour freelancer</code></td>
-<td>Freelancer PM — time tracking, invoicing</td>
-</tr>
-<tr>
-<td>🥐 <strong>Édith</strong></td>
-<td><code>--flavour edith</code></td>
-<td>Sales intelligence — CRM, pipeline</td>
-</tr>
-<tr>
-<td>🛒 <strong>Retail Ops</strong></td>
-<td><code>--flavour retail</code></td>
-<td>Inventory &amp; retail analytics</td>
-</tr>
-<tr>
-<td>🏢 <strong>Office</strong></td>
-<td><code>--flavour office</code></td>
-<td>Document management &amp; workflows</td>
 </tr>
 </tbody>
 </table>
